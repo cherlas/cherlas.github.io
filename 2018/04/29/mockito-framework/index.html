@@ -1,0 +1,1107 @@
+
+<!DOCTYPE html>
+<html lang="zh-cn">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="baidu-site-verification" content="fJhstNzkJ1"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="generator" content="小一 | 莫舍己道 勿扰他心">
+    <title>单元测试之— Mockito 框架 - 小一 | 莫舍己道 勿扰他心</title>
+    <meta name="author" content="小一">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0" />
+    <link rel="Shortcut Icon" href="http://www.istarx.cc/assets/images/favicon.ico" type="image/x-icon">
+    
+        <meta name="keywords" content="unit-test,自动化测试,Mock,Mockito">
+    
+    
+        <link rel="icon" href="http://www.istarx.cc/assets/images/favicon.ico">
+    
+    
+        <link rel="alternate" type="application/atom+xml" title="RSS" href="/atom.xml">
+    
+    
+    
+    
+        
+    
+    
+        <meta property="og:image" content="http://www.istarx.cc/assets/images/avatar.png"/>
+    
+    
+    
+        <meta property="og:image" content="http://ox8xvtm5b.bkt.clouddn.com/mockito-framework.JPG"/>
+        <meta class="swiftype" name="image" data-type="enum"
+              content="http://ox8xvtm5b.bkt.clouddn.com/mockito-framework.JPG"/>
+    
+    
+    <!--STYLES-->
+    <link rel="stylesheet" href="/assets/css/style-rlxfihttornraopitbezqtlbmvsdagzls3exfuttflefzmed5ps1pwz5efhy.min.css">
+    <!--STYLES END-->
+    
+
+    
+
+</head>
+
+<body>
+<div id="container">
+    <canvas id="anm-canvas" data-behavior="2" class="anm-canvas hidden"></canvas>
+    <div id="blog">
+        <!-- Define author's picture -->
+
+
+    
+        
+            
+        
+    
+
+<header id="header" data-behavior="2" class="fade-in">
+    <i id="btn-open-sidebar" class="fa fa-lg fa-bars"></i>
+    <div class="header-title">
+        <a class="header-title-link" href="/ ">小一 | 莫舍己道 勿扰他心</a>
+    </div>
+    <i class="btn-open-search fa fa-lg fa-search"></i>
+    
+        
+        <a class="header-right-picture  " href=" #about ">
+            
+        
+            <img class="header-picture" src="/assets/images/avatar.png" alt="作者的图片">
+        
+        </a>
+    
+</header>
+
+        <!-- Define author's picture -->
+
+
+
+        
+    
+
+<nav id="sidebar" data-behavior="2" class="hidden fade-in">
+    <div class="sidebar-top-whitespace"></div>
+    <div class="sidebar-container">
+        
+            <div class="sidebar-profile">
+                <!-- 头像效果-start -->
+                <div class="ih-item circle effect right_to_left">
+                    <a href="/ ">
+                        <img class="sidebar-profile-picture" src="/assets/images/avatar.png" alt="作者的图片">
+                        <div class="info">
+                            <div class="info-back">
+                                <h2>
+                                    
+                                    Android
+                                    
+                                </h2>
+                                <p>
+                                    
+                                    Pyhon
+                                    
+                                </p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <!-- 头像效果-end -->
+                <h4 class="sidebar-profile-name">小一</h4>
+                
+                    <h5 class="sidebar-profile-bio"><p>莫舍己道,勿扰他心.</p>
+</h5>
+                
+            </div>
+        
+        
+            <ul class="sidebar-buttons">
+            
+                <li class="sidebar-button">
+                    
+                        <a class="sidebar-button-link " href="/#blog">
+                            
+                            <i class="sidebar-button-icon fa fa-lg fa-home" aria-hidden="true"></i>
+                            <span class="sidebar-button-desc">首页</span>
+                        </a>
+            </li>
+            
+                <li class="sidebar-button">
+                    
+                        <a class="sidebar-button-link " href="/all-categories">
+                            
+                            <i class="sidebar-button-icon fa fa-lg fa-bookmark" aria-hidden="true"></i>
+                            <span class="sidebar-button-desc">分类</span>
+                        </a>
+            </li>
+            
+                <li class="sidebar-button">
+                    
+                        <a class="sidebar-button-link " href="/all-tags">
+                            
+                            <i class="sidebar-button-icon fa fa-lg fa-tags" aria-hidden="true"></i>
+                            <span class="sidebar-button-desc">标签</span>
+                        </a>
+            </li>
+            
+                <li class="sidebar-button">
+                    
+                        <a class="sidebar-button-link " href="/all-archives">
+                            
+                            <i class="sidebar-button-icon fa fa-lg fa-archive" aria-hidden="true"></i>
+                            <span class="sidebar-button-desc">归档</span>
+                        </a>
+            </li>
+            
+                <li class="sidebar-button">
+                    
+                    <a class="sidebar-button-link open-search-col" rel="noopener">
+                    
+                            <i class="sidebar-button-icon fa fa-lg fa-search" aria-hidden="true"></i>
+                            <span class="sidebar-button-desc">搜索</span>
+                        </a>
+            </li>
+            
+                <li class="sidebar-button">
+                    
+                        <a class="sidebar-button-link " href="#about">
+                            
+                            <i class="sidebar-button-icon fa fa-lg fa-question" aria-hidden="true"></i>
+                            <span class="sidebar-button-desc">关于</span>
+                        </a>
+            </li>
+            
+        </ul>
+        
+            <ul class="sidebar-buttons">
+            
+                <li class="sidebar-button">
+                    
+                        <a class="sidebar-button-link " href="https://github.com/cherlas" target="_blank" rel="noopener">
+                    
+                            <i class="sidebar-button-icon fa fa-lg fa-github" aria-hidden="true"></i>
+                            <span class="sidebar-button-desc">GitHub</span>
+                        </a>
+            </li>
+            
+                <li class="sidebar-button">
+                    
+                        <a class="sidebar-button-link " href="mailto:vm@li.cm" target="_blank" rel="noopener">
+                    
+                            <i class="sidebar-button-icon fa fa-lg fa-envelope-o" aria-hidden="true"></i>
+                            <span class="sidebar-button-desc">邮箱</span>
+                        </a>
+            </li>
+            
+        </ul>
+        
+            <ul class="sidebar-buttons">
+            
+                <li class="sidebar-button">
+                    
+                        <a class="sidebar-button-link " href="/atom.xml">
+                            
+                            <i class="sidebar-button-icon fa fa-lg fa-rss" aria-hidden="true"></i>
+                            <span class="sidebar-button-desc">RSS</span>
+                        </a>
+            </li>
+            
+        </ul>
+        
+    </div>
+    <div class="sidebar-bottom-whitespace"></div>
+</nav>
+
+        
+<div class="post-header-cover fade-in header-image-cover
+                    text-left
+                    post-header-cover--partial" style="background-image:url('http://ox8xvtm5b.bkt.clouddn.com/mockito-framework.JPG');
+      filter: blur(0px); 
+      height: 60%;" data-behavior="2">
+</div>
+<div class="post-header-cover fade-in post-header-cover-background
+                            text-left
+                            post-header-cover--partial" style="
+     
+             height: 60%;
+     " data-behavior="2">
+
+    
+    <div class="post-header main-content-wrap text-left fadeInDown">
+    <div class="post-header-message content-with-table">
+        
+        <h1 class="post-title" itemprop="headline">
+            单元测试之— Mockito 框架
+        </h1>
+        
+        
+        <div class="post-meta">
+    <time itemprop="datePublished" datetime="2018-04-29T21:26:25+08:00">
+        <img class="calendar" src="/assets/images/calendar.png">
+        
+        4月 29, 2018
+        
+    </time>
+    
+    <span>发布在 </span>
+    
+<a class="category-link" href="/categories/程序猿进化之路/">程序猿进化之路</a>, <a class="category-link" href="/categories/程序猿进化之路/自动化测试/">自动化测试</a>
+
+
+    
+    
+    <img class="tag-img" src="/assets/images/tag-icon.svg">
+    <div class="post-tags">
+        
+        <a href="/tags/自动化测试/">自动化测试</a>
+        
+        <a href="/tags/unit-test/">unit-test</a>
+        
+        <a href="/tags/Mock/">Mock</a>
+        
+        <a href="/tags/Mockito/">Mockito</a>
+        
+    </div>
+    
+</div>
+
+        
+    </div>
+</div>
+
+    
+</div>
+
+
+        <div id="main" data-behavior="2"
+             class="hasCover
+                        hasCoverMetaIn
+                        hasCoverCaption hidden fade-in">
+            
+<article class="post" itemscope="" itemtype="http://schema.org/BlogPosting">
+    
+        <span class="post-header-cover-caption caption">求知若饥，虚心若愚。</span>
+    
+    
+    <div class="tableTile" data-message="目录">
+    </div>
+    <div class="post-content markdown" itemprop="articleBody">
+        <div class="main-content-wrap fadeInDown toc content-with-table">
+            <script src="/assets/js/APlayer.min.js"> </script><p>Mock 意为模拟，指模拟一个代码所依赖的框架、第三方代码或者构建起来较为复杂的对象，将被测试的代码和其它代码隔离开来，而 Mockito 框架是一款流行的 Mock 框架。</p>
+<a id="more"></a>
+<p><ul class="toc js-fixedContent">
+<li><a href="#mock%E7%AE%80%E4%BB%8B">Mock简介</a></li>
+<li><a href="#android-studio-%E4%B8%AD%E9%85%8D%E7%BD%AE-mockito">Android Studio 中配置 Mockito</a></li>
+<li><a href="#mockito-%E5%9F%BA%E6%9C%AC%E7%94%A8%E6%B3%95">Mockito 基本用法</a>
+<ul>
+<li><a href="#mock-%E4%B8%80%E4%B8%AA%E5%AF%B9%E8%B1%A1">Mock 一个对象</a></li>
+<li><a href="#serializable-mocks">Serializable Mocks</a>
+<ul>
+<li><a href="#%E9%87%8D%E7%BD%AE-mock">重置 Mock</a></li>
+</ul>
+</li>
+<li><a href="#%E5%8F%82%E6%95%B0%E5%8C%B9%E9%85%8D">参数匹配</a></li>
+<li><a href="#%E5%8F%82%E6%95%B0%E6%8D%95%E6%8D%89">参数捕捉</a></li>
+<li><a href="#stub-%E6%8F%92%E6%A1%A9">Stub 插桩</a>
+<ul>
+<li><a href="#%E5%85%A8%E9%83%A8%E6%A8%A1%E6%8B%9Fmock-%E5%92%8C%E9%83%A8%E5%88%86%E6%A8%A1%E6%8B%9Fspy-%E8%BF%9B%E8%A1%8C-stub">全部模拟(Mock) 和部分模拟(Spy) 进行 Stub</a></li>
+<li><a href="#%E5%AF%B9-void-%E6%96%B9%E6%B3%95%E8%BF%9B%E8%A1%8C-stub">对 void 方法进行 stub</a></li>
+<li><a href="#%E5%AF%B9%E5%90%8C%E4%B8%80%E4%B8%AA%E6%96%B9%E6%B3%95%E8%BF%9B%E8%A1%8C%E8%BF%9E%E7%BB%AD-stub">对同一个方法进行连续 stub</a></li>
+<li><a href="#%E4%B8%BA%E6%9C%AA%E8%BF%9B%E8%A1%8C-stub-%E7%9A%84%E6%96%B9%E6%B3%95%E8%AE%BE%E7%BD%AE%E9%BB%98%E8%AE%A4%E8%BF%94%E5%9B%9E%E5%80%BC">为未进行 stub 的方法设置默认返回值</a></li>
+</ul>
+</li>
+<li><a href="#%E9%AA%8C%E8%AF%81-verify">验证 verify</a>
+<ul>
+<li><a href="#%E8%A1%8C%E4%B8%BA%E9%AA%8C%E8%AF%81">行为验证</a></li>
+<li><a href="#%E8%B0%83%E7%94%A8%E6%AC%A1%E6%95%B0%E9%AA%8C%E8%AF%81">调用次数验证</a></li>
+<li><a href="#%E8%B0%83%E7%94%A8%E6%AC%A1%E5%BA%8F%E9%AA%8C%E8%AF%81">调用次序验证</a></li>
+<li><a href="#%E9%AA%8C%E8%AF%81-mock-%E5%AF%B9%E8%B1%A1%E6%98%AF%E5%90%A6%E4%BA%A4%E4%BA%92">验证 mock 对象是否交互</a></li>
+<li><a href="#%E6%9F%A5%E6%89%BE%E6%98%AF%E5%90%A6%E6%9C%89%E6%9C%AA%E9%AA%8C%E8%AF%81%E7%9A%84%E4%BA%A4%E4%BA%92">查找是否有未验证的交互</a></li>
+<li><a href="#%E8%B6%85%E6%97%B6%E9%AA%8C%E8%AF%81">超时验证</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</p>
+<h2 id="mock简介"><a class="anchor" href="#mock简介"></a> Mock简介</h2>
+<p>当我们所写的代码相对简单时，被测试代码不会或者很少依赖其它的类和代码，但是当代码较为复杂时，被测试代码免不了于系统中其它的部分进行交互，这给测试带来很大的不便。还有另外一种情况，在测试建立初始条件时，对于一些构建比较复杂难以构建的对象，同样给测试带来一定困难。此时 Mock 框架就显示出了其作用所在。</p>
+<p>单元测试的目的是把被测试代码和其它部分相隔离，当成一个独立的单元来进行测试，这样可以让你无视被测试单元所依赖部分运行的准确性，从而达到准确测试的目的。</p>
+<p><a href="https://github.com/mockito/mockito" target="_blank" rel="noopener">Mockito</a> 框架是一款比较流行的 Mock 框架，当前最新版是 2.18.5，但是 gradle 插件在 maven 仓库中只能下载到2.18.3 版本。其不仅可以用于 java 工程，还可以搭配 <code>dexmaker</code> 用于Android 项目中。类似的框架还有 EasyMock、PowerMock 等。</p>
+<h2 id="android-studio-中配置-mockito"><a class="anchor" href="#android-studio-中配置-mockito"></a> Android Studio 中配置 Mockito</h2>
+<p>在 Mockito 2.6.1版本开始，Mockito 团队专门为 Android 做了相关支持，为了在 Android Test 测试中使用 Mockito，需要引入以下依赖：</p>
+<figure class="highlight gradle"><table><tr><td class="code"><pre><span class="line"><span class="keyword">repositories</span> &#123;</span><br><span class="line">	jcenter() <span class="comment">// 或者 mavenCenter(), aliyun仓库等</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">dependencies</span> &#123;</span><br><span class="line">	...</span><br><span class="line">	testCompile <span class="string">'org.mockito:mockito-core:2.18.5'</span></span><br><span class="line">	androidTestCompile <span class="string">'org.mockito:mockito-android:2.18.5'</span> <span class="comment">// 不能和 inline mock maker 一起使用</span></span><br><span class="line">	...</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><code>mockito-android:</code>依赖中已经包含了<code>mockito-core</code>，所以不需要单独添加该依赖。</p>
+<h2 id="mockito-基本用法"><a class="anchor" href="#mockito-基本用法"></a> Mockito 基本用法</h2>
+<p>Mockito 框架有官方详细的说明文档，地址为 <a href="http://site.mockito.org/mockito/docs/current/org/mockito/Mockito.html" target="_blank" rel="noopener">http://site.mockito.org/mockito/docs/current/org/mockito/Mockito.html</a></p>
+<h3 id="mock-一个对象"><a class="anchor" href="#mock-一个对象"></a> Mock 一个对象</h3>
+<p>假设有如下一个类以及一个接口：</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Student</span> </span>&#123; &#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">interface</span> <span class="title">StudentDatabaseHelper</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> Student <span class="title">queryStudentWithId</span><span class="params">(<span class="keyword">int</span> id)</span></span>;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">updateNewScoreWithId</span><span class="params">(<span class="keyword">int</span> id, <span class="keyword">int</span> score)</span></span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ul>
+<li>
+<p>使用<code>mock</code>方法：</p>
+<p><code>mock()</code>方法是最基本的 mock 一个对象的方法，无论是类、接口都可以进行模拟，具体使用方法如下：</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line">Student student = mock(Student.class);</span><br><span class="line">StudentDatabaseHelper databaseHelper = mock(StudentDatabaseHelper.class);</span><br></pre></td></tr></table></figure>
+</li>
+<li>
+<p>使用<code>@Mock</code>注释：</p>
+<p>使用<code>@Mock</code>注释有以下几个有点：</p>
+<ul>
+<li>减少代码量；</li>
+<li>增加代码的可读性；</li>
+<li>让verify出错信息更易读，因为变量名可用来描述标记mock对象；</li>
+</ul>
+<p>具体使用方法如下：</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="meta">@Mock</span> <span class="keyword">private</span> Student student;</span><br><span class="line"><span class="meta">@Mock</span> <span class="keyword">private</span> StudentDatabaseHelper databaseHelper;</span><br><span class="line">...</span><br><span class="line"><span class="meta">@Before</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setUp</span><span class="params">()</span> </span>&#123;</span><br><span class="line">	MockitoAnnotations.initMocks(<span class="keyword">this</span>);  <span class="comment">// 很重要，也可以放在基类或者 Runner 中</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li>
+<p>使用<code>Spy</code>方法或者<code>@Spy</code>注释：</p>
+<p><code>Spy</code>和<code>Mock</code>的主要区别在于<code>Mock</code>模拟的对象是全部模拟，必须显式的对类或接口中的方法进行 stub；而 <code>Spy</code>则是部分模拟，其对显式 stub 的方法执行 stub 结果，但是对没有显式 stub 的方法则执行原方法。使用方法如下：</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="meta">@Spy</span> Student student = <span class="keyword">new</span> Student(); </span><br><span class="line"><span class="comment">//上面的模拟方法可以简写成</span></span><br><span class="line"><span class="meta">@Spy</span> Student student; <span class="comment">// Mockito 会自动实例化</span></span><br><span class="line"><span class="comment">// 以下是用 spy 方法模拟</span></span><br><span class="line">Student student = <span class="keyword">new</span> Student();</span><br><span class="line">Student spyStudent = spy(student);</span><br></pre></td></tr></table></figure>
+</li>
+<li>
+<p>使用<code>@InjectMocks</code>注释：</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="meta">@InjectMocks</span> Student; <span class="comment">// Mockito 会自动实例化该类</span></span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h3 id="serializable-mocks"><a class="anchor" href="#serializable-mocks"></a> Serializable Mocks</h3>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="meta">@Test</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">serializableMockTest</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    Student student = mock(Student.class, withSettings().serializable());</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="重置-mock"><a class="anchor" href="#重置-mock"></a> 重置 Mock</h4>
+<p>官方文档中提示不要在测试用例进行过程中使用重置 Mock。重置 Mock 使用 <code>reset()</code>方法。</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="meta">@Test</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">resetMockTest</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    Student student = mock(Student.class);</span><br><span class="line">    doNothing().when(student).setScore(<span class="number">99</span>);</span><br><span class="line">    student.setScore(<span class="number">99</span>);</span><br><span class="line">    reset(student);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="参数匹配"><a class="anchor" href="#参数匹配"></a> 参数匹配</h3>
+<p>当对方法进行插桩或者进行验证时，可以配合 Harmcrest 匹配器进行参数匹配，Mockito 框架集成了匹配器，并对其进行了一定的扩展，因此可以直接进行使用，不需要添加依赖。</p>
+<p>Mockito 框架对匹配器所做的扩展的类为<code>MockitoHamcrest</code>，其内部方法都是以如下形式命名的：</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">static</span> xxx <span class="title">xxxThat</span><span class="params">(Matcher&lt;xxx&gt; matcher)</span></span></span><br></pre></td></tr></table></figure>
+<p>其中的<code>xxx</code>可以为<code>arg</code>、<code>boolean</code>、<code>byte</code>、<code>char</code>以及基础数据类型，一位对某一类型的参数进行匹配。</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="meta">@Test</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">argMatcherTest</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    ArrayList&lt;String&gt; mockList = mock(ArrayList.class);</span><br><span class="line"></span><br><span class="line">    when(mockList.get(anyInt())).thenReturn(<span class="string">"arg matcher0"</span>);</span><br><span class="line">    assertEquals(<span class="string">"arg matcher0"</span>, mockList.get(<span class="number">0</span>));</span><br><span class="line">    assertEquals(<span class="string">"arg matcher0"</span>, mockList.get(<span class="number">4</span>));</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 可以写 lambda 表达式</span></span><br><span class="line">    when(mockList.get(intThat(i -&gt; i &gt; <span class="number">5</span>))).thenReturn(<span class="string">"big than 5"</span>);</span><br><span class="line">    assertEquals(<span class="string">"big than 5"</span>, mockList.get(<span class="number">999</span>));</span><br><span class="line"></span><br><span class="line">    when(mockList.indexOf(argThat((String str) -&gt; str.length() &gt; <span class="number">5</span>))).thenReturn(<span class="number">5</span>);</span><br><span class="line">    assertEquals(<span class="number">5</span>, mockList.indexOf(<span class="string">"arg matcher test"</span>));</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>除了以上匹配器以外，还可以自定义匹配器，具体请查看 <a href="http://www.istarx.cc/2018/02/11/hamcrest-matcher/">Harmcrest 自定义匹配器</a> 文章。</p>
+<div class="alert warning"><p>如果在 stub 或者 验证的过程中对某个方法使用了参数匹配，则所有的参数都必须使用参数匹配，对于确定的值需要使用<code>eq()</code>匹配器。</p>
+</div>
+<h3 id="参数捕捉"><a class="anchor" href="#参数捕捉"></a> 参数捕捉</h3>
+<p>参数捕捉指对某一方法的参数进行捕捉，并对其进行验证。</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="meta">@Test</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">argumentCaptureTest</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    Student student = mock(Student.class);</span><br><span class="line">    <span class="comment">// 实例化 ArgumentCaptor 对象</span></span><br><span class="line">    ArgumentCaptor&lt;Integer&gt; captor = ArgumentCaptor.forClass(Integer.class);</span><br><span class="line"></span><br><span class="line">    student.setScore(<span class="number">100</span>);</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 先验证再捕捉参数</span></span><br><span class="line">    verify(student).setScore(captor.capture());</span><br><span class="line">    assertEquals(<span class="number">100</span>, (<span class="keyword">int</span>)captor.getValue());</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="stub-插桩"><a class="anchor" href="#stub-插桩"></a> Stub 插桩</h3>
+<p>对模拟的对象进行插桩主要使用方法<code>when</code>，配合<code>thenReturn</code>、<code>doThrow</code>等方法完成。对方法进行 stub 是 Mock 框架的核心所在。</p>
+<h4 id="全部模拟mock-和部分模拟spy-进行-stub"><a class="anchor" href="#全部模拟mock-和部分模拟spy-进行-stub"></a> 全部模拟(Mock) 和部分模拟(Spy) 进行 Stub</h4>
+<p>由于模拟一个对象的时候可以全部模拟(即 Mock)，也可以部分模拟(即Spy)，两者稍微有所区别。下面是以 ArraryList 进行简单的举例：</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="meta">@Test</span>(expected = IndexOutOfBoundsException.class)</span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">stubbingTest</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="comment">// mock 一个对象</span></span><br><span class="line">    ArrayList&lt;String&gt; mockList = mock(ArrayList.class);</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 插桩</span></span><br><span class="line">    when(mockList.get(<span class="number">0</span>)).thenReturn(<span class="string">"mock stub test"</span>);</span><br><span class="line"></span><br><span class="line">    <span class="comment">//验证</span></span><br><span class="line">    assertEquals(<span class="string">"mock stub test"</span>, mockList.get(<span class="number">0</span>));</span><br><span class="line">    assertNull(mockList.get(<span class="number">1</span>)); <span class="comment">// 因为 mockList.get(1) 方法没有插桩，所以返回 null；</span></span><br><span class="line"></span><br><span class="line">    <span class="comment">// spy 一个对象</span></span><br><span class="line">    ArrayList&lt;String&gt; arrayList = <span class="keyword">new</span> ArrayList&lt;&gt;();</span><br><span class="line">    ArrayList&lt;String&gt; spyList = spy(arrayList);</span><br><span class="line"></span><br><span class="line">    spyList.add(<span class="string">"one"</span>);</span><br><span class="line">    spyList.add(<span class="string">"two"</span>);</span><br><span class="line"></span><br><span class="line">    assertEquals(<span class="string">"one"</span>, spyList.get(<span class="number">0</span>));</span><br><span class="line">    <span class="comment">// 下面语句会输出 two.</span></span><br><span class="line">    System.out.println(spyList.get(<span class="number">1</span>));</span><br><span class="line">    <span class="comment">// spyList.get(2) 会抛出 IndexOutOfBoundsException</span></span><br><span class="line">    assertNull(spyList.get(<span class="number">2</span>));</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="对-void-方法进行-stub"><a class="anchor" href="#对-void-方法进行-stub"></a> 对 void 方法进行 stub</h4>
+<p>如果一个方法返回返回为空，则需要特定的方法进行 stub。例如：</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line">doXXX().when(mockObj).someMethod([arg1, arg2, ...]);</span><br></pre></td></tr></table></figure>
+<p>其中 <code>doXXX()</code>可以是<code>doNothing()</code>、<code>doCallRealMethod</code>、<code>doThrow()</code>、<code>doAnswer()</code>其中的一种：举例如下：</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="meta">@Test</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">stubVoidMethodTest</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    StudentDatabaseHelper helper = mock(StudentDatabaseHelper.class);</span><br><span class="line">    Object object = <span class="keyword">new</span> Object();</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 执行该 stub 的方法时不做任何事</span></span><br><span class="line">    doNothing().when(helper).updateNewScoreWithId(anyInt(), anyInt());</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 执行该 stub 的方法时执行该方法真正的方法体，由于本方法是 abstract 的，所以此处在编译时会报错</span></span><br><span class="line">    <span class="comment">// doCallRealMethod().when(helper).updateNewScoreWithId(anyInt(), anyInt());</span></span><br><span class="line"></span><br><span class="line">    <span class="comment">// 执行该 stub 的方法时抛出一个异常</span></span><br><span class="line">    doThrow(RuntimeException.class).when(helper).updateNewScoreWithId(anyInt(), anyInt());</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 执行该 stub 的方法时执行特定的操作</span></span><br><span class="line">    doAnswer(invocation -&gt; &#123;</span><br><span class="line">        Object[] arguments = invocation.getArguments();</span><br><span class="line">        <span class="keyword">if</span> (arguments.length == <span class="number">2</span>) &#123;</span><br><span class="line">            <span class="keyword">return</span> arguments[<span class="number">0</span>];</span><br><span class="line">        &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">            <span class="keyword">return</span> arguments[<span class="number">1</span>];</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;).when(helper).updateNewScoreWithId(anyInt(), anyInt());</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="对同一个方法进行连续-stub"><a class="anchor" href="#对同一个方法进行连续-stub"></a> 对同一个方法进行连续 stub</h4>
+<p>某些时候，在测试的过程中重复调用了某个方法，并且此方法是被测试单元之外需要进行 stub 的。使用之前的方法，对每次方法的调用都使用</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line">when(mockObj.someMethod()).thenReturn(<span class="string">"value"</span>);</span><br></pre></td></tr></table></figure>
+<p>会显得代码会很累赘。Mockito 框架提供了一种简单的迭代的方法对同一个方法进行 stub。</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="meta">@Test</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">consecutiveStubTest</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    Student mockStudent = mock(Student.class);</span><br><span class="line"></span><br><span class="line">    when(mockStudent.getName())</span><br><span class="line">        .thenReturn(<span class="string">"name1"</span>)</span><br><span class="line">        .thenReturn(<span class="string">"name2"</span>)</span><br><span class="line">        .thenReturn(<span class="string">"name3"</span>)</span><br><span class="line">        .thenReturn(<span class="string">"name4"</span>);</span><br><span class="line"></span><br><span class="line">    assertEquals(<span class="string">"name1"</span>, mockStudent.getName());</span><br><span class="line">    assertEquals(<span class="string">"name2"</span>, mockStudent.getName());</span><br><span class="line">    assertEquals(<span class="string">"name3"</span>, mockStudent.getName());</span><br><span class="line">    assertEquals(<span class="string">"name4"</span>, mockStudent.getName());</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="为未进行-stub-的方法设置默认返回值"><a class="anchor" href="#为未进行-stub-的方法设置默认返回值"></a> 为未进行 stub 的方法设置默认返回值</h4>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="meta">@Test</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setDefaultReturnValues</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    Student student = mock(Student.class);</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 利用 thenAnswer() 设置默认返回值</span></span><br><span class="line">    when(student.getName()).thenAnswer(invocation -&gt; <span class="string">"default value"</span>);</span><br><span class="line"></span><br><span class="line">    assertEquals(<span class="string">"default value"</span>, student.getName());</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="验证-verify"><a class="anchor" href="#验证-verify"></a> 验证 verify</h3>
+<h4 id="行为验证"><a class="anchor" href="#行为验证"></a> 行为验证</h4>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="meta">@Test</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">verifyTest</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    Student mockStudent = mock(Student.class);</span><br><span class="line"></span><br><span class="line">    <span class="comment">// stub 方法</span></span><br><span class="line">    when(mockStudent.getName()).thenReturn(<span class="string">"name1"</span>);</span><br><span class="line">    doNothing().when(mockStudent).setScore(<span class="number">99</span>);</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 调用 stub 之后的方法</span></span><br><span class="line">    mockStudent.setScore(<span class="number">99</span>);</span><br><span class="line">    mockStudent.getName();</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 验证</span></span><br><span class="line">    verify(mockStudent).setScore(<span class="number">99</span>); <span class="comment">// 验证添加参数的方法</span></span><br><span class="line">    verify(mockStudent).getName();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="调用次数验证"><a class="anchor" href="#调用次数验证"></a> 调用次数验证</h4>
+<p>Mockito 提供了几个常用的验证调用次数的方法，可以利用这些方法对待测试代码所调用的方法进行调用次数上的精确验证：</p>
+<ul>
+<li><code>times(n)</code> - 验证具体的调用次数，n 为具体正整数，代表所需要验证的次数，在 verify 中默认验证次数为 1；</li>
+<li><code>atLeast(n)</code> - 字面意思，验证至少调用的次数；</li>
+<li><code>atLeastOnce()</code> - 即<code>atLeast(1)</code>;</li>
+<li><code>atMost(n)</code> - 和<code>atLeast</code>相反，表示至多调用多少次；</li>
+<li><code>never()</code> - 表示验证从未调用过该方法，等价于<code>times(0)</code>;</li>
+</ul>
+<p>例如：</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="meta">@Test</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">verifyCallTimesTest</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    Student mockStudent = mock(Student.class);</span><br><span class="line"></span><br><span class="line">    mockStudent.setScore(<span class="number">1</span>);</span><br><span class="line"></span><br><span class="line">    mockStudent.setScore(<span class="number">2</span>);</span><br><span class="line">    mockStudent.setScore(<span class="number">2</span>);</span><br><span class="line"></span><br><span class="line">    verify(mockStudent).setScore(<span class="number">1</span>);</span><br><span class="line">    verify(mockStudent, times(<span class="number">1</span>)).setScore(<span class="number">1</span>);</span><br><span class="line">    verify(mockStudent, atLeast(<span class="number">1</span>)).setScore(<span class="number">1</span>);</span><br><span class="line"></span><br><span class="line">    verify(mockStudent, times(<span class="number">2</span>)).setScore(<span class="number">2</span>);</span><br><span class="line">    verify(mockStudent, atMost(<span class="number">5</span>)).setScore(<span class="number">2</span>);</span><br><span class="line">    verify(mockStudent, atLeastOnce()).setScore(<span class="number">2</span>);</span><br><span class="line"></span><br><span class="line">    verify(mockStudent, never()).setScore(<span class="number">4</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="调用次序验证"><a class="anchor" href="#调用次序验证"></a> 调用次序验证</h4>
+<p>验证调用次序主要用到了<code>InOrder</code>类中的<code>verify()</code>方法，举例如下：</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="meta">@Test</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">verifyOrderTest</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    Student singleMockStudent = mock(Student.class);</span><br><span class="line"></span><br><span class="line">    singleMockStudent.setScore(<span class="number">1</span>);</span><br><span class="line">    singleMockStudent.setScore(<span class="number">2</span>);</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 实例化一个 inOrder 对象</span></span><br><span class="line">    InOrder inOrder = Mockito.inOrder(singleMockStudent);</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 验证参数为 1 的方法先于参数为 2 的方法运行</span></span><br><span class="line">    inOrder.verify(singleMockStudent).setScore(<span class="number">1</span>);</span><br><span class="line">    inOrder.verify(singleMockStudent).setScore(<span class="number">2</span>);</span><br><span class="line"></span><br><span class="line">    Student firstStudent = mock(Student.class);</span><br><span class="line">    Student secondStudent = mock(Student.class);</span><br><span class="line"></span><br><span class="line">    firstStudent.setScore(<span class="number">3</span>);</span><br><span class="line">    secondStudent.setScore(<span class="number">4</span>);</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 实例化 inOrder 对象，参数为需要进行验证调用次序的 mock 对象</span></span><br><span class="line">    inOrder = Mockito.inOrder(firstStudent, secondStudent);</span><br><span class="line">	</span><br><span class="line">    <span class="comment">// verify</span></span><br><span class="line">    inOrder.verify(firstStudent).setScore(<span class="number">3</span>);</span><br><span class="line">    inOrder.verify(secondStudent).setScore(<span class="number">4</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="验证-mock-对象是否交互"><a class="anchor" href="#验证-mock-对象是否交互"></a> 验证 mock 对象是否交互</h4>
+<p>验证对象是否进行交互的意思是验证测试用例中 mock 的对象在验证之前是否与之产生交互。</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="meta">@Test</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">verifyInteractionTest</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    Student firstStudent = mock(Student.class);</span><br><span class="line">    Student secondStudent = mock(Student.class);</span><br><span class="line"></span><br><span class="line">    firstStudent.setScore(<span class="number">1</span>);</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 正常的验证行为</span></span><br><span class="line">    verify(firstStudent).setScore(<span class="number">1</span>);</span><br><span class="line">    verify(secondStudent, never()).setScore(anyInt());</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 交互验证 secondStudent 从未进行交互 </span></span><br><span class="line">    verifyZeroInteractions(secondStudent);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="查找是否有未验证的交互"><a class="anchor" href="#查找是否有未验证的交互"></a> 查找是否有未验证的交互</h4>
+<p>主要是验证对某个 mock 对象进行了操作，并且对操作进行了 verify。不介意在每个测试用例中使用，官方文档原文为：</p>
+<blockquote>
+<p>A word of <strong>warning</strong>: Some users who did a lot of classic, expect-run-verify mocking tend to use <code>verifyNoMoreInteractions()</code> very often, even in every test method. <code>verifyNoMoreInteractions()</code> is not recommended to use in every test method. <code>verifyNoMoreInteractions()</code> is a handy assertion from the interaction testing toolkit. Use it only when it’s relevant. Abusing it leads to <strong>overspecified</strong>, <strong>less maintainable</strong> tests. You can find further reading <a href="http://monkeyisland.pl/2008/07/12/should-i-worry-about-the-unexpected/" target="_blank" rel="noopener">here</a>.</p>
+</blockquote>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="meta">@Test</span>(expected = NoInteractionsWanted.class)</span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">noMoreInteractionsTest</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    Student student = mock(Student.class);</span><br><span class="line"></span><br><span class="line">    student.setScore(<span class="number">1</span>);</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 验证失败，抛出 NoInteractionsWanted 异常</span></span><br><span class="line">    verifyNoMoreInteractions(student);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="超时验证"><a class="anchor" href="#超时验证"></a> 超时验证</h4>
+<p>超时验证是用来验证某一特定的方法或者操作在规定的时间内能执行完毕，防止进程阻塞或者更新缓慢等，给用户带来不友好的体验。</p>
+<p>在<a href="http://www.istarx.cc/2018/04/24/unit-test-annotation/">JUnit基本注释</a>一文中也提到了超时测试，利用<code>@Test(timeout = time_with_ms)</code>的注释可以对整个测试用例运行的执行时长进行测试。PowerMock 同样也提供了<code>verify</code> + <code>timeout</code>的方法对某一特定的方法进行验证， 但其验证的作用是在验证之前对进程阻塞一段时间，之后再去验证。例如：</p>
+<p>被测试代码两个方法如下：</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">TimeoutDemo</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">timeoutMethod</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="comment">// do something here</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>测试代码如下：</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="meta">@Test</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">timeoutTest</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    TimeoutDemo demo = mock(TimeoutDemo.class);</span><br><span class="line"></span><br><span class="line">    doCallRealMethod().when(demo).timeoutMethod();</span><br><span class="line">    demo.timeoutMethod();</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    <span class="comment">// 延迟 200ms 再验证该方法是否执行过</span></span><br><span class="line">    verify(demo,timeout(<span class="number">200</span>)).timeoutMethod();</span><br><span class="line">    <span class="comment">// 等价与下面这句</span></span><br><span class="line">    verify(demo, timeout(<span class="number">200</span>).times(<span class="number">1</span>)).timeoutMethod();</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 自定义验证模式</span></span><br><span class="line">    verify(demo,<span class="keyword">new</span> Timeout(<span class="number">200</span>, <span class="keyword">new</span> VerificationMode() &#123;</span><br><span class="line">        <span class="meta">@Override</span></span><br><span class="line">        <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">verify</span><span class="params">(VerificationData data)</span> </span>&#123;</span><br><span class="line">            <span class="comment">// custom verify mode</span></span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="meta">@Override</span></span><br><span class="line">        <span class="function"><span class="keyword">public</span> VerificationMode <span class="title">description</span><span class="params">(String description)</span> </span>&#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="keyword">null</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;)).timeoutMethod();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<div class="alert warning"><p><code>timeout()</code>方法需要1.8.5 版本之后才可以使用。</p>
+</div>
+            
+
+        </div>
+        
+            <div class="tableContent fade-in" data-message="true"></div>
+        
+        
+            <div class="post-copyright main-content-wrap content-with-table">
+    <p class="copyright-item">
+        <span>原文作者: </span>
+        <a href="http://http://www.istarx.cc">小一</a>
+    </p>
+    <p class="copyright-item">
+        <span>原文链接: </span>
+        <a href="http://www.istarx.cc/2018/04/29/mockito-framework/">http://www.istarx.cc/2018/04/29/mockito-framework/</a>
+    </p>
+    <p class="copyright-item">
+        <span>许可协议: </span>
+        <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/" target="_blank">知识共享署名-非商业性使用 4.0 国际许可协议，转载请注明出处，谢谢.</a>
+    </p>
+</div>
+
+        
+    </div>
+    
+        <div id="post-footer" class="post-footer main-content-wrap content-with-table">
+            
+                <div class="post-footer-tags">
+                    <span class="text-color-light text-small">标签</span><br>
+                    
+<div class="tagcloud article-tag-list">
+    
+    <li class="article-tag-list-item">
+        <a href="/tags/自动化测试/" class="js-tag color1">自动化测试</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="/tags/unit-test/" class="js-tag color5">unit-test</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="/tags/Mock/" class="js-tag color5">Mock</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="/tags/Mockito/" class="js-tag color3">Mockito</a>
+    </li>
+    
+    <div class="clearfix"></div>
+</div>
+
+
+                </div>
+            
+            
+                <div class="post-actions-wrap">
+    <nav>
+        <ul class="post-actions post-action-nav">
+            <li class="post-action">
+                
+                
+                <a class="post-action-btn btn btn--default tooltip--top" href="/2018/05/02/powermock-framework/" data-tooltip="单元测试之— PowerMock 框架" aria-label="上一篇: 单元测试之— PowerMock 框架">
+                    
+                        <i class="fa fa-angle-left" aria-hidden="true"></i>
+                        <span class="hide-xs hide-sm text-small icon-ml">上一篇</span>
+                    </a>
+            </li>
+            <li class="post-action">
+                
+                
+                <a class="post-action-btn btn btn--default tooltip--top" href="/2018/04/26/how-to-write-unit-tests/" data-tooltip="如何写有价值的单元测试" aria-label="下一篇: 如何写有价值的单元测试">
+                    
+                        <span class="hide-xs hide-sm text-small icon-mr">下一篇</span>
+                        <i class="fa fa-angle-right" aria-hidden="true"></i>
+                    </a>
+            </li>
+        </ul>
+    </nav>
+    <ul class="post-actions post-action-share">
+        <li class="post-action hide-lg hide-md hide-sm">
+            <a class="post-action-btn btn btn--default btn-open-shareoptions" href="#btn-open-shareoptions" aria-label="Diesen Beitrag teilen">
+                <i class="fa fa-share-alt" aria-hidden="true"></i>
+            </a>
+        </li>
+        
+        
+        <li class="post-action">
+            
+                <a class="post-action-btn btn btn--default" href="#" aria-label="Nach oben">
+                    
+                    <i class="fa fa-arrow-up" aria-hidden="true"></i>
+                </a>
+        </li>
+    </ul>
+</div>
+
+
+            
+            
+        </div>
+    
+</article>
+
+
+
+            <footer id="footer" class="main-content-wrap">
+    <span class="copyrights">
+        Copyrights &copy; 2018 小一. All Rights Reserved.
+    </span>
+</footer>
+
+        </div>
+        
+        <div id="bottom-bar" class="post-bottom-bar" data-behavior="2">
+            <div class="post-actions-wrap">
+    <nav>
+        <ul class="post-actions post-action-nav">
+            <li class="post-action">
+                
+                
+                <a class="post-action-btn btn btn--default tooltip--top" href="/2018/05/02/powermock-framework/" data-tooltip="单元测试之— PowerMock 框架" aria-label="上一篇: 单元测试之— PowerMock 框架">
+                    
+                        <i class="fa fa-angle-left" aria-hidden="true"></i>
+                        <span class="hide-xs hide-sm text-small icon-ml">上一篇</span>
+                    </a>
+            </li>
+            <li class="post-action">
+                
+                
+                <a class="post-action-btn btn btn--default tooltip--top" href="/2018/04/26/how-to-write-unit-tests/" data-tooltip="如何写有价值的单元测试" aria-label="下一篇: 如何写有价值的单元测试">
+                    
+                        <span class="hide-xs hide-sm text-small icon-mr">下一篇</span>
+                        <i class="fa fa-angle-right" aria-hidden="true"></i>
+                    </a>
+            </li>
+        </ul>
+    </nav>
+    <ul class="post-actions post-action-share">
+        <li class="post-action hide-lg hide-md hide-sm">
+            <a class="post-action-btn btn btn--default btn-open-shareoptions" href="#btn-open-shareoptions" aria-label="Diesen Beitrag teilen">
+                <i class="fa fa-share-alt" aria-hidden="true"></i>
+            </a>
+        </li>
+        
+        
+        <li class="post-action">
+            
+                <a class="post-action-btn btn btn--default" href="#" aria-label="Nach oben">
+                    
+                    <i class="fa fa-arrow-up" aria-hidden="true"></i>
+                </a>
+        </li>
+    </ul>
+</div>
+
+
+        </div>
+        <div id="share-options-bar" class="share-options-bar" data-behavior="2">
+    <i id="btn-close-shareoptions" class="fa fa-close"></i>
+    <ul class="share-options">
+        
+    </ul>
+</div>
+
+        
+    </div>
+    
+
+
+    
+        
+    
+
+<div id="about">
+    <div id="about-card">
+        <div id="about-btn-close">
+            <i class="fa fa-remove"></i>
+        </div>
+        
+            <img id="about-card-picture" src="/assets/images/avatar.png" alt="作者的图片">
+        
+            <h4 id="about-card-name">小一</h4>
+        
+            <div id="about-card-bio"><p>莫舍己道,勿扰他心.</p>
+</div>
+        
+        
+            <div id="about-card-job">
+                <i class="fa fa-briefcase"></i>
+                <br>
+                <p>Android开发<br>自动化测试</p>
+
+            </div>
+        
+        
+            <div id="about-card-location">
+                <i class="fa fa-map-marker"></i>
+                <br>
+                ShanXi Xi&#39;an
+            </div>
+        
+    </div>
+</div>
+
+    
+
+<!-- Define author's picture -->
+
+
+    
+        
+    
+
+<div id="cover" style="background-image:url('http://ox8xvtm5b.bkt.clouddn.com/cover.jpg');">
+    <div class="first-page-desc-container">
+        <span class="first-page-desc pulse"></span>
+    </div>
+    <div class="full-screen-head hidden">
+        <!-- 头像效果-start -->
+        <div class="ih-item circle effect right_to_left fade-in">
+            <a href="/#blog" class="blog-button-full-screen">
+                <img class="sidebar-profile-picture" src="/assets/images/avatar.png" alt="作者的图片">
+                <div class="info">
+                    <div class="info-back">
+                        <h2>
+                            
+                            Android
+                            
+                        </h2>
+                        <p>
+                            
+                            Pyhon
+                            
+                        </p>
+                    </div>
+                </div>
+            </a>
+        </div>
+        <!-- 头像效果-end -->
+    </div>
+</div>
+
+    <!--SCRIPTS-->
+<script src="/assets/js/script-6x2v9gn7dhx5dmgdhsw61sllyjdn5hhxgfecagyxt4udfqiwo1hxodblwcyt.min.js"></script>
+<!--SCRIPTS END-->
+
+
+<script src="https://cdn.jsdelivr.net/npm/moment@2.20.1/min/moment-with-locales.min.js"></script>
+<script src="//cdn.jsdelivr.net/algoliasearch/3/algoliasearch.min.js"></script>
+<script>
+  var algoliaClient = algoliasearch('8N47Y2YYXB', '6ed86c6c2611f5cfdbfc015301c1bdb2');
+  var algoliaIndex = algoliaClient.initIndex('blog-index');
+</script>
+
+
+<script>
+  window.onload = function() {
+    if (location.hash !== '#blog' && location.hash !== '' && location.hash !== '#') {
+      window.location.hash = '';
+    }
+  };
+</script>
+
+    <div data-behavior="2" class="search-tools-col hide">
+    <div class="tools-wrap">
+        <section class="tools-section tools-section-all">
+            <div class="search-wrap">
+                <input class="search-ipt" type="text" placeholder="find something…">
+                <i class="icon-search icon"></i>
+                <i class="icon-close icon "></i>
+            </div>
+            <div class="widget tagcloud search-tag">
+                <ul class="article-tag-list">
+                    
+                    <li class="article-tag-list-item">
+                        <a class="js-tag color3">android</a>
+                    </li>
+                    
+                    <li class="article-tag-list-item">
+                        <a class="js-tag color1">自动化测试</a>
+                    </li>
+                    
+                    <li class="article-tag-list-item">
+                        <a class="js-tag color2">UIAutomator</a>
+                    </li>
+                    
+                    <li class="article-tag-list-item">
+                        <a class="js-tag color4">sql</a>
+                    </li>
+                    
+                    <li class="article-tag-list-item">
+                        <a class="js-tag color5">unit-test</a>
+                    </li>
+                    
+                    <li class="article-tag-list-item">
+                        <a class="js-tag color4">espresso</a>
+                    </li>
+                    
+                    <li class="article-tag-list-item">
+                        <a class="js-tag color2">gradle</a>
+                    </li>
+                    
+                    <li class="article-tag-list-item">
+                        <a class="js-tag color5">productflavors</a>
+                    </li>
+                    
+                    <li class="article-tag-list-item">
+                        <a class="js-tag color1">sourcecode</a>
+                    </li>
+                    
+                    <li class="article-tag-list-item">
+                        <a class="js-tag color5">hexo</a>
+                    </li>
+                    
+                    <li class="article-tag-list-item">
+                        <a class="js-tag color5">blog</a>
+                    </li>
+                    
+                    <li class="article-tag-list-item">
+                        <a class="js-tag color4">hamcrest</a>
+                    </li>
+                    
+                    <li class="article-tag-list-item">
+                        <a class="js-tag color5">Mock</a>
+                    </li>
+                    
+                    <li class="article-tag-list-item">
+                        <a class="js-tag color3">Mockito</a>
+                    </li>
+                    
+                    <li class="article-tag-list-item">
+                        <a class="js-tag color5">PowerMock</a>
+                    </li>
+                    
+                    <li class="article-tag-list-item">
+                        <a class="js-tag color2">robolectric</a>
+                    </li>
+                    
+                    <li class="article-tag-list-item">
+                        <a class="js-tag color4">proguard</a>
+                    </li>
+                    
+                    <li class="article-tag-list-item">
+                        <a class="js-tag color1">theme</a>
+                    </li>
+                    
+                    <li class="article-tag-list-item">
+                        <a class="js-tag color3">主题</a>
+                    </li>
+                    
+                    <div class="clearfix"></div>
+                </ul>
+            </div>
+            <p class="results-count hide" data-message-zero="没有找到文章" data-message-one="找到 1 篇文章" data-message-other="找到 {n} 篇文章">
+                找到 17 篇文章
+            </p>
+            <div class="search-result">
+                
+                <div class="media">
+    <a class="search-title" href="/2018/02/10/android-autotest-summary/"><i class="fa fa-quote-left"></i><span id="search-post-title">Android 自动化测试总述</span></a>
+    <p class="search-time">
+        <i class="fa fa-calendar icon"></i>
+        <span id="search-post-tags">2018-02-10</span>
+    </p>
+    
+    <p class="search-result-meta">
+    <i class="fa fa-tags icon"></i>
+        
+            <span id="search-post-tags">#android</span>
+        
+            <span id="search-post-tags">#自动化测试</span>
+        
+    </p>
+    
+    <div class="clearfix"></div>
+</div>
+
+                
+                <div class="media">
+    <a class="search-title" href="/2018/04/07/android-test-uiautomator/"><i class="fa fa-quote-left"></i><span id="search-post-title">Android 自动化测试之 — UI Automator</span></a>
+    <p class="search-time">
+        <i class="fa fa-calendar icon"></i>
+        <span id="search-post-tags">2018-04-07</span>
+    </p>
+    
+    <p class="search-result-meta">
+    <i class="fa fa-tags icon"></i>
+        
+            <span id="search-post-tags">#自动化测试</span>
+        
+            <span id="search-post-tags">#UIAutomator</span>
+        
+    </p>
+    
+    <div class="clearfix"></div>
+</div>
+
+                
+                <div class="media">
+    <a class="search-title" href="/2018/12/17/unique-keyword-of-mysql/"><i class="fa fa-quote-left"></i><span id="search-post-title">SQL 中的 UNIQUE 关键字</span></a>
+    <p class="search-time">
+        <i class="fa fa-calendar icon"></i>
+        <span id="search-post-tags">2018-12-17</span>
+    </p>
+    
+    <p class="search-result-meta">
+    <i class="fa fa-tags icon"></i>
+        
+            <span id="search-post-tags">#sql</span>
+        
+    </p>
+    
+    <div class="clearfix"></div>
+</div>
+
+                
+                <div class="media">
+    <a class="search-title" href="/2018/04/24/unit-test-annotation/"><i class="fa fa-quote-left"></i><span id="search-post-title">单元测试常用注释</span></a>
+    <p class="search-time">
+        <i class="fa fa-calendar icon"></i>
+        <span id="search-post-tags">2018-04-24</span>
+    </p>
+    
+    <p class="search-result-meta">
+    <i class="fa fa-tags icon"></i>
+        
+            <span id="search-post-tags">#unit-test</span>
+        
+    </p>
+    
+    <div class="clearfix"></div>
+</div>
+
+                
+                <div class="media">
+    <a class="search-title" href="/2018/04/16/unit-test-what-and-why/"><i class="fa fa-quote-left"></i><span id="search-post-title">Android自动化测试之 — 简单聊聊单元测试</span></a>
+    <p class="search-time">
+        <i class="fa fa-calendar icon"></i>
+        <span id="search-post-tags">2018-04-16</span>
+    </p>
+    
+    <p class="search-result-meta">
+    <i class="fa fa-tags icon"></i>
+        
+            <span id="search-post-tags">#自动化测试</span>
+        
+            <span id="search-post-tags">#unit-test</span>
+        
+    </p>
+    
+    <div class="clearfix"></div>
+</div>
+
+                
+                <div class="media">
+    <a class="search-title" href="/2018/04/09/android-test-espresso/"><i class="fa fa-quote-left"></i><span id="search-post-title">Android 自动化测试之 — Espresso</span></a>
+    <p class="search-time">
+        <i class="fa fa-calendar icon"></i>
+        <span id="search-post-tags">2018-04-09</span>
+    </p>
+    
+    <p class="search-result-meta">
+    <i class="fa fa-tags icon"></i>
+        
+            <span id="search-post-tags">#自动化测试</span>
+        
+            <span id="search-post-tags">#espresso</span>
+        
+    </p>
+    
+    <div class="clearfix"></div>
+</div>
+
+                
+                <div class="media">
+    <a class="search-title" href="/2018/02/04/build-mulit-edition-apks-using-productflavors/"><i class="fa fa-quote-left"></i><span id="search-post-title">利用 ProductFlavors 构建差异化APK版本</span></a>
+    <p class="search-time">
+        <i class="fa fa-calendar icon"></i>
+        <span id="search-post-tags">2018-02-04</span>
+    </p>
+    
+    <p class="search-result-meta">
+    <i class="fa fa-tags icon"></i>
+        
+            <span id="search-post-tags">#android</span>
+        
+            <span id="search-post-tags">#gradle</span>
+        
+            <span id="search-post-tags">#productflavors</span>
+        
+    </p>
+    
+    <div class="clearfix"></div>
+</div>
+
+                
+                <div class="media">
+    <a class="search-title" href="/2018/02/03/download-android-source-code/"><i class="fa fa-quote-left"></i><span id="search-post-title">Android 源代码下载与编译</span></a>
+    <p class="search-time">
+        <i class="fa fa-calendar icon"></i>
+        <span id="search-post-tags">2018-02-03</span>
+    </p>
+    
+    <p class="search-result-meta">
+    <i class="fa fa-tags icon"></i>
+        
+            <span id="search-post-tags">#android</span>
+        
+            <span id="search-post-tags">#sourcecode</span>
+        
+    </p>
+    
+    <div class="clearfix"></div>
+</div>
+
+                
+                <div class="media">
+    <a class="search-title" href="/2018/01/09/eatablish-your-own-blog-with-hexo-and-github-pages/"><i class="fa fa-quote-left"></i><span id="search-post-title">Hexo + Github 搭建属于自己的小窝</span></a>
+    <p class="search-time">
+        <i class="fa fa-calendar icon"></i>
+        <span id="search-post-tags">2018-01-09</span>
+    </p>
+    
+    <p class="search-result-meta">
+    <i class="fa fa-tags icon"></i>
+        
+            <span id="search-post-tags">#hexo</span>
+        
+            <span id="search-post-tags">#blog</span>
+        
+    </p>
+    
+    <div class="clearfix"></div>
+</div>
+
+                
+                <div class="media">
+    <a class="search-title" href="/2018/02/11/hamcrest-matcher/"><i class="fa fa-quote-left"></i><span id="search-post-title">Hamcrest 匹配器</span></a>
+    <p class="search-time">
+        <i class="fa fa-calendar icon"></i>
+        <span id="search-post-tags">2018-02-11</span>
+    </p>
+    
+    <p class="search-result-meta">
+    <i class="fa fa-tags icon"></i>
+        
+            <span id="search-post-tags">#android</span>
+        
+            <span id="search-post-tags">#hamcrest</span>
+        
+    </p>
+    
+    <div class="clearfix"></div>
+</div>
+
+                
+                <div class="media">
+    <a class="search-title" href="/2018/04/26/how-to-write-unit-tests/"><i class="fa fa-quote-left"></i><span id="search-post-title">如何写有价值的单元测试</span></a>
+    <p class="search-time">
+        <i class="fa fa-calendar icon"></i>
+        <span id="search-post-tags">2018-04-26</span>
+    </p>
+    
+    <p class="search-result-meta">
+    <i class="fa fa-tags icon"></i>
+        
+            <span id="search-post-tags">#自动化测试</span>
+        
+            <span id="search-post-tags">#unit-test</span>
+        
+    </p>
+    
+    <div class="clearfix"></div>
+</div>
+
+                
+                <div class="media">
+    <a class="search-title" href="/2018/04/29/mockito-framework/"><i class="fa fa-quote-left"></i><span id="search-post-title">单元测试之— Mockito 框架</span></a>
+    <p class="search-time">
+        <i class="fa fa-calendar icon"></i>
+        <span id="search-post-tags">2018-04-29</span>
+    </p>
+    
+    <p class="search-result-meta">
+    <i class="fa fa-tags icon"></i>
+        
+            <span id="search-post-tags">#自动化测试</span>
+        
+            <span id="search-post-tags">#unit-test</span>
+        
+            <span id="search-post-tags">#Mock</span>
+        
+            <span id="search-post-tags">#Mockito</span>
+        
+    </p>
+    
+    <div class="clearfix"></div>
+</div>
+
+                
+                <div class="media">
+    <a class="search-title" href="/2018/05/02/powermock-framework/"><i class="fa fa-quote-left"></i><span id="search-post-title">单元测试之— PowerMock 框架</span></a>
+    <p class="search-time">
+        <i class="fa fa-calendar icon"></i>
+        <span id="search-post-tags">2018-05-02</span>
+    </p>
+    
+    <p class="search-result-meta">
+    <i class="fa fa-tags icon"></i>
+        
+            <span id="search-post-tags">#自动化测试</span>
+        
+            <span id="search-post-tags">#unit-test</span>
+        
+            <span id="search-post-tags">#Mock</span>
+        
+            <span id="search-post-tags">#PowerMock</span>
+        
+    </p>
+    
+    <div class="clearfix"></div>
+</div>
+
+                
+                <div class="media">
+    <a class="search-title" href="/2018/05/07/robolectric-framework/"><i class="fa fa-quote-left"></i><span id="search-post-title">单元测试之 —  Robolectric 框架</span></a>
+    <p class="search-time">
+        <i class="fa fa-calendar icon"></i>
+        <span id="search-post-tags">2018-05-07</span>
+    </p>
+    
+    <p class="search-result-meta">
+    <i class="fa fa-tags icon"></i>
+        
+            <span id="search-post-tags">#自动化测试</span>
+        
+            <span id="search-post-tags">#unit-test</span>
+        
+            <span id="search-post-tags">#robolectric</span>
+        
+    </p>
+    
+    <div class="clearfix"></div>
+</div>
+
+                
+                <div class="media">
+    <a class="search-title" href="/2018/04/19/android-proguard/"><i class="fa fa-quote-left"></i><span id="search-post-title">Andoid ProGuard</span></a>
+    <p class="search-time">
+        <i class="fa fa-calendar icon"></i>
+        <span id="search-post-tags">2018-04-19</span>
+    </p>
+    
+    <p class="search-result-meta">
+    <i class="fa fa-tags icon"></i>
+        
+            <span id="search-post-tags">#proguard</span>
+        
+    </p>
+    
+    <div class="clearfix"></div>
+</div>
+
+                
+            </div>
+        </section>
+    </div>
+</div>
+
+</div>
+</body>
+</html>

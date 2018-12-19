@@ -1,0 +1,1077 @@
+
+<!DOCTYPE html>
+<html lang="zh-cn">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="baidu-site-verification" content="fJhstNzkJ1"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="generator" content="小一 | 莫舍己道 勿扰他心">
+    <title>单元测试之— PowerMock 框架 - 小一 | 莫舍己道 勿扰他心</title>
+    <meta name="author" content="小一">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0" />
+    <link rel="Shortcut Icon" href="http://www.istarx.cc/assets/images/favicon.ico" type="image/x-icon">
+    
+        <meta name="keywords" content="unit-test,自动化测试,Mock,PowerMock">
+    
+    
+        <link rel="icon" href="http://www.istarx.cc/assets/images/favicon.ico">
+    
+    
+        <link rel="alternate" type="application/atom+xml" title="RSS" href="/atom.xml">
+    
+    
+    
+    
+        
+    
+    
+        <meta property="og:image" content="http://www.istarx.cc/assets/images/avatar.png"/>
+    
+    
+    
+        <meta property="og:image" content="http://ox8xvtm5b.bkt.clouddn.com/powermock.jpg"/>
+        <meta class="swiftype" name="image" data-type="enum"
+              content="http://ox8xvtm5b.bkt.clouddn.com/powermock.jpg"/>
+    
+    
+    <!--STYLES-->
+    <link rel="stylesheet" href="/assets/css/style-rlxfihttornraopitbezqtlbmvsdagzls3exfuttflefzmed5ps1pwz5efhy.min.css">
+    <!--STYLES END-->
+    
+
+    
+
+</head>
+
+<body>
+<div id="container">
+    <canvas id="anm-canvas" data-behavior="2" class="anm-canvas hidden"></canvas>
+    <div id="blog">
+        <!-- Define author's picture -->
+
+
+    
+        
+            
+        
+    
+
+<header id="header" data-behavior="2" class="fade-in">
+    <i id="btn-open-sidebar" class="fa fa-lg fa-bars"></i>
+    <div class="header-title">
+        <a class="header-title-link" href="/ ">小一 | 莫舍己道 勿扰他心</a>
+    </div>
+    <i class="btn-open-search fa fa-lg fa-search"></i>
+    
+        
+        <a class="header-right-picture  " href=" #about ">
+            
+        
+            <img class="header-picture" src="/assets/images/avatar.png" alt="作者的图片">
+        
+        </a>
+    
+</header>
+
+        <!-- Define author's picture -->
+
+
+
+        
+    
+
+<nav id="sidebar" data-behavior="2" class="hidden fade-in">
+    <div class="sidebar-top-whitespace"></div>
+    <div class="sidebar-container">
+        
+            <div class="sidebar-profile">
+                <!-- 头像效果-start -->
+                <div class="ih-item circle effect right_to_left">
+                    <a href="/ ">
+                        <img class="sidebar-profile-picture" src="/assets/images/avatar.png" alt="作者的图片">
+                        <div class="info">
+                            <div class="info-back">
+                                <h2>
+                                    
+                                    Android
+                                    
+                                </h2>
+                                <p>
+                                    
+                                    Pyhon
+                                    
+                                </p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <!-- 头像效果-end -->
+                <h4 class="sidebar-profile-name">小一</h4>
+                
+                    <h5 class="sidebar-profile-bio"><p>莫舍己道,勿扰他心.</p>
+</h5>
+                
+            </div>
+        
+        
+            <ul class="sidebar-buttons">
+            
+                <li class="sidebar-button">
+                    
+                        <a class="sidebar-button-link " href="/#blog">
+                            
+                            <i class="sidebar-button-icon fa fa-lg fa-home" aria-hidden="true"></i>
+                            <span class="sidebar-button-desc">首页</span>
+                        </a>
+            </li>
+            
+                <li class="sidebar-button">
+                    
+                        <a class="sidebar-button-link " href="/all-categories">
+                            
+                            <i class="sidebar-button-icon fa fa-lg fa-bookmark" aria-hidden="true"></i>
+                            <span class="sidebar-button-desc">分类</span>
+                        </a>
+            </li>
+            
+                <li class="sidebar-button">
+                    
+                        <a class="sidebar-button-link " href="/all-tags">
+                            
+                            <i class="sidebar-button-icon fa fa-lg fa-tags" aria-hidden="true"></i>
+                            <span class="sidebar-button-desc">标签</span>
+                        </a>
+            </li>
+            
+                <li class="sidebar-button">
+                    
+                        <a class="sidebar-button-link " href="/all-archives">
+                            
+                            <i class="sidebar-button-icon fa fa-lg fa-archive" aria-hidden="true"></i>
+                            <span class="sidebar-button-desc">归档</span>
+                        </a>
+            </li>
+            
+                <li class="sidebar-button">
+                    
+                    <a class="sidebar-button-link open-search-col" rel="noopener">
+                    
+                            <i class="sidebar-button-icon fa fa-lg fa-search" aria-hidden="true"></i>
+                            <span class="sidebar-button-desc">搜索</span>
+                        </a>
+            </li>
+            
+                <li class="sidebar-button">
+                    
+                        <a class="sidebar-button-link " href="#about">
+                            
+                            <i class="sidebar-button-icon fa fa-lg fa-question" aria-hidden="true"></i>
+                            <span class="sidebar-button-desc">关于</span>
+                        </a>
+            </li>
+            
+        </ul>
+        
+            <ul class="sidebar-buttons">
+            
+                <li class="sidebar-button">
+                    
+                        <a class="sidebar-button-link " href="https://github.com/cherlas" target="_blank" rel="noopener">
+                    
+                            <i class="sidebar-button-icon fa fa-lg fa-github" aria-hidden="true"></i>
+                            <span class="sidebar-button-desc">GitHub</span>
+                        </a>
+            </li>
+            
+                <li class="sidebar-button">
+                    
+                        <a class="sidebar-button-link " href="mailto:vm@li.cm" target="_blank" rel="noopener">
+                    
+                            <i class="sidebar-button-icon fa fa-lg fa-envelope-o" aria-hidden="true"></i>
+                            <span class="sidebar-button-desc">邮箱</span>
+                        </a>
+            </li>
+            
+        </ul>
+        
+            <ul class="sidebar-buttons">
+            
+                <li class="sidebar-button">
+                    
+                        <a class="sidebar-button-link " href="/atom.xml">
+                            
+                            <i class="sidebar-button-icon fa fa-lg fa-rss" aria-hidden="true"></i>
+                            <span class="sidebar-button-desc">RSS</span>
+                        </a>
+            </li>
+            
+        </ul>
+        
+    </div>
+    <div class="sidebar-bottom-whitespace"></div>
+</nav>
+
+        
+<div class="post-header-cover fade-in header-image-cover
+                    text-left
+                    post-header-cover--partial" style="background-image:url('http://ox8xvtm5b.bkt.clouddn.com/powermock.jpg');
+      filter: blur(0px); 
+      height: 60%;" data-behavior="2">
+</div>
+<div class="post-header-cover fade-in post-header-cover-background
+                            text-left
+                            post-header-cover--partial" style="
+     
+             height: 60%;
+     " data-behavior="2">
+
+    
+    <div class="post-header main-content-wrap text-left fadeInDown">
+    <div class="post-header-message content-with-table">
+        
+        <h1 class="post-title" itemprop="headline">
+            单元测试之— PowerMock 框架
+        </h1>
+        
+        
+        <div class="post-meta">
+    <time itemprop="datePublished" datetime="2018-05-02T21:29:46+08:00">
+        <img class="calendar" src="/assets/images/calendar.png">
+        
+        5月 02, 2018
+        
+    </time>
+    
+    <span>发布在 </span>
+    
+<a class="category-link" href="/categories/程序猿进化之路/">程序猿进化之路</a>, <a class="category-link" href="/categories/程序猿进化之路/自动化测试/">自动化测试</a>
+
+
+    
+    
+    <img class="tag-img" src="/assets/images/tag-icon.svg">
+    <div class="post-tags">
+        
+        <a href="/tags/自动化测试/">自动化测试</a>
+        
+        <a href="/tags/unit-test/">unit-test</a>
+        
+        <a href="/tags/Mock/">Mock</a>
+        
+        <a href="/tags/PowerMock/">PowerMock</a>
+        
+    </div>
+    
+</div>
+
+        
+    </div>
+</div>
+
+    
+</div>
+
+
+        <div id="main" data-behavior="2"
+             class="hasCover
+                        hasCoverMetaIn
+                        hasCoverCaption hidden fade-in">
+            
+<article class="post" itemscope="" itemtype="http://schema.org/BlogPosting">
+    
+        <span class="post-header-cover-caption caption">有时候人生会用砖头砸你的头，但不要丧失信心。 — Steve Jobs</span>
+    
+    
+    <div class="tableTile" data-message="目录">
+    </div>
+    <div class="post-content markdown" itemprop="articleBody">
+        <div class="main-content-wrap fadeInDown toc content-with-table">
+            <script src="/assets/js/APlayer.min.js"> </script><p>PowerMock 框架也是属于 Mock 框架的一种，它是从 EasyMock 和 Mockito 两个框架扩展而来的，其最大的优点就是可以 mock 或者屏蔽一些私有、静态、final 等方法。</p>
+<a id="more"></a>
+<p><ul class="toc js-fixedContent">
+<li><a href="#android-%E9%85%8D%E7%BD%AE-powermock">Android 配置 PowerMock</a></li>
+<li><a href="#%E5%9F%BA%E6%9C%AC%E6%B3%A8%E9%87%8A">基本注释</a></li>
+<li><a href="#%E6%93%8D%E4%BD%9C%E7%A7%81%E6%9C%89%E5%B1%9E%E6%80%A7%E5%92%8C%E6%96%B9%E6%B3%95">操作私有属性和方法</a></li>
+<li><a href="#%E5%B1%8F%E8%94%BD%E6%89%A7%E8%A1%8C">屏蔽执行</a></li>
+<li><a href="#mock-%E9%9D%99%E6%80%81%E6%96%B9%E6%B3%95">Mock 静态方法</a></li>
+<li><a href="#mock-%E7%A7%81%E6%9C%89%E6%96%B9%E6%B3%95">Mock 私有方法</a></li>
+<li><a href="#mock-%E6%9E%84%E9%80%A0%E5%87%BD%E6%95%B0">Mock 构造函数</a></li>
+<li><a href="#%E6%80%BB%E7%BB%93">总结</a></li>
+</ul>
+</p>
+<p>PowerMock 正如它的名字一样，是一种“强大”的 mock 框架。PowerMock 和 Mock 一样，主要为了解决代码中难以构建或者难以测试部分，它通过在测试用例运行期间修改字节码文件实现 mock、stub 或其它功能。它涵盖了 <code>EasyMock</code>和<code>Mockito</code>的所有功能，同时对这两个框架进行了扩展，弥补了这两个框架不能 mock 私有、静态、final 方法及变量等缺点。</p>
+<p>PowerMock 框架支持 JUnit 以及 TestNG，同时支持多个版本的 JUnit 版本，分别为 <code>JUnit 4.4+</code>和<code>JUnit 4.0~4.3</code>，在 PowerMock 2.0 版本之后，JUnit 3 已被废除。</p>
+<h2 id="android-配置-powermock"><a class="anchor" href="#android-配置-powermock"></a> Android 配置 PowerMock</h2>
+<p>Android Studio 中使用 PowerMock 框架需要添加如下依赖：</p>
+<figure class="highlight groovy"><table><tr><td class="code"><pre><span class="line">dependencies &#123;</span><br><span class="line">    <span class="comment">// powermock framework</span></span><br><span class="line">    <span class="keyword">def</span> powerMockVersion = <span class="string">'2.0.0-beta.5'</span></span><br><span class="line">    <span class="comment">// powermock junit4</span></span><br><span class="line">    testImplementation <span class="string">"org.powermock:powermock-module-junit4:$&#123;powerMockVersion&#125;"</span></span><br><span class="line">    <span class="comment">// powermock with mockito2</span></span><br><span class="line">    testImplementation <span class="string">"org.powermock:powermock-api-mockito2:$&#123;powerMockVersion&#125;"</span></span><br><span class="line">    <span class="comment">// powermock with easymock</span></span><br><span class="line">    testImplementation <span class="string">"org.powermock:powermock-api-easymock:$&#123;powerMockVersion&#125;"</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="基本注释"><a class="anchor" href="#基本注释"></a> 基本注释</h2>
+<ul>
+<li>
+<p><code>@RunWith(PowerMockRunner.class)</code></p>
+<p>如果测试用例使用 PowerMock 框架运行，则需要在测试类前添加<code>@RunWith(PowerMockRunner.class)</code>注释，<code>PowerMockRunner</code>也可以替换成自定义的继承自<code>PowerMockRunner</code>的 Runner；</p>
+</li>
+<li>
+<p><code>@PrepareForTest({SomeClass.class}, ...)</code></p>
+<p>此注释意为告诉 PowerMock 准备一些测试所必须的类，包括一些 final 修饰的类，包含静态方法或变量、私有方法或变量以及 native 修饰的方法。</p>
+<p>该注释可以用来注释某一(些)测试类，也可以修饰特定测试方法，这取决于你测试用例的设计，如果用来注释测试类，则 PowerMock 会为该测试类中的所有方法准备所指定的类，如果在测试类和测试方法都用<code>PrepareForTest()注释</code>，则测试类方法的注释会覆盖测试类的注释。</p>
+</li>
+<li>
+<p><code>@PrepareOnlyThisForTest({SomeClass.class}, ...)</code></p>
+<p>和<code>PrepareForTest()</code>方法类似，两者的区别在于<code>PrepareOnlyThisForTest()</code>只针对某个特定的类，不对类的层次结构进行操作，但是<code>PrepareForTest()</code>会对整个类的层次结构进行操作。</p>
+</li>
+<li>
+<p><code>@PrepareEverythingForTest()</code></p>
+<p>此注释意为准备除特定的系统和测试相关类以外的所有类用来测试，但是同样会加载静态初始化块。</p>
+</li>
+<li>
+<p><code>@PoweMockIgnore</code></p>
+<p>在正常情况下，PowerMock 会使用<code>MockClassLoader</code>加载所有的类，但是在某些情况下不需要使用 PowerMock 的类加载器加载，例如在 PowerMock 和 Robolectric 框架搭配使用时，此时需要使用<code>@PowerMockIgnore</code>对其进行注释，其参数可以是某一个类也可以包，例如</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="meta">@RunWith</span>(PowerMockRunner.class)</span><br><span class="line"><span class="meta">@PowerMockIgnore</span>(&#123;<span class="string">"cc.istarx.MainActivity"</span>,<span class="string">"android.*"</span>&#125;)</span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">ExamplePowerMockTest</span> </span>&#123;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>但是使用<code>@PowerMockIgnore</code>注释的最大的缺点就是必须对每个不同的测试类都需要该注释，这样就造成了相同的代码在很多处都存在，给维护带来很大的不便。对于这种情况有两种方法可以解决：</p>
+<ul>
+<li>
+<p>编写基类，并把公有的类和包在基类中使用<code>@PowerMockIgnore</code>注释，并让所有的测试类都继承该基类</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="meta">@RunWith</span>(PowerMockRunner.class)</span><br><span class="line"><span class="meta">@PowerMockIgnore</span>(&#123;<span class="string">"cc.istarx.MainActivity"</span>,<span class="string">"android.*"</span>&#125;)</span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">BaseClass</span> </span>&#123; </span><br><span class="line">    <span class="comment">// 基类</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> TestClass1 extends BaseClass &#123;</span><br><span class="line">    <span class="meta">@Test</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">test1</span><span class="params">()</span></span>&#123;</span><br><span class="line">        <span class="comment">// do some test here</span></span><br><span class="line">    &#125;</span><br><span class="line">    ...</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li>
+<p>利用 PowerMock 1.7.0 版本之后可以使用配置文件指定忽略加载的类和包，例如：</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line">powermock.global-ignore=<span class="string">"cc.istarx.MainActivity"</span> <span class="comment">// 单个类</span></span><br><span class="line">powermock.global-ignore=<span class="string">"cc.istarx.MainActivity"</span>,<span class="string">"android.*"</span> <span class="comment">// 多个类和包</span></span><br></pre></td></tr></table></figure>
+<p>所有用户定义的配置文件在目录<code>org/powermock/extensions/configuration.properties</code>中。如果在某一测试类中需要取消这些配置，则只需将<code>globalIgnore</code>值置为<code>false</code>即可。例如：</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="meta">@RunWith</span>(PowerMockRunner.class)</span><br><span class="line"><span class="meta">@PowerMockIgnore</span>(globalIgnore = <span class="keyword">false</span>)</span><br><span class="line"><span class="keyword">public</span> TestClass &#123;</span><br><span class="line">    ...</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<div class="alert warning"><p>当<code>@PrepareForTest</code>、<code>@PrepareOnlyThisForTest</code>、<code>@PrepareEverythingForTest</code>、<code>@PowerMockIgnore</code>注释同时出现时，<code>@PrepareForTest</code>、<code>@PrepareOnlyThisForTest</code>优先级要高于<code>@PowerMockIgnore</code>，但是 <code>@PrepareEverythingForTest</code>的优先级要低于<code>@PowerMockIgnore</code>。</p>
+</div>
+</li>
+</ul>
+<h2 id="操作私有属性和方法"><a class="anchor" href="#操作私有属性和方法"></a> 操作私有属性和方法</h2>
+<p>正常情况下，为降低代码的侵入性，不介意修改私有变量或者操作私有方法和构造函数。但是为了达到更高的覆盖率，防止后面代码重构破坏原有功能，这种情况下操作私有变量、方法以及构造函数是很有必要的。</p>
+<p>PowerMock 提供了一个用来操作私有属性、方法以及构建函数，该类中提供了操作私有变量、方法、构造函数的方法。例如：</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line">Whitebox.newInstance(Class&lt;T&gt; classToInstantiate); <span class="comment">// 不执行构造函数而实例化</span></span><br><span class="line">Whitebox.ssetInternalState(Object object, Class&lt;?&gt; fieldType, Object value); <span class="comment">// 私有属性的赋值</span></span><br><span class="line">Whitebox.invokeConstructor(Class&lt;T&gt; classThatContainsTheConstructorToTest, Class&lt;?&gt;[] parameterTypes, Object[] arguments); <span class="comment">// 执行私有的构建函数</span></span><br><span class="line">Whitebox.invokeMethod(Class&lt;?&gt; klass, Object... arguments); <span class="comment">// 执行私有方法</span></span><br><span class="line">...</span><br></pre></td></tr></table></figure>
+<p>一个完整的例子如下：</p>
+<p>被测试类:</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">WhiteboxDemo</span> </span>&#123;</span><br><span class="line">    <span class="keyword">private</span> String name;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">static</span> WhiteboxDemo demo;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">private</span> <span class="title">WhiteboxDemo</span><span class="params">()</span> </span>&#123; &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> WhiteboxDemo <span class="title">getInstance</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (demo == <span class="keyword">null</span>) &#123;</span><br><span class="line">            demo = <span class="keyword">new</span> WhiteboxDemo();</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> demo;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> String <span class="title">getName</span><span class="params">()</span> </span>&#123; <span class="keyword">return</span> name; &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title">setName</span><span class="params">(String name)</span> </span>&#123; <span class="keyword">this</span>.name = name; &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>对应的测试用例：</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="meta">@Test</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">WhiteBoxTest</span><span class="params">()</span> <span class="keyword">throws</span> Exception </span>&#123;</span><br><span class="line">    String name = <span class="string">"whitebox"</span>;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 不执行构造函数而实例化</span></span><br><span class="line">    WhiteboxDemo demo = Whitebox.newInstance(WhiteboxDemo.class);</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 静态私有属性的赋值</span></span><br><span class="line">    Whitebox.setInternalState(WhiteboxDemo.class, <span class="string">"demo"</span>, demo);</span><br><span class="line">    <span class="comment">// 非静态私有属性的赋值</span></span><br><span class="line">    Whitebox.setInternalState(demo, <span class="string">"name"</span>, name);</span><br><span class="line">    Field field = Whitebox.getField(WhiteboxDemo.class, <span class="string">"name"</span>);</span><br><span class="line">    assertEquals(name, field.get(demo));</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 执行私有的构建函数</span></span><br><span class="line">    WhiteboxDemo demo1 = Whitebox.invokeConstructor(WhiteboxDemo.class);</span><br><span class="line">    assertNotNull(demo1);</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 执行私有方法</span></span><br><span class="line">    Whitebox.invokeMethod(demo, <span class="string">"setName"</span>,<span class="string">"setName"</span>);</span><br><span class="line">    assertEquals(<span class="string">"setName"</span>, Whitebox.getInternalState(demo, <span class="string">"name"</span>)); <span class="comment">// 获取私有变量</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="屏蔽执行"><a class="anchor" href="#屏蔽执行"></a> 屏蔽执行</h2>
+<p>在被测代码中，某些方法的执行对测试带来了阻碍，比如 <code>System.loadLibrary()</code>等。类似的系统方法可以利用 PowerMock 框架可以模拟出来，但是某些情况下，比如某个变量、构造函数等，不能利用模拟的方法解决这类问题，PowerMock 提供了一种方法可以绕过这些方法、变量、构造函数的执行，极大的提高了测试的便利性。</p>
+<p>PowerMock 用来绕过执行的方法是<code>suppress()</code>，该方法在<code>org.powermock.api.support.membermodification.MemberModifier</code>类中，该方法的参数可以是 <code>Mehtod</code>、<code>Fied</code>、<code>constructor</code>，如果同时绕过多个<code>Field</code>或者<code>constructor</code>，则可以构建一维数组进行传递。</p>
+<p>绕过某个方法、变量、构造函数需要注意一下几点：</p>
+<ul>
+<li>测试用例所在的测试类必须要以<code>@RunWith(PowerMockRunner.class)</code>进行注释；</li>
+<li>如果要屏蔽某个类的静态初始化块，则需要对对测试类添加注释<code>@SuppressStaticInitializationFor(class.want.to.suppress.ClassName)</code>;</li>
+<li>如果要对某个类的构造函数、方法、变量进行屏蔽，则需要在<code>测试类</code>之前添加<code>@PrepareForTest()</code>注释；</li>
+</ul>
+<p>例如有如下代码：</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">SuppressDemo</span> </span>&#123;</span><br><span class="line">    <span class="keyword">public</span> String firstName = <span class="string">"test"</span>;</span><br><span class="line">    <span class="keyword">public</span> String secondName;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">int</span> id;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">static</span> &#123;</span><br><span class="line">        id = <span class="number">123</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">SuppressDemo</span><span class="params">(String secondName)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.secondName = secondName;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setSecondName</span> <span class="params">(String secondName)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.secondName = secondName;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> String <span class="title">updateSecondName</span> <span class="params">(String name)</span> </span>&#123;</span><br><span class="line">        setSecondName(name);</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">this</span>.secondName;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>对应的测试用例如下：</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="meta">@RunWith</span>(PowerMockRunner.class)</span><br><span class="line"><span class="comment">// 屏蔽静态初始化块</span></span><br><span class="line"><span class="meta">@SuppressStaticInitializationFor</span>(<span class="string">"cc.istarx.powermockdemo.SuppressDemo"</span>)</span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">ExampleTest</span> </span>&#123;</span><br><span class="line">    <span class="meta">@Test</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">suppressTest</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="comment">// 屏蔽方法的执行</span></span><br><span class="line">        suppress(method(SuppressDemo.class,<span class="string">"setSecondName"</span>, String.class));</span><br><span class="line">        <span class="comment">// 屏蔽构造函数，</span></span><br><span class="line">        suppress(constructor(SuppressDemo.class,String.class));</span><br><span class="line">        <span class="comment">// 屏蔽变量</span></span><br><span class="line">        suppress(field(SuppressDemo.class,<span class="string">"firstName"</span>));</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 屏蔽构造函数之后可以利用 WhiteBox.newInstance() 方法实例化参数</span></span><br><span class="line">        SuppressDemo demo = Whitebox.newInstance(SuppressDemo.class);</span><br><span class="line">        <span class="comment">// firstName 变量被屏蔽，下面这句断言位真</span></span><br><span class="line">        assertNull(demo.getFirstName());</span><br><span class="line">        <span class="comment">// 静态初始化块被屏蔽，下面这句断言位真</span></span><br><span class="line">        assertEquals(<span class="number">0</span>, SuppressDemo.id);</span><br><span class="line">        <span class="comment">// 对象成员变量都是默认值</span></span><br><span class="line">        assertNull(demo.secondName);</span><br><span class="line">        <span class="comment">// 由于 setSecondName() 方法被屏蔽，所以 secondName 不会被更新</span></span><br><span class="line">        assertNull(demo.updateSecondName(<span class="string">"suppress"</span>));</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="mock-静态方法"><a class="anchor" href="#mock-静态方法"></a> Mock 静态方法</h2>
+<p>在实际项目测试中，被测代码中难免会有静态方法，给测试带来了一定的难度。PowerMock 比 Mockito 框架好的地方就是可以对静态、私有、final类型的方法等进行模拟。PoweMock 在模拟一个静态方法时有一套固定的流程，主要步骤如下：</p>
+<ul>
+<li>
+<p>以<code>@RunWith(PowerMockRunner.class)</code>对测试类进行注释；</p>
+</li>
+<li>
+<p>对包含静态方法的类以<code>@PrepareForTest()</code>注释，所准备的类为包含静态方法的类，次注释可以是类级别也可以是测试方法级别；</p>
+</li>
+<li>
+<p>在测试用例中的步骤如下：</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line">PowerMock.mockStatic(WithStaticMethod.class);</span><br><span class="line">when(WithStaticMethod.getNum()).thenReturn(<span class="number">11</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">// 执行静态方法</span></span><br><span class="line"></span><br><span class="line">PowerMockito.verifyStatic(WithStaticMethod.class);</span><br><span class="line">WithStaticMethod.getNum();</span><br></pre></td></tr></table></figure>
+</li>
+<li>
+<p>在<code>verify</code>的时候同样可以进行参数匹配或者次数验证:</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line">PowerMockito.verifyStatic(WithStaticMethod.class, times(<span class="number">1</span>));</span><br><span class="line">WithStaticMethod.getNumWithNum(anyInt());</span><br></pre></td></tr></table></figure>
+<div class="alert warning"><p>必须在每个静态方法的验证之前调用<code>PowerMockito.verifyStatic(Static.class)</code></p>
+</div>
+</li>
+</ul>
+<p>举例：</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 被测试代码</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">WithStaticMethod</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">int</span> <span class="title">getNum</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="number">999</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">int</span> <span class="title">getNumWithNum</span><span class="params">(<span class="keyword">int</span> num)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> num;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 测试用例代码</span></span><br><span class="line"><span class="meta">@Test</span></span><br><span class="line"><span class="meta">@PrepareForTest</span>(WithStaticMethod.class)</span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">mockStaticMethodTest</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    PowerMockito.mockStatic(WithStaticMethod.class);</span><br><span class="line">    when(WithStaticMethod.getNum()).thenReturn(<span class="number">11</span>);</span><br><span class="line">    when(WithStaticMethod.getNumWithNum(<span class="number">9</span>)).thenReturn(<span class="number">19</span>);</span><br><span class="line"></span><br><span class="line">    assertEquals(<span class="number">11</span>, WithStaticMethod.getNum());</span><br><span class="line">    assertEquals(<span class="number">19</span>, WithStaticMethod.getNumWithNum(<span class="number">9</span>));</span><br><span class="line"></span><br><span class="line">    PowerMockito.verifyStatic(WithStaticMethod.class, times(<span class="number">1</span>));</span><br><span class="line">    WithStaticMethod.getNum();</span><br><span class="line">    PowerMockito.verifyStatic(WithStaticMethod.class, atLeast(<span class="number">1</span>));</span><br><span class="line">    WithStaticMethod.getNumWithNum(eq(<span class="number">9</span>));</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="mock-私有方法"><a class="anchor" href="#mock-私有方法"></a> Mock 私有方法</h2>
+<p>PowerMock 提供了验证私有方法的方法<code>verifyPrivate(tested).invoke(&quot;privateMethodName&quot;, argument1)</code>，例如：</p>
+<p>待测试代码：</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">VerifyPrivateAndConstructor</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">private</span> String <span class="title">privateMethod</span><span class="params">(String str)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> str;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> String <span class="title">getStr</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> privateMethod(<span class="string">"test"</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>测试用例：</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="meta">@Test</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">verifyPrivateMethod</span><span class="params">()</span> <span class="keyword">throws</span> Exception </span>&#123;</span><br><span class="line">    VerifyPrivateAndConstructor pr = mock(VerifyPrivateAndConstructor.class);</span><br><span class="line"></span><br><span class="line">    when(pr.getStr()).thenCallRealMethod();</span><br><span class="line">    pr.getStr();</span><br><span class="line"></span><br><span class="line">    PowerMockito.verifyPrivate(pr, times(<span class="number">1</span>)).invoke(<span class="string">"privateMethod"</span>, <span class="string">"test"</span>);</span><br><span class="line">    pr.getStr();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="mock-构造函数"><a class="anchor" href="#mock-构造函数"></a> Mock 构造函数</h2>
+<p>Mock 构造函数时必须用<code>@PrepareForTest(XXX.class)</code>对测试方法或者类进行注释，并用<code>PowerMock.whenNew()</code>对构造函数进行 mock，例如：</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="meta">@Test</span>(expected = IllegalArgumentException.class)</span><br><span class="line"><span class="meta">@PrepareForTest</span>(VerifyPrivateAndConstructor.class)</span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">mockConstructorTest</span><span class="params">()</span> <span class="keyword">throws</span> Exception </span>&#123;</span><br><span class="line"></span><br><span class="line">    whenNew(VerifyPrivateAndConstructor.class).withAnyArguments().thenThrow(<span class="keyword">new</span> IllegalArgumentException(<span class="string">"error message"</span>));</span><br><span class="line">    <span class="keyword">new</span> VerifyPrivateAndConstructor(<span class="string">"test"</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="总结"><a class="anchor" href="#总结"></a> 总结</h2>
+<p>PowerMock 正如其名，确实很强大，可以解决一些测试中很难测试的点或者和框架、系统进行交互的地方，给测试带来了极大的便利性。PowerMock 也可以和其它框架进行配合使用，比如 Robolectric，关于 Robolectric 后续会有专门的介绍。</p>
+<p>谢谢阅读，希望能给你带来帮助。</p>
+<p>本文示例代码：<a href="https://github.com/cherlas/BlogDemo/tree/master/powermockdemo" target="_blank" rel="noopener">PowerMock Demo</a></p>
+
+            
+
+        </div>
+        
+            <div class="tableContent fade-in" data-message="true"></div>
+        
+        
+            <div class="post-copyright main-content-wrap content-with-table">
+    <p class="copyright-item">
+        <span>原文作者: </span>
+        <a href="http://http://www.istarx.cc">小一</a>
+    </p>
+    <p class="copyright-item">
+        <span>原文链接: </span>
+        <a href="http://www.istarx.cc/2018/05/02/powermock-framework/">http://www.istarx.cc/2018/05/02/powermock-framework/</a>
+    </p>
+    <p class="copyright-item">
+        <span>许可协议: </span>
+        <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/" target="_blank">知识共享署名-非商业性使用 4.0 国际许可协议，转载请注明出处，谢谢.</a>
+    </p>
+</div>
+
+        
+    </div>
+    
+        <div id="post-footer" class="post-footer main-content-wrap content-with-table">
+            
+                <div class="post-footer-tags">
+                    <span class="text-color-light text-small">标签</span><br>
+                    
+<div class="tagcloud article-tag-list">
+    
+    <li class="article-tag-list-item">
+        <a href="/tags/自动化测试/" class="js-tag color1">自动化测试</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="/tags/unit-test/" class="js-tag color5">unit-test</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="/tags/Mock/" class="js-tag color5">Mock</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="/tags/PowerMock/" class="js-tag color5">PowerMock</a>
+    </li>
+    
+    <div class="clearfix"></div>
+</div>
+
+
+                </div>
+            
+            
+                <div class="post-actions-wrap">
+    <nav>
+        <ul class="post-actions post-action-nav">
+            <li class="post-action">
+                
+                
+                <a class="post-action-btn btn btn--default tooltip--top" href="/2018/05/07/robolectric-framework/" data-tooltip="单元测试之 —  Robolectric 框架" aria-label="上一篇: 单元测试之 —  Robolectric 框架">
+                    
+                        <i class="fa fa-angle-left" aria-hidden="true"></i>
+                        <span class="hide-xs hide-sm text-small icon-ml">上一篇</span>
+                    </a>
+            </li>
+            <li class="post-action">
+                
+                
+                <a class="post-action-btn btn btn--default tooltip--top" href="/2018/04/29/mockito-framework/" data-tooltip="单元测试之— Mockito 框架" aria-label="下一篇: 单元测试之— Mockito 框架">
+                    
+                        <span class="hide-xs hide-sm text-small icon-mr">下一篇</span>
+                        <i class="fa fa-angle-right" aria-hidden="true"></i>
+                    </a>
+            </li>
+        </ul>
+    </nav>
+    <ul class="post-actions post-action-share">
+        <li class="post-action hide-lg hide-md hide-sm">
+            <a class="post-action-btn btn btn--default btn-open-shareoptions" href="#btn-open-shareoptions" aria-label="Diesen Beitrag teilen">
+                <i class="fa fa-share-alt" aria-hidden="true"></i>
+            </a>
+        </li>
+        
+        
+        <li class="post-action">
+            
+                <a class="post-action-btn btn btn--default" href="#" aria-label="Nach oben">
+                    
+                    <i class="fa fa-arrow-up" aria-hidden="true"></i>
+                </a>
+        </li>
+    </ul>
+</div>
+
+
+            
+            
+        </div>
+    
+</article>
+
+
+
+            <footer id="footer" class="main-content-wrap">
+    <span class="copyrights">
+        Copyrights &copy; 2018 小一. All Rights Reserved.
+    </span>
+</footer>
+
+        </div>
+        
+        <div id="bottom-bar" class="post-bottom-bar" data-behavior="2">
+            <div class="post-actions-wrap">
+    <nav>
+        <ul class="post-actions post-action-nav">
+            <li class="post-action">
+                
+                
+                <a class="post-action-btn btn btn--default tooltip--top" href="/2018/05/07/robolectric-framework/" data-tooltip="单元测试之 —  Robolectric 框架" aria-label="上一篇: 单元测试之 —  Robolectric 框架">
+                    
+                        <i class="fa fa-angle-left" aria-hidden="true"></i>
+                        <span class="hide-xs hide-sm text-small icon-ml">上一篇</span>
+                    </a>
+            </li>
+            <li class="post-action">
+                
+                
+                <a class="post-action-btn btn btn--default tooltip--top" href="/2018/04/29/mockito-framework/" data-tooltip="单元测试之— Mockito 框架" aria-label="下一篇: 单元测试之— Mockito 框架">
+                    
+                        <span class="hide-xs hide-sm text-small icon-mr">下一篇</span>
+                        <i class="fa fa-angle-right" aria-hidden="true"></i>
+                    </a>
+            </li>
+        </ul>
+    </nav>
+    <ul class="post-actions post-action-share">
+        <li class="post-action hide-lg hide-md hide-sm">
+            <a class="post-action-btn btn btn--default btn-open-shareoptions" href="#btn-open-shareoptions" aria-label="Diesen Beitrag teilen">
+                <i class="fa fa-share-alt" aria-hidden="true"></i>
+            </a>
+        </li>
+        
+        
+        <li class="post-action">
+            
+                <a class="post-action-btn btn btn--default" href="#" aria-label="Nach oben">
+                    
+                    <i class="fa fa-arrow-up" aria-hidden="true"></i>
+                </a>
+        </li>
+    </ul>
+</div>
+
+
+        </div>
+        <div id="share-options-bar" class="share-options-bar" data-behavior="2">
+    <i id="btn-close-shareoptions" class="fa fa-close"></i>
+    <ul class="share-options">
+        
+    </ul>
+</div>
+
+        
+    </div>
+    
+
+
+    
+        
+    
+
+<div id="about">
+    <div id="about-card">
+        <div id="about-btn-close">
+            <i class="fa fa-remove"></i>
+        </div>
+        
+            <img id="about-card-picture" src="/assets/images/avatar.png" alt="作者的图片">
+        
+            <h4 id="about-card-name">小一</h4>
+        
+            <div id="about-card-bio"><p>莫舍己道,勿扰他心.</p>
+</div>
+        
+        
+            <div id="about-card-job">
+                <i class="fa fa-briefcase"></i>
+                <br>
+                <p>Android开发<br>自动化测试</p>
+
+            </div>
+        
+        
+            <div id="about-card-location">
+                <i class="fa fa-map-marker"></i>
+                <br>
+                ShanXi Xi&#39;an
+            </div>
+        
+    </div>
+</div>
+
+    
+
+<!-- Define author's picture -->
+
+
+    
+        
+    
+
+<div id="cover" style="background-image:url('http://ox8xvtm5b.bkt.clouddn.com/cover.jpg');">
+    <div class="first-page-desc-container">
+        <span class="first-page-desc pulse"></span>
+    </div>
+    <div class="full-screen-head hidden">
+        <!-- 头像效果-start -->
+        <div class="ih-item circle effect right_to_left fade-in">
+            <a href="/#blog" class="blog-button-full-screen">
+                <img class="sidebar-profile-picture" src="/assets/images/avatar.png" alt="作者的图片">
+                <div class="info">
+                    <div class="info-back">
+                        <h2>
+                            
+                            Android
+                            
+                        </h2>
+                        <p>
+                            
+                            Pyhon
+                            
+                        </p>
+                    </div>
+                </div>
+            </a>
+        </div>
+        <!-- 头像效果-end -->
+    </div>
+</div>
+
+    <!--SCRIPTS-->
+<script src="/assets/js/script-6x2v9gn7dhx5dmgdhsw61sllyjdn5hhxgfecagyxt4udfqiwo1hxodblwcyt.min.js"></script>
+<!--SCRIPTS END-->
+
+
+<script src="https://cdn.jsdelivr.net/npm/moment@2.20.1/min/moment-with-locales.min.js"></script>
+<script src="//cdn.jsdelivr.net/algoliasearch/3/algoliasearch.min.js"></script>
+<script>
+  var algoliaClient = algoliasearch('8N47Y2YYXB', '6ed86c6c2611f5cfdbfc015301c1bdb2');
+  var algoliaIndex = algoliaClient.initIndex('blog-index');
+</script>
+
+
+<script>
+  window.onload = function() {
+    if (location.hash !== '#blog' && location.hash !== '' && location.hash !== '#') {
+      window.location.hash = '';
+    }
+  };
+</script>
+
+    <div data-behavior="2" class="search-tools-col hide">
+    <div class="tools-wrap">
+        <section class="tools-section tools-section-all">
+            <div class="search-wrap">
+                <input class="search-ipt" type="text" placeholder="find something…">
+                <i class="icon-search icon"></i>
+                <i class="icon-close icon "></i>
+            </div>
+            <div class="widget tagcloud search-tag">
+                <ul class="article-tag-list">
+                    
+                    <li class="article-tag-list-item">
+                        <a class="js-tag color3">android</a>
+                    </li>
+                    
+                    <li class="article-tag-list-item">
+                        <a class="js-tag color1">自动化测试</a>
+                    </li>
+                    
+                    <li class="article-tag-list-item">
+                        <a class="js-tag color2">UIAutomator</a>
+                    </li>
+                    
+                    <li class="article-tag-list-item">
+                        <a class="js-tag color4">sql</a>
+                    </li>
+                    
+                    <li class="article-tag-list-item">
+                        <a class="js-tag color5">unit-test</a>
+                    </li>
+                    
+                    <li class="article-tag-list-item">
+                        <a class="js-tag color4">espresso</a>
+                    </li>
+                    
+                    <li class="article-tag-list-item">
+                        <a class="js-tag color2">gradle</a>
+                    </li>
+                    
+                    <li class="article-tag-list-item">
+                        <a class="js-tag color5">productflavors</a>
+                    </li>
+                    
+                    <li class="article-tag-list-item">
+                        <a class="js-tag color1">sourcecode</a>
+                    </li>
+                    
+                    <li class="article-tag-list-item">
+                        <a class="js-tag color5">hexo</a>
+                    </li>
+                    
+                    <li class="article-tag-list-item">
+                        <a class="js-tag color5">blog</a>
+                    </li>
+                    
+                    <li class="article-tag-list-item">
+                        <a class="js-tag color4">hamcrest</a>
+                    </li>
+                    
+                    <li class="article-tag-list-item">
+                        <a class="js-tag color5">Mock</a>
+                    </li>
+                    
+                    <li class="article-tag-list-item">
+                        <a class="js-tag color3">Mockito</a>
+                    </li>
+                    
+                    <li class="article-tag-list-item">
+                        <a class="js-tag color5">PowerMock</a>
+                    </li>
+                    
+                    <li class="article-tag-list-item">
+                        <a class="js-tag color2">robolectric</a>
+                    </li>
+                    
+                    <li class="article-tag-list-item">
+                        <a class="js-tag color4">proguard</a>
+                    </li>
+                    
+                    <li class="article-tag-list-item">
+                        <a class="js-tag color1">theme</a>
+                    </li>
+                    
+                    <li class="article-tag-list-item">
+                        <a class="js-tag color3">主题</a>
+                    </li>
+                    
+                    <div class="clearfix"></div>
+                </ul>
+            </div>
+            <p class="results-count hide" data-message-zero="没有找到文章" data-message-one="找到 1 篇文章" data-message-other="找到 {n} 篇文章">
+                找到 17 篇文章
+            </p>
+            <div class="search-result">
+                
+                <div class="media">
+    <a class="search-title" href="/2018/02/10/android-autotest-summary/"><i class="fa fa-quote-left"></i><span id="search-post-title">Android 自动化测试总述</span></a>
+    <p class="search-time">
+        <i class="fa fa-calendar icon"></i>
+        <span id="search-post-tags">2018-02-10</span>
+    </p>
+    
+    <p class="search-result-meta">
+    <i class="fa fa-tags icon"></i>
+        
+            <span id="search-post-tags">#android</span>
+        
+            <span id="search-post-tags">#自动化测试</span>
+        
+    </p>
+    
+    <div class="clearfix"></div>
+</div>
+
+                
+                <div class="media">
+    <a class="search-title" href="/2018/04/07/android-test-uiautomator/"><i class="fa fa-quote-left"></i><span id="search-post-title">Android 自动化测试之 — UI Automator</span></a>
+    <p class="search-time">
+        <i class="fa fa-calendar icon"></i>
+        <span id="search-post-tags">2018-04-07</span>
+    </p>
+    
+    <p class="search-result-meta">
+    <i class="fa fa-tags icon"></i>
+        
+            <span id="search-post-tags">#自动化测试</span>
+        
+            <span id="search-post-tags">#UIAutomator</span>
+        
+    </p>
+    
+    <div class="clearfix"></div>
+</div>
+
+                
+                <div class="media">
+    <a class="search-title" href="/2018/12/17/unique-keyword-of-mysql/"><i class="fa fa-quote-left"></i><span id="search-post-title">SQL 中的 UNIQUE 关键字</span></a>
+    <p class="search-time">
+        <i class="fa fa-calendar icon"></i>
+        <span id="search-post-tags">2018-12-17</span>
+    </p>
+    
+    <p class="search-result-meta">
+    <i class="fa fa-tags icon"></i>
+        
+            <span id="search-post-tags">#sql</span>
+        
+    </p>
+    
+    <div class="clearfix"></div>
+</div>
+
+                
+                <div class="media">
+    <a class="search-title" href="/2018/04/24/unit-test-annotation/"><i class="fa fa-quote-left"></i><span id="search-post-title">单元测试常用注释</span></a>
+    <p class="search-time">
+        <i class="fa fa-calendar icon"></i>
+        <span id="search-post-tags">2018-04-24</span>
+    </p>
+    
+    <p class="search-result-meta">
+    <i class="fa fa-tags icon"></i>
+        
+            <span id="search-post-tags">#unit-test</span>
+        
+    </p>
+    
+    <div class="clearfix"></div>
+</div>
+
+                
+                <div class="media">
+    <a class="search-title" href="/2018/04/16/unit-test-what-and-why/"><i class="fa fa-quote-left"></i><span id="search-post-title">Android自动化测试之 — 简单聊聊单元测试</span></a>
+    <p class="search-time">
+        <i class="fa fa-calendar icon"></i>
+        <span id="search-post-tags">2018-04-16</span>
+    </p>
+    
+    <p class="search-result-meta">
+    <i class="fa fa-tags icon"></i>
+        
+            <span id="search-post-tags">#自动化测试</span>
+        
+            <span id="search-post-tags">#unit-test</span>
+        
+    </p>
+    
+    <div class="clearfix"></div>
+</div>
+
+                
+                <div class="media">
+    <a class="search-title" href="/2018/04/09/android-test-espresso/"><i class="fa fa-quote-left"></i><span id="search-post-title">Android 自动化测试之 — Espresso</span></a>
+    <p class="search-time">
+        <i class="fa fa-calendar icon"></i>
+        <span id="search-post-tags">2018-04-09</span>
+    </p>
+    
+    <p class="search-result-meta">
+    <i class="fa fa-tags icon"></i>
+        
+            <span id="search-post-tags">#自动化测试</span>
+        
+            <span id="search-post-tags">#espresso</span>
+        
+    </p>
+    
+    <div class="clearfix"></div>
+</div>
+
+                
+                <div class="media">
+    <a class="search-title" href="/2018/02/04/build-mulit-edition-apks-using-productflavors/"><i class="fa fa-quote-left"></i><span id="search-post-title">利用 ProductFlavors 构建差异化APK版本</span></a>
+    <p class="search-time">
+        <i class="fa fa-calendar icon"></i>
+        <span id="search-post-tags">2018-02-04</span>
+    </p>
+    
+    <p class="search-result-meta">
+    <i class="fa fa-tags icon"></i>
+        
+            <span id="search-post-tags">#android</span>
+        
+            <span id="search-post-tags">#gradle</span>
+        
+            <span id="search-post-tags">#productflavors</span>
+        
+    </p>
+    
+    <div class="clearfix"></div>
+</div>
+
+                
+                <div class="media">
+    <a class="search-title" href="/2018/02/03/download-android-source-code/"><i class="fa fa-quote-left"></i><span id="search-post-title">Android 源代码下载与编译</span></a>
+    <p class="search-time">
+        <i class="fa fa-calendar icon"></i>
+        <span id="search-post-tags">2018-02-03</span>
+    </p>
+    
+    <p class="search-result-meta">
+    <i class="fa fa-tags icon"></i>
+        
+            <span id="search-post-tags">#android</span>
+        
+            <span id="search-post-tags">#sourcecode</span>
+        
+    </p>
+    
+    <div class="clearfix"></div>
+</div>
+
+                
+                <div class="media">
+    <a class="search-title" href="/2018/01/09/eatablish-your-own-blog-with-hexo-and-github-pages/"><i class="fa fa-quote-left"></i><span id="search-post-title">Hexo + Github 搭建属于自己的小窝</span></a>
+    <p class="search-time">
+        <i class="fa fa-calendar icon"></i>
+        <span id="search-post-tags">2018-01-09</span>
+    </p>
+    
+    <p class="search-result-meta">
+    <i class="fa fa-tags icon"></i>
+        
+            <span id="search-post-tags">#hexo</span>
+        
+            <span id="search-post-tags">#blog</span>
+        
+    </p>
+    
+    <div class="clearfix"></div>
+</div>
+
+                
+                <div class="media">
+    <a class="search-title" href="/2018/02/11/hamcrest-matcher/"><i class="fa fa-quote-left"></i><span id="search-post-title">Hamcrest 匹配器</span></a>
+    <p class="search-time">
+        <i class="fa fa-calendar icon"></i>
+        <span id="search-post-tags">2018-02-11</span>
+    </p>
+    
+    <p class="search-result-meta">
+    <i class="fa fa-tags icon"></i>
+        
+            <span id="search-post-tags">#android</span>
+        
+            <span id="search-post-tags">#hamcrest</span>
+        
+    </p>
+    
+    <div class="clearfix"></div>
+</div>
+
+                
+                <div class="media">
+    <a class="search-title" href="/2018/04/26/how-to-write-unit-tests/"><i class="fa fa-quote-left"></i><span id="search-post-title">如何写有价值的单元测试</span></a>
+    <p class="search-time">
+        <i class="fa fa-calendar icon"></i>
+        <span id="search-post-tags">2018-04-26</span>
+    </p>
+    
+    <p class="search-result-meta">
+    <i class="fa fa-tags icon"></i>
+        
+            <span id="search-post-tags">#自动化测试</span>
+        
+            <span id="search-post-tags">#unit-test</span>
+        
+    </p>
+    
+    <div class="clearfix"></div>
+</div>
+
+                
+                <div class="media">
+    <a class="search-title" href="/2018/04/29/mockito-framework/"><i class="fa fa-quote-left"></i><span id="search-post-title">单元测试之— Mockito 框架</span></a>
+    <p class="search-time">
+        <i class="fa fa-calendar icon"></i>
+        <span id="search-post-tags">2018-04-29</span>
+    </p>
+    
+    <p class="search-result-meta">
+    <i class="fa fa-tags icon"></i>
+        
+            <span id="search-post-tags">#自动化测试</span>
+        
+            <span id="search-post-tags">#unit-test</span>
+        
+            <span id="search-post-tags">#Mock</span>
+        
+            <span id="search-post-tags">#Mockito</span>
+        
+    </p>
+    
+    <div class="clearfix"></div>
+</div>
+
+                
+                <div class="media">
+    <a class="search-title" href="/2018/05/02/powermock-framework/"><i class="fa fa-quote-left"></i><span id="search-post-title">单元测试之— PowerMock 框架</span></a>
+    <p class="search-time">
+        <i class="fa fa-calendar icon"></i>
+        <span id="search-post-tags">2018-05-02</span>
+    </p>
+    
+    <p class="search-result-meta">
+    <i class="fa fa-tags icon"></i>
+        
+            <span id="search-post-tags">#自动化测试</span>
+        
+            <span id="search-post-tags">#unit-test</span>
+        
+            <span id="search-post-tags">#Mock</span>
+        
+            <span id="search-post-tags">#PowerMock</span>
+        
+    </p>
+    
+    <div class="clearfix"></div>
+</div>
+
+                
+                <div class="media">
+    <a class="search-title" href="/2018/05/07/robolectric-framework/"><i class="fa fa-quote-left"></i><span id="search-post-title">单元测试之 —  Robolectric 框架</span></a>
+    <p class="search-time">
+        <i class="fa fa-calendar icon"></i>
+        <span id="search-post-tags">2018-05-07</span>
+    </p>
+    
+    <p class="search-result-meta">
+    <i class="fa fa-tags icon"></i>
+        
+            <span id="search-post-tags">#自动化测试</span>
+        
+            <span id="search-post-tags">#unit-test</span>
+        
+            <span id="search-post-tags">#robolectric</span>
+        
+    </p>
+    
+    <div class="clearfix"></div>
+</div>
+
+                
+                <div class="media">
+    <a class="search-title" href="/2018/04/19/android-proguard/"><i class="fa fa-quote-left"></i><span id="search-post-title">Andoid ProGuard</span></a>
+    <p class="search-time">
+        <i class="fa fa-calendar icon"></i>
+        <span id="search-post-tags">2018-04-19</span>
+    </p>
+    
+    <p class="search-result-meta">
+    <i class="fa fa-tags icon"></i>
+        
+            <span id="search-post-tags">#proguard</span>
+        
+    </p>
+    
+    <div class="clearfix"></div>
+</div>
+
+                
+            </div>
+        </section>
+    </div>
+</div>
+
+</div>
+</body>
+</html>

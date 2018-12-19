@@ -1,0 +1,1215 @@
+
+<!DOCTYPE html>
+<html lang="zh-cn">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="baidu-site-verification" content="fJhstNzkJ1"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="generator" content="小一 | 莫舍己道 勿扰他心">
+    <title>Android 源代码下载与编译 - 小一 | 莫舍己道 勿扰他心</title>
+    <meta name="author" content="小一">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0" />
+    <link rel="Shortcut Icon" href="http://www.istarx.cc/assets/images/favicon.ico" type="image/x-icon">
+    
+        <meta name="keywords" content="android,source,code,source-code">
+    
+    
+        <link rel="icon" href="http://www.istarx.cc/assets/images/favicon.ico">
+    
+    
+        <link rel="alternate" type="application/atom+xml" title="RSS" href="/atom.xml">
+    
+    
+    
+    
+        
+    
+    
+        <meta property="og:image" content="http://www.istarx.cc/assets/images/avatar.png"/>
+    
+    
+    
+        <meta property="og:image" content="http://ox8xvtm5b.bkt.clouddn.com/android-source-code.jpg"/>
+        <meta class="swiftype" name="image" data-type="enum"
+              content="http://ox8xvtm5b.bkt.clouddn.com/android-source-code.jpg"/>
+    
+    
+    <!--STYLES-->
+    <link rel="stylesheet" href="/assets/css/style-rlxfihttornraopitbezqtlbmvsdagzls3exfuttflefzmed5ps1pwz5efhy.min.css">
+    <!--STYLES END-->
+    
+
+    
+
+</head>
+
+<body>
+<div id="container">
+    <canvas id="anm-canvas" data-behavior="2" class="anm-canvas hidden"></canvas>
+    <div id="blog">
+        <!-- Define author's picture -->
+
+
+    
+        
+            
+        
+    
+
+<header id="header" data-behavior="2" class="fade-in">
+    <i id="btn-open-sidebar" class="fa fa-lg fa-bars"></i>
+    <div class="header-title">
+        <a class="header-title-link" href="/ ">小一 | 莫舍己道 勿扰他心</a>
+    </div>
+    <i class="btn-open-search fa fa-lg fa-search"></i>
+    
+        
+        <a class="header-right-picture  " href=" #about ">
+            
+        
+            <img class="header-picture" src="/assets/images/avatar.png" alt="作者的图片">
+        
+        </a>
+    
+</header>
+
+        <!-- Define author's picture -->
+
+
+
+        
+    
+
+<nav id="sidebar" data-behavior="2" class="hidden fade-in">
+    <div class="sidebar-top-whitespace"></div>
+    <div class="sidebar-container">
+        
+            <div class="sidebar-profile">
+                <!-- 头像效果-start -->
+                <div class="ih-item circle effect right_to_left">
+                    <a href="/ ">
+                        <img class="sidebar-profile-picture" src="/assets/images/avatar.png" alt="作者的图片">
+                        <div class="info">
+                            <div class="info-back">
+                                <h2>
+                                    
+                                    Android
+                                    
+                                </h2>
+                                <p>
+                                    
+                                    Pyhon
+                                    
+                                </p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <!-- 头像效果-end -->
+                <h4 class="sidebar-profile-name">小一</h4>
+                
+                    <h5 class="sidebar-profile-bio"><p>莫舍己道,勿扰他心.</p>
+</h5>
+                
+            </div>
+        
+        
+            <ul class="sidebar-buttons">
+            
+                <li class="sidebar-button">
+                    
+                        <a class="sidebar-button-link " href="/#blog">
+                            
+                            <i class="sidebar-button-icon fa fa-lg fa-home" aria-hidden="true"></i>
+                            <span class="sidebar-button-desc">首页</span>
+                        </a>
+            </li>
+            
+                <li class="sidebar-button">
+                    
+                        <a class="sidebar-button-link " href="/all-categories">
+                            
+                            <i class="sidebar-button-icon fa fa-lg fa-bookmark" aria-hidden="true"></i>
+                            <span class="sidebar-button-desc">分类</span>
+                        </a>
+            </li>
+            
+                <li class="sidebar-button">
+                    
+                        <a class="sidebar-button-link " href="/all-tags">
+                            
+                            <i class="sidebar-button-icon fa fa-lg fa-tags" aria-hidden="true"></i>
+                            <span class="sidebar-button-desc">标签</span>
+                        </a>
+            </li>
+            
+                <li class="sidebar-button">
+                    
+                        <a class="sidebar-button-link " href="/all-archives">
+                            
+                            <i class="sidebar-button-icon fa fa-lg fa-archive" aria-hidden="true"></i>
+                            <span class="sidebar-button-desc">归档</span>
+                        </a>
+            </li>
+            
+                <li class="sidebar-button">
+                    
+                    <a class="sidebar-button-link open-search-col" rel="noopener">
+                    
+                            <i class="sidebar-button-icon fa fa-lg fa-search" aria-hidden="true"></i>
+                            <span class="sidebar-button-desc">搜索</span>
+                        </a>
+            </li>
+            
+                <li class="sidebar-button">
+                    
+                        <a class="sidebar-button-link " href="#about">
+                            
+                            <i class="sidebar-button-icon fa fa-lg fa-question" aria-hidden="true"></i>
+                            <span class="sidebar-button-desc">关于</span>
+                        </a>
+            </li>
+            
+        </ul>
+        
+            <ul class="sidebar-buttons">
+            
+                <li class="sidebar-button">
+                    
+                        <a class="sidebar-button-link " href="https://github.com/cherlas" target="_blank" rel="noopener">
+                    
+                            <i class="sidebar-button-icon fa fa-lg fa-github" aria-hidden="true"></i>
+                            <span class="sidebar-button-desc">GitHub</span>
+                        </a>
+            </li>
+            
+                <li class="sidebar-button">
+                    
+                        <a class="sidebar-button-link " href="mailto:vm@li.cm" target="_blank" rel="noopener">
+                    
+                            <i class="sidebar-button-icon fa fa-lg fa-envelope-o" aria-hidden="true"></i>
+                            <span class="sidebar-button-desc">邮箱</span>
+                        </a>
+            </li>
+            
+        </ul>
+        
+            <ul class="sidebar-buttons">
+            
+                <li class="sidebar-button">
+                    
+                        <a class="sidebar-button-link " href="/atom.xml">
+                            
+                            <i class="sidebar-button-icon fa fa-lg fa-rss" aria-hidden="true"></i>
+                            <span class="sidebar-button-desc">RSS</span>
+                        </a>
+            </li>
+            
+        </ul>
+        
+    </div>
+    <div class="sidebar-bottom-whitespace"></div>
+</nav>
+
+        
+<div class="post-header-cover fade-in header-image-cover
+                    text-left
+                    post-header-cover--partial" style="background-image:url('http://ox8xvtm5b.bkt.clouddn.com/android-source-code.jpg');
+      filter: blur(0px); 
+      height: 50%;" data-behavior="2">
+</div>
+<div class="post-header-cover fade-in post-header-cover-background
+                            text-left
+                            post-header-cover--partial" style="
+     
+             height: 50%;
+     " data-behavior="2">
+
+    
+    <div class="post-header main-content-wrap text-left fadeInDown">
+    <div class="post-header-message content-with-table">
+        
+        <h1 class="post-title" itemprop="headline">
+            Android 源代码下载与编译
+        </h1>
+        
+        
+        <div class="post-meta">
+    <time itemprop="datePublished" datetime="2018-02-03T17:28:11+08:00">
+        <img class="calendar" src="/assets/images/calendar.png">
+        
+        2月 03, 2018
+        
+    </time>
+    
+    <span>发布在 </span>
+    
+<a class="category-link" href="/categories/程序猿进化之路/">程序猿进化之路</a>
+
+
+    
+    
+    <img class="tag-img" src="/assets/images/tag-icon.svg">
+    <div class="post-tags">
+        
+        <a href="/tags/android/">android</a>
+        
+        <a href="/tags/sourcecode/">sourcecode</a>
+        
+    </div>
+    
+</div>
+
+        
+    </div>
+</div>
+
+    
+</div>
+
+
+        <div id="main" data-behavior="2"
+             class="hasCover
+                        hasCoverMetaIn
+                        hasCoverCaption hidden fade-in">
+            
+<article class="post" itemscope="" itemtype="http://schema.org/BlogPosting">
+    
+        <span class="post-header-cover-caption caption">Road to the future</span>
+    
+    
+    <div class="tableTile" data-message="目录">
+    </div>
+    <div class="post-content markdown" itemprop="articleBody">
+        <div class="main-content-wrap fadeInDown toc content-with-table">
+            <script src="/assets/js/APlayer.min.js"> </script><p>在查看源代码以及二次开发的过程中避免不了和源代码打交道。本文记录了在Mac OS(当前10.13.2版本)下载、编译Android源代码过程。</p>
+<a id="more"></a>
+<p><ul class="toc js-fixedContent">
+<li><a href="#%E8%AE%BE%E7%BD%AE%E7%BC%96%E8%AF%91%E7%8E%AF%E5%A2%83">设置编译环境</a>
+<ul>
+<li><a href="#%E5%AE%89%E8%A3%85jdk%E4%BB%A5%E5%8F%8A-xcode-%E5%91%BD%E4%BB%A4%E8%A1%8C%E5%B7%A5%E5%85%B7">安装JDK以及 Xcode 命令行工具</a>
+<ul>
+<li><a href="#%E5%AE%89%E8%A3%85jdk">安装jdk</a></li>
+<li><a href="#%E5%AE%89%E8%A3%85xcode%E5%91%BD%E4%BB%A4%E8%A1%8C%E5%B7%A5%E5%85%B7">安装Xcode命令行工具</a></li>
+</ul>
+</li>
+<li><a href="#%E5%88%9B%E5%BB%BA%E5%A4%A7%E5%B0%8F%E5%86%99%E6%95%8F%E6%84%9F%E7%9A%84%E7%A3%81%E7%9B%98%E6%98%A0%E5%83%8F">创建大小写敏感的磁盘映像</a>
+<ul>
+<li><a href="#%E5%88%9B%E5%BB%BA%E7%A3%81%E7%9B%98%E6%98%A0%E5%83%8F">创建磁盘映像</a></li>
+<li><a href="#%E8%A3%85%E8%BD%BD%E5%8F%8A%E5%8D%B8%E8%BD%BD%E7%A3%81%E7%9B%98%E6%98%A0%E5%83%8F">装载及卸载磁盘映像</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#%E4%B8%8B%E8%BD%BD%E6%BA%90%E4%BB%A3%E7%A0%81">下载源代码</a>
+<ul>
+<li><a href="#%E5%88%9D%E5%A7%8B%E5%8C%96repo">初始化Repo</a></li>
+<li><a href="#%E5%90%8C%E6%AD%A5android%E6%BA%90%E4%BB%A3%E7%A0%81%E6%A0%91">同步Android源代码树</a></li>
+<li><a href="#%E9%80%9A%E8%BF%87%E4%B8%8B%E8%BD%BD%E4%BD%BF%E7%94%A8%E6%AF%8F%E6%9C%88%E6%9B%B4%E6%96%B0%E7%9A%84%E5%88%9D%E5%A7%8B%E5%8C%96%E5%8C%85%E5%90%8C%E6%AD%A5%E4%BB%A3%E7%A0%81">通过下载使用每月更新的初始化包同步代码</a></li>
+<li><a href="#%E5%88%87%E6%8D%A2%E5%88%86%E6%94%AF">切换分支</a></li>
+</ul>
+</li>
+<li><a href="#%E7%BC%96%E8%AF%91%E6%BA%90%E4%BB%A3%E7%A0%81">编译源代码</a>
+<ul>
+<li><a href="#%E6%B8%85%E9%99%A4%E7%BC%96%E8%AF%91%E6%93%8D%E4%BD%9C%E7%9A%84%E6%89%80%E6%9C%89%E8%BE%93%E5%87%BA">清除编译操作的所有输出</a></li>
+<li><a href="#%E8%AE%BE%E7%BD%AE%E7%8E%AF%E5%A2%83">设置环境</a></li>
+<li><a href="#%E9%80%89%E6%8B%A9%E7%9B%AE%E6%A0%87">选择目标</a></li>
+<li><a href="#%E7%BC%96%E8%AF%91%E4%BB%A3%E7%A0%81">编译代码</a></li>
+<li><a href="#%E7%BC%96%E8%AF%91-fastboot-%E5%92%8C-adb">编译 fastboot 和 adb</a></li>
+<li><a href="#%E8%A7%A3%E9%94%81%E5%8F%8A%E5%8A%A0%E9%94%81%E5%BC%95%E5%AF%BC%E5%8A%A0%E8%BD%BD%E7%A8%8B%E5%BA%8F">解锁及加锁引导加载程序</a></li>
+</ul>
+</li>
+<li><a href="#%E4%BD%BF%E7%94%A8-android-studio-%E5%8A%A0%E8%BD%BD%E6%BA%90%E4%BB%A3%E7%A0%81">使用 Android Studio 加载源代码</a></li>
+<li><a href="#%E9%81%87%E5%88%B0%E7%9A%84%E9%97%AE%E9%A2%98">遇到的问题</a></li>
+</ul>
+</p>
+<h2 id="设置编译环境"><a class="anchor" href="#设置编译环境"></a> 设置编译环境</h2>
+<p>Mac上默认安装是在一个保留大小写但是不区分大小写的环境下进行的，但是git命令并不能很好的支持该环境，后续编译也不能正常进行。因此在Mac上下载Android源代码之前要新建一个始终区分大小写的文件系统中，并在此文件系统中对源码进行编译等操作。</p>
+<h3 id="安装jdk以及-xcode-命令行工具"><a class="anchor" href="#安装jdk以及-xcode-命令行工具"></a> 安装JDK以及 Xcode 命令行工具</h3>
+<h4 id="安装jdk"><a class="anchor" href="#安装jdk"></a> 安装jdk</h4>
+<p>你可以在<a href="http://www.oracle.com/technetwork/java/javase/downloads/index.html" target="_blank" rel="noopener">java官网</a>上下载最新或指定的jdk版本进行安装。也可以使用HomeBrew命令来进行安装:</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">brew cask info java <span class="comment"># 查看java最新版本相关信息</span></span><br><span class="line">brew cask install java <span class="comment"># 安装java最新版本</span></span><br></pre></td></tr></table></figure>
+<p>也可以通过如下命令来进行特定版本的安装：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">brew tap caskroom/versions</span><br><span class="line">brew cask info java8</span><br><span class="line">brew cask install java8</span><br></pre></td></tr></table></figure>
+<div class="alert info no-icon"><p>Android 7.0 (Nougat) - Android 8.0 (O)在Ubuntu上需要<a href="http://openjdk.java.net/install/" target="_blank" rel="noopener">OpenJDK8</a>，Mac OS上需要<a href="http://www.oracle.com/technetwork/java/javase/downloads/java-archive-javase8-2177648.html#jdk-8u45-oth-JPR" target="_blank" rel="noopener">jdk8u45或更高</a>版本。</p>
+</div>
+<h4 id="安装xcode命令行工具"><a class="anchor" href="#安装xcode命令行工具"></a> 安装Xcode命令行工具</h4>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">xcode-select --install</span><br></pre></td></tr></table></figure>
+<p>如果你已经安装过Xcode，则只需要在第一次打开的时候同意许可即可。</p>
+<h3 id="创建大小写敏感的磁盘映像"><a class="anchor" href="#创建大小写敏感的磁盘映像"></a> 创建大小写敏感的磁盘映像</h3>
+<h4 id="创建磁盘映像"><a class="anchor" href="#创建磁盘映像"></a> 创建磁盘映像</h4>
+<ul>
+<li>
+<p>通过磁盘文件系统创建映像</p>
+<p>通过 <code>应用程序—&gt;实用工具—&gt;磁盘工具</code>，选择<code>文件--&gt;新建映像--&gt;空白映像</code>，填写名称大小(编译至少需要25G空间，如果是设置缓存等功能，则需要更大的控件)，<span class="highlight-text orange">格式选择Mac OS 扩展 (区分大小写，日志式) </span>。</p>
+</li>
+<li>
+<p>通过shell命令</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hdiutil create -<span class="built_in">type</span> SPARSE -fs <span class="string">'Case-sensitive Journaled HFS+'</span> -size 40g ~/AndroidSourceCode/android.dmg</span><br></pre></td></tr></table></figure>
+<p>输出如下图：</p>
+<p><img src="create-image.png" alt="create-image"></p>
+<p>新建的image文件可能是一个<code>.dmg</code>，也可能是一个<code>.dmg.sparseimage</code>。</p>
+<p>可以使用如下命令来调整稀疏映像的大小：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hdiutil resize -size &lt;new-size-you-want&gt;g ~/AndroidSourceCode/android.dmg.sparseimage</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h4 id="装载及卸载磁盘映像"><a class="anchor" href="#装载及卸载磁盘映像"></a> 装载及卸载磁盘映像</h4>
+<p>执行装载卸载映像，只需要执行一下命令即可：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hdiutil attach ~/AndroidSourceCode/android.dmg.sparseimage -mountpoint /Volumes/android;  <span class="comment"># 装载</span></span><br><span class="line">hdiutil detach /Volumes/android <span class="comment"># 卸载</span></span><br></pre></td></tr></table></figure>
+<p>为了方便装载及卸载映像，可以把上述代码写进<code>.bashrc</code>或<code>zshrc</code>或者类似的文件中：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># mount the android file image</span></span><br><span class="line"><span class="keyword">function</span> mountAndroid &#123; hdiutil attach ~/AndroidSourceCode/android.dmg.sparseimage -mountpoint /Volumes/android; &#125;</span><br><span class="line"></span><br><span class="line"><span class="comment"># unmount the android file image</span></span><br><span class="line"><span class="keyword">function</span> unmountAndroid &#123; hdiutil detach /Volumes/android; &#125;</span><br></pre></td></tr></table></figure>
+<p>接着执行<code>source .bashrc</code>或者<code>source .zshrc</code>就可以使用<code>mountAndroid</code>命令装载映像，<code>unmmountAndroid</code>命令卸载映像。</p>
+<h2 id="下载源代码"><a class="anchor" href="#下载源代码"></a> 下载源代码</h2>
+<h3 id="初始化repo"><a class="anchor" href="#初始化repo"></a> 初始化Repo</h3>
+<p>新建一个专门存放repo的bin文件夹，并将其添加到PATH变量中：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">mkdir ~/bin</span><br><span class="line">PATH=~/bin:<span class="variable">$PATH</span>  <span class="comment"># 也可以执行 echo 'export PATH=~/bin:$PATH' &gt;&gt; ~/.zshrc 命令</span></span><br></pre></td></tr></table></figure>
+<p>然后下载Repo工具，在命令行中输入以下命令：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">curl https://storage.googleapis.com/git-repo-downloads/repo &gt; ~/bin/repo</span><br><span class="line">chmod a+x ~/bin/repo</span><br></pre></td></tr></table></figure>
+<p>如果没有VPN，则可以用清华的镜像地址替换谷歌的地址。</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">REPO_URL = <span class="string">'https://gerrit-googlesource.lug.ustc.edu.cn/git-repo'</span></span><br></pre></td></tr></table></figure>
+<p><img src="repo-address.png" alt="repo-address"></p>
+<p>替换为：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">REPO_URL = <span class="string">'https://aosp.tuna.tsinghua.edu.cn/git-repo'</span></span><br></pre></td></tr></table></figure>
+<p>加载之前创建的稀疏映像，新建工作目录：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">cd</span> /Volumes/android</span><br><span class="line">mkdir source_code</span><br><span class="line"><span class="built_in">cd</span> source_code</span><br></pre></td></tr></table></figure>
+<p>执行repo初始化指令</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">repo init</span><br></pre></td></tr></table></figure>
+<p>如果指定地址和分支，则使用：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">repo init -u https://aosp.tuna.tsinghua.edu.cn/platform/manifest -b android-8.0.0_r31</span><br></pre></td></tr></table></figure>
+<p>初始化成功之后在工作目录下会有一个<code>.repo</code>文件夹，包含了清单文件。</p>
+<h3 id="同步android源代码树"><a class="anchor" href="#同步android源代码树"></a> 同步Android源代码树</h3>
+<p>在工作目录下运行如下命令，经过漫长的等待即可以下载到对应分支的源代码了。</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">repo sync</span><br></pre></td></tr></table></figure>
+<p>如果已经有源码，并需要更换清华源，则需要替换<code>.repo/manifests/default.xml</code>中的同步源码</p>
+<figure class="highlight diff"><table><tr><td class="code"><pre><span class="line"> &lt;manifest&gt;</span><br><span class="line">   &lt;remote  name="aosp"</span><br><span class="line"><span class="deletion">-           fetch=".."</span></span><br><span class="line"><span class="addition">+           fetch="https://aosp.tuna.tsinghua.edu.cn/"</span></span><br><span class="line">            review="https://android-review.googlesource.com/" /&gt;</span><br><span class="line">   &lt;default revision="refs/tags/android-8.0.0_r31"</span><br><span class="line">            remote="aosp"</span><br></pre></td></tr></table></figure>
+<h3 id="通过下载使用每月更新的初始化包同步代码"><a class="anchor" href="#通过下载使用每月更新的初始化包同步代码"></a> 通过下载使用每月更新的初始化包同步代码</h3>
+<p>由于上述同步工作需要下载30G的数据，任何环节出问题都可能造成同步失败，所以可以使用清华的<a href="https://mirrors.tuna.tsinghua.edu.cn/aosp-monthly/aosp-latest.tar" target="_blank" rel="noopener">每月初始化包</a>进行同步代码。</p>
+<p>下载<a href="https://mirrors.tuna.tsinghua.edu.cn/aosp-monthly/aosp-latest.tar" target="_blank" rel="noopener">https://mirrors.tuna.tsinghua.edu.cn/aosp-monthly/aosp-latest.tar</a>最新的源代码tar包以及对应的md5文件，下载完成后执行以下MD5校验一下。</p>
+<p>具体执行过程如下：</p>
+<ol>
+<li>
+<p>先下载repo工具；</p>
+</li>
+<li>
+<p>下载初始化包并同步；</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">wget -c https://mirrors.tuna.tsinghua.edu.cn/aosp-monthly/aosp-latest.tar <span class="comment"># 下载初始化包</span></span><br><span class="line">wget -c https://mirrors.tuna.tsinghua.edu.cn/aosp-monthly/aosp-latest.tar <span class="comment"># 下载初始化包对应的md5码</span></span><br><span class="line">MD5 aosp-latest.tar <span class="comment">#校验MD5码</span></span><br><span class="line">tar xf aosp-latest.tar</span><br><span class="line"><span class="built_in">cd</span> AOSP   <span class="comment"># 解压得到的 AOSP 工程目录，这时 ls 的话什么也看不到，因为只有一个隐藏的 .repo 目录</span></span><br><span class="line">repo sync <span class="comment"># 正常同步一遍即可得到完整目录或 repo sync -l 仅checkout代码</span></span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<h3 id="切换分支"><a class="anchor" href="#切换分支"></a> 切换分支</h3>
+<p>以每月更新的初始化包下载的代码，分支为默认分支，需要切换到所需的分支上。</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">cd</span> .repo/manifests</span><br><span class="line">git branch -a | cut -d / -f 3</span><br><span class="line">repo init -u https://aosp.tuna.tsinghua.edu.cn/platform/manifest -b android-8.0.0_r31</span><br><span class="line">repo sync</span><br></pre></td></tr></table></figure>
+<p>之后就可以使用命令编译源码了。</p>
+<h2 id="编译源代码"><a class="anchor" href="#编译源代码"></a> 编译源代码</h2>
+<h3 id="清除编译操作的所有输出"><a class="anchor" href="#清除编译操作的所有输出"></a> 清除编译操作的所有输出</h3>
+<blockquote>
+<p>建议在 bash 环境下执行，否则会出现莫名其妙的问题。</p>
+</blockquote>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">make clobber</span><br></pre></td></tr></table></figure>
+<h3 id="设置环境"><a class="anchor" href="#设置环境"></a> 设置环境</h3>
+<p>Android 源代码种与编译相关的文件都放在 build 目录中，其中<code>envsetup.sh</code>脚本是初始化环境所用：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">source</span> build/envsetup.sh</span><br></pre></td></tr></table></figure>
+<p>可以简写为：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">. build/envsetup.sh</span><br></pre></td></tr></table></figure>
+<h3 id="选择目标"><a class="anchor" href="#选择目标"></a> 选择目标</h3>
+<p>使用<code>lunch</code>命令，可以在该命令后面添加参数，参数采用 <code>BUILD-BUILDTYPE</code>的形式指定编译目标，其中 <code>BUILD</code>指特定功能组合的代号，而<code>BUILDTYPE</code>则有 <code>user</code>、<code>userdebug</code>、<code>eng</code> 三种：</p>
+<ul>
+<li><code>user</code>：权限受限；适用于生产环境；</li>
+<li><code>userdebug</code>：与“user”类似，但具有 root 权限和可调试性；是进行调试时的首选编译类型；</li>
+<li><code>eng</code>：具有额外调试工具的开发配置；</li>
+</ul>
+<p>如果在<code>lunch</code>命令后面不添加参数，则需要从提示菜单中选择一个编译目标。</p>
+<h3 id="编译代码"><a class="anchor" href="#编译代码"></a> 编译代码</h3>
+<p>Android 源码编译命令为 <code>make</code>，参数为<code>-jN</code>，N 是介于所使用计算机硬件线程总数的1～2倍之间。</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">make -j8</span><br></pre></td></tr></table></figure>
+<p>常用的编译命令：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">make -k <span class="comment"># 继续编译</span></span><br><span class="line">m  <span class="comment"># 编译完整的Android源代码</span></span><br><span class="line">mm  <span class="comment"># 此命令必须进入指定的工程的目录进行编译</span></span><br><span class="line">mmm  <span class="comment"># 可以在任何一级目录编译任意指定的工程</span></span><br></pre></td></tr></table></figure>
+<h3 id="编译-fastboot-和-adb"><a class="anchor" href="#编译-fastboot-和-adb"></a> 编译 fastboot 和 adb</h3>
+<p>编译 fastboot 和 adb 命令如下：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">make fastboot adb</span><br></pre></td></tr></table></figure>
+<p>之后可以使用物理按键的方式((对于Nexus系列可以参考<a href="https://source.android.com/source/running.html#booting-into-fastboot-mode" target="_blank" rel="noopener">这里</a>))或者 <code>adb reboot bootloader</code>命令重启进入引导加载程序。</p>
+<h3 id="解锁及加锁引导加载程序"><a class="anchor" href="#解锁及加锁引导加载程序"></a> 解锁及加锁引导加载程序</h3>
+<p>如果要刷写定制系统，例如各个 Android 厂商的定制 ROM，需要解锁引导加载程序，而引导加载程序默认处于锁定状态。解锁会导致系统清楚设备上的所有数据，so，在解锁之前请先备份重要文件。</p>
+<p>解锁引导加载程序的步骤如下：</p>
+<ul>
+<li>
+<p>在设置—系统—关于本机，点按<code>版本号</code>7次，当看到“您已处于开发者模式”这条消息后，点按返回按钮；</p>
+</li>
+<li>
+<p>进入<strong>开发者选项</strong>，然后启用 <strong>OEM 解锁</strong>和 <strong>USB 调试</strong>，如果 OEM 解锁处于不可用状态，则需要链接互联网，以便设备至少签到一次，之后如果仍处于锁定状态，说明设备可能已被运营商锁定 SIM 卡；</p>
+</li>
+<li>
+<p><code>adb reboot bootloader</code>命令进入引导加载程序；</p>
+</li>
+<li>
+<p>执行以下命令以解锁：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">fastboot flashing unlock <span class="comment"># 2015 之后发布的设备</span></span><br><span class="line">fastboot oem unlock <span class="comment"># 2014 年及之前发布的设备</span></span><br></pre></td></tr></table></figure>
+</li>
+<li>
+<p>在屏幕上确认解锁；</p>
+</li>
+</ul>
+<p>对于加锁过程，只需要重启到引导加载程序以后执行以下命令即可：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">fastboot flashing lock <span class="comment"># 2015 之后发布的设备</span></span><br><span class="line">fastboot oem lock <span class="comment"># 2014 年及之前发布的设备</span></span><br></pre></td></tr></table></figure>
+<h2 id="使用-android-studio-加载源代码"><a class="anchor" href="#使用-android-studio-加载源代码"></a> 使用 Android Studio 加载源代码</h2>
+<p>在编译完全部源代码一次之后查看<code>out/host/darwin-x86/framework/idegen.jar</code>是否存在，如不存在，则使用如下命令生成该文件：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">source</span> build/envsetup.sh</span><br><span class="line">lunch [编译全部源代码时选择的参数]</span><br><span class="line">mmm development/tools/idegen/</span><br></pre></td></tr></table></figure>
+<p>接下来生成配置文件：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">development/tools/idegen/idegen.sh</span><br></pre></td></tr></table></figure>
+<p>之后会在源码目录下生成<code>android.ipr</code>和<code>android.iml</code>文件。</p>
+<p><img src="android-ipr.png" alt="android-ipr"></p>
+<p>打开 Android Studio 加载ipr文件即可。</p>
+<p><img src="android-studio.png" alt="android-studio"></p>
+<p><img src="open-android-ipr.png" alt="open-android-ipr"></p>
+<h2 id="遇到的问题"><a class="anchor" href="#遇到的问题"></a> 遇到的问题</h2>
+<ul>
+<li>
+<blockquote>
+<p>RPC failed; curl 18 transfer closed with outstanding read data remaining.</p>
+</blockquote>
+<p>因为curl的postBuffer默认值太小的原因，重新在终端配置一下这个值就可以了。</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git config –global http.postBuffer 524288000</span><br></pre></td></tr></table></figure>
+</li>
+<li>
+<blockquote>
+<p>curl: (22) The requested URL returned error: 404 Server does not provide clone.bundle; ignoring.</p>
+</blockquote>
+<p>无视即可</p>
+</li>
+<li>
+<blockquote>
+<p>error.GitError: device/asus/fugu-kernel rev-list (’^fb4baab945ff1b696b84a8bd9af3d54032d3cfaa’, ‘HEAD’, ‘–’): fatal: bad object HEAD</p>
+</blockquote>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">cd</span> AOSP/device/asus/fugu-kernel </span><br><span class="line">git fetch --all</span><br></pre></td></tr></table></figure>
+</li>
+<li>
+<blockquote>
+<p>curl: (35) LibreSSL SSL_connect: SSL_ERROR_SYSCALL in connection to <a href="http://android.googlesource.com:443" target="_blank" rel="noopener">android.googlesource.com:443</a></p>
+</blockquote>
+<p>升级系统自带的libressl, openssl 和 curl 即可</p>
+</li>
+<li>
+<blockquote>
+<p>repo sync discarding xxx commits.</p>
+</blockquote>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">repo forall -c <span class="string">'git reset --hard; git clean -f -d -x'</span>;</span><br></pre></td></tr></table></figure>
+</li>
+<li>
+<blockquote>
+<p>external/error_prone/soong/Android.bp:1:1: “soong-java-config-error_prone” depends on undefined module “soong-java-config” ninja: error: rebuilding ‘out/soong/.minibootstrap/build.ninja’: subcommand failed.</p>
+</blockquote>
+<p>删除soong相关的文件<code>external/error_prone/soong</code>以及<code>out</code>文件夹，然后执行<code>repo sync</code>命令。</p>
+</li>
+<li>
+<blockquote>
+<p>Could not find a supported mac sdk: [“10.10” “10.11” “10.12”]</p>
+</blockquote>
+<p><a href="https://github.com/phracker/MacOSX-SDKs" target="_blank" rel="noopener">下载</a> 10.13 版本的SDK，解压到 <code>/Applications/XCode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/</code> 目录下</p>
+</li>
+<li>
+<blockquote>
+<p>frameworks/layoutlib: MODULE.darwin.JAVA_LIBRARIES.temp_layoutlib already defined by frameworks/base/tools/layoutlib.</p>
+</blockquote>
+<p>删除源码中的 framworks 文件夹，重新执行 <code>repo sync</code></p>
+</li>
+<li>
+<blockquote>
+<p>FAILED: out/soong/.intermediates/system/tools/aidl/libaidl-  common/darwin_x86_64_static/gen/yacc/system/tools/aidl/aidl_language_y.cpp out/soong/.intermediates/system/tools/aidl/libaidl-common/darwin_x86_64_static/gen/yacc/system/tools/aidl/aidl_language_y.h</p>
+</blockquote>
+<p>是因为 bison 造成的，需要给 bison 打补丁，并且替换现有的 /prebuilt/ 目录下的二进制文件，具体做法如下：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">cd</span> /Volumes/AOSP/external/bison</span><br><span class="line">git cherry-pick c0c852bd6fe462b148475476d9124fd740eba160</span><br><span class="line">mm</span><br><span class="line">cp /Volumes/AOSP/out/host/darwin-x86/bin/bison /Volumes/AOSP/prebuilts/misc/darwin-x86/bison/</span><br></pre></td></tr></table></figure>
+<p>参考网址<a href="https://groups.google.com/forum/#!topic/android-building/D1-c5lZ9Oco" target="_blank" rel="noopener">https://groups.google.com/forum/#!topic/android-building/D1-c5lZ9Oco</a></p>
+</li>
+<li>
+<blockquote>
+<p>Unsupported curl, please use a curl not based on SecureTransport. Jack server installation not found</p>
+</blockquote>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">brew install curl --with-openssl</span><br><span class="line"><span class="built_in">echo</span> <span class="string">'export PATH=$(brew --prefix curl)/bin:$PATH'</span> &gt;&gt; ~/.zshrc</span><br><span class="line"><span class="built_in">source</span> ~/.zshrc</span><br><span class="line">caffeinate make -j8 <span class="comment"># caffeinate是为了防止OS X 进入睡眠</span></span><br></pre></td></tr></table></figure>
+</li>
+<li>
+<blockquote>
+<p>/bin/bash: xz: command not found</p>
+</blockquote>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">brew install xz</span><br></pre></td></tr></table></figure>
+</li>
+<li>
+<blockquote>
+<p>Couldn’t locate the directory development/tools/idegen</p>
+</blockquote>
+<p>是因为编译时使用zsh，要切换到bash环境下：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">bash</span><br><span class="line">mmm development/tools/idegen/</span><br></pre></td></tr></table></figure>
+</li>
+<li>
+<blockquote>
+<p>fatal error: error in backend: IO failure on output stream.</p>
+</blockquote>
+<p>是因为磁盘分区小了，扩大磁盘分区：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo hdiutil resize -size &lt;new-size-you-want&gt;g ~/android.dmg.sparseimage</span><br></pre></td></tr></table></figure>
+<p>​</p>
+</li>
+</ul>
+
+            
+
+        </div>
+        
+            <div class="tableContent fade-in" data-message="true"></div>
+        
+        
+            <div class="post-copyright main-content-wrap content-with-table">
+    <p class="copyright-item">
+        <span>原文作者: </span>
+        <a href="http://http://www.istarx.cc">小一</a>
+    </p>
+    <p class="copyright-item">
+        <span>原文链接: </span>
+        <a href="http://www.istarx.cc/2018/02/03/download-android-source-code/">http://www.istarx.cc/2018/02/03/download-android-source-code/</a>
+    </p>
+    <p class="copyright-item">
+        <span>许可协议: </span>
+        <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/" target="_blank">知识共享署名-非商业性使用 4.0 国际许可协议，转载请注明出处，谢谢.</a>
+    </p>
+</div>
+
+        
+    </div>
+    
+        <div id="post-footer" class="post-footer main-content-wrap content-with-table">
+            
+                <div class="post-footer-tags">
+                    <span class="text-color-light text-small">标签</span><br>
+                    
+<div class="tagcloud article-tag-list">
+    
+    <li class="article-tag-list-item">
+        <a href="/tags/android/" class="js-tag color3">android</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="/tags/sourcecode/" class="js-tag color1">sourcecode</a>
+    </li>
+    
+    <div class="clearfix"></div>
+</div>
+
+
+                </div>
+            
+            
+                <div class="post-actions-wrap">
+    <nav>
+        <ul class="post-actions post-action-nav">
+            <li class="post-action">
+                
+                
+                <a class="post-action-btn btn btn--default tooltip--top" href="/2018/02/04/build-mulit-edition-apks-using-productflavors/" data-tooltip="利用 ProductFlavors 构建差异化APK版本" aria-label="上一篇: 利用 ProductFlavors 构建差异化APK版本">
+                    
+                        <i class="fa fa-angle-left" aria-hidden="true"></i>
+                        <span class="hide-xs hide-sm text-small icon-ml">上一篇</span>
+                    </a>
+            </li>
+            <li class="post-action">
+                
+                
+                <a class="post-action-btn btn btn--default tooltip--top" href="/2018/01/15/andoid-autotest-apis-complete/" data-tooltip="UI Automator API 整理" aria-label="下一篇: UI Automator API 整理">
+                    
+                        <span class="hide-xs hide-sm text-small icon-mr">下一篇</span>
+                        <i class="fa fa-angle-right" aria-hidden="true"></i>
+                    </a>
+            </li>
+        </ul>
+    </nav>
+    <ul class="post-actions post-action-share">
+        <li class="post-action hide-lg hide-md hide-sm">
+            <a class="post-action-btn btn btn--default btn-open-shareoptions" href="#btn-open-shareoptions" aria-label="Diesen Beitrag teilen">
+                <i class="fa fa-share-alt" aria-hidden="true"></i>
+            </a>
+        </li>
+        
+        
+        <li class="post-action">
+            
+                <a class="post-action-btn btn btn--default" href="#" aria-label="Nach oben">
+                    
+                    <i class="fa fa-arrow-up" aria-hidden="true"></i>
+                </a>
+        </li>
+    </ul>
+</div>
+
+
+            
+            
+        </div>
+    
+</article>
+
+
+
+            <footer id="footer" class="main-content-wrap">
+    <span class="copyrights">
+        Copyrights &copy; 2018 小一. All Rights Reserved.
+    </span>
+</footer>
+
+        </div>
+        
+        <div id="bottom-bar" class="post-bottom-bar" data-behavior="2">
+            <div class="post-actions-wrap">
+    <nav>
+        <ul class="post-actions post-action-nav">
+            <li class="post-action">
+                
+                
+                <a class="post-action-btn btn btn--default tooltip--top" href="/2018/02/04/build-mulit-edition-apks-using-productflavors/" data-tooltip="利用 ProductFlavors 构建差异化APK版本" aria-label="上一篇: 利用 ProductFlavors 构建差异化APK版本">
+                    
+                        <i class="fa fa-angle-left" aria-hidden="true"></i>
+                        <span class="hide-xs hide-sm text-small icon-ml">上一篇</span>
+                    </a>
+            </li>
+            <li class="post-action">
+                
+                
+                <a class="post-action-btn btn btn--default tooltip--top" href="/2018/01/15/andoid-autotest-apis-complete/" data-tooltip="UI Automator API 整理" aria-label="下一篇: UI Automator API 整理">
+                    
+                        <span class="hide-xs hide-sm text-small icon-mr">下一篇</span>
+                        <i class="fa fa-angle-right" aria-hidden="true"></i>
+                    </a>
+            </li>
+        </ul>
+    </nav>
+    <ul class="post-actions post-action-share">
+        <li class="post-action hide-lg hide-md hide-sm">
+            <a class="post-action-btn btn btn--default btn-open-shareoptions" href="#btn-open-shareoptions" aria-label="Diesen Beitrag teilen">
+                <i class="fa fa-share-alt" aria-hidden="true"></i>
+            </a>
+        </li>
+        
+        
+        <li class="post-action">
+            
+                <a class="post-action-btn btn btn--default" href="#" aria-label="Nach oben">
+                    
+                    <i class="fa fa-arrow-up" aria-hidden="true"></i>
+                </a>
+        </li>
+    </ul>
+</div>
+
+
+        </div>
+        <div id="share-options-bar" class="share-options-bar" data-behavior="2">
+    <i id="btn-close-shareoptions" class="fa fa-close"></i>
+    <ul class="share-options">
+        
+    </ul>
+</div>
+
+        
+    </div>
+    
+
+
+    
+        
+    
+
+<div id="about">
+    <div id="about-card">
+        <div id="about-btn-close">
+            <i class="fa fa-remove"></i>
+        </div>
+        
+            <img id="about-card-picture" src="/assets/images/avatar.png" alt="作者的图片">
+        
+            <h4 id="about-card-name">小一</h4>
+        
+            <div id="about-card-bio"><p>莫舍己道,勿扰他心.</p>
+</div>
+        
+        
+            <div id="about-card-job">
+                <i class="fa fa-briefcase"></i>
+                <br>
+                <p>Android开发<br>自动化测试</p>
+
+            </div>
+        
+        
+            <div id="about-card-location">
+                <i class="fa fa-map-marker"></i>
+                <br>
+                ShanXi Xi&#39;an
+            </div>
+        
+    </div>
+</div>
+
+    
+
+<!-- Define author's picture -->
+
+
+    
+        
+    
+
+<div id="cover" style="background-image:url('http://ox8xvtm5b.bkt.clouddn.com/cover.jpg');">
+    <div class="first-page-desc-container">
+        <span class="first-page-desc pulse"></span>
+    </div>
+    <div class="full-screen-head hidden">
+        <!-- 头像效果-start -->
+        <div class="ih-item circle effect right_to_left fade-in">
+            <a href="/#blog" class="blog-button-full-screen">
+                <img class="sidebar-profile-picture" src="/assets/images/avatar.png" alt="作者的图片">
+                <div class="info">
+                    <div class="info-back">
+                        <h2>
+                            
+                            Android
+                            
+                        </h2>
+                        <p>
+                            
+                            Pyhon
+                            
+                        </p>
+                    </div>
+                </div>
+            </a>
+        </div>
+        <!-- 头像效果-end -->
+    </div>
+</div>
+
+    <!--SCRIPTS-->
+<script src="/assets/js/script-6x2v9gn7dhx5dmgdhsw61sllyjdn5hhxgfecagyxt4udfqiwo1hxodblwcyt.min.js"></script>
+<!--SCRIPTS END-->
+
+
+<script src="https://cdn.jsdelivr.net/npm/moment@2.20.1/min/moment-with-locales.min.js"></script>
+<script src="//cdn.jsdelivr.net/algoliasearch/3/algoliasearch.min.js"></script>
+<script>
+  var algoliaClient = algoliasearch('8N47Y2YYXB', '6ed86c6c2611f5cfdbfc015301c1bdb2');
+  var algoliaIndex = algoliaClient.initIndex('blog-index');
+</script>
+
+
+<script>
+  window.onload = function() {
+    if (location.hash !== '#blog' && location.hash !== '' && location.hash !== '#') {
+      window.location.hash = '';
+    }
+  };
+</script>
+
+    <div data-behavior="2" class="search-tools-col hide">
+    <div class="tools-wrap">
+        <section class="tools-section tools-section-all">
+            <div class="search-wrap">
+                <input class="search-ipt" type="text" placeholder="find something…">
+                <i class="icon-search icon"></i>
+                <i class="icon-close icon "></i>
+            </div>
+            <div class="widget tagcloud search-tag">
+                <ul class="article-tag-list">
+                    
+                    <li class="article-tag-list-item">
+                        <a class="js-tag color3">android</a>
+                    </li>
+                    
+                    <li class="article-tag-list-item">
+                        <a class="js-tag color1">自动化测试</a>
+                    </li>
+                    
+                    <li class="article-tag-list-item">
+                        <a class="js-tag color2">UIAutomator</a>
+                    </li>
+                    
+                    <li class="article-tag-list-item">
+                        <a class="js-tag color4">sql</a>
+                    </li>
+                    
+                    <li class="article-tag-list-item">
+                        <a class="js-tag color5">unit-test</a>
+                    </li>
+                    
+                    <li class="article-tag-list-item">
+                        <a class="js-tag color4">espresso</a>
+                    </li>
+                    
+                    <li class="article-tag-list-item">
+                        <a class="js-tag color2">gradle</a>
+                    </li>
+                    
+                    <li class="article-tag-list-item">
+                        <a class="js-tag color5">productflavors</a>
+                    </li>
+                    
+                    <li class="article-tag-list-item">
+                        <a class="js-tag color1">sourcecode</a>
+                    </li>
+                    
+                    <li class="article-tag-list-item">
+                        <a class="js-tag color5">hexo</a>
+                    </li>
+                    
+                    <li class="article-tag-list-item">
+                        <a class="js-tag color5">blog</a>
+                    </li>
+                    
+                    <li class="article-tag-list-item">
+                        <a class="js-tag color4">hamcrest</a>
+                    </li>
+                    
+                    <li class="article-tag-list-item">
+                        <a class="js-tag color5">Mock</a>
+                    </li>
+                    
+                    <li class="article-tag-list-item">
+                        <a class="js-tag color3">Mockito</a>
+                    </li>
+                    
+                    <li class="article-tag-list-item">
+                        <a class="js-tag color5">PowerMock</a>
+                    </li>
+                    
+                    <li class="article-tag-list-item">
+                        <a class="js-tag color2">robolectric</a>
+                    </li>
+                    
+                    <li class="article-tag-list-item">
+                        <a class="js-tag color4">proguard</a>
+                    </li>
+                    
+                    <li class="article-tag-list-item">
+                        <a class="js-tag color1">theme</a>
+                    </li>
+                    
+                    <li class="article-tag-list-item">
+                        <a class="js-tag color3">主题</a>
+                    </li>
+                    
+                    <div class="clearfix"></div>
+                </ul>
+            </div>
+            <p class="results-count hide" data-message-zero="没有找到文章" data-message-one="找到 1 篇文章" data-message-other="找到 {n} 篇文章">
+                找到 17 篇文章
+            </p>
+            <div class="search-result">
+                
+                <div class="media">
+    <a class="search-title" href="/2018/02/10/android-autotest-summary/"><i class="fa fa-quote-left"></i><span id="search-post-title">Android 自动化测试总述</span></a>
+    <p class="search-time">
+        <i class="fa fa-calendar icon"></i>
+        <span id="search-post-tags">2018-02-10</span>
+    </p>
+    
+    <p class="search-result-meta">
+    <i class="fa fa-tags icon"></i>
+        
+            <span id="search-post-tags">#android</span>
+        
+            <span id="search-post-tags">#自动化测试</span>
+        
+    </p>
+    
+    <div class="clearfix"></div>
+</div>
+
+                
+                <div class="media">
+    <a class="search-title" href="/2018/04/07/android-test-uiautomator/"><i class="fa fa-quote-left"></i><span id="search-post-title">Android 自动化测试之 — UI Automator</span></a>
+    <p class="search-time">
+        <i class="fa fa-calendar icon"></i>
+        <span id="search-post-tags">2018-04-07</span>
+    </p>
+    
+    <p class="search-result-meta">
+    <i class="fa fa-tags icon"></i>
+        
+            <span id="search-post-tags">#自动化测试</span>
+        
+            <span id="search-post-tags">#UIAutomator</span>
+        
+    </p>
+    
+    <div class="clearfix"></div>
+</div>
+
+                
+                <div class="media">
+    <a class="search-title" href="/2018/12/17/unique-keyword-of-mysql/"><i class="fa fa-quote-left"></i><span id="search-post-title">SQL 中的 UNIQUE 关键字</span></a>
+    <p class="search-time">
+        <i class="fa fa-calendar icon"></i>
+        <span id="search-post-tags">2018-12-17</span>
+    </p>
+    
+    <p class="search-result-meta">
+    <i class="fa fa-tags icon"></i>
+        
+            <span id="search-post-tags">#sql</span>
+        
+    </p>
+    
+    <div class="clearfix"></div>
+</div>
+
+                
+                <div class="media">
+    <a class="search-title" href="/2018/04/24/unit-test-annotation/"><i class="fa fa-quote-left"></i><span id="search-post-title">单元测试常用注释</span></a>
+    <p class="search-time">
+        <i class="fa fa-calendar icon"></i>
+        <span id="search-post-tags">2018-04-24</span>
+    </p>
+    
+    <p class="search-result-meta">
+    <i class="fa fa-tags icon"></i>
+        
+            <span id="search-post-tags">#unit-test</span>
+        
+    </p>
+    
+    <div class="clearfix"></div>
+</div>
+
+                
+                <div class="media">
+    <a class="search-title" href="/2018/04/16/unit-test-what-and-why/"><i class="fa fa-quote-left"></i><span id="search-post-title">Android自动化测试之 — 简单聊聊单元测试</span></a>
+    <p class="search-time">
+        <i class="fa fa-calendar icon"></i>
+        <span id="search-post-tags">2018-04-16</span>
+    </p>
+    
+    <p class="search-result-meta">
+    <i class="fa fa-tags icon"></i>
+        
+            <span id="search-post-tags">#自动化测试</span>
+        
+            <span id="search-post-tags">#unit-test</span>
+        
+    </p>
+    
+    <div class="clearfix"></div>
+</div>
+
+                
+                <div class="media">
+    <a class="search-title" href="/2018/04/09/android-test-espresso/"><i class="fa fa-quote-left"></i><span id="search-post-title">Android 自动化测试之 — Espresso</span></a>
+    <p class="search-time">
+        <i class="fa fa-calendar icon"></i>
+        <span id="search-post-tags">2018-04-09</span>
+    </p>
+    
+    <p class="search-result-meta">
+    <i class="fa fa-tags icon"></i>
+        
+            <span id="search-post-tags">#自动化测试</span>
+        
+            <span id="search-post-tags">#espresso</span>
+        
+    </p>
+    
+    <div class="clearfix"></div>
+</div>
+
+                
+                <div class="media">
+    <a class="search-title" href="/2018/02/04/build-mulit-edition-apks-using-productflavors/"><i class="fa fa-quote-left"></i><span id="search-post-title">利用 ProductFlavors 构建差异化APK版本</span></a>
+    <p class="search-time">
+        <i class="fa fa-calendar icon"></i>
+        <span id="search-post-tags">2018-02-04</span>
+    </p>
+    
+    <p class="search-result-meta">
+    <i class="fa fa-tags icon"></i>
+        
+            <span id="search-post-tags">#android</span>
+        
+            <span id="search-post-tags">#gradle</span>
+        
+            <span id="search-post-tags">#productflavors</span>
+        
+    </p>
+    
+    <div class="clearfix"></div>
+</div>
+
+                
+                <div class="media">
+    <a class="search-title" href="/2018/02/03/download-android-source-code/"><i class="fa fa-quote-left"></i><span id="search-post-title">Android 源代码下载与编译</span></a>
+    <p class="search-time">
+        <i class="fa fa-calendar icon"></i>
+        <span id="search-post-tags">2018-02-03</span>
+    </p>
+    
+    <p class="search-result-meta">
+    <i class="fa fa-tags icon"></i>
+        
+            <span id="search-post-tags">#android</span>
+        
+            <span id="search-post-tags">#sourcecode</span>
+        
+    </p>
+    
+    <div class="clearfix"></div>
+</div>
+
+                
+                <div class="media">
+    <a class="search-title" href="/2018/01/09/eatablish-your-own-blog-with-hexo-and-github-pages/"><i class="fa fa-quote-left"></i><span id="search-post-title">Hexo + Github 搭建属于自己的小窝</span></a>
+    <p class="search-time">
+        <i class="fa fa-calendar icon"></i>
+        <span id="search-post-tags">2018-01-09</span>
+    </p>
+    
+    <p class="search-result-meta">
+    <i class="fa fa-tags icon"></i>
+        
+            <span id="search-post-tags">#hexo</span>
+        
+            <span id="search-post-tags">#blog</span>
+        
+    </p>
+    
+    <div class="clearfix"></div>
+</div>
+
+                
+                <div class="media">
+    <a class="search-title" href="/2018/02/11/hamcrest-matcher/"><i class="fa fa-quote-left"></i><span id="search-post-title">Hamcrest 匹配器</span></a>
+    <p class="search-time">
+        <i class="fa fa-calendar icon"></i>
+        <span id="search-post-tags">2018-02-11</span>
+    </p>
+    
+    <p class="search-result-meta">
+    <i class="fa fa-tags icon"></i>
+        
+            <span id="search-post-tags">#android</span>
+        
+            <span id="search-post-tags">#hamcrest</span>
+        
+    </p>
+    
+    <div class="clearfix"></div>
+</div>
+
+                
+                <div class="media">
+    <a class="search-title" href="/2018/04/26/how-to-write-unit-tests/"><i class="fa fa-quote-left"></i><span id="search-post-title">如何写有价值的单元测试</span></a>
+    <p class="search-time">
+        <i class="fa fa-calendar icon"></i>
+        <span id="search-post-tags">2018-04-26</span>
+    </p>
+    
+    <p class="search-result-meta">
+    <i class="fa fa-tags icon"></i>
+        
+            <span id="search-post-tags">#自动化测试</span>
+        
+            <span id="search-post-tags">#unit-test</span>
+        
+    </p>
+    
+    <div class="clearfix"></div>
+</div>
+
+                
+                <div class="media">
+    <a class="search-title" href="/2018/04/29/mockito-framework/"><i class="fa fa-quote-left"></i><span id="search-post-title">单元测试之— Mockito 框架</span></a>
+    <p class="search-time">
+        <i class="fa fa-calendar icon"></i>
+        <span id="search-post-tags">2018-04-29</span>
+    </p>
+    
+    <p class="search-result-meta">
+    <i class="fa fa-tags icon"></i>
+        
+            <span id="search-post-tags">#自动化测试</span>
+        
+            <span id="search-post-tags">#unit-test</span>
+        
+            <span id="search-post-tags">#Mock</span>
+        
+            <span id="search-post-tags">#Mockito</span>
+        
+    </p>
+    
+    <div class="clearfix"></div>
+</div>
+
+                
+                <div class="media">
+    <a class="search-title" href="/2018/05/02/powermock-framework/"><i class="fa fa-quote-left"></i><span id="search-post-title">单元测试之— PowerMock 框架</span></a>
+    <p class="search-time">
+        <i class="fa fa-calendar icon"></i>
+        <span id="search-post-tags">2018-05-02</span>
+    </p>
+    
+    <p class="search-result-meta">
+    <i class="fa fa-tags icon"></i>
+        
+            <span id="search-post-tags">#自动化测试</span>
+        
+            <span id="search-post-tags">#unit-test</span>
+        
+            <span id="search-post-tags">#Mock</span>
+        
+            <span id="search-post-tags">#PowerMock</span>
+        
+    </p>
+    
+    <div class="clearfix"></div>
+</div>
+
+                
+                <div class="media">
+    <a class="search-title" href="/2018/05/07/robolectric-framework/"><i class="fa fa-quote-left"></i><span id="search-post-title">单元测试之 —  Robolectric 框架</span></a>
+    <p class="search-time">
+        <i class="fa fa-calendar icon"></i>
+        <span id="search-post-tags">2018-05-07</span>
+    </p>
+    
+    <p class="search-result-meta">
+    <i class="fa fa-tags icon"></i>
+        
+            <span id="search-post-tags">#自动化测试</span>
+        
+            <span id="search-post-tags">#unit-test</span>
+        
+            <span id="search-post-tags">#robolectric</span>
+        
+    </p>
+    
+    <div class="clearfix"></div>
+</div>
+
+                
+                <div class="media">
+    <a class="search-title" href="/2018/04/19/android-proguard/"><i class="fa fa-quote-left"></i><span id="search-post-title">Andoid ProGuard</span></a>
+    <p class="search-time">
+        <i class="fa fa-calendar icon"></i>
+        <span id="search-post-tags">2018-04-19</span>
+    </p>
+    
+    <p class="search-result-meta">
+    <i class="fa fa-tags icon"></i>
+        
+            <span id="search-post-tags">#proguard</span>
+        
+    </p>
+    
+    <div class="clearfix"></div>
+</div>
+
+                
+            </div>
+        </section>
+    </div>
+</div>
+
+</div>
+</body>
+</html>

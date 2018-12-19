@@ -1,0 +1,1045 @@
+
+<!DOCTYPE html>
+<html lang="zh-cn">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="baidu-site-verification" content="fJhstNzkJ1"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="generator" content="小一 | 莫舍己道 勿扰他心">
+    <title>Hamcrest 匹配器 - 小一 | 莫舍己道 勿扰他心</title>
+    <meta name="author" content="小一">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0" />
+    <link rel="Shortcut Icon" href="http://www.istarx.cc/assets/images/favicon.ico" type="image/x-icon">
+    
+        <meta name="keywords" content="hamcrest,匹配器">
+    
+    
+        <link rel="icon" href="http://www.istarx.cc/assets/images/favicon.ico">
+    
+    
+        <link rel="alternate" type="application/atom+xml" title="RSS" href="/atom.xml">
+    
+    
+    
+    
+        
+    
+    
+        <meta property="og:image" content="http://www.istarx.cc/assets/images/avatar.png"/>
+    
+    
+    
+        <meta property="og:image" content="http://ox8xvtm5b.bkt.clouddn.com/hamcrest-matching.jpg"/>
+        <meta class="swiftype" name="image" data-type="enum"
+              content="http://ox8xvtm5b.bkt.clouddn.com/hamcrest-matching.jpg"/>
+    
+    
+    <!--STYLES-->
+    <link rel="stylesheet" href="/assets/css/style-rlxfihttornraopitbezqtlbmvsdagzls3exfuttflefzmed5ps1pwz5efhy.min.css">
+    <!--STYLES END-->
+    
+
+    
+
+</head>
+
+<body>
+<div id="container">
+    <canvas id="anm-canvas" data-behavior="2" class="anm-canvas hidden"></canvas>
+    <div id="blog">
+        <!-- Define author's picture -->
+
+
+    
+        
+            
+        
+    
+
+<header id="header" data-behavior="2" class="fade-in">
+    <i id="btn-open-sidebar" class="fa fa-lg fa-bars"></i>
+    <div class="header-title">
+        <a class="header-title-link" href="/ ">小一 | 莫舍己道 勿扰他心</a>
+    </div>
+    <i class="btn-open-search fa fa-lg fa-search"></i>
+    
+        
+        <a class="header-right-picture  " href=" #about ">
+            
+        
+            <img class="header-picture" src="/assets/images/avatar.png" alt="作者的图片">
+        
+        </a>
+    
+</header>
+
+        <!-- Define author's picture -->
+
+
+
+        
+    
+
+<nav id="sidebar" data-behavior="2" class="hidden fade-in">
+    <div class="sidebar-top-whitespace"></div>
+    <div class="sidebar-container">
+        
+            <div class="sidebar-profile">
+                <!-- 头像效果-start -->
+                <div class="ih-item circle effect right_to_left">
+                    <a href="/ ">
+                        <img class="sidebar-profile-picture" src="/assets/images/avatar.png" alt="作者的图片">
+                        <div class="info">
+                            <div class="info-back">
+                                <h2>
+                                    
+                                    Android
+                                    
+                                </h2>
+                                <p>
+                                    
+                                    Pyhon
+                                    
+                                </p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <!-- 头像效果-end -->
+                <h4 class="sidebar-profile-name">小一</h4>
+                
+                    <h5 class="sidebar-profile-bio"><p>莫舍己道,勿扰他心.</p>
+</h5>
+                
+            </div>
+        
+        
+            <ul class="sidebar-buttons">
+            
+                <li class="sidebar-button">
+                    
+                        <a class="sidebar-button-link " href="/#blog">
+                            
+                            <i class="sidebar-button-icon fa fa-lg fa-home" aria-hidden="true"></i>
+                            <span class="sidebar-button-desc">首页</span>
+                        </a>
+            </li>
+            
+                <li class="sidebar-button">
+                    
+                        <a class="sidebar-button-link " href="/all-categories">
+                            
+                            <i class="sidebar-button-icon fa fa-lg fa-bookmark" aria-hidden="true"></i>
+                            <span class="sidebar-button-desc">分类</span>
+                        </a>
+            </li>
+            
+                <li class="sidebar-button">
+                    
+                        <a class="sidebar-button-link " href="/all-tags">
+                            
+                            <i class="sidebar-button-icon fa fa-lg fa-tags" aria-hidden="true"></i>
+                            <span class="sidebar-button-desc">标签</span>
+                        </a>
+            </li>
+            
+                <li class="sidebar-button">
+                    
+                        <a class="sidebar-button-link " href="/all-archives">
+                            
+                            <i class="sidebar-button-icon fa fa-lg fa-archive" aria-hidden="true"></i>
+                            <span class="sidebar-button-desc">归档</span>
+                        </a>
+            </li>
+            
+                <li class="sidebar-button">
+                    
+                    <a class="sidebar-button-link open-search-col" rel="noopener">
+                    
+                            <i class="sidebar-button-icon fa fa-lg fa-search" aria-hidden="true"></i>
+                            <span class="sidebar-button-desc">搜索</span>
+                        </a>
+            </li>
+            
+                <li class="sidebar-button">
+                    
+                        <a class="sidebar-button-link " href="#about">
+                            
+                            <i class="sidebar-button-icon fa fa-lg fa-question" aria-hidden="true"></i>
+                            <span class="sidebar-button-desc">关于</span>
+                        </a>
+            </li>
+            
+        </ul>
+        
+            <ul class="sidebar-buttons">
+            
+                <li class="sidebar-button">
+                    
+                        <a class="sidebar-button-link " href="https://github.com/cherlas" target="_blank" rel="noopener">
+                    
+                            <i class="sidebar-button-icon fa fa-lg fa-github" aria-hidden="true"></i>
+                            <span class="sidebar-button-desc">GitHub</span>
+                        </a>
+            </li>
+            
+                <li class="sidebar-button">
+                    
+                        <a class="sidebar-button-link " href="mailto:vm@li.cm" target="_blank" rel="noopener">
+                    
+                            <i class="sidebar-button-icon fa fa-lg fa-envelope-o" aria-hidden="true"></i>
+                            <span class="sidebar-button-desc">邮箱</span>
+                        </a>
+            </li>
+            
+        </ul>
+        
+            <ul class="sidebar-buttons">
+            
+                <li class="sidebar-button">
+                    
+                        <a class="sidebar-button-link " href="/atom.xml">
+                            
+                            <i class="sidebar-button-icon fa fa-lg fa-rss" aria-hidden="true"></i>
+                            <span class="sidebar-button-desc">RSS</span>
+                        </a>
+            </li>
+            
+        </ul>
+        
+    </div>
+    <div class="sidebar-bottom-whitespace"></div>
+</nav>
+
+        
+<div class="post-header-cover fade-in header-image-cover
+                    text-left
+                    post-header-cover--partial" style="background-image:url('http://ox8xvtm5b.bkt.clouddn.com/hamcrest-matching.jpg');
+      filter: blur(0px); 
+      height: 50%;" data-behavior="2">
+</div>
+<div class="post-header-cover fade-in post-header-cover-background
+                            text-left
+                            post-header-cover--partial" style="
+     
+             height: 50%;
+     " data-behavior="2">
+
+    
+    <div class="post-header main-content-wrap text-left fadeInDown">
+    <div class="post-header-message content-with-table">
+        
+        <h1 class="post-title" itemprop="headline">
+            Hamcrest 匹配器
+        </h1>
+        
+        
+        <div class="post-meta">
+    <time itemprop="datePublished" datetime="2018-02-11T00:04:33+08:00">
+        <img class="calendar" src="/assets/images/calendar.png">
+        
+        2月 11, 2018
+        
+    </time>
+    
+    <span>发布在 </span>
+    
+<a class="category-link" href="/categories/程序猿进化之路/">程序猿进化之路</a>, <a class="category-link" href="/categories/程序猿进化之路/自动化测试/">自动化测试</a>
+
+
+    
+    
+    <img class="tag-img" src="/assets/images/tag-icon.svg">
+    <div class="post-tags">
+        
+        <a href="/tags/android/">android</a>
+        
+        <a href="/tags/hamcrest/">hamcrest</a>
+        
+    </div>
+    
+</div>
+
+        
+    </div>
+</div>
+
+    
+</div>
+
+
+        <div id="main" data-behavior="2"
+             class="hasCover
+                        hasCoverMetaIn
+                        hasCoverCaption hidden fade-in">
+            
+<article class="post" itemscope="" itemtype="http://schema.org/BlogPosting">
+    
+        <span class="post-header-cover-caption caption">很多我们以为永远不会忘记的事情，都在我们念念不忘的日子里，被我们遗忘了。 — 青春·杨花·念念不忘</span>
+    
+    
+    <div class="tableTile" data-message="目录">
+    </div>
+    <div class="post-content markdown" itemprop="articleBody">
+        <div class="main-content-wrap fadeInDown toc content-with-table">
+            <script src="/assets/js/APlayer.min.js"> </script><p>Hamcrest是用于编写匹配器对象的框架，允许以声明方式定义“匹配”规则。有许多情况下匹配器是不可估量的，例如UI验证或数据过滤，但是在编写灵活测试的领域中，匹配器反而是最常用的。</p>
+<a id="more"></a>
+<p><ul class="toc js-fixedContent">
+<li><a href="#%E7%AE%80%E8%BF%B0">简述</a></li>
+<li><a href="#%E5%B8%B8%E7%94%A8api">常用API</a>
+<ul>
+<li><a href="#%E6%A0%B8%E5%BF%83">核心</a></li>
+<li><a href="#%E9%80%BB%E8%BE%91">逻辑</a></li>
+<li><a href="#%E5%AF%B9%E8%B1%A1">对象</a></li>
+<li><a href="#beans">Beans</a></li>
+<li><a href="#%E9%9B%86%E5%90%88">集合</a></li>
+<li><a href="#%E6%95%B0%E5%AD%97">数字</a></li>
+<li><a href="#%E6%96%87%E6%9C%AC">文本</a></li>
+</ul>
+</li>
+<li><a href="#%E8%87%AA%E5%AE%9A%E4%B9%89%E5%8C%B9%E9%85%8D%E5%99%A8">自定义匹配器</a>
+<ul>
+<li><a href="#%E5%AE%9E%E7%8E%B0basematchert%E6%8E%A5%E5%8F%A3">实现<code>BaseMatcher&lt;T&gt;</code>接口</a></li>
+<li><a href="#%E5%AE%9E%E7%8E%B0typesafematchert%E6%8E%A5%E5%8F%A3">实现<code>TypeSafeMatcher&lt;T&gt;</code>接口</a></li>
+</ul>
+</li>
+</ul>
+</p>
+<h2 id="简述"><a class="anchor" href="#简述"></a> 简述</h2>
+<p>Hamcrest是用于编写匹配器对象的框架，允许以声明方式定义“匹配”规则。有许多情况下匹配器是不可估量的，例如UI验证或数据过滤，但是在编写灵活测试的领域中，匹配器反而是最常用的。</p>
+<p>Hamcrest还是相对比较简单的，API也相对比较少，就从一个小例子说起吧。</p>
+<p>假如要你要测试一个集合中是否包含三个元素中的一个，如果包含则断言真，否则为假。把集合的初始化放在<code>@Before</code>中，则用JUnit的Assert断言写法如下：</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="meta">@RunWith</span>(JUnit4.class)</span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">HamcrestTest</span> </span>&#123;</span><br><span class="line">    <span class="keyword">private</span> List&lt;String&gt; hamcrestTestList;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Before</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setUp</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        hamcrestTestList = <span class="keyword">new</span> ArrayList&lt;&gt;();</span><br><span class="line">        hamcrestTestList.add(<span class="string">"first element"</span>);</span><br><span class="line">        hamcrestTestList.add(<span class="string">"second element"</span>);</span><br><span class="line">        hamcrestTestList.add(<span class="string">"third element"</span>);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Test</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">assertWithJunitTest</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        assertTrue(hamcrestTestList.contains(<span class="string">"first element"</span>)</span><br><span class="line">                || hamcrestTestList.contains(<span class="string">"second element"</span>)</span><br><span class="line">                || hamcrestTestList.contains(<span class="string">"third element"</span>));</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>assertWithJunitTest方法本身并难以理解，但是你第一眼看到它很可能不太明白它是做什么的，而且代码也不简练，而Hamcrest则正是为了简化断言，可以构建测试表达式的匹配器库。Hamcrest的书写方法如下：</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> <span class="keyword">static</span> org.hamcrest.CoreMatchers.anyOf;</span><br><span class="line"><span class="keyword">import</span> <span class="keyword">static</span> org.hamcrest.CoreMatchers.equalTo;</span><br><span class="line"><span class="keyword">import</span> <span class="keyword">static</span> org.hamcrest.CoreMatchers.hasItem;</span><br><span class="line"></span><br><span class="line">...</span><br><span class="line"></span><br><span class="line"><span class="meta">@Test</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">assertWithHamcrestTest</span><span class="params">()</span></span>&#123;</span><br><span class="line">    assertThat(hamcrestTestList, hasItem(anyOf(equalTo(<span class="string">"first element"</span>), equalTo(<span class="string">"second element"</span>), equalTo(<span class="string">"third element"</span>))));</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="常用api"><a class="anchor" href="#常用api"></a> 常用API</h2>
+<p>hamcrest的匹配器都看起来很好理解，并且还提供了自定义匹配器的接口，可以满足编写代码的需要。主要的API接口有如下：</p>
+<h3 id="核心"><a class="anchor" href="#核心"></a> 核心</h3>
+<ul>
+<li><code>anything</code> - 绝对匹配，无论什么情况下都会匹配成功；</li>
+<li><code>describedAs</code> - 添加自定义失败描述；</li>
+<li><code>is</code> - 是否的意思，仅用来改善断言语句的可读性；</li>
+</ul>
+<h3 id="逻辑"><a class="anchor" href="#逻辑"></a> 逻辑</h3>
+<ul>
+<li><code>allOf</code> - 检查是否包含所有的匹配器，相当于与(&amp;&amp;)；</li>
+<li><code>anyOf</code> - 检查是否包含匹配器中的一个，相当于(||)；</li>
+<li><code>not</code> - 检查是否与匹配器相反，相当于非(!)；</li>
+</ul>
+<h3 id="对象"><a class="anchor" href="#对象"></a> 对象</h3>
+<ul>
+<li><code>equalTo</code> - 检查两个对象是否相等；</li>
+<li><code>hasToString</code> - 检查Object.toString；</li>
+<li><code>instanceOf</code>,<code>isCompatibleType</code> - 检查对象是否是兼容类型；</li>
+<li><code>notNullValue</code>,<code>nullValue</code> - 检查是否是null值；</li>
+<li><code>sameInstance</code> - 检查对象是否是相同的类型；</li>
+</ul>
+<h3 id="beans"><a class="anchor" href="#beans"></a> Beans</h3>
+<ul>
+<li><code>hasProperty</code> - 检查对象是否有某种属性；</li>
+</ul>
+<h3 id="集合"><a class="anchor" href="#集合"></a> 集合</h3>
+<ul>
+<li><code>array</code> - 检查array的元素是否和匹配器描述的相同；</li>
+<li><code>hasEntry</code>,<code>hasKey</code>,<code>hasValue</code> - 测试给定的Map是否有特定的实体、键或者值；</li>
+<li><code>hasItem</code>,<code>hasItems</code> - 测试集合是否有一个或者多个元素；</li>
+<li><code>hasItemInArray</code> - 测试数组中是否有某一元素；</li>
+</ul>
+<h3 id="数字"><a class="anchor" href="#数字"></a> 数字</h3>
+<ul>
+<li><code>closeTo</code> - 给定的数字是否接近于给定的值；</li>
+<li><code>greaterThan</code>,<code>greaterThanOrEqualTo</code>,<code>lessThan</code>,<code>lessThanOrEqualTo</code> -给定的数字是否大于、大于等于、小于、小于等于给定的值；</li>
+</ul>
+<h3 id="文本"><a class="anchor" href="#文本"></a> 文本</h3>
+<ul>
+<li><code>equalToIgnoringCase</code> - 检查给定的字符串是否与另一字符串在忽略大小写的情况下相同；</li>
+<li><code>equalToIgnoringWhiteSpace</code> - 检查给定的字符串是否与另一字符串在忽略空格的情况下相同；</li>
+<li><code>containsString</code> - 检查给定的字符串是否包含某一字符串；</li>
+<li><code>endsWith</code> - 检查给定的字符串是否以某一字符串结尾；</li>
+<li><code>startsWith</code> - 检查给定的字符串是否以某一字符串开头；</li>
+</ul>
+<p>这些匹配器除了可以单独使用外，还可以组合使用，提供更佳精确的匹配。例如：</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line">assertThat(hamcrestTestList, hasItem(anyOf(equalTo(<span class="string">"first element"</span>),equalTo(<span class="string">"second element"</span>), equalTo(<span class="string">"third element"</span>))));</span><br></pre></td></tr></table></figure>
+<h2 id="自定义匹配器"><a class="anchor" href="#自定义匹配器"></a> 自定义匹配器</h2>
+<p>hamcrest除了可以使用上述匹配器以外，还可以自己编写合适的匹配器，更好的进行测试。自定义匹配器需要实现Mather接口和一个适当的工厂方法。自定义匹配器一方面可以达到合适的匹配，另一方面也可以简化断言语句。</p>
+<p>要想定义自定义匹配器，则需要实现<code>BaseMatcher&lt;T&gt;</code>或者<code>TypeSafeMatcher&lt;T&gt;</code>，需要在<code>build.gradle</code>文件中<code>dependencies</code>闭包中引入对应的包：</p>
+<figure class="highlight groovy"><table><tr><td class="code"><pre><span class="line">dependencies &#123;</span><br><span class="line">    testImplementation <span class="string">'org.hamcrest:hamcrest-core:1.3'</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>自定义匹配器有以下两种实现方法：</p>
+<h3 id="实现basematchert接口"><a class="anchor" href="#实现basematchert接口"></a> 实现<code>BaseMatcher&lt;T&gt;</code>接口</h3>
+<p>如果实现了<code>BaseMatcher&lt;T&gt;</code>，那么需要重写matches方法，matches方法内部实现我们的逻辑，即要满足什么条件时匹配器将匹配各种条件，并确定是否匹配成功。比如如果要实现自定义匹配器，判断给定的字符串是否以<code>ham</code>开头，并且以<code>java</code>结尾，则自定义匹配器实现方式如下：</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">IsExceptedStringMatcher</span> <span class="keyword">extends</span> <span class="title">BaseMatcher</span>&lt;<span class="title">String</span>&gt; </span>&#123;</span><br><span class="line">    <span class="meta">@Factory</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> &lt;T&gt; <span class="function">Matcher&lt;String&gt; <span class="title">isExceptedString</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">new</span> IsExceptedStringMatcher();</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">matches</span><span class="params">(Object item)</span> </span>&#123;</span><br><span class="line">        String str = (String) item;</span><br><span class="line">        <span class="keyword">if</span> (str != <span class="keyword">null</span> &amp;&amp; str.length() &gt;= <span class="number">7</span> &amp;&amp; str.startsWith(<span class="string">"ham"</span>) &amp;&amp; str.endsWith(<span class="string">"java"</span>)) &#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="keyword">true</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">false</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">describeTo</span><span class="params">(Description description)</span> </span>&#123;</span><br><span class="line">        description.appendText(<span class="string">"a string that start with \"ham\" and end with \"java\""</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>之后就可以在断言中直接使用自定义匹配器：</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="meta">@Test</span>(expected = AssertionError.class)</span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">isExceptedStringTest</span><span class="params">()</span></span>&#123;</span><br><span class="line">    String str=<span class="string">"hamcrestjava"</span>;</span><br><span class="line">    assertThat(str,isExceptedString());</span><br><span class="line">    str=<span class="keyword">null</span>;</span><br><span class="line">    assertThat(str,isExceptedString());</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="实现typesafematchert接口"><a class="anchor" href="#实现typesafematchert接口"></a> 实现<code>TypeSafeMatcher&lt;T&gt;</code>接口</h3>
+<p>如果实现了<code>TypeSafeMatcher &lt;T&gt;</code>，那么需要重写matchesSafely方法，</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">protected</span> <span class="keyword">boolean</span> <span class="title">matchesSafely</span><span class="params">(T item)</span></span></span><br></pre></td></tr></table></figure>
+<p>matchesSafely方法内部同样实现我们的逻辑，该方法绝不能接受一个null对象，它总会接受一个类型为T的参数，该参数已被检查是否为null且永远不能为null。如果我们要在自定义匹配器内部进行是否为null检查，则要继续实现<code>BaseMatcher&lt;T&gt;</code>接口，如果要自定义一个密码检查的匹配器，要求密码必须包含1个特殊符号(!、&quot;、#、$、%、&amp;、’、(、)、*、+、-、.、／)和1个数字，并且密码长度至少为6，则自定义匹配器实现方式如下：</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">IsStrongPassword</span> <span class="keyword">extends</span> <span class="title">TypeSafeMatcher</span>&lt;<span class="title">String</span>&gt; </span>&#123;</span><br><span class="line">    <span class="meta">@Factory</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> &lt;T&gt; <span class="function">Matcher&lt;String&gt; <span class="title">isStrongPassword</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">new</span> IsStrongPassword();</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">protected</span> <span class="keyword">boolean</span> <span class="title">matchesSafely</span><span class="params">(String item)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (containsSymbol(item) &amp;&amp; containsDigit(item) &amp;&amp; item.length() &gt;= <span class="number">6</span>) &#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="keyword">true</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">false</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">private</span> <span class="keyword">boolean</span> <span class="title">containsDigit</span><span class="params">(String password)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">char</span> ch : password.toCharArray()) &#123;</span><br><span class="line">            <span class="keyword">if</span> (Character.isDigit(ch)) &#123;</span><br><span class="line">                <span class="keyword">return</span> <span class="keyword">true</span>;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">false</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">private</span> <span class="keyword">boolean</span> <span class="title">containsSymbol</span><span class="params">(String password)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">char</span> ch : password.toCharArray()) &#123;</span><br><span class="line">            <span class="keyword">if</span> ((<span class="keyword">int</span>) ch &gt;= <span class="number">33</span> &amp;&amp; (<span class="keyword">int</span>) ch &lt;= <span class="number">47</span>) &#123;</span><br><span class="line">                <span class="keyword">return</span> <span class="keyword">true</span>;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">false</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">describeTo</span><span class="params">(Description description)</span> </span>&#123;</span><br><span class="line">        description.appendText(<span class="string">"a string which a strong password"</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>接下来你同样可以在测试代码中使用如下的方式使用该匹配器：</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="meta">@Test</span>(expected = AssertionError.class)</span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">IsStrongPasswordTest</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    String password;</span><br><span class="line">    password = <span class="string">"!1s2dxs"</span>;</span><br><span class="line">    assertThat(password, isStrongPassword());</span><br><span class="line">    password = <span class="string">"123dsda"</span>;</span><br><span class="line">    assertThat(password, isStrongPassword());</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+            
+
+        </div>
+        
+            <div class="tableContent fade-in" data-message="true"></div>
+        
+        
+            <div class="post-copyright main-content-wrap content-with-table">
+    <p class="copyright-item">
+        <span>原文作者: </span>
+        <a href="http://http://www.istarx.cc">小一</a>
+    </p>
+    <p class="copyright-item">
+        <span>原文链接: </span>
+        <a href="http://www.istarx.cc/2018/02/11/hamcrest-matcher/">http://www.istarx.cc/2018/02/11/hamcrest-matcher/</a>
+    </p>
+    <p class="copyright-item">
+        <span>许可协议: </span>
+        <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/" target="_blank">知识共享署名-非商业性使用 4.0 国际许可协议，转载请注明出处，谢谢.</a>
+    </p>
+</div>
+
+        
+    </div>
+    
+        <div id="post-footer" class="post-footer main-content-wrap content-with-table">
+            
+                <div class="post-footer-tags">
+                    <span class="text-color-light text-small">标签</span><br>
+                    
+<div class="tagcloud article-tag-list">
+    
+    <li class="article-tag-list-item">
+        <a href="/tags/android/" class="js-tag color3">android</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="/tags/hamcrest/" class="js-tag color4">hamcrest</a>
+    </li>
+    
+    <div class="clearfix"></div>
+</div>
+
+
+                </div>
+            
+            
+                <div class="post-actions-wrap">
+    <nav>
+        <ul class="post-actions post-action-nav">
+            <li class="post-action">
+                
+                
+                <a class="post-action-btn btn btn--default tooltip--top" href="/2018/03/08/creat-your-custom-hexo-theme-from-scratch/" data-tooltip="从零开始制作自己的 Hexo 主题" aria-label="上一篇: 从零开始制作自己的 Hexo 主题">
+                    
+                        <i class="fa fa-angle-left" aria-hidden="true"></i>
+                        <span class="hide-xs hide-sm text-small icon-ml">上一篇</span>
+                    </a>
+            </li>
+            <li class="post-action">
+                
+                
+                <a class="post-action-btn btn btn--default tooltip--top" href="/2018/02/10/android-autotest-summary/" data-tooltip="Android 自动化测试总述" aria-label="下一篇: Android 自动化测试总述">
+                    
+                        <span class="hide-xs hide-sm text-small icon-mr">下一篇</span>
+                        <i class="fa fa-angle-right" aria-hidden="true"></i>
+                    </a>
+            </li>
+        </ul>
+    </nav>
+    <ul class="post-actions post-action-share">
+        <li class="post-action hide-lg hide-md hide-sm">
+            <a class="post-action-btn btn btn--default btn-open-shareoptions" href="#btn-open-shareoptions" aria-label="Diesen Beitrag teilen">
+                <i class="fa fa-share-alt" aria-hidden="true"></i>
+            </a>
+        </li>
+        
+        
+        <li class="post-action">
+            
+                <a class="post-action-btn btn btn--default" href="#" aria-label="Nach oben">
+                    
+                    <i class="fa fa-arrow-up" aria-hidden="true"></i>
+                </a>
+        </li>
+    </ul>
+</div>
+
+
+            
+            
+        </div>
+    
+</article>
+
+
+
+            <footer id="footer" class="main-content-wrap">
+    <span class="copyrights">
+        Copyrights &copy; 2018 小一. All Rights Reserved.
+    </span>
+</footer>
+
+        </div>
+        
+        <div id="bottom-bar" class="post-bottom-bar" data-behavior="2">
+            <div class="post-actions-wrap">
+    <nav>
+        <ul class="post-actions post-action-nav">
+            <li class="post-action">
+                
+                
+                <a class="post-action-btn btn btn--default tooltip--top" href="/2018/03/08/creat-your-custom-hexo-theme-from-scratch/" data-tooltip="从零开始制作自己的 Hexo 主题" aria-label="上一篇: 从零开始制作自己的 Hexo 主题">
+                    
+                        <i class="fa fa-angle-left" aria-hidden="true"></i>
+                        <span class="hide-xs hide-sm text-small icon-ml">上一篇</span>
+                    </a>
+            </li>
+            <li class="post-action">
+                
+                
+                <a class="post-action-btn btn btn--default tooltip--top" href="/2018/02/10/android-autotest-summary/" data-tooltip="Android 自动化测试总述" aria-label="下一篇: Android 自动化测试总述">
+                    
+                        <span class="hide-xs hide-sm text-small icon-mr">下一篇</span>
+                        <i class="fa fa-angle-right" aria-hidden="true"></i>
+                    </a>
+            </li>
+        </ul>
+    </nav>
+    <ul class="post-actions post-action-share">
+        <li class="post-action hide-lg hide-md hide-sm">
+            <a class="post-action-btn btn btn--default btn-open-shareoptions" href="#btn-open-shareoptions" aria-label="Diesen Beitrag teilen">
+                <i class="fa fa-share-alt" aria-hidden="true"></i>
+            </a>
+        </li>
+        
+        
+        <li class="post-action">
+            
+                <a class="post-action-btn btn btn--default" href="#" aria-label="Nach oben">
+                    
+                    <i class="fa fa-arrow-up" aria-hidden="true"></i>
+                </a>
+        </li>
+    </ul>
+</div>
+
+
+        </div>
+        <div id="share-options-bar" class="share-options-bar" data-behavior="2">
+    <i id="btn-close-shareoptions" class="fa fa-close"></i>
+    <ul class="share-options">
+        
+    </ul>
+</div>
+
+        
+    </div>
+    
+
+
+    
+        
+    
+
+<div id="about">
+    <div id="about-card">
+        <div id="about-btn-close">
+            <i class="fa fa-remove"></i>
+        </div>
+        
+            <img id="about-card-picture" src="/assets/images/avatar.png" alt="作者的图片">
+        
+            <h4 id="about-card-name">小一</h4>
+        
+            <div id="about-card-bio"><p>莫舍己道,勿扰他心.</p>
+</div>
+        
+        
+            <div id="about-card-job">
+                <i class="fa fa-briefcase"></i>
+                <br>
+                <p>Android开发<br>自动化测试</p>
+
+            </div>
+        
+        
+            <div id="about-card-location">
+                <i class="fa fa-map-marker"></i>
+                <br>
+                ShanXi Xi&#39;an
+            </div>
+        
+    </div>
+</div>
+
+    
+
+<!-- Define author's picture -->
+
+
+    
+        
+    
+
+<div id="cover" style="background-image:url('http://ox8xvtm5b.bkt.clouddn.com/cover.jpg');">
+    <div class="first-page-desc-container">
+        <span class="first-page-desc pulse"></span>
+    </div>
+    <div class="full-screen-head hidden">
+        <!-- 头像效果-start -->
+        <div class="ih-item circle effect right_to_left fade-in">
+            <a href="/#blog" class="blog-button-full-screen">
+                <img class="sidebar-profile-picture" src="/assets/images/avatar.png" alt="作者的图片">
+                <div class="info">
+                    <div class="info-back">
+                        <h2>
+                            
+                            Android
+                            
+                        </h2>
+                        <p>
+                            
+                            Pyhon
+                            
+                        </p>
+                    </div>
+                </div>
+            </a>
+        </div>
+        <!-- 头像效果-end -->
+    </div>
+</div>
+
+    <!--SCRIPTS-->
+<script src="/assets/js/script-6x2v9gn7dhx5dmgdhsw61sllyjdn5hhxgfecagyxt4udfqiwo1hxodblwcyt.min.js"></script>
+<!--SCRIPTS END-->
+
+
+<script src="https://cdn.jsdelivr.net/npm/moment@2.20.1/min/moment-with-locales.min.js"></script>
+<script src="//cdn.jsdelivr.net/algoliasearch/3/algoliasearch.min.js"></script>
+<script>
+  var algoliaClient = algoliasearch('8N47Y2YYXB', '6ed86c6c2611f5cfdbfc015301c1bdb2');
+  var algoliaIndex = algoliaClient.initIndex('blog-index');
+</script>
+
+
+<script>
+  window.onload = function() {
+    if (location.hash !== '#blog' && location.hash !== '' && location.hash !== '#') {
+      window.location.hash = '';
+    }
+  };
+</script>
+
+    <div data-behavior="2" class="search-tools-col hide">
+    <div class="tools-wrap">
+        <section class="tools-section tools-section-all">
+            <div class="search-wrap">
+                <input class="search-ipt" type="text" placeholder="find something…">
+                <i class="icon-search icon"></i>
+                <i class="icon-close icon "></i>
+            </div>
+            <div class="widget tagcloud search-tag">
+                <ul class="article-tag-list">
+                    
+                    <li class="article-tag-list-item">
+                        <a class="js-tag color3">android</a>
+                    </li>
+                    
+                    <li class="article-tag-list-item">
+                        <a class="js-tag color1">自动化测试</a>
+                    </li>
+                    
+                    <li class="article-tag-list-item">
+                        <a class="js-tag color2">UIAutomator</a>
+                    </li>
+                    
+                    <li class="article-tag-list-item">
+                        <a class="js-tag color4">sql</a>
+                    </li>
+                    
+                    <li class="article-tag-list-item">
+                        <a class="js-tag color5">unit-test</a>
+                    </li>
+                    
+                    <li class="article-tag-list-item">
+                        <a class="js-tag color4">espresso</a>
+                    </li>
+                    
+                    <li class="article-tag-list-item">
+                        <a class="js-tag color2">gradle</a>
+                    </li>
+                    
+                    <li class="article-tag-list-item">
+                        <a class="js-tag color5">productflavors</a>
+                    </li>
+                    
+                    <li class="article-tag-list-item">
+                        <a class="js-tag color1">sourcecode</a>
+                    </li>
+                    
+                    <li class="article-tag-list-item">
+                        <a class="js-tag color5">hexo</a>
+                    </li>
+                    
+                    <li class="article-tag-list-item">
+                        <a class="js-tag color5">blog</a>
+                    </li>
+                    
+                    <li class="article-tag-list-item">
+                        <a class="js-tag color4">hamcrest</a>
+                    </li>
+                    
+                    <li class="article-tag-list-item">
+                        <a class="js-tag color5">Mock</a>
+                    </li>
+                    
+                    <li class="article-tag-list-item">
+                        <a class="js-tag color3">Mockito</a>
+                    </li>
+                    
+                    <li class="article-tag-list-item">
+                        <a class="js-tag color5">PowerMock</a>
+                    </li>
+                    
+                    <li class="article-tag-list-item">
+                        <a class="js-tag color2">robolectric</a>
+                    </li>
+                    
+                    <li class="article-tag-list-item">
+                        <a class="js-tag color4">proguard</a>
+                    </li>
+                    
+                    <li class="article-tag-list-item">
+                        <a class="js-tag color1">theme</a>
+                    </li>
+                    
+                    <li class="article-tag-list-item">
+                        <a class="js-tag color3">主题</a>
+                    </li>
+                    
+                    <div class="clearfix"></div>
+                </ul>
+            </div>
+            <p class="results-count hide" data-message-zero="没有找到文章" data-message-one="找到 1 篇文章" data-message-other="找到 {n} 篇文章">
+                找到 17 篇文章
+            </p>
+            <div class="search-result">
+                
+                <div class="media">
+    <a class="search-title" href="/2018/02/10/android-autotest-summary/"><i class="fa fa-quote-left"></i><span id="search-post-title">Android 自动化测试总述</span></a>
+    <p class="search-time">
+        <i class="fa fa-calendar icon"></i>
+        <span id="search-post-tags">2018-02-10</span>
+    </p>
+    
+    <p class="search-result-meta">
+    <i class="fa fa-tags icon"></i>
+        
+            <span id="search-post-tags">#android</span>
+        
+            <span id="search-post-tags">#自动化测试</span>
+        
+    </p>
+    
+    <div class="clearfix"></div>
+</div>
+
+                
+                <div class="media">
+    <a class="search-title" href="/2018/04/07/android-test-uiautomator/"><i class="fa fa-quote-left"></i><span id="search-post-title">Android 自动化测试之 — UI Automator</span></a>
+    <p class="search-time">
+        <i class="fa fa-calendar icon"></i>
+        <span id="search-post-tags">2018-04-07</span>
+    </p>
+    
+    <p class="search-result-meta">
+    <i class="fa fa-tags icon"></i>
+        
+            <span id="search-post-tags">#自动化测试</span>
+        
+            <span id="search-post-tags">#UIAutomator</span>
+        
+    </p>
+    
+    <div class="clearfix"></div>
+</div>
+
+                
+                <div class="media">
+    <a class="search-title" href="/2018/12/17/unique-keyword-of-mysql/"><i class="fa fa-quote-left"></i><span id="search-post-title">SQL 中的 UNIQUE 关键字</span></a>
+    <p class="search-time">
+        <i class="fa fa-calendar icon"></i>
+        <span id="search-post-tags">2018-12-17</span>
+    </p>
+    
+    <p class="search-result-meta">
+    <i class="fa fa-tags icon"></i>
+        
+            <span id="search-post-tags">#sql</span>
+        
+    </p>
+    
+    <div class="clearfix"></div>
+</div>
+
+                
+                <div class="media">
+    <a class="search-title" href="/2018/04/24/unit-test-annotation/"><i class="fa fa-quote-left"></i><span id="search-post-title">单元测试常用注释</span></a>
+    <p class="search-time">
+        <i class="fa fa-calendar icon"></i>
+        <span id="search-post-tags">2018-04-24</span>
+    </p>
+    
+    <p class="search-result-meta">
+    <i class="fa fa-tags icon"></i>
+        
+            <span id="search-post-tags">#unit-test</span>
+        
+    </p>
+    
+    <div class="clearfix"></div>
+</div>
+
+                
+                <div class="media">
+    <a class="search-title" href="/2018/04/16/unit-test-what-and-why/"><i class="fa fa-quote-left"></i><span id="search-post-title">Android自动化测试之 — 简单聊聊单元测试</span></a>
+    <p class="search-time">
+        <i class="fa fa-calendar icon"></i>
+        <span id="search-post-tags">2018-04-16</span>
+    </p>
+    
+    <p class="search-result-meta">
+    <i class="fa fa-tags icon"></i>
+        
+            <span id="search-post-tags">#自动化测试</span>
+        
+            <span id="search-post-tags">#unit-test</span>
+        
+    </p>
+    
+    <div class="clearfix"></div>
+</div>
+
+                
+                <div class="media">
+    <a class="search-title" href="/2018/04/09/android-test-espresso/"><i class="fa fa-quote-left"></i><span id="search-post-title">Android 自动化测试之 — Espresso</span></a>
+    <p class="search-time">
+        <i class="fa fa-calendar icon"></i>
+        <span id="search-post-tags">2018-04-09</span>
+    </p>
+    
+    <p class="search-result-meta">
+    <i class="fa fa-tags icon"></i>
+        
+            <span id="search-post-tags">#自动化测试</span>
+        
+            <span id="search-post-tags">#espresso</span>
+        
+    </p>
+    
+    <div class="clearfix"></div>
+</div>
+
+                
+                <div class="media">
+    <a class="search-title" href="/2018/02/04/build-mulit-edition-apks-using-productflavors/"><i class="fa fa-quote-left"></i><span id="search-post-title">利用 ProductFlavors 构建差异化APK版本</span></a>
+    <p class="search-time">
+        <i class="fa fa-calendar icon"></i>
+        <span id="search-post-tags">2018-02-04</span>
+    </p>
+    
+    <p class="search-result-meta">
+    <i class="fa fa-tags icon"></i>
+        
+            <span id="search-post-tags">#android</span>
+        
+            <span id="search-post-tags">#gradle</span>
+        
+            <span id="search-post-tags">#productflavors</span>
+        
+    </p>
+    
+    <div class="clearfix"></div>
+</div>
+
+                
+                <div class="media">
+    <a class="search-title" href="/2018/02/03/download-android-source-code/"><i class="fa fa-quote-left"></i><span id="search-post-title">Android 源代码下载与编译</span></a>
+    <p class="search-time">
+        <i class="fa fa-calendar icon"></i>
+        <span id="search-post-tags">2018-02-03</span>
+    </p>
+    
+    <p class="search-result-meta">
+    <i class="fa fa-tags icon"></i>
+        
+            <span id="search-post-tags">#android</span>
+        
+            <span id="search-post-tags">#sourcecode</span>
+        
+    </p>
+    
+    <div class="clearfix"></div>
+</div>
+
+                
+                <div class="media">
+    <a class="search-title" href="/2018/01/09/eatablish-your-own-blog-with-hexo-and-github-pages/"><i class="fa fa-quote-left"></i><span id="search-post-title">Hexo + Github 搭建属于自己的小窝</span></a>
+    <p class="search-time">
+        <i class="fa fa-calendar icon"></i>
+        <span id="search-post-tags">2018-01-09</span>
+    </p>
+    
+    <p class="search-result-meta">
+    <i class="fa fa-tags icon"></i>
+        
+            <span id="search-post-tags">#hexo</span>
+        
+            <span id="search-post-tags">#blog</span>
+        
+    </p>
+    
+    <div class="clearfix"></div>
+</div>
+
+                
+                <div class="media">
+    <a class="search-title" href="/2018/02/11/hamcrest-matcher/"><i class="fa fa-quote-left"></i><span id="search-post-title">Hamcrest 匹配器</span></a>
+    <p class="search-time">
+        <i class="fa fa-calendar icon"></i>
+        <span id="search-post-tags">2018-02-11</span>
+    </p>
+    
+    <p class="search-result-meta">
+    <i class="fa fa-tags icon"></i>
+        
+            <span id="search-post-tags">#android</span>
+        
+            <span id="search-post-tags">#hamcrest</span>
+        
+    </p>
+    
+    <div class="clearfix"></div>
+</div>
+
+                
+                <div class="media">
+    <a class="search-title" href="/2018/04/26/how-to-write-unit-tests/"><i class="fa fa-quote-left"></i><span id="search-post-title">如何写有价值的单元测试</span></a>
+    <p class="search-time">
+        <i class="fa fa-calendar icon"></i>
+        <span id="search-post-tags">2018-04-26</span>
+    </p>
+    
+    <p class="search-result-meta">
+    <i class="fa fa-tags icon"></i>
+        
+            <span id="search-post-tags">#自动化测试</span>
+        
+            <span id="search-post-tags">#unit-test</span>
+        
+    </p>
+    
+    <div class="clearfix"></div>
+</div>
+
+                
+                <div class="media">
+    <a class="search-title" href="/2018/04/29/mockito-framework/"><i class="fa fa-quote-left"></i><span id="search-post-title">单元测试之— Mockito 框架</span></a>
+    <p class="search-time">
+        <i class="fa fa-calendar icon"></i>
+        <span id="search-post-tags">2018-04-29</span>
+    </p>
+    
+    <p class="search-result-meta">
+    <i class="fa fa-tags icon"></i>
+        
+            <span id="search-post-tags">#自动化测试</span>
+        
+            <span id="search-post-tags">#unit-test</span>
+        
+            <span id="search-post-tags">#Mock</span>
+        
+            <span id="search-post-tags">#Mockito</span>
+        
+    </p>
+    
+    <div class="clearfix"></div>
+</div>
+
+                
+                <div class="media">
+    <a class="search-title" href="/2018/05/02/powermock-framework/"><i class="fa fa-quote-left"></i><span id="search-post-title">单元测试之— PowerMock 框架</span></a>
+    <p class="search-time">
+        <i class="fa fa-calendar icon"></i>
+        <span id="search-post-tags">2018-05-02</span>
+    </p>
+    
+    <p class="search-result-meta">
+    <i class="fa fa-tags icon"></i>
+        
+            <span id="search-post-tags">#自动化测试</span>
+        
+            <span id="search-post-tags">#unit-test</span>
+        
+            <span id="search-post-tags">#Mock</span>
+        
+            <span id="search-post-tags">#PowerMock</span>
+        
+    </p>
+    
+    <div class="clearfix"></div>
+</div>
+
+                
+                <div class="media">
+    <a class="search-title" href="/2018/05/07/robolectric-framework/"><i class="fa fa-quote-left"></i><span id="search-post-title">单元测试之 —  Robolectric 框架</span></a>
+    <p class="search-time">
+        <i class="fa fa-calendar icon"></i>
+        <span id="search-post-tags">2018-05-07</span>
+    </p>
+    
+    <p class="search-result-meta">
+    <i class="fa fa-tags icon"></i>
+        
+            <span id="search-post-tags">#自动化测试</span>
+        
+            <span id="search-post-tags">#unit-test</span>
+        
+            <span id="search-post-tags">#robolectric</span>
+        
+    </p>
+    
+    <div class="clearfix"></div>
+</div>
+
+                
+                <div class="media">
+    <a class="search-title" href="/2018/04/19/android-proguard/"><i class="fa fa-quote-left"></i><span id="search-post-title">Andoid ProGuard</span></a>
+    <p class="search-time">
+        <i class="fa fa-calendar icon"></i>
+        <span id="search-post-tags">2018-04-19</span>
+    </p>
+    
+    <p class="search-result-meta">
+    <i class="fa fa-tags icon"></i>
+        
+            <span id="search-post-tags">#proguard</span>
+        
+    </p>
+    
+    <div class="clearfix"></div>
+</div>
+
+                
+            </div>
+        </section>
+    </div>
+</div>
+
+</div>
+</body>
+</html>
