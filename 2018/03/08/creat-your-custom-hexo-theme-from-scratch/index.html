@@ -30,13 +30,13 @@
     
     
     
-        <meta property="og:image" content="http://ox8xvtm5b.bkt.clouddn.com/create-hexo-theme.jpg"/>
+        <meta property="og:image" content="http://cherlas-blog.oss-cn-beijing.aliyuncs.com/create-hexo-theme.jpg"/>
         <meta class="swiftype" name="image" data-type="enum"
-              content="http://ox8xvtm5b.bkt.clouddn.com/create-hexo-theme.jpg"/>
+              content="http://cherlas-blog.oss-cn-beijing.aliyuncs.com/create-hexo-theme.jpg"/>
     
     
     <!--STYLES-->
-    <link rel="stylesheet" href="/assets/css/style-rlxfihttornraopitbezqtlbmvsdagzls3exfuttflefzmed5ps1pwz5efhy.min.css">
+    <link rel="stylesheet" href="/assets/css/style-nquzy2nicpec0tkfrvwuyo3aijjvo4igqdkvgzeqswz9wqwkivchz2f9ma1k.min.css">
     <!--STYLES END-->
     
 
@@ -215,7 +215,7 @@
         
 <div class="post-header-cover fade-in header-image-cover
                     text-left
-                    post-header-cover--partial" style="background-image:url('http://ox8xvtm5b.bkt.clouddn.com/create-hexo-theme.jpg');
+                    post-header-cover--partial" style="background-image:url('http://cherlas-blog.oss-cn-beijing.aliyuncs.com/create-hexo-theme.jpg');
       filter: blur(0px); 
       height: 50%;" data-behavior="2">
 </div>
@@ -375,7 +375,7 @@
 <figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">%</span> <span class="attr">for</span> (<span class="attr">var</span> <span class="attr">i</span> <span class="attr">in</span> <span class="attr">theme.menu</span>)&#123; %&gt;</span></span><br><span class="line">   <span class="tag">&lt;<span class="name">a</span> <span class="attr">class</span>=<span class="string">"main-nav-link"</span> <span class="attr">href</span>=<span class="string">"&lt;%- url_for(theme.menu[i]) %&gt;"</span>&gt;</span><span class="tag">&lt;<span class="name">%=</span> <span class="attr">i</span> %&gt;</span><span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">%</span> &#125; %&gt;</span></span><br></pre></td></tr></table></figure>
 <p>搜索框则是利用 hexo 的辅助函数进行添加：</p>
 <figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">%-</span> <span class="attr">search_form</span>(&#123;<span class="attr">button:</span> '&amp;#<span class="attr">xF002</span>;'&#125;) %&gt;</span></span><br></pre></td></tr></table></figure>
-<p>Header 文件内容以及对于的css文件如下： <figure class="codeblock codeblock--tabbed"><figcaption><span>partial/header</span><ul class="tabs"><li class="tab active">ejs</li><li class="tab">Stylus</li></ul></figcaption><div class="tabs-content"><figure class="highlight html" style="display: block;"><table><tbody><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">header</span> <span class="attr">id</span>=<span class="string">"header"</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"banner"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"header-outer"</span> <span class="attr">class</span>=<span class="string">"outer"</span>&gt;</span><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"header-title"</span> <span class="attr">class</span>=<span class="string">"inner"</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">h1</span> <span class="attr">id</span>=<span class="string">"logo-wrap"</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"&lt;%- url_for() %&gt;"</span> <span class="attr">id</span>=<span class="string">"logo"</span>&gt;</span><span class="tag">&lt;<span class="name">%=</span> <span class="attr">config.title</span> %&gt;</span><span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;/<span class="name">h1</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">%</span> <span class="attr">if</span> (<span class="attr">theme.subtitle</span>){ %&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">h2</span> <span class="attr">id</span>=<span class="string">"subtitle-wrap"</span>&gt;</span></span><br><span class="line">          <span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"&lt;%- url_for() %&gt;"</span> <span class="attr">id</span>=<span class="string">"subtitle"</span>&gt;</span><span class="tag">&lt;<span class="name">%=</span> <span class="attr">theme.subtitle</span> %&gt;</span><span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">h2</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">%</span> } %&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"header-inner"</span> <span class="attr">class</span>=<span class="string">"inner"</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">nav</span> <span class="attr">id</span>=<span class="string">"main-nav"</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">a</span> <span class="attr">id</span>=<span class="string">"main-nav-toggle"</span> <span class="attr">class</span>=<span class="string">"nav-icon"</span>&gt;</span><span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">%</span> <span class="attr">for</span> (<span class="attr">var</span> <span class="attr">i</span> <span class="attr">in</span> <span class="attr">theme.menu</span>){ %&gt;</span></span><br><span class="line">          <span class="tag">&lt;<span class="name">a</span> <span class="attr">class</span>=<span class="string">"main-nav-link"</span> <span class="attr">href</span>=<span class="string">"&lt;%- url_for(theme.menu[i]) %&gt;"</span>&gt;</span><span class="tag">&lt;<span class="name">%=</span> <span class="attr">i</span> %&gt;</span><span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">%</span> } %&gt;</span></span><br><span class="line">      <span class="tag">&lt;/<span class="name">nav</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">nav</span> <span class="attr">id</span>=<span class="string">"sub-nav"</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">%</span> <span class="attr">if</span> (<span class="attr">theme.rss</span>){ %&gt;</span></span><br><span class="line">          <span class="tag">&lt;<span class="name">a</span> <span class="attr">id</span>=<span class="string">"nav-rss-link"</span> </span><br><span class="line">            <span class="attr">class</span>=<span class="string">"nav-icon"</span> <span class="attr">href</span>=<span class="string">"&lt;%- url_for(theme.rss) %&gt;"</span><span class="attr">title</span>=<span class="string">"&lt;%= __('rss_feed') %&gt;"</span>&gt;</span></span><br><span class="line">          <span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">%</span> } %&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">a</span> <span class="attr">id</span>=<span class="string">"nav-search-btn"</span> <span class="attr">class</span>=<span class="string">"nav-icon"</span> <span class="attr">title</span>=<span class="string">"&lt;%= __('search') %&gt;"</span>&gt;</span><span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;/<span class="name">nav</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"search-form-wrap"</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">%-</span> <span class="attr">search_form</span>({<span class="attr">button:</span> '&amp;#<span class="attr">xF002</span>;'}) %&gt;</span></span><br><span class="line">      <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">header</span>&gt;</span></span><br></pre></td></tr></tbody></table></figure><figure class="highlight stylus" style="display: none;"><table><tbody><tr><td class="code"><pre><span class="line"><span class="selector-id">#header</span></span><br><span class="line">  <span class="attribute">height</span>: banner-height</span><br><span class="line">  <span class="attribute">position</span>: relative</span><br><span class="line">  <span class="attribute">border-bottom</span>: <span class="number">1px</span> solid color-border</span><br><span class="line">  &amp;:before, &amp;:after</span><br><span class="line">    <span class="attribute">content</span>: <span class="string">""</span></span><br><span class="line">    <span class="attribute">position</span>: absolute</span><br><span class="line">    <span class="attribute">left</span>: <span class="number">0</span></span><br><span class="line">    <span class="attribute">right</span>: <span class="number">0</span></span><br><span class="line">    <span class="attribute">height</span>: <span class="number">40px</span></span><br><span class="line">  &amp;:before</span><br><span class="line">    <span class="attribute">top</span>: <span class="number">0</span></span><br><span class="line">    <span class="attribute">background</span>: linear-gradient(rgba(<span class="number">0</span>, <span class="number">0</span>, <span class="number">0</span>, <span class="number">0.2</span>), transparent)</span><br><span class="line">  &amp;:after</span><br><span class="line">    <span class="attribute">bottom</span>: <span class="number">0</span></span><br><span class="line">    <span class="attribute">background</span>: linear-gradient(transparent, rgba(<span class="number">0</span>, <span class="number">0</span>, <span class="number">0</span>, <span class="number">0.2</span>))</span><br><span class="line"></span><br><span class="line"><span class="selector-id">#header-outer</span></span><br><span class="line">  <span class="attribute">height</span>: <span class="number">100%</span></span><br><span class="line">  <span class="attribute">position</span>: relative</span><br><span class="line"></span><br><span class="line"><span class="selector-id">#header-inner</span></span><br><span class="line">  <span class="attribute">position</span>: relative</span><br><span class="line">  <span class="attribute">overflow</span>: hidden</span><br><span class="line"></span><br><span class="line"><span class="selector-id">#banner</span></span><br><span class="line">  <span class="attribute">position</span>: absolute</span><br><span class="line">  <span class="attribute">top</span>: <span class="number">0</span></span><br><span class="line">  <span class="attribute">left</span>: <span class="number">0</span></span><br><span class="line">  <span class="attribute">width</span>: <span class="number">100%</span></span><br><span class="line">  <span class="attribute">height</span>: <span class="number">100%</span></span><br><span class="line">  <span class="attribute">background</span>: url(banner-url) center <span class="number">#000</span></span><br><span class="line">  <span class="attribute">background-size</span>: cover</span><br><span class="line">  <span class="attribute">z-index</span>: -<span class="number">1</span></span><br><span class="line"></span><br><span class="line"><span class="selector-id">#header-title</span></span><br><span class="line">  <span class="attribute">text-align</span>: center</span><br><span class="line">  <span class="attribute">height</span>: logo-size</span><br><span class="line">  <span class="attribute">position</span>: absolute</span><br><span class="line">  <span class="attribute">top</span>: <span class="number">50%</span></span><br><span class="line">  <span class="attribute">left</span>: <span class="number">0</span></span><br><span class="line">  <span class="attribute">margin-top</span>: logo-size * -<span class="number">0.5</span></span><br><span class="line"></span><br><span class="line"><span class="variable">$logo</span>-text</span><br><span class="line">  <span class="attribute">text-decoration</span>: none</span><br><span class="line">  <span class="attribute">color</span>: <span class="number">#fff</span></span><br><span class="line">  <span class="attribute">font-weight</span>: <span class="number">300</span></span><br><span class="line">  <span class="attribute">text-shadow</span>: <span class="number">0</span> <span class="number">1px</span> <span class="number">4px</span> rgba(<span class="number">0</span>, <span class="number">0</span>, <span class="number">0</span>, <span class="number">0.3</span>)</span><br><span class="line"></span><br><span class="line"><span class="selector-id">#logo</span></span><br><span class="line">  @extend <span class="variable">$logo</span>-text</span><br><span class="line">  <span class="attribute">font-size</span>: logo-size</span><br><span class="line">  <span class="attribute">line-height</span>: logo-size</span><br><span class="line">  <span class="attribute">letter-spacing</span>: <span class="number">2px</span></span><br><span class="line"></span><br><span class="line"><span class="selector-id">#subtitle</span></span><br><span class="line">  @extend <span class="variable">$logo</span>-text</span><br><span class="line">  <span class="attribute">font-size</span>: subtitle-size</span><br><span class="line">  <span class="attribute">line-height</span>: subtitle-size</span><br><span class="line">  <span class="attribute">letter-spacing</span>: <span class="number">1px</span></span><br><span class="line"></span><br><span class="line"><span class="selector-id">#subtitle-wrap</span></span><br><span class="line">  <span class="attribute">margin-top</span>: subtitle-size</span><br><span class="line"></span><br><span class="line"><span class="selector-id">#main-nav</span></span><br><span class="line">  <span class="attribute">float</span>: left</span><br><span class="line">  <span class="attribute">margin-left</span>: -<span class="number">15px</span></span><br><span class="line"></span><br><span class="line"><span class="variable">$nav</span>-link</span><br><span class="line">  <span class="attribute">float</span>: left</span><br><span class="line">  <span class="attribute">color</span>: <span class="number">#fff</span></span><br><span class="line">  <span class="attribute">opacity</span>: <span class="number">0.6</span></span><br><span class="line">  <span class="attribute">text-decoration</span>: none</span><br><span class="line">  <span class="attribute">text-shadow</span>: <span class="number">0</span> <span class="number">1px</span> rgba(<span class="number">0</span>, <span class="number">0</span>, <span class="number">0</span>, <span class="number">0.2</span>)</span><br><span class="line">  <span class="attribute">transition</span>: opacity <span class="number">0.2s</span></span><br><span class="line">  <span class="attribute">display</span>: block</span><br><span class="line">  <span class="attribute">padding</span>: <span class="number">20px</span> <span class="number">15px</span></span><br><span class="line">  &amp;:hover</span><br><span class="line">    <span class="attribute">opacity</span>: <span class="number">1</span></span><br><span class="line"></span><br><span class="line"><span class="selector-class">.nav-icon</span></span><br><span class="line">  @extend <span class="variable">$nav</span>-link</span><br><span class="line">  <span class="attribute">font-family</span>: font-icon</span><br><span class="line">  <span class="attribute">text-align</span>: center</span><br><span class="line">  <span class="attribute">font-size</span>: font-size</span><br><span class="line">  <span class="attribute">width</span>: font-size</span><br><span class="line">  <span class="attribute">height</span>: font-size</span><br><span class="line">  <span class="attribute">padding</span>: <span class="number">20px</span> <span class="number">15px</span></span><br><span class="line">  <span class="attribute">position</span>: relative</span><br><span class="line">  <span class="attribute">cursor</span>: pointer</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.main-nav-link</span></span><br><span class="line">  @extend <span class="variable">$nav</span>-link</span><br><span class="line">  <span class="attribute">font-weight</span>: <span class="number">300</span></span><br><span class="line">  <span class="attribute">letter-spacing</span>: <span class="number">1px</span></span><br><span class="line">  @media mq-mobile</span><br><span class="line">    <span class="attribute">display</span>: none</span><br><span class="line"></span><br><span class="line"><span class="selector-id">#main-nav-toggle</span></span><br><span class="line">  <span class="attribute">display</span>: none</span><br><span class="line">  &amp;:before</span><br><span class="line">    <span class="attribute">content</span>: <span class="string">"\f0c9"</span></span><br><span class="line">  @media mq-mobile</span><br><span class="line">    <span class="attribute">display</span>: block</span><br><span class="line"></span><br><span class="line"><span class="selector-id">#sub-nav</span></span><br><span class="line">  <span class="attribute">float</span>: right</span><br><span class="line">  <span class="attribute">margin-right</span>: -<span class="number">15px</span></span><br><span class="line"></span><br><span class="line"><span class="selector-id">#nav-rss-link</span></span><br><span class="line">  &amp;:before</span><br><span class="line">    <span class="attribute">content</span>: <span class="string">"\f09e"</span></span><br><span class="line"></span><br><span class="line"><span class="selector-id">#nav-search-btn</span></span><br><span class="line">  &amp;:before</span><br><span class="line">    <span class="attribute">content</span>: <span class="string">"\f002"</span></span><br><span class="line"></span><br><span class="line"><span class="selector-id">#search-form-wrap</span></span><br><span class="line">  <span class="attribute">position</span>: absolute</span><br><span class="line">  <span class="attribute">top</span>: <span class="number">15px</span></span><br><span class="line">  <span class="attribute">width</span>: <span class="number">150px</span></span><br><span class="line">  <span class="attribute">height</span>: <span class="number">30px</span></span><br><span class="line">  <span class="attribute">right</span>: -<span class="number">150px</span></span><br><span class="line">  <span class="attribute">opacity</span>: <span class="number">0</span></span><br><span class="line">  <span class="attribute">transition</span>: <span class="number">0.2s</span> ease-out</span><br><span class="line">  &amp;<span class="selector-class">.on</span></span><br><span class="line">    <span class="attribute">opacity</span>: <span class="number">1</span></span><br><span class="line">    <span class="attribute">right</span>: <span class="number">0</span></span><br><span class="line">  @media mq-mobile</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">100%</span></span><br><span class="line">    <span class="attribute">right</span>: -<span class="number">100%</span></span><br><span class="line"></span><br><span class="line"><span class="selector-class">.search-form</span></span><br><span class="line">  <span class="attribute">position</span>: absolute</span><br><span class="line">  <span class="attribute">top</span>: <span class="number">0</span></span><br><span class="line">  <span class="attribute">left</span>: <span class="number">0</span></span><br><span class="line">  <span class="attribute">right</span>: <span class="number">0</span></span><br><span class="line">  <span class="attribute">background</span>: <span class="number">#fff</span></span><br><span class="line">  <span class="attribute">padding</span>: <span class="number">5px</span> <span class="number">15px</span></span><br><span class="line">  <span class="attribute">border-radius</span>: <span class="number">15px</span></span><br><span class="line">  <span class="attribute">box-shadow</span>: <span class="number">0</span> <span class="number">0</span> <span class="number">10px</span> rgba(<span class="number">0</span>, <span class="number">0</span>, <span class="number">0</span>, <span class="number">0.3</span>)</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.search-form-input</span></span><br><span class="line">  <span class="attribute">border</span>: none</span><br><span class="line">  <span class="attribute">background</span>: none</span><br><span class="line">  <span class="attribute">color</span>: color-default</span><br><span class="line">  <span class="attribute">width</span>: <span class="number">100%</span></span><br><span class="line">  <span class="attribute">font</span>: <span class="number">13px</span> font-sans</span><br><span class="line">  <span class="attribute">outline</span>: none</span><br><span class="line">  &amp;::-webkit-search-results-decoration</span><br><span class="line">  &amp;::-webkit-search-cancel-<span class="selector-tag">button</span></span><br><span class="line">    -webkit-appearance: <span class="attribute">none</span></span><br><span class="line"></span><br><span class="line"><span class="selector-class">.search-form-submit</span></span><br><span class="line">  <span class="attribute">position</span>: absolute</span><br><span class="line">  <span class="attribute">top</span>: <span class="number">50%</span></span><br><span class="line">  <span class="attribute">right</span>: <span class="number">10px</span></span><br><span class="line">  <span class="attribute">margin-top</span>: -<span class="number">7px</span></span><br><span class="line">  <span class="attribute">font</span>: <span class="number">13px</span> font-icon</span><br><span class="line">  <span class="attribute">border</span>: none</span><br><span class="line">  <span class="attribute">background</span>: none</span><br><span class="line">  <span class="attribute">color</span>: <span class="number">#bbb</span></span><br><span class="line">  <span class="attribute">cursor</span>: pointer</span><br><span class="line">  &amp;:hover, &amp;:focus</span><br><span class="line">    <span class="attribute">color</span>: <span class="number">#777</span></span><br></pre></td></tr></tbody></table></figure></div></figure></p>
+<p>Header 文件内容以及对于的css文件如下： <figure class="codeblock codeblock--tabbed"><figcaption><span>partial/header</span><ul class="tabs"><li class="tab active">ejs</li><li class="tab">Stylus</li></ul></figcaption><div class="tabs-content"><figure class="highlight html" style="display: block;"><table><tbody><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">header</span> <span class="attr">id</span>=<span class="string">"header"</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"banner"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"header-outer"</span> <span class="attr">class</span>=<span class="string">"outer"</span>&gt;</span><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"header-title"</span> <span class="attr">class</span>=<span class="string">"inner"</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">h1</span> <span class="attr">id</span>=<span class="string">"logo-wrap"</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"&lt;%- url_for() %&gt;"</span> <span class="attr">id</span>=<span class="string">"logo"</span>&gt;</span><span class="tag">&lt;<span class="name">%=</span> <span class="attr">config.title</span> %&gt;</span><span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;/<span class="name">h1</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">%</span> <span class="attr">if</span> (<span class="attr">theme.subtitle</span>){ %&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">h2</span> <span class="attr">id</span>=<span class="string">"subtitle-wrap"</span>&gt;</span></span><br><span class="line">          <span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"&lt;%- url_for() %&gt;"</span> <span class="attr">id</span>=<span class="string">"subtitle"</span>&gt;</span><span class="tag">&lt;<span class="name">%=</span> <span class="attr">theme.subtitle</span> %&gt;</span><span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">h2</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">%</span> } %&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"header-inner"</span> <span class="attr">class</span>=<span class="string">"inner"</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">nav</span> <span class="attr">id</span>=<span class="string">"main-nav"</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">a</span> <span class="attr">id</span>=<span class="string">"main-nav-toggle"</span> <span class="attr">class</span>=<span class="string">"nav-icon"</span>&gt;</span><span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">%</span> <span class="attr">for</span> (<span class="attr">var</span> <span class="attr">i</span> <span class="attr">in</span> <span class="attr">theme.menu</span>){ %&gt;</span></span><br><span class="line">          <span class="tag">&lt;<span class="name">a</span> <span class="attr">class</span>=<span class="string">"main-nav-link"</span> <span class="attr">href</span>=<span class="string">"&lt;%- url_for(theme.menu[i]) %&gt;"</span>&gt;</span><span class="tag">&lt;<span class="name">%=</span> <span class="attr">i</span> %&gt;</span><span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">%</span> } %&gt;</span></span><br><span class="line">      <span class="tag">&lt;/<span class="name">nav</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">nav</span> <span class="attr">id</span>=<span class="string">"sub-nav"</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">%</span> <span class="attr">if</span> (<span class="attr">theme.rss</span>){ %&gt;</span></span><br><span class="line">          <span class="tag">&lt;<span class="name">a</span> <span class="attr">id</span>=<span class="string">"nav-rss-link"</span> </span><br><span class="line">            <span class="attr">class</span>=<span class="string">"nav-icon"</span> <span class="attr">href</span>=<span class="string">"&lt;%- url_for(theme.rss) %&gt;"</span><span class="attr">title</span>=<span class="string">"&lt;%= __('rss_feed') %&gt;"</span>&gt;</span></span><br><span class="line">          <span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">%</span> } %&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">a</span> <span class="attr">id</span>=<span class="string">"nav-search-btn"</span> <span class="attr">class</span>=<span class="string">"nav-icon"</span> <span class="attr">title</span>=<span class="string">"&lt;%= __('search') %&gt;"</span>&gt;</span><span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;/<span class="name">nav</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"search-form-wrap"</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">%-</span> <span class="attr">search_form</span>({<span class="attr">button:</span> '&amp;#<span class="attr">xF002</span>;'}) %&gt;</span></span><br><span class="line">      <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">header</span>&gt;</span></span><br></pre></td></tr></tbody></table></figure><figure class="highlight stylus" style="display: none;"><table><tbody><tr><td class="code"><pre><span class="line"><span class="selector-id">#header</span></span><br><span class="line">  <span class="attribute">height</span>: banner-height</span><br><span class="line">  <span class="attribute">position</span>: relative</span><br><span class="line">  <span class="attribute">border-bottom</span>: <span class="number">1px</span> solid color-border</span><br><span class="line">  &amp;:before, &amp;:after</span><br><span class="line">​    <span class="attribute">content</span>: <span class="string">""</span></span><br><span class="line">​    <span class="attribute">position</span>: absolute</span><br><span class="line">​    <span class="attribute">left</span>: <span class="number">0</span></span><br><span class="line">​    <span class="attribute">right</span>: <span class="number">0</span></span><br><span class="line">​    <span class="attribute">height</span>: <span class="number">40px</span></span><br><span class="line">  &amp;:before</span><br><span class="line">​    <span class="attribute">top</span>: <span class="number">0</span></span><br><span class="line">​    <span class="attribute">background</span>: linear-gradient(rgba(<span class="number">0</span>, <span class="number">0</span>, <span class="number">0</span>, <span class="number">0.2</span>), transparent)</span><br><span class="line">  &amp;:after</span><br><span class="line">​    <span class="attribute">bottom</span>: <span class="number">0</span></span><br><span class="line">​    <span class="attribute">background</span>: linear-gradient(transparent, rgba(<span class="number">0</span>, <span class="number">0</span>, <span class="number">0</span>, <span class="number">0.2</span>))</span><br><span class="line"></span><br><span class="line"><span class="selector-id">#header-outer</span></span><br><span class="line">  <span class="attribute">height</span>: <span class="number">100%</span></span><br><span class="line">  <span class="attribute">position</span>: relative</span><br><span class="line"></span><br><span class="line"><span class="selector-id">#header-inner</span></span><br><span class="line">  <span class="attribute">position</span>: relative</span><br><span class="line">  <span class="attribute">overflow</span>: hidden</span><br><span class="line"></span><br><span class="line"><span class="selector-id">#banner</span></span><br><span class="line">  <span class="attribute">position</span>: absolute</span><br><span class="line">  <span class="attribute">top</span>: <span class="number">0</span></span><br><span class="line">  <span class="attribute">left</span>: <span class="number">0</span></span><br><span class="line">  <span class="attribute">width</span>: <span class="number">100%</span></span><br><span class="line">  <span class="attribute">height</span>: <span class="number">100%</span></span><br><span class="line">  <span class="attribute">background</span>: url(banner-url) center <span class="number">#000</span></span><br><span class="line">  <span class="attribute">background-size</span>: cover</span><br><span class="line">  <span class="attribute">z-index</span>: -<span class="number">1</span></span><br><span class="line"></span><br><span class="line"><span class="selector-id">#header-title</span></span><br><span class="line">  <span class="attribute">text-align</span>: center</span><br><span class="line">  <span class="attribute">height</span>: logo-size</span><br><span class="line">  <span class="attribute">position</span>: absolute</span><br><span class="line">  <span class="attribute">top</span>: <span class="number">50%</span></span><br><span class="line">  <span class="attribute">left</span>: <span class="number">0</span></span><br><span class="line">  <span class="attribute">margin-top</span>: logo-size * -<span class="number">0.5</span></span><br><span class="line"></span><br><span class="line"><span class="variable">$logo</span>-text</span><br><span class="line">  <span class="attribute">text-decoration</span>: none</span><br><span class="line">  <span class="attribute">color</span>: <span class="number">#fff</span></span><br><span class="line">  <span class="attribute">font-weight</span>: <span class="number">300</span></span><br><span class="line">  <span class="attribute">text-shadow</span>: <span class="number">0</span> <span class="number">1px</span> <span class="number">4px</span> rgba(<span class="number">0</span>, <span class="number">0</span>, <span class="number">0</span>, <span class="number">0.3</span>)</span><br><span class="line"></span><br><span class="line"><span class="selector-id">#logo</span></span><br><span class="line">  @extend <span class="variable">$logo</span>-text</span><br><span class="line">  <span class="attribute">font-size</span>: logo-size</span><br><span class="line">  <span class="attribute">line-height</span>: logo-size</span><br><span class="line">  <span class="attribute">letter-spacing</span>: <span class="number">2px</span></span><br><span class="line"></span><br><span class="line"><span class="selector-id">#subtitle</span></span><br><span class="line">  @extend <span class="variable">$logo</span>-text</span><br><span class="line">  <span class="attribute">font-size</span>: subtitle-size</span><br><span class="line">  <span class="attribute">line-height</span>: subtitle-size</span><br><span class="line">  <span class="attribute">letter-spacing</span>: <span class="number">1px</span></span><br><span class="line"></span><br><span class="line"><span class="selector-id">#subtitle-wrap</span></span><br><span class="line">  <span class="attribute">margin-top</span>: subtitle-size</span><br><span class="line"></span><br><span class="line"><span class="selector-id">#main-nav</span></span><br><span class="line">  <span class="attribute">float</span>: left</span><br><span class="line">  <span class="attribute">margin-left</span>: -<span class="number">15px</span></span><br><span class="line"></span><br><span class="line"><span class="variable">$nav</span>-link</span><br><span class="line">  <span class="attribute">float</span>: left</span><br><span class="line">  <span class="attribute">color</span>: <span class="number">#fff</span></span><br><span class="line">  <span class="attribute">opacity</span>: <span class="number">0.6</span></span><br><span class="line">  <span class="attribute">text-decoration</span>: none</span><br><span class="line">  <span class="attribute">text-shadow</span>: <span class="number">0</span> <span class="number">1px</span> rgba(<span class="number">0</span>, <span class="number">0</span>, <span class="number">0</span>, <span class="number">0.2</span>)</span><br><span class="line">  <span class="attribute">transition</span>: opacity <span class="number">0.2s</span></span><br><span class="line">  <span class="attribute">display</span>: block</span><br><span class="line">  <span class="attribute">padding</span>: <span class="number">20px</span> <span class="number">15px</span></span><br><span class="line">  &amp;:hover</span><br><span class="line">​    <span class="attribute">opacity</span>: <span class="number">1</span></span><br><span class="line"></span><br><span class="line"><span class="selector-class">.nav-icon</span></span><br><span class="line">  @extend <span class="variable">$nav</span>-link</span><br><span class="line">  <span class="attribute">font-family</span>: font-icon</span><br><span class="line">  <span class="attribute">text-align</span>: center</span><br><span class="line">  <span class="attribute">font-size</span>: font-size</span><br><span class="line">  <span class="attribute">width</span>: font-size</span><br><span class="line">  <span class="attribute">height</span>: font-size</span><br><span class="line">  <span class="attribute">padding</span>: <span class="number">20px</span> <span class="number">15px</span></span><br><span class="line">  <span class="attribute">position</span>: relative</span><br><span class="line">  <span class="attribute">cursor</span>: pointer</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.main-nav-link</span></span><br><span class="line">  @extend <span class="variable">$nav</span>-link</span><br><span class="line">  <span class="attribute">font-weight</span>: <span class="number">300</span></span><br><span class="line">  <span class="attribute">letter-spacing</span>: <span class="number">1px</span></span><br><span class="line">  @media mq-mobile</span><br><span class="line">​    <span class="attribute">display</span>: none</span><br><span class="line"></span><br><span class="line"><span class="selector-id">#main-nav-toggle</span></span><br><span class="line">  <span class="attribute">display</span>: none</span><br><span class="line">  &amp;:before</span><br><span class="line">​    <span class="attribute">content</span>: <span class="string">"\f0c9"</span></span><br><span class="line">  @media mq-mobile</span><br><span class="line">​    <span class="attribute">display</span>: block</span><br><span class="line"></span><br><span class="line"><span class="selector-id">#sub-nav</span></span><br><span class="line">  <span class="attribute">float</span>: right</span><br><span class="line">  <span class="attribute">margin-right</span>: -<span class="number">15px</span></span><br><span class="line"></span><br><span class="line"><span class="selector-id">#nav-rss-link</span></span><br><span class="line">  &amp;:before</span><br><span class="line">​    <span class="attribute">content</span>: <span class="string">"\f09e"</span></span><br><span class="line"></span><br><span class="line"><span class="selector-id">#nav-search-btn</span></span><br><span class="line">  &amp;:before</span><br><span class="line">​    <span class="attribute">content</span>: <span class="string">"\f002"</span></span><br><span class="line"></span><br><span class="line"><span class="selector-id">#search-form-wrap</span></span><br><span class="line">  <span class="attribute">position</span>: absolute</span><br><span class="line">  <span class="attribute">top</span>: <span class="number">15px</span></span><br><span class="line">  <span class="attribute">width</span>: <span class="number">150px</span></span><br><span class="line">  <span class="attribute">height</span>: <span class="number">30px</span></span><br><span class="line">  <span class="attribute">right</span>: -<span class="number">150px</span></span><br><span class="line">  <span class="attribute">opacity</span>: <span class="number">0</span></span><br><span class="line">  <span class="attribute">transition</span>: <span class="number">0.2s</span> ease-out</span><br><span class="line">  &amp;<span class="selector-class">.on</span></span><br><span class="line">​    <span class="attribute">opacity</span>: <span class="number">1</span></span><br><span class="line">​    <span class="attribute">right</span>: <span class="number">0</span></span><br><span class="line">  @media mq-mobile</span><br><span class="line">​    <span class="attribute">width</span>: <span class="number">100%</span></span><br><span class="line">​    <span class="attribute">right</span>: -<span class="number">100%</span></span><br><span class="line"></span><br><span class="line"><span class="selector-class">.search-form</span></span><br><span class="line">  <span class="attribute">position</span>: absolute</span><br><span class="line">  <span class="attribute">top</span>: <span class="number">0</span></span><br><span class="line">  <span class="attribute">left</span>: <span class="number">0</span></span><br><span class="line">  <span class="attribute">right</span>: <span class="number">0</span></span><br><span class="line">  <span class="attribute">background</span>: <span class="number">#fff</span></span><br><span class="line">  <span class="attribute">padding</span>: <span class="number">5px</span> <span class="number">15px</span></span><br><span class="line">  <span class="attribute">border-radius</span>: <span class="number">15px</span></span><br><span class="line">  <span class="attribute">box-shadow</span>: <span class="number">0</span> <span class="number">0</span> <span class="number">10px</span> rgba(<span class="number">0</span>, <span class="number">0</span>, <span class="number">0</span>, <span class="number">0.3</span>)</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.search-form-input</span></span><br><span class="line">  <span class="attribute">border</span>: none</span><br><span class="line">  <span class="attribute">background</span>: none</span><br><span class="line">  <span class="attribute">color</span>: color-default</span><br><span class="line">  <span class="attribute">width</span>: <span class="number">100%</span></span><br><span class="line">  <span class="attribute">font</span>: <span class="number">13px</span> font-sans</span><br><span class="line">  <span class="attribute">outline</span>: none</span><br><span class="line">  &amp;::-webkit-search-results-decoration</span><br><span class="line">  &amp;::-webkit-search-cancel-<span class="selector-tag">button</span></span><br><span class="line">​    -webkit-appearance: <span class="attribute">none</span></span><br><span class="line"></span><br><span class="line"><span class="selector-class">.search-form-submit</span></span><br><span class="line">  <span class="attribute">position</span>: absolute</span><br><span class="line">  <span class="attribute">top</span>: <span class="number">50%</span></span><br><span class="line">  <span class="attribute">right</span>: <span class="number">10px</span></span><br><span class="line">  <span class="attribute">margin-top</span>: -<span class="number">7px</span></span><br><span class="line">  <span class="attribute">font</span>: <span class="number">13px</span> font-icon</span><br><span class="line">  <span class="attribute">border</span>: none</span><br><span class="line">  <span class="attribute">background</span>: none</span><br><span class="line">  <span class="attribute">color</span>: <span class="number">#bbb</span></span><br><span class="line">  <span class="attribute">cursor</span>: pointer</span><br><span class="line">  &amp;:hover, &amp;:focus</span><br><span class="line">​    <span class="attribute">color</span>: <span class="number">#777</span></span><br></pre></td></tr></tbody></table></figure></div></figure></p>
 <h3 id="main-content部分"><a class="anchor" href="#main-content部分"></a> Main Content部分</h3>
 <p>Main Content部分 是整个页面中的主体部分，其内容在不同页面中显示的内容不一样：</p>
 <ul>
@@ -713,7 +713,7 @@
         
     
 
-<div id="cover" style="background-image:url('http://ox8xvtm5b.bkt.clouddn.com/cover.jpg');">
+<div id="cover" style="background-image:url('http://cherlas-blog.oss-cn-beijing.aliyuncs.com/cover.jpg');">
     <div class="first-page-desc-container">
         <span class="first-page-desc pulse"></span>
     </div>
@@ -743,7 +743,7 @@
 </div>
 
     <!--SCRIPTS-->
-<script src="/assets/js/script-6x2v9gn7dhx5dmgdhsw61sllyjdn5hhxgfecagyxt4udfqiwo1hxodblwcyt.min.js"></script>
+<script src="/assets/js/script-u1uqfoexpfffrbin0dmisld9miqjoh9wh42nzzalbtskiwbib07yrwp0sckj.min.js"></script>
 <!--SCRIPTS END-->
 
 
@@ -787,15 +787,23 @@
                     </li>
                     
                     <li class="article-tag-list-item">
-                        <a class="js-tag color5">unit-test</a>
-                    </li>
-                    
-                    <li class="article-tag-list-item">
-                        <a class="js-tag color4">sql</a>
+                        <a class="js-tag color4">proguard</a>
                     </li>
                     
                     <li class="article-tag-list-item">
                         <a class="js-tag color4">espresso</a>
+                    </li>
+                    
+                    <li class="article-tag-list-item">
+                        <a class="js-tag color5">hexo</a>
+                    </li>
+                    
+                    <li class="article-tag-list-item">
+                        <a class="js-tag color1">theme</a>
+                    </li>
+                    
+                    <li class="article-tag-list-item">
+                        <a class="js-tag color3">主题</a>
                     </li>
                     
                     <li class="article-tag-list-item">
@@ -807,11 +815,19 @@
                     </li>
                     
                     <li class="article-tag-list-item">
+                        <a class="js-tag color5">blog</a>
+                    </li>
+                    
+                    <li class="article-tag-list-item">
                         <a class="js-tag color1">sourcecode</a>
                     </li>
                     
                     <li class="article-tag-list-item">
                         <a class="js-tag color4">hamcrest</a>
+                    </li>
+                    
+                    <li class="article-tag-list-item">
+                        <a class="js-tag color5">unit-test</a>
                     </li>
                     
                     <li class="article-tag-list-item">
@@ -831,23 +847,7 @@
                     </li>
                     
                     <li class="article-tag-list-item">
-                        <a class="js-tag color5">hexo</a>
-                    </li>
-                    
-                    <li class="article-tag-list-item">
-                        <a class="js-tag color5">blog</a>
-                    </li>
-                    
-                    <li class="article-tag-list-item">
-                        <a class="js-tag color4">proguard</a>
-                    </li>
-                    
-                    <li class="article-tag-list-item">
-                        <a class="js-tag color1">theme</a>
-                    </li>
-                    
-                    <li class="article-tag-list-item">
-                        <a class="js-tag color3">主题</a>
+                        <a class="js-tag color4">sql</a>
                     </li>
                     
                     <div class="clearfix"></div>
@@ -879,14 +879,16 @@
 
                 
                 <div class="media">
-    <a class="search-title" href="/2018/04/07/android-test-uiautomator/"><i class="fa fa-quote-left"></i><span id="search-post-title">Android 自动化测试之 — UI Automator</span></a>
+    <a class="search-title" href="/2018/01/15/andoid-autotest-apis-complete/"><i class="fa fa-quote-left"></i><span id="search-post-title">UI Automator API 整理</span></a>
     <p class="search-time">
         <i class="fa fa-calendar icon"></i>
-        <span id="search-post-tags">2018-04-07</span>
+        <span id="search-post-tags">2018-01-15</span>
     </p>
     
     <p class="search-result-meta">
     <i class="fa fa-tags icon"></i>
+        
+            <span id="search-post-tags">#android</span>
         
             <span id="search-post-tags">#自动化测试</span>
         
@@ -899,54 +901,16 @@
 
                 
                 <div class="media">
-    <a class="search-title" href="/2018/04/24/unit-test-annotation/"><i class="fa fa-quote-left"></i><span id="search-post-title">单元测试常用注释</span></a>
+    <a class="search-title" href="/2018/04/19/android-proguard/"><i class="fa fa-quote-left"></i><span id="search-post-title">Andoid ProGuard</span></a>
     <p class="search-time">
         <i class="fa fa-calendar icon"></i>
-        <span id="search-post-tags">2018-04-24</span>
+        <span id="search-post-tags">2018-04-19</span>
     </p>
     
     <p class="search-result-meta">
     <i class="fa fa-tags icon"></i>
         
-            <span id="search-post-tags">#unit-test</span>
-        
-    </p>
-    
-    <div class="clearfix"></div>
-</div>
-
-                
-                <div class="media">
-    <a class="search-title" href="/2018/04/16/unit-test-what-and-why/"><i class="fa fa-quote-left"></i><span id="search-post-title">Android自动化测试之 — 简单聊聊单元测试</span></a>
-    <p class="search-time">
-        <i class="fa fa-calendar icon"></i>
-        <span id="search-post-tags">2018-04-16</span>
-    </p>
-    
-    <p class="search-result-meta">
-    <i class="fa fa-tags icon"></i>
-        
-            <span id="search-post-tags">#自动化测试</span>
-        
-            <span id="search-post-tags">#unit-test</span>
-        
-    </p>
-    
-    <div class="clearfix"></div>
-</div>
-
-                
-                <div class="media">
-    <a class="search-title" href="/2018/12/17/unique-keyword-of-mysql/"><i class="fa fa-quote-left"></i><span id="search-post-title">SQL 中的 UNIQUE 关键字</span></a>
-    <p class="search-time">
-        <i class="fa fa-calendar icon"></i>
-        <span id="search-post-tags">2018-12-17</span>
-    </p>
-    
-    <p class="search-result-meta">
-    <i class="fa fa-tags icon"></i>
-        
-            <span id="search-post-tags">#sql</span>
+            <span id="search-post-tags">#proguard</span>
         
     </p>
     
@@ -975,6 +939,48 @@
 
                 
                 <div class="media">
+    <a class="search-title" href="/2018/04/07/android-test-uiautomator/"><i class="fa fa-quote-left"></i><span id="search-post-title">Android 自动化测试之 — UI Automator</span></a>
+    <p class="search-time">
+        <i class="fa fa-calendar icon"></i>
+        <span id="search-post-tags">2018-04-07</span>
+    </p>
+    
+    <p class="search-result-meta">
+    <i class="fa fa-tags icon"></i>
+        
+            <span id="search-post-tags">#自动化测试</span>
+        
+            <span id="search-post-tags">#UIAutomator</span>
+        
+    </p>
+    
+    <div class="clearfix"></div>
+</div>
+
+                
+                <div class="media">
+    <a class="search-title" href="/2018/03/08/creat-your-custom-hexo-theme-from-scratch/"><i class="fa fa-quote-left"></i><span id="search-post-title">从零开始制作自己的 Hexo 主题</span></a>
+    <p class="search-time">
+        <i class="fa fa-calendar icon"></i>
+        <span id="search-post-tags">2018-03-08</span>
+    </p>
+    
+    <p class="search-result-meta">
+    <i class="fa fa-tags icon"></i>
+        
+            <span id="search-post-tags">#hexo</span>
+        
+            <span id="search-post-tags">#theme</span>
+        
+            <span id="search-post-tags">#主题</span>
+        
+    </p>
+    
+    <div class="clearfix"></div>
+</div>
+
+                
+                <div class="media">
     <a class="search-title" href="/2018/02/04/build-mulit-edition-apks-using-productflavors/"><i class="fa fa-quote-left"></i><span id="search-post-title">利用 ProductFlavors 构建差异化APK版本</span></a>
     <p class="search-time">
         <i class="fa fa-calendar icon"></i>
@@ -989,6 +995,26 @@
             <span id="search-post-tags">#gradle</span>
         
             <span id="search-post-tags">#productflavors</span>
+        
+    </p>
+    
+    <div class="clearfix"></div>
+</div>
+
+                
+                <div class="media">
+    <a class="search-title" href="/2018/01/09/eatablish-your-own-blog-with-hexo-and-github-pages/"><i class="fa fa-quote-left"></i><span id="search-post-title">Hexo + Github 搭建属于自己的小窝</span></a>
+    <p class="search-time">
+        <i class="fa fa-calendar icon"></i>
+        <span id="search-post-tags">2018-01-09</span>
+    </p>
+    
+    <p class="search-result-meta">
+    <i class="fa fa-tags icon"></i>
+        
+            <span id="search-post-tags">#hexo</span>
+        
+            <span id="search-post-tags">#blog</span>
         
     </p>
     
@@ -1029,6 +1055,26 @@
             <span id="search-post-tags">#android</span>
         
             <span id="search-post-tags">#hamcrest</span>
+        
+    </p>
+    
+    <div class="clearfix"></div>
+</div>
+
+                
+                <div class="media">
+    <a class="search-title" href="/2018/04/26/how-to-write-unit-tests/"><i class="fa fa-quote-left"></i><span id="search-post-title">如何写有价值的单元测试</span></a>
+    <p class="search-time">
+        <i class="fa fa-calendar icon"></i>
+        <span id="search-post-tags">2018-04-26</span>
+    </p>
+    
+    <p class="search-result-meta">
+    <i class="fa fa-tags icon"></i>
+        
+            <span id="search-post-tags">#自动化测试</span>
+        
+            <span id="search-post-tags">#unit-test</span>
         
     </p>
     
@@ -1107,56 +1153,16 @@
 
                 
                 <div class="media">
-    <a class="search-title" href="/2018/04/26/how-to-write-unit-tests/"><i class="fa fa-quote-left"></i><span id="search-post-title">如何写有价值的单元测试</span></a>
+    <a class="search-title" href="/2018/12/17/unique-keyword-of-mysql/"><i class="fa fa-quote-left"></i><span id="search-post-title">SQL 中的 UNIQUE 关键字</span></a>
     <p class="search-time">
         <i class="fa fa-calendar icon"></i>
-        <span id="search-post-tags">2018-04-26</span>
+        <span id="search-post-tags">2018-12-17</span>
     </p>
     
     <p class="search-result-meta">
     <i class="fa fa-tags icon"></i>
         
-            <span id="search-post-tags">#自动化测试</span>
-        
-            <span id="search-post-tags">#unit-test</span>
-        
-    </p>
-    
-    <div class="clearfix"></div>
-</div>
-
-                
-                <div class="media">
-    <a class="search-title" href="/2018/01/09/eatablish-your-own-blog-with-hexo-and-github-pages/"><i class="fa fa-quote-left"></i><span id="search-post-title">Hexo + Github 搭建属于自己的小窝</span></a>
-    <p class="search-time">
-        <i class="fa fa-calendar icon"></i>
-        <span id="search-post-tags">2018-01-09</span>
-    </p>
-    
-    <p class="search-result-meta">
-    <i class="fa fa-tags icon"></i>
-        
-            <span id="search-post-tags">#hexo</span>
-        
-            <span id="search-post-tags">#blog</span>
-        
-    </p>
-    
-    <div class="clearfix"></div>
-</div>
-
-                
-                <div class="media">
-    <a class="search-title" href="/2018/04/19/android-proguard/"><i class="fa fa-quote-left"></i><span id="search-post-title">Andoid ProGuard</span></a>
-    <p class="search-time">
-        <i class="fa fa-calendar icon"></i>
-        <span id="search-post-tags">2018-04-19</span>
-    </p>
-    
-    <p class="search-result-meta">
-    <i class="fa fa-tags icon"></i>
-        
-            <span id="search-post-tags">#proguard</span>
+            <span id="search-post-tags">#sql</span>
         
     </p>
     
