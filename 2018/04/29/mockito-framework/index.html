@@ -10,12 +10,12 @@
     <title>单元测试之— Mockito 框架 - 小一 | 莫舍己道 勿扰他心</title>
     <meta name="author" content="小一">
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0" />
-    <link rel="Shortcut Icon" href="http://www.istarx.cc/assets/images/favicon.ico" type="image/x-icon">
+    <link rel="Shortcut Icon" href="http://www.istarx.cn/assets/images/favicon.ico" type="image/x-icon">
     
         <meta name="keywords" content="unit-test,自动化测试,Mock,Mockito">
     
     
-        <link rel="icon" href="http://www.istarx.cc/assets/images/favicon.ico">
+        <link rel="icon" href="http://www.istarx.cn/assets/images/favicon.ico">
     
     
         <link rel="alternate" type="application/atom+xml" title="RSS" href="/atom.xml">
@@ -26,7 +26,7 @@
         
     
     
-        <meta property="og:image" content="http://www.istarx.cc/assets/images/avatar.png"/>
+        <meta property="og:image" content="http://www.istarx.cn/assets/images/avatar.png"/>
     
     
     
@@ -327,13 +327,13 @@
 <h2 id="mock简介"><a class="anchor" href="#mock简介"></a> Mock简介</h2>
 <p>当我们所写的代码相对简单时，被测试代码不会或者很少依赖其它的类和代码，但是当代码较为复杂时，被测试代码免不了于系统中其它的部分进行交互，这给测试带来很大的不便。还有另外一种情况，在测试建立初始条件时，对于一些构建比较复杂难以构建的对象，同样给测试带来一定困难。此时 Mock 框架就显示出了其作用所在。</p>
 <p>单元测试的目的是把被测试代码和其它部分相隔离，当成一个独立的单元来进行测试，这样可以让你无视被测试单元所依赖部分运行的准确性，从而达到准确测试的目的。</p>
-<p><a href="https://github.com/mockito/mockito" target="_blank" rel="noopener">Mockito</a> 框架是一款比较流行的 Mock 框架，当前最新版是 2.18.5，但是 gradle 插件在 maven 仓库中只能下载到2.18.3 版本。其不仅可以用于 java 工程，还可以搭配 <code>dexmaker</code> 用于Android 项目中。类似的框架还有 EasyMock、PowerMock 等。</p>
+<p><a href="https://github.com/mockito/mockito">Mockito</a> 框架是一款比较流行的 Mock 框架，当前最新版是 2.18.5，但是 gradle 插件在 maven 仓库中只能下载到2.18.3 版本。其不仅可以用于 java 工程，还可以搭配 <code>dexmaker</code> 用于Android 项目中。类似的框架还有 EasyMock、PowerMock 等。</p>
 <h2 id="android-studio-中配置-mockito"><a class="anchor" href="#android-studio-中配置-mockito"></a> Android Studio 中配置 Mockito</h2>
 <p>在 Mockito 2.6.1版本开始，Mockito 团队专门为 Android 做了相关支持，为了在 Android Test 测试中使用 Mockito，需要引入以下依赖：</p>
 <figure class="highlight gradle"><table><tr><td class="code"><pre><span class="line"><span class="keyword">repositories</span> &#123;</span><br><span class="line">	jcenter() <span class="comment">// 或者 mavenCenter(), aliyun仓库等</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">dependencies</span> &#123;</span><br><span class="line">	...</span><br><span class="line">	testCompile <span class="string">'org.mockito:mockito-core:2.18.5'</span></span><br><span class="line">	androidTestCompile <span class="string">'org.mockito:mockito-android:2.18.5'</span> <span class="comment">// 不能和 inline mock maker 一起使用</span></span><br><span class="line">	...</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p><code>mockito-android:</code>依赖中已经包含了<code>mockito-core</code>，所以不需要单独添加该依赖。</p>
 <h2 id="mockito-基本用法"><a class="anchor" href="#mockito-基本用法"></a> Mockito 基本用法</h2>
-<p>Mockito 框架有官方详细的说明文档，地址为 <a href="http://site.mockito.org/mockito/docs/current/org/mockito/Mockito.html" target="_blank" rel="noopener">http://site.mockito.org/mockito/docs/current/org/mockito/Mockito.html</a></p>
+<p>Mockito 框架有官方详细的说明文档，地址为 <a href="http://site.mockito.org/mockito/docs/current/org/mockito/Mockito.html">http://site.mockito.org/mockito/docs/current/org/mockito/Mockito.html</a></p>
 <h3 id="mock-一个对象"><a class="anchor" href="#mock-一个对象"></a> Mock 一个对象</h3>
 <p>假设有如下一个类以及一个接口：</p>
 <figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Student</span> </span>&#123; &#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">interface</span> <span class="title">StudentDatabaseHelper</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> Student <span class="title">queryStudentWithId</span><span class="params">(<span class="keyword">int</span> id)</span></span>;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">updateNewScoreWithId</span><span class="params">(<span class="keyword">int</span> id, <span class="keyword">int</span> score)</span></span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
@@ -421,7 +421,7 @@
 <h4 id="查找是否有未验证的交互"><a class="anchor" href="#查找是否有未验证的交互"></a> 查找是否有未验证的交互</h4>
 <p>主要是验证对某个 mock 对象进行了操作，并且对操作进行了 verify。不介意在每个测试用例中使用，官方文档原文为：</p>
 <blockquote>
-<p>A word of <strong>warning</strong>: Some users who did a lot of classic, expect-run-verify mocking tend to use <code>verifyNoMoreInteractions()</code> very often, even in every test method. <code>verifyNoMoreInteractions()</code> is not recommended to use in every test method. <code>verifyNoMoreInteractions()</code> is a handy assertion from the interaction testing toolkit. Use it only when it’s relevant. Abusing it leads to <strong>overspecified</strong>, <strong>less maintainable</strong> tests. You can find further reading <a href="http://monkeyisland.pl/2008/07/12/should-i-worry-about-the-unexpected/" target="_blank" rel="noopener">here</a>.</p>
+<p>A word of <strong>warning</strong>: Some users who did a lot of classic, expect-run-verify mocking tend to use <code>verifyNoMoreInteractions()</code> very often, even in every test method. <code>verifyNoMoreInteractions()</code> is not recommended to use in every test method. <code>verifyNoMoreInteractions()</code> is a handy assertion from the interaction testing toolkit. Use it only when it’s relevant. Abusing it leads to <strong>overspecified</strong>, <strong>less maintainable</strong> tests. You can find further reading <a href="http://monkeyisland.pl/2008/07/12/should-i-worry-about-the-unexpected/">here</a>.</p>
 </blockquote>
 <figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="meta">@Test</span>(expected = NoInteractionsWanted.class)</span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">noMoreInteractionsTest</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    Student student = mock(Student.class);</span><br><span class="line"></span><br><span class="line">    student.setScore(<span class="number">1</span>);</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 验证失败，抛出 NoInteractionsWanted 异常</span></span><br><span class="line">    verifyNoMoreInteractions(student);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <h4 id="超时验证"><a class="anchor" href="#超时验证"></a> 超时验证</h4>
@@ -443,11 +443,11 @@
             <div class="post-copyright main-content-wrap content-with-table">
     <p class="copyright-item">
         <span>原文作者: </span>
-        <a href="http://http://www.istarx.cc">小一</a>
+        <a href="http://http://www.istarx.cn">小一</a>
     </p>
     <p class="copyright-item">
         <span>原文链接: </span>
-        <a href="http://www.istarx.cc/2018/04/29/mockito-framework/">http://www.istarx.cc/2018/04/29/mockito-framework/</a>
+        <a href="http://www.istarx.cn/2018/04/29/mockito-framework/">http://www.istarx.cn/2018/04/29/mockito-framework/</a>
     </p>
     <p class="copyright-item">
         <span>许可协议: </span>
@@ -728,6 +728,18 @@
                     </li>
                     
                     <li class="article-tag-list-item">
+                        <a class="js-tag color5">ARTS</a>
+                    </li>
+                    
+                    <li class="article-tag-list-item">
+                        <a class="js-tag color2">gradle</a>
+                    </li>
+                    
+                    <li class="article-tag-list-item">
+                        <a class="js-tag color5">productflavors</a>
+                    </li>
+                    
+                    <li class="article-tag-list-item">
                         <a class="js-tag color5">hexo</a>
                     </li>
                     
@@ -740,19 +752,11 @@
                     </li>
                     
                     <li class="article-tag-list-item">
-                        <a class="js-tag color2">gradle</a>
-                    </li>
-                    
-                    <li class="article-tag-list-item">
-                        <a class="js-tag color5">productflavors</a>
+                        <a class="js-tag color1">sourcecode</a>
                     </li>
                     
                     <li class="article-tag-list-item">
                         <a class="js-tag color5">blog</a>
-                    </li>
-                    
-                    <li class="article-tag-list-item">
-                        <a class="js-tag color1">sourcecode</a>
                     </li>
                     
                     <li class="article-tag-list-item">
@@ -787,7 +791,7 @@
                 </ul>
             </div>
             <p class="results-count hide" data-message-zero="没有找到文章" data-message-one="找到 1 篇文章" data-message-other="找到 {n} 篇文章">
-                找到 17 篇文章
+                找到 18 篇文章
             </p>
             <div class="search-result">
                 
@@ -892,20 +896,16 @@
 
                 
                 <div class="media">
-    <a class="search-title" href="/2018/03/08/creat-your-custom-hexo-theme-from-scratch/"><i class="fa fa-quote-left"></i><span id="search-post-title">从零开始制作自己的 Hexo 主题</span></a>
+    <a class="search-title" href="/2019/03/22/arts-week-zero/"><i class="fa fa-quote-left"></i><span id="search-post-title">ARTS打卡—第0周</span></a>
     <p class="search-time">
         <i class="fa fa-calendar icon"></i>
-        <span id="search-post-tags">2018-03-08</span>
+        <span id="search-post-tags">2019-03-22</span>
     </p>
     
     <p class="search-result-meta">
     <i class="fa fa-tags icon"></i>
         
-            <span id="search-post-tags">#hexo</span>
-        
-            <span id="search-post-tags">#theme</span>
-        
-            <span id="search-post-tags">#主题</span>
+            <span id="search-post-tags">#ARTS</span>
         
     </p>
     
@@ -936,10 +936,10 @@
 
                 
                 <div class="media">
-    <a class="search-title" href="/2018/01/09/eatablish-your-own-blog-with-hexo-and-github-pages/"><i class="fa fa-quote-left"></i><span id="search-post-title">Hexo + Github 搭建属于自己的小窝</span></a>
+    <a class="search-title" href="/2018/03/08/creat-your-custom-hexo-theme-from-scratch/"><i class="fa fa-quote-left"></i><span id="search-post-title">从零开始制作自己的 Hexo 主题</span></a>
     <p class="search-time">
         <i class="fa fa-calendar icon"></i>
-        <span id="search-post-tags">2018-01-09</span>
+        <span id="search-post-tags">2018-03-08</span>
     </p>
     
     <p class="search-result-meta">
@@ -947,7 +947,9 @@
         
             <span id="search-post-tags">#hexo</span>
         
-            <span id="search-post-tags">#blog</span>
+            <span id="search-post-tags">#theme</span>
+        
+            <span id="search-post-tags">#主题</span>
         
     </p>
     
@@ -968,6 +970,26 @@
             <span id="search-post-tags">#android</span>
         
             <span id="search-post-tags">#sourcecode</span>
+        
+    </p>
+    
+    <div class="clearfix"></div>
+</div>
+
+                
+                <div class="media">
+    <a class="search-title" href="/2018/01/09/eatablish-your-own-blog-with-hexo-and-github-pages/"><i class="fa fa-quote-left"></i><span id="search-post-title">Hexo + Github 搭建属于自己的小窝</span></a>
+    <p class="search-time">
+        <i class="fa fa-calendar icon"></i>
+        <span id="search-post-tags">2018-01-09</span>
+    </p>
+    
+    <p class="search-result-meta">
+    <i class="fa fa-tags icon"></i>
+        
+            <span id="search-post-tags">#hexo</span>
+        
+            <span id="search-post-tags">#blog</span>
         
     </p>
     
@@ -1078,24 +1100,6 @@
             <span id="search-post-tags">#unit-test</span>
         
             <span id="search-post-tags">#robolectric</span>
-        
-    </p>
-    
-    <div class="clearfix"></div>
-</div>
-
-                
-                <div class="media">
-    <a class="search-title" href="/2018/12/17/unique-keyword-of-mysql/"><i class="fa fa-quote-left"></i><span id="search-post-title">SQL 中的 UNIQUE 关键字</span></a>
-    <p class="search-time">
-        <i class="fa fa-calendar icon"></i>
-        <span id="search-post-tags">2018-12-17</span>
-    </p>
-    
-    <p class="search-result-meta">
-    <i class="fa fa-tags icon"></i>
-        
-            <span id="search-post-tags">#sql</span>
         
     </p>
     
