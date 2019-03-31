@@ -290,6 +290,7 @@
 <li><a href="#python">Python</a></li>
 </ul>
 </li>
+<li><a href="#database">Database</a></li>
 <li><a href="#review">Review</a></li>
 <li><a href="#tips">Tips</a></li>
 <li><a href="#share">Share</a></li>
@@ -306,6 +307,7 @@
 <figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">NO976_LargestPerimeterTriangle</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">int</span>[] A = <span class="keyword">new</span> <span class="keyword">int</span>[]&#123;<span class="number">1</span>, <span class="number">1</span>, <span class="number">2</span>&#125;;</span><br><span class="line">        System.out.println(largestPerimeter(A));</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">int</span> <span class="title">largestPerimeter</span><span class="params">(<span class="keyword">int</span>[] A)</span> </span>&#123;</span><br><span class="line">        quickSort(A, <span class="number">0</span>, A.length - <span class="number">1</span>); <span class="comment">// increase</span></span><br><span class="line">        <span class="keyword">int</span> numCount = A.length;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> index = numCount - <span class="number">3</span>; index &gt;= <span class="number">0</span>; index--) &#123;</span><br><span class="line">            <span class="keyword">if</span> (A[index] + A[index + <span class="number">1</span>] &gt; A[index + <span class="number">2</span>]) &#123;</span><br><span class="line">                <span class="keyword">return</span> A[index] + A[index + <span class="number">1</span>] + A[index + <span class="number">2</span>];</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">quickSort</span><span class="params">(<span class="keyword">int</span>[] nums, <span class="keyword">int</span> start, <span class="keyword">int</span> end)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (start &gt;= end) &#123;</span><br><span class="line">            <span class="keyword">return</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">int</span> pivot = partition(nums, start, end);</span><br><span class="line">        quickSort(nums, start, pivot - <span class="number">1</span>);</span><br><span class="line">        quickSort(nums, pivot + <span class="number">1</span>, end);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">int</span> <span class="title">partition</span><span class="params">(<span class="keyword">int</span>[] nums, <span class="keyword">int</span> start, <span class="keyword">int</span> end)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">int</span> pivot = nums[end];</span><br><span class="line">        <span class="keyword">int</span> i = start;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> j = start; j &lt; end; j++) &#123;</span><br><span class="line">            <span class="keyword">if</span> (nums[j] &lt; pivot) &#123;</span><br><span class="line">                swap(nums, i, j);</span><br><span class="line">                i++;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        swap(nums, i, end);</span><br><span class="line">        <span class="keyword">return</span> i;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">swap</span><span class="params">(<span class="keyword">int</span>[] nums, <span class="keyword">int</span> i, <span class="keyword">int</span> j)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">int</span> tmp = nums[j];</span><br><span class="line">        nums[j] = nums[i];</span><br><span class="line">        nums[i] = tmp;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <h3 id="python"><a class="anchor" href="#python"></a> Python</h3>
 <figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">largestPerimeter</span><span class="params">(self, A: list)</span> -&gt; int:</span></span><br><span class="line">        self.quick_sort(A, <span class="number">0</span>, len(A) - <span class="number">1</span>)</span><br><span class="line">        <span class="keyword">for</span> i <span class="keyword">in</span> range(len(A) - <span class="number">3</span>, <span class="number">-1</span>, <span class="number">-1</span>): <span class="comment"># -1 </span></span><br><span class="line">            <span class="keyword">if</span> A[i] + A[i + <span class="number">1</span>] &gt; A[i + <span class="number">2</span>]:</span><br><span class="line">                <span class="keyword">return</span> A[i] + A[i + <span class="number">1</span>] + A[i + <span class="number">2</span>]</span><br><span class="line">        <span class="keyword">return</span> <span class="number">0</span></span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">quick_sort</span><span class="params">(self, A: list, start: int, end: int)</span> -&gt; <span class="keyword">None</span>:</span></span><br><span class="line">        <span class="keyword">if</span> start &gt;= end:</span><br><span class="line">            <span class="keyword">return</span></span><br><span class="line">        pivot = self.partition(A, start, end)</span><br><span class="line">        self.quick_sort(A, start, pivot - <span class="number">1</span>)</span><br><span class="line">        self.quick_sort(A, pivot + <span class="number">1</span>, end)</span><br><span class="line"></span><br><span class="line"><span class="meta">    @staticmethod</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">partition</span><span class="params">(A: list, start: int, end: int)</span> -&gt; int:</span></span><br><span class="line">        pivot = A[end]</span><br><span class="line">        i = start</span><br><span class="line">        <span class="keyword">for</span> j <span class="keyword">in</span> range(start, end, <span class="number">1</span>):</span><br><span class="line">            <span class="keyword">if</span> A[j] &lt; pivot:</span><br><span class="line">                A[i], A[j] = A[j], A[i]</span><br><span class="line">                i = i + <span class="number">1</span></span><br><span class="line">        A[i], A[end] = A[end], A[i]</span><br><span class="line">        <span class="keyword">return</span> i</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">'__main__'</span>:</span><br><span class="line">    print(str(Solution().largestPerimeter([<span class="number">2</span>, <span class="number">1</span>, <span class="number">2</span>])))</span><br></pre></td></tr></table></figure>
+<p>时间复杂度为 $$O(n)$$ .</p>
 <table>
 <thead>
 <tr>
@@ -327,6 +329,13 @@
 </tr>
 </tbody>
 </table>
+<h2 id="database"><a class="anchor" href="#database"></a> Database</h2>
+<blockquote>
+<p>Table: <code>Person(PersonId, FirstName, LastName)</code> and Table: <code>Address(AddressId, PersonId, City, State)</code>. Write a SQL query for a report that provides the following information for each person in the Person table, regardless if there is an address for each of those people:</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">&gt;</span><span class="bash"> FirstName, LastName, City, State</span></span><br><span class="line"><span class="meta">&gt;</span><span class="bash"></span></span><br></pre></td></tr></table></figure>
+</blockquote>
+<p>SQL语句如下：</p>
+<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">SELECT</span></span><br><span class="line">    FirstName, LastName, City, State</span><br><span class="line"><span class="keyword">FROM</span></span><br><span class="line">    Person</span><br><span class="line"><span class="keyword">LEFT</span> <span class="keyword">JOIN</span></span><br><span class="line">    Address</span><br><span class="line"><span class="keyword">ON</span></span><br><span class="line">    Person.personId = Address.PersonId</span><br></pre></td></tr></table></figure>
 <h2 id="review"><a class="anchor" href="#review"></a> Review</h2>
 <p>这周开始学习了一下优美的<code>RxJava</code>及<code>RxAndroid</code>，主要看github的项目wiki，计划两周时间内阅读完该wiki：</p>
 <p><a href="https://github.com/ReactiveX/RxJava/wiki">https://github.com/ReactiveX/RxJava/wiki</a></p>
@@ -428,7 +437,7 @@
     </nav>
     <ul class="post-actions post-action-share">
         <li class="post-action hide-lg hide-md hide-sm">
-            <a class="post-action-btn btn btn--default btn-open-shareoptions" href="#btn-open-shareoptions" aria-label="Share this post">
+            <a class="post-action-btn btn btn--default btn-open-shareoptions" href="#btn-open-shareoptions" aria-label="Diesen Beitrag teilen">
                 <i class="fa fa-share-alt" aria-hidden="true"></i>
             </a>
         </li>
@@ -436,7 +445,7 @@
         
         <li class="post-action">
             
-                <a class="post-action-btn btn btn--default" href="#" aria-label="Back to top">
+                <a class="post-action-btn btn btn--default" href="#" aria-label="Nach oben">
                     
                     <i class="fa fa-arrow-up" aria-hidden="true"></i>
                 </a>
@@ -486,7 +495,7 @@
     </nav>
     <ul class="post-actions post-action-share">
         <li class="post-action hide-lg hide-md hide-sm">
-            <a class="post-action-btn btn btn--default btn-open-shareoptions" href="#btn-open-shareoptions" aria-label="Share this post">
+            <a class="post-action-btn btn btn--default btn-open-shareoptions" href="#btn-open-shareoptions" aria-label="Diesen Beitrag teilen">
                 <i class="fa fa-share-alt" aria-hidden="true"></i>
             </a>
         </li>
@@ -494,7 +503,7 @@
         
         <li class="post-action">
             
-                <a class="post-action-btn btn btn--default" href="#" aria-label="Back to top">
+                <a class="post-action-btn btn btn--default" href="#" aria-label="Nach oben">
                     
                     <i class="fa fa-arrow-up" aria-hidden="true"></i>
                 </a>
@@ -646,14 +655,6 @@
                     </li>
                     
                     <li class="article-tag-list-item">
-                        <a class="js-tag color2">gradle</a>
-                    </li>
-                    
-                    <li class="article-tag-list-item">
-                        <a class="js-tag color5">productflavors</a>
-                    </li>
-                    
-                    <li class="article-tag-list-item">
                         <a class="js-tag color5">hexo</a>
                     </li>
                     
@@ -667,6 +668,14 @@
                     
                     <li class="article-tag-list-item">
                         <a class="js-tag color1">sourcecode</a>
+                    </li>
+                    
+                    <li class="article-tag-list-item">
+                        <a class="js-tag color2">gradle</a>
+                    </li>
+                    
+                    <li class="article-tag-list-item">
+                        <a class="js-tag color5">productflavors</a>
                     </li>
                     
                     <li class="article-tag-list-item">
@@ -752,6 +761,26 @@
 
                 
                 <div class="media">
+    <a class="search-title" href="/2018/04/07/android-test-uiautomator/"><i class="fa fa-quote-left"></i><span id="search-post-title">Android 自动化测试之 — UI Automator</span></a>
+    <p class="search-time">
+        <i class="fa fa-calendar icon"></i>
+        <span id="search-post-tags">2018-04-07</span>
+    </p>
+    
+    <p class="search-result-meta">
+    <i class="fa fa-tags icon"></i>
+        
+            <span id="search-post-tags">#UIAutomator</span>
+        
+            <span id="search-post-tags">#自动化测试</span>
+        
+    </p>
+    
+    <div class="clearfix"></div>
+</div>
+
+                
+                <div class="media">
     <a class="search-title" href="/2018/04/19/android-proguard/"><i class="fa fa-quote-left"></i><span id="search-post-title">Andoid ProGuard</span></a>
     <p class="search-time">
         <i class="fa fa-calendar icon"></i>
@@ -782,26 +811,6 @@
             <span id="search-post-tags">#自动化测试</span>
         
             <span id="search-post-tags">#espresso</span>
-        
-    </p>
-    
-    <div class="clearfix"></div>
-</div>
-
-                
-                <div class="media">
-    <a class="search-title" href="/2018/04/07/android-test-uiautomator/"><i class="fa fa-quote-left"></i><span id="search-post-title">Android 自动化测试之 — UI Automator</span></a>
-    <p class="search-time">
-        <i class="fa fa-calendar icon"></i>
-        <span id="search-post-tags">2018-04-07</span>
-    </p>
-    
-    <p class="search-result-meta">
-    <i class="fa fa-tags icon"></i>
-        
-            <span id="search-post-tags">#UIAutomator</span>
-        
-            <span id="search-post-tags">#自动化测试</span>
         
     </p>
     
@@ -846,28 +855,6 @@
 
                 
                 <div class="media">
-    <a class="search-title" href="/2018/02/04/build-mulit-edition-apks-using-productflavors/"><i class="fa fa-quote-left"></i><span id="search-post-title">利用 ProductFlavors 构建差异化APK版本</span></a>
-    <p class="search-time">
-        <i class="fa fa-calendar icon"></i>
-        <span id="search-post-tags">2018-02-04</span>
-    </p>
-    
-    <p class="search-result-meta">
-    <i class="fa fa-tags icon"></i>
-        
-            <span id="search-post-tags">#android</span>
-        
-            <span id="search-post-tags">#gradle</span>
-        
-            <span id="search-post-tags">#productflavors</span>
-        
-    </p>
-    
-    <div class="clearfix"></div>
-</div>
-
-                
-                <div class="media">
     <a class="search-title" href="/2018/03/08/creat-your-custom-hexo-theme-from-scratch/"><i class="fa fa-quote-left"></i><span id="search-post-title">从零开始制作自己的 Hexo 主题</span></a>
     <p class="search-time">
         <i class="fa fa-calendar icon"></i>
@@ -902,6 +889,28 @@
             <span id="search-post-tags">#android</span>
         
             <span id="search-post-tags">#sourcecode</span>
+        
+    </p>
+    
+    <div class="clearfix"></div>
+</div>
+
+                
+                <div class="media">
+    <a class="search-title" href="/2018/02/04/build-mulit-edition-apks-using-productflavors/"><i class="fa fa-quote-left"></i><span id="search-post-title">利用 ProductFlavors 构建差异化APK版本</span></a>
+    <p class="search-time">
+        <i class="fa fa-calendar icon"></i>
+        <span id="search-post-tags">2018-02-04</span>
+    </p>
+    
+    <p class="search-result-meta">
+    <i class="fa fa-tags icon"></i>
+        
+            <span id="search-post-tags">#android</span>
+        
+            <span id="search-post-tags">#gradle</span>
+        
+            <span id="search-post-tags">#productflavors</span>
         
     </p>
     
