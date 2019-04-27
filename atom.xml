@@ -380,9 +380,9 @@
       <category term="自动化测试" scheme="http://www.istarx.cn/categories/%E7%A8%8B%E5%BA%8F%E7%8C%BF%E8%BF%9B%E5%8C%96%E4%B9%8B%E8%B7%AF/%E8%87%AA%E5%8A%A8%E5%8C%96%E6%B5%8B%E8%AF%95/"/>
     
     
-      <category term="自动化测试" scheme="http://www.istarx.cn/tags/%E8%87%AA%E5%8A%A8%E5%8C%96%E6%B5%8B%E8%AF%95/"/>
-    
       <category term="UIAutomator" scheme="http://www.istarx.cn/tags/UIAutomator/"/>
+    
+      <category term="自动化测试" scheme="http://www.istarx.cn/tags/%E8%87%AA%E5%8A%A8%E5%8C%96%E6%B5%8B%E8%AF%95/"/>
     
   </entry>
   
@@ -458,9 +458,9 @@
       <category term="自动化测试" scheme="http://www.istarx.cn/categories/%E7%A8%8B%E5%BA%8F%E7%8C%BF%E8%BF%9B%E5%8C%96%E4%B9%8B%E8%B7%AF/%E8%87%AA%E5%8A%A8%E5%8C%96%E6%B5%8B%E8%AF%95/"/>
     
     
-      <category term="android" scheme="http://www.istarx.cn/tags/android/"/>
-    
       <category term="自动化测试" scheme="http://www.istarx.cn/tags/%E8%87%AA%E5%8A%A8%E5%8C%96%E6%B5%8B%E8%AF%95/"/>
+    
+      <category term="android" scheme="http://www.istarx.cn/tags/android/"/>
     
   </entry>
   
