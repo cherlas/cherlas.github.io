@@ -7,7 +7,7 @@
     <meta name="baidu-site-verification" content="fJhstNzkJ1"/>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="generator" content="小一 | 莫舍己道 勿扰他心">
-    <title>ARTS打卡—第4周 - 小一 | 莫舍己道 勿扰他心</title>
+    <title>ARTS打卡—第5周 - 小一 | 莫舍己道 勿扰他心</title>
     <meta name="author" content="小一">
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0" />
     <link rel="Shortcut Icon" href="http://www.istarx.cn/assets/images/favicon.ico" type="image/x-icon">
@@ -30,9 +30,9 @@
     
     
     
-        <meta property="og:image" content="http://cherlas-blog.oss-cn-beijing.aliyuncs.com/arts-week4.jpg"/>
+        <meta property="og:image" content="http://cherlas-blog.oss-cn-beijing.aliyuncs.com/arts-week5.jpg"/>
         <meta class="swiftype" name="image" data-type="enum"
-              content="http://cherlas-blog.oss-cn-beijing.aliyuncs.com/arts-week4.jpg"/>
+              content="http://cherlas-blog.oss-cn-beijing.aliyuncs.com/arts-week5.jpg"/>
     
     
     <!--STYLES-->
@@ -215,7 +215,7 @@
         
 <div class="post-header-cover fade-in header-image-cover
                     text-left
-                    post-header-cover--partial" style="background-image:url('http://cherlas-blog.oss-cn-beijing.aliyuncs.com/arts-week4.jpg');
+                    post-header-cover--partial" style="background-image:url('http://cherlas-blog.oss-cn-beijing.aliyuncs.com/arts-week5.jpg');
       filter: blur(0px); 
       height: 60%;" data-behavior="2">
 </div>
@@ -231,15 +231,15 @@
     <div class="post-header-message content-with-table">
         
         <h1 class="post-title" itemprop="headline">
-            ARTS打卡—第4周
+            ARTS打卡—第5周
         </h1>
         
         
         <div class="post-meta">
-    <time itemprop="datePublished" datetime="2019-04-27T19:35:01+08:00">
+    <time itemprop="datePublished" datetime="2019-05-03T13:02:44+08:00">
         <img class="calendar" src="/assets/images/calendar.png">
         
-        4月 27, 2019
+        5月 03, 2019
         
     </time>
     
@@ -274,14 +274,14 @@
             
 <article class="post" itemscope="" itemtype="http://schema.org/BlogPosting">
     
-        <span class="post-header-cover-caption caption">人生如逆旅，我亦是行人</span>
+        <span class="post-header-cover-caption caption">生命是一场有去无回的旅行，好的坏的，都是风景</span>
     
     
     <div class="tableTile" data-message="目录">
     </div>
     <div class="post-content markdown" itemprop="articleBody">
         <div class="main-content-wrap fadeInDown toc content-with-table">
-            <script src="/assets/js/APlayer.min.js"> </script><p>马上五一放假了～但是，但是！！！但是五一要加班，呜呼哀哉。。。这周的打卡主要是一道回文数判断的题目，数据库方面是一道<code>NOT IN</code>关键字的题目，以及 REVIEW 一篇 RxJava 的文章。</p>
+            <script src="/assets/js/APlayer.min.js"> </script><p>五一放假机智如我，没有出门，看着各种人挤人，车挤车，我心甚慰🤣🤣。本来报了加班，结果也没让去加班，不得不说公司还是很坑啊。这周的打卡内容主要是一道二叉树遍历题目，数据库方面是一道<code>NOT IN</code>关键字的题目，以及 REVIEW 一篇 RxJava 的文章。</p>
 <a id="more"></a>
 <p><ul class="toc js-fixedContent">
 <li><a href="#algorithm">Algorithm</a>
@@ -300,19 +300,15 @@
 <h2 id="algorithm"><a class="anchor" href="#algorithm"></a> Algorithm</h2>
 <h3 id="题目描述"><a class="anchor" href="#题目描述"></a> 题目描述</h3>
 <blockquote>
-<p>Determine whether an integer is a palindrome. An integer is a palindrome when it reads the same backward as forward.</p>
-<p><strong>Example 1:</strong></p>
-<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">&gt;</span><span class="bash"> Input: 121</span></span><br><span class="line"><span class="meta">&gt;</span><span class="bash"> Output: <span class="literal">true</span></span></span><br><span class="line"><span class="meta">&gt;</span><span class="bash"></span></span><br></pre></td></tr></table></figure>
+<p>Given a binary tree, return the <em>inorder</em> traversal of its nodes’ values.</p>
+<p><strong>Example:</strong></p>
+<figure class="highlight angelscript"><table><tr><td class="code"><pre><span class="line">&gt; Input: [<span class="number">1</span>,<span class="literal">null</span>,<span class="number">2</span>,<span class="number">3</span>]</span><br><span class="line">&gt;    <span class="number">1</span></span><br><span class="line">&gt;     \</span><br><span class="line">&gt;      <span class="number">2</span></span><br><span class="line">&gt;     /</span><br><span class="line">&gt;    <span class="number">3</span></span><br><span class="line">&gt; </span><br><span class="line">&gt; Output: [<span class="number">1</span>,<span class="number">3</span>,<span class="number">2</span>]</span><br><span class="line">&gt;</span><br></pre></td></tr></table></figure>
 </blockquote>
-<blockquote>
-<p><strong>Follow up:</strong></p>
-<p>Coud you solve it without converting the integer to a string?</p>
-</blockquote>
-<p>回文数判断，一种方法是把整数转换成字符串，判断正反字符串是否相同，但是题目中要求不能使用字符串。第二种就是把整数反转，可以整转或者半转，半转的效率相对较高，所以采用半转的方法。</p>
+<p>二叉树的遍历问题，最经典的方法就是递归了。</p>
 <h3 id="java"><a class="anchor" href="#java"></a> Java</h3>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">isPalindrome</span><span class="params">(<span class="keyword">int</span> x)</span> </span>&#123;</span><br><span class="line">  <span class="keyword">if</span> (x &lt; <span class="number">0</span> || (x % <span class="number">10</span> == <span class="number">0</span> &amp;&amp; x != <span class="number">0</span>)) &#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">false</span>;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">long</span> reverseNumber = <span class="number">0</span>;</span><br><span class="line">  reverseNumber = <span class="number">0</span>;</span><br><span class="line">  <span class="keyword">while</span> (reverseNumber &lt; x) &#123;</span><br><span class="line">    reverseNumber = reverseNumber * <span class="number">10</span> + x % <span class="number">10</span>;</span><br><span class="line">    x = x / <span class="number">10</span>;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">return</span> x == reverseNumber || x == reverseNumber / <span class="number">10</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> List&lt;Integer&gt; <span class="title">inorderTraversal</span><span class="params">(TreeNode root)</span> </span>&#123;</span><br><span class="line">  <span class="keyword">if</span> (root == <span class="keyword">null</span>) &#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">new</span> ArrayList&lt;&gt;();</span><br><span class="line">  &#125;</span><br><span class="line">  List&lt;Integer&gt; res = <span class="keyword">new</span> ArrayList&lt;&gt;(inorderTraversal(root.left));</span><br><span class="line">  res.add(root.val);</span><br><span class="line">  res.addAll(inorderTraversal(root.right));</span><br><span class="line">  <span class="keyword">return</span> res;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <h3 id="python"><a class="anchor" href="#python"></a> Python</h3>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">isPalindrome</span><span class="params">(self, x: int)</span> -&gt; bool:</span></span><br><span class="line">  <span class="keyword">if</span> x &lt; <span class="number">0</span> <span class="keyword">or</span> x % <span class="number">10</span> == <span class="number">0</span> <span class="keyword">and</span> x != <span class="number">0</span>:</span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">False</span>;</span><br><span class="line">  reverseNumber = <span class="number">0</span>;</span><br><span class="line">  <span class="keyword">while</span> (reverseNumber &lt; x):</span><br><span class="line">    reverseNumber = reverseNumber * <span class="number">10</span> + x % <span class="number">10</span></span><br><span class="line">    x = x // <span class="number">10</span></span><br><span class="line">    <span class="keyword">return</span> x == reverseNumber <span class="keyword">or</span> x == reverseNumber // <span class="number">10</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">inorderTraversal</span><span class="params">(self, root: TreeNode)</span> -&gt; List[int]:</span></span><br><span class="line">  <span class="keyword">if</span> <span class="keyword">not</span> root:</span><br><span class="line">    <span class="keyword">return</span> []</span><br><span class="line">  res = []</span><br><span class="line">  res.extend(self.inorderTraversal(root.left))</span><br><span class="line">  res.append(root.val)</span><br><span class="line">  res.extend(self.inorderTraversal(root.right))</span><br><span class="line">  <span class="keyword">return</span> res</span><br></pre></td></tr></table></figure>
 <table>
 <thead>
 <tr>
@@ -323,74 +319,54 @@
 </thead>
 <tbody>
 <tr>
-<td>84 ms</td>
-<td>13.2 MB</td>
+<td>36 ms</td>
+<td>13.1 MB</td>
 <td>python</td>
 </tr>
 <tr>
-<td>6 ms</td>
-<td>34.5 MB</td>
+<td>1 ms</td>
+<td>36.1 MB</td>
 <td>java</td>
 </tr>
 </tbody>
 </table>
 <h2 id="database"><a class="anchor" href="#database"></a> Database</h2>
 <blockquote>
-<p><strong>183. Customers Who Never Order</strong></p>
-<p>Suppose that a website contains two tables, the <code>Customers</code> table and the <code>Orders</code> table. Write a SQL query to find all customers who never order anything.</p>
+<p><strong>596. Classes More Than 5 Students</strong></p>
+<p>There is a table <code>courses</code> with columns: <strong>student</strong> and <strong>class</strong></p>
+<p>Please list out all classes which have more than or equal to 5 students.</p>
+<p><strong>Note:</strong><br>
+The students should not be counted duplicate in each course.</p>
 </blockquote>
-<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> Customers.Name <span class="keyword">AS</span> Customers</span><br><span class="line"><span class="keyword">FROM</span> Customers</span><br><span class="line"><span class="keyword">WHERE</span> </span><br><span class="line">    Customers.Id <span class="keyword">NOT</span> <span class="keyword">IN</span> </span><br><span class="line">        (<span class="keyword">SELECT</span> Orders.CustomerId <span class="keyword">FROM</span> Orders)</span><br></pre></td></tr></table></figure>
+<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> </span><br><span class="line">    <span class="keyword">class</span></span><br><span class="line"><span class="keyword">FROM</span> </span><br><span class="line">    (<span class="keyword">SELECT</span> </span><br><span class="line">    <span class="keyword">class</span>, <span class="keyword">COUNT</span>(<span class="keyword">DISTINCT</span>(student)) <span class="keyword">AS</span> <span class="keyword">num</span> </span><br><span class="line">    <span class="keyword">FROM</span> courses</span><br><span class="line">    <span class="keyword">GROUP</span> <span class="keyword">BY</span> <span class="keyword">class</span>) <span class="keyword">AS</span> tmp</span><br><span class="line"><span class="keyword">WHERE</span> </span><br><span class="line">    <span class="keyword">num</span> &gt;= <span class="number">5</span></span><br></pre></td></tr></table></figure>
 <p>主要用到了<code>NOT IN</code>关键字。</p>
 <h2 id="review"><a class="anchor" href="#review"></a> Review</h2>
-<p>本周由于工作比较忙，所以只看了RxJava系列的文章中的第一篇。主要讲述了 <code>Observable</code> 以及其基本操作：</p>
+<p>本周接着看了RxJava系列的文章中的第二篇。主要讲述了 <code>Observable</code>传递过程中的相关操作：</p>
 <ul>
-<li>
-<p><strong>Create</strong>：Observable.create()方法，传入ObservableOnSubscribe对象，需要实现此对象的<code>subscribe</code>方法；</p>
-</li>
-<li>
-<p><strong>Defer</strong>：和 Create 类似，区别在于不是每次都创建新的 Observable 对象，效率更高；</p>
-</li>
-<li>
-<p><strong>From</strong>：从一个数组或者迭代器创建 Observable 对象，包括<code>fromCallable(), fromFuture(), fromIterable(), fromPublisher(), fromArray()</code></p>
-</li>
-<li>
-<p><strong>Interval</strong>： 创建每隔一定时间提交时间的 Observable 对象；</p>
-</li>
-<li>
-<p><strong>Just</strong>：传入一系列的参数(最多10个)，所创建的 Observable 对象依次把这些参数转换成 Observable 元素并进行事件发送。</p>
-<div class="alert info"><p>from 和 just 的区别在于 just 一次把所有的元素发布出来，但是 from 则是把元素依次发布出来</p>
-</div>
-</li>
-<li>
-<p><strong>Range</strong>：传入两个参数分别在起始值和长度，则会发布对应的元素序列；</p>
-</li>
-<li>
-<p><strong>Repeat</strong>：发布时间的重复次数</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line">Observable.range(<span class="number">2</span>, <span class="number">5</span>)</span><br><span class="line">          .repeat(<span class="number">2</span>) <span class="comment">//上面的序列连续发布两次</span></span><br></pre></td></tr></table></figure>
-</li>
-<li>
-<p><strong>Timer</strong>：创建一个 Observable 对象，该对象在特定时间之后发布一个事件；</p>
-<div class="alert info"><p>interval 和 timer 的区别在于 time 仅仅只发送一次事件，但是 interval 则是每隔一定时间会发布事件；</p>
-</div>
-</li>
+<li><strong>Buffer</strong>：Observable.buffer(int num)方法，会周期性的从 Obserable 中取出 num 个数的数据或者事件，而不是一个接一个的传递；</li>
+<li><strong>Map</strong>：该方法是对每一个传递的数据或者事件进行处理，处理完毕之后再进行向下传递；</li>
+<li><strong>FlatMap</strong>：该方法返回的还是一个 Observable 对象，是对原来传递的数据进行处理，返回一个对应的 Observable 对象(主要用于对元素顺序不关注的情况)；</li>
+<li><strong>SwitchMap</strong>： 返回原始 Observable 对象传递数据中最后的一项 ；</li>
+<li><strong>ConcatMap</strong>：和 flatMap 有点类似；</li>
+<li><strong>GroupBy</strong>：将原始 Observable 对象传递的数据按某一 key 进行分类，将分类之后的数据进行传递(apply方法返回为 <code>true</code> 的时候该数据或事件才会进行传递)；</li>
+<li><strong>Scan</strong>：对传递的参数进行处理，但是该参数不仅仅指当前传递的，还包括以前传递的。</li>
 </ul>
-<p><a href="https://proandroiddev.com/exploring-rxjava-in-android-e52ed7ef32e2">Exploring RxJava in Android — Introduction</a></p>
+<p><a href="https://proandroiddev.com/exploring-rxjava-in-android-operators-for-transforming-observables-367c22d86677">Exploring RxJava in Android — Operators for Transforming Observables</a></p>
 <h2 id="tips"><a class="anchor" href="#tips"></a> Tips</h2>
 <ol>
 <li>
-<p>本地和远程仓库关联：git branch --set-upstream-to &lt;本地分支&gt; origin/&lt;远程分支&gt;；</p>
+<p>python中给list一次添加多个元素时使用方法<code>extend()</code></p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">list1 = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>]</span><br><span class="line">list2 = [<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>]</span><br><span class="line">list1.extend(list2)</span><br><span class="line"><span class="comment"># list1 is [1,2,3,2,3,4]</span></span><br></pre></td></tr></table></figure>
 </li>
 <li>
-<p>本地仓库关联远程：</p>
-<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">git remote add origin https://github.com/user_name/repositories_name.git</span><br></pre></td></tr></table></figure>
+<p>python中读取一个文件的所有内容除了<code>file.readlines()</code>方法，还可以使用<code>file.read()</code>方法；</p>
 </li>
 <li>
-<p>建立索引:</p>
-<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">CREATE</span> <span class="keyword">INDEX</span> index_name <span class="keyword">on</span> table_name</span><br></pre></td></tr></table></figure>
+<p>NinePatchDrawable 在给 background 设置 bounds 之后，下次 draw 时 bottom 会变小，导致看起来会闪一下，目前想到的解决办法就是在原来背景的基础上通过设置着色达到改变背景的目的。</p>
 </li>
 </ol>
 <h2 id="share"><a class="anchor" href="#share"></a> Share</h2>
-<p>一篇 Android 内存优化相关的文章：<a href="https://mp.weixin.qq.com/s/2MsEAR9pQfMr1Sfs7cPdWQ">Android 内存优化总结&amp;实践</a></p>
+<p>python 内容较多的文件内容读取方式比较：<a href="https://www.cnblogs.com/6tian/p/5886284.html">https://www.cnblogs.com/6tian/p/5886284.html</a></p>
 
             
 
@@ -406,7 +382,7 @@
     </p>
     <p class="copyright-item">
         <span>原文链接: </span>
-        <a href="http://www.istarx.cn/2019/04/27/arts-week-four/">http://www.istarx.cn/2019/04/27/arts-week-four/</a>
+        <a href="http://www.istarx.cn/2019/05/03/arts-week-five/">http://www.istarx.cn/2019/05/03/arts-week-five/</a>
     </p>
     <p class="copyright-item">
         <span>许可协议: </span>
@@ -440,9 +416,8 @@
         <ul class="post-actions post-action-nav">
             <li class="post-action">
                 
-                
-                <a class="post-action-btn btn btn--default tooltip--top" href="/2019/05/03/arts-week-five/" data-tooltip="ARTS打卡—第5周" aria-label="上一篇: ARTS打卡—第5周">
-                    
+                    <a class="post-action-btn btn btn--disabled">
+                        
                         <i class="fa fa-angle-left" aria-hidden="true"></i>
                         <span class="hide-xs hide-sm text-small icon-ml">上一篇</span>
                     </a>
@@ -450,7 +425,7 @@
             <li class="post-action">
                 
                 
-                <a class="post-action-btn btn btn--default tooltip--top" href="/2019/04/21/arts-week-three/" data-tooltip="ARTS打卡—第3周" aria-label="下一篇: ARTS打卡—第3周">
+                <a class="post-action-btn btn btn--default tooltip--top" href="/2019/04/27/arts-week-four/" data-tooltip="ARTS打卡—第4周" aria-label="下一篇: ARTS打卡—第4周">
                     
                         <span class="hide-xs hide-sm text-small icon-mr">下一篇</span>
                         <i class="fa fa-angle-right" aria-hidden="true"></i>
@@ -499,9 +474,8 @@
         <ul class="post-actions post-action-nav">
             <li class="post-action">
                 
-                
-                <a class="post-action-btn btn btn--default tooltip--top" href="/2019/05/03/arts-week-five/" data-tooltip="ARTS打卡—第5周" aria-label="上一篇: ARTS打卡—第5周">
-                    
+                    <a class="post-action-btn btn btn--disabled">
+                        
                         <i class="fa fa-angle-left" aria-hidden="true"></i>
                         <span class="hide-xs hide-sm text-small icon-ml">上一篇</span>
                     </a>
@@ -509,7 +483,7 @@
             <li class="post-action">
                 
                 
-                <a class="post-action-btn btn btn--default tooltip--top" href="/2019/04/21/arts-week-three/" data-tooltip="ARTS打卡—第3周" aria-label="下一篇: ARTS打卡—第3周">
+                <a class="post-action-btn btn btn--default tooltip--top" href="/2019/04/27/arts-week-four/" data-tooltip="ARTS打卡—第4周" aria-label="下一篇: ARTS打卡—第4周">
                     
                         <span class="hide-xs hide-sm text-small icon-mr">下一篇</span>
                         <i class="fa fa-angle-right" aria-hidden="true"></i>
