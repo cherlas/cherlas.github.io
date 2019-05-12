@@ -7,10 +7,12 @@
     <meta name="baidu-site-verification" content="fJhstNzkJ1"/>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="generator" content="小一 | 莫舍己道 勿扰他心">
-    <title>归档: 2018 - 小一 | 莫舍己道 勿扰他心</title>
+    <title>ARTS打卡—第6周 - 小一 | 莫舍己道 勿扰他心</title>
     <meta name="author" content="小一">
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0" />
     <link rel="Shortcut Icon" href="http://www.istarx.cn/assets/images/favicon.ico" type="image/x-icon">
+    
+        <meta name="keywords" content="ARTS,LeetCode">
     
     
         <link rel="icon" href="http://www.istarx.cn/assets/images/favicon.ico">
@@ -27,6 +29,10 @@
         <meta property="og:image" content="http://www.istarx.cn/assets/images/avatar.png"/>
     
     
+    
+        <meta property="og:image" content="http://cherlas-blog.oss-cn-beijing.aliyuncs.com/arts-week6.jpg"/>
+        <meta class="swiftype" name="image" data-type="enum"
+              content="http://cherlas-blog.oss-cn-beijing.aliyuncs.com/arts-week6.jpg"/>
     
     
     <!--STYLES-->
@@ -207,454 +213,279 @@
 </nav>
 
         
+<div class="post-header-cover fade-in header-image-cover
+                    text-left
+                    post-header-cover--partial" style="background-image:url('http://cherlas-blog.oss-cn-beijing.aliyuncs.com/arts-week6.jpg');
+      filter: blur(0px); 
+      height: 60%;" data-behavior="2">
+</div>
+<div class="post-header-cover fade-in post-header-cover-background
+                            text-left
+                            post-header-cover--partial" style="
+     
+             height: 60%;
+     " data-behavior="2">
+
+    
+    <div class="post-header main-content-wrap text-left fadeInDown">
+    <div class="post-header-message content-with-table">
+        
+        <h1 class="post-title" itemprop="headline">
+            ARTS打卡—第6周
+        </h1>
+        
+        
+        <div class="post-meta">
+    <time itemprop="datePublished" datetime="2019-05-12T14:27:45+08:00">
+        <img class="calendar" src="/assets/images/calendar.png">
+        
+        5月 12, 2019
+        
+    </time>
+    
+    <span>发布在 </span>
+    
+<a class="category-link" href="/categories/ARTS打卡/">ARTS打卡</a>
+
+
+    
+    
+    <img class="tag-img" src="/assets/images/tag-icon.svg">
+    <div class="post-tags">
+        
+        <a href="/tags/ARTS/">ARTS</a>
+        
+    </div>
+    
+</div>
+
+        
+    </div>
+</div>
+
+    
+</div>
+
 
         <div id="main" data-behavior="2"
-             class="
+             class="hasCover
                         hasCoverMetaIn
-                         hidden fade-in">
+                        hasCoverCaption hidden fade-in">
             
-    <section class="postShorten-group main-content-wrap">
+<article class="post" itemscope="" itemtype="http://schema.org/BlogPosting">
+    
+        <span class="post-header-cover-caption caption">没有失败，只有尝试</span>
     
     
-    <article class="postShorten postShorten--thumbnailimg-bottom fadeInUp" itemscope="" itemtype="http://schema.org/BlogPosting" style="animation-delay: 0s">
-        <div class="postShorten-wrap">
+    <div class="tableTile" data-message="目录">
+    </div>
+    <div class="post-content markdown" itemprop="articleBody">
+        <div class="main-content-wrap fadeInDown toc content-with-table">
+            <script src="/assets/js/APlayer.min.js"> </script><p>这周的打卡内容主要是一道数组操作相关的题目，数据库方面是一道 <code>JOIN</code> 和 <code>IN</code> 关键字相关的题目，以及 Review 两篇 RxJava 中 Observable 对象过滤及组合相关的文章。</p>
+<a id="more"></a>
+<p><ul class="toc js-fixedContent">
+<li><a href="#algorithm">Algorithm</a>
+<ul>
+<li><a href="#%E9%A2%98%E7%9B%AE%E6%8F%8F%E8%BF%B0">题目描述</a></li>
+<li><a href="#java">Java</a></li>
+<li><a href="#python">Python</a></li>
+</ul>
+</li>
+<li><a href="#database">Database</a></li>
+<li><a href="#review">Review</a>
+<ul>
+<li><a href="#observable%E8%BF%87%E6%BB%A4"><code>Observable</code>过滤</a></li>
+<li><a href="#obserable%E7%BB%84%E5%90%88"><code>Obserable</code>组合</a></li>
+</ul>
+</li>
+<li><a href="#tips">Tips</a></li>
+<li></li>
+<li><a href="#share">Share</a></li>
+</ul>
+</p>
+<h2 id="algorithm"><a class="anchor" href="#algorithm"></a> Algorithm</h2>
+<h3 id="题目描述"><a class="anchor" href="#题目描述"></a> 题目描述</h3>
+<blockquote>
+<p><a href="https://leetcode.com/problems/max-increase-to-keep-city-skyline/">807. Max Increase to Keep City Skyline</a></p>
+</blockquote>
+<h3 id="java"><a class="anchor" href="#java"></a> Java</h3>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">maxIncreaseKeepingSkyline</span><span class="params">(<span class="keyword">int</span>[][] grid)</span> </span>&#123;</span><br><span class="line">  <span class="keyword">if</span> (grid == <span class="keyword">null</span> || grid.length == <span class="number">0</span> || grid[<span class="number">0</span>].length == <span class="number">0</span> ||</span><br><span class="line">      grid.length == <span class="number">1</span> &amp;&amp; grid[<span class="number">0</span>].length == <span class="number">1</span>) &#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">int</span> N = grid.length;</span><br><span class="line">  <span class="keyword">int</span>[] leftRight = <span class="keyword">new</span> <span class="keyword">int</span>[N];</span><br><span class="line">  <span class="keyword">int</span>[] topBottom = <span class="keyword">new</span> <span class="keyword">int</span>[N];</span><br><span class="line">  <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; N; i++) &#123;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> j = <span class="number">0</span>; j&lt; N; j++) &#123;</span><br><span class="line">      leftRight[i] = Math.max(leftRight[i], grid[i][j]);</span><br><span class="line">      topBottom[i] = Math.max(topBottom[i], grid[j][i]);</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">int</span> res = <span class="number">0</span>;</span><br><span class="line">  <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; N; i++) &#123;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="number">0</span>; j &lt; N; j++) &#123;</span><br><span class="line">      res += Math.min(leftRight[i], topBottom[j]) - grid[i][j];</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">return</span> res;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="python"><a class="anchor" href="#python"></a> Python</h3>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">maxIncreaseKeepingSkyline</span><span class="params">(self, grid: List[List[int]])</span> -&gt; int:</span></span><br><span class="line">  <span class="keyword">if</span> <span class="keyword">not</span> grid <span class="keyword">or</span> len(grid) == <span class="number">0</span> <span class="keyword">or</span> len(grid) ==<span class="number">1</span>:</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span></span><br><span class="line">  N = len(grid)</span><br><span class="line">  row = [<span class="number">-1</span>] * N</span><br><span class="line">  col = [<span class="number">-1</span>] * N</span><br><span class="line">  <span class="keyword">for</span> i <span class="keyword">in</span> range(N):</span><br><span class="line">    <span class="keyword">for</span> j <span class="keyword">in</span> range(N):</span><br><span class="line">      row[i] = max(row[i], grid[i][j])</span><br><span class="line">      col[i] = max(col[i], grid[j][i])</span><br><span class="line">  res = <span class="number">0</span></span><br><span class="line">  <span class="keyword">for</span> i <span class="keyword">in</span> range(N):</span><br><span class="line">  	<span class="keyword">for</span> j <span class="keyword">in</span> range(N):</span><br><span class="line">    	res = res + min(row[i], col[j]) - grid[i][j]</span><br><span class="line">  <span class="keyword">return</span> res</span><br></pre></td></tr></table></figure>
+<table>
+<thead>
+<tr>
+<th>Runtime</th>
+<th>Memory</th>
+<th>Language</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>68 ms</td>
+<td>13.4 MB</td>
+<td>python</td>
+</tr>
+<tr>
+<td>1 ms</td>
+<td>41.7 MB</td>
+<td>java</td>
+</tr>
+</tbody>
+</table>
+<h2 id="database"><a class="anchor" href="#database"></a> Database</h2>
+<blockquote>
+<p><strong>596. Classes More Than 5 Students</strong></p>
+<p>The <code>Employee</code> table holds all employees. Every employee has an Id, a salary, and there is also a column for the department Id.</p>
+<p>The <code>Department</code> table holds all departments of the company.</p>
+<p>Write a SQL query to find employees who have the highest salary in each of the departments. For the above tables, your SQL query should return the following rows (order of rows does not matter)</p>
+</blockquote>
+<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> </span><br><span class="line">    Department.Name <span class="keyword">AS</span> <span class="string">"Department"</span>,</span><br><span class="line">    Employee.Name <span class="keyword">AS</span> <span class="string">"Employee"</span>,</span><br><span class="line">    Employee.Salary</span><br><span class="line"><span class="keyword">FROM</span></span><br><span class="line">    Employee</span><br><span class="line">    <span class="keyword">JOIN</span></span><br><span class="line">    Department <span class="keyword">ON</span> Department.Id = Employee.DepartmentId</span><br><span class="line"><span class="keyword">WHERE</span></span><br><span class="line">    (Employee.DepartmentId , Salary) <span class="keyword">IN</span></span><br><span class="line">    (<span class="keyword">SELECT</span> </span><br><span class="line">        DepartmentId , <span class="keyword">Max</span>(Salary)</span><br><span class="line">     <span class="keyword">FROM</span> </span><br><span class="line">        Employee</span><br><span class="line">     <span class="keyword">GROUP</span> <span class="keyword">BY</span> DepartmentId</span><br><span class="line">    )</span><br></pre></td></tr></table></figure>
+<p>主要用到了<code>NOT IN</code>关键字。</p>
+<h2 id="review"><a class="anchor" href="#review"></a> Review</h2>
+<p>本周接着看了RxJava系列的文章中的第三及第四篇。主要讲述了 <code>Observable</code>的过滤和组合。</p>
+<h3 id="observable过滤"><a class="anchor" href="#observable过滤"></a> <code>Observable</code>过滤</h3>
+<ul>
+<li><strong>Debounce</strong>：<code>debounce()</code>方法会在设置时间内没有传递数据或事件的情况下才会传递此时间之前的最后一个数据或者事件；</li>
+<li><strong>Distinct()</strong>：过滤重复数据或者时间，需要重写时间或者数据的<code>equals</code>方法；</li>
+<li><strong>ElementAt</strong>：仅传递传递序列中的第 N 个数据或者元素；</li>
+<li><strong>Filter</strong>： 对原始传递的元素进行过滤，仅传递满足条件的元素；</li>
+<li><strong>IgnoreElements</strong>：忽略所有元素的传递，但是会在传递完成后会进行通知，如果不关心所传递的元素，仅仅在传递完成后进行通知，则可以使用此方法；</li>
+<li><strong>Sample</strong>：对传递元素每隔一定阶段再传递一次；</li>
+<li><strong>Skip</strong>：跳过开始的 N 个元素；</li>
+<li><strong>skipLast</strong>：跳过结尾的 N 个元素；</li>
+<li><strong>Take</strong>：仅传递开始的 N 个元素；</li>
+<li><strong>TakeLast</strong>：仅传递最后的 N 个元素；</li>
+</ul>
+<h3 id="obserable组合"><a class="anchor" href="#obserable组合"></a> <code>Obserable</code>组合</h3>
+<ul>
+<li><strong>CombineLatest</strong>：当某元素被两个 Observable 对象分别之一发送时，可是把两个Observable 对象进行组合，并传递经过处理之后的元素；</li>
+<li><strong>Join</strong>：当两个元素有重合时，把所传递的元素两个元素当成一对病经过处理再进行传递；</li>
+<li><strong>Merge</strong>：将多个 Observable 对象合并为一个，合并之后传递数据时同步传输，并非等待前面的 Observable 传递完成后后面的才开始传递；</li>
+<li><strong>Concat</strong>：把两个或者多个 Observable 对象合并为一个，而非插入，合并之后的 Observable 数据传递时顺序传递的，即第一个 Observable 传递完毕之后才会传递第二个 Observable 对象的数据(区别于 Merge)；</li>
+<li><strong>Zip</strong>：将多个 Observable 对象的传递的元素通过一定的方法进行处理，并只传递处理之后的结果；</li>
+<li><strong>SwitchOnNext</strong>：在第二个 Observable 开始传递之前第一个 Observable 一直会传递数据，当第二个 Observable 开始传递数据时，取消第一个 Observable 对象的订阅，并切换到订阅第二个 Observable 对象；</li>
+</ul>
+<p><a href="https://proandroiddev.com/exploring-rxjava-in-android-operators-for-filtering-observables-b0a299ea23a3">Exploring RxJava in Android — Operators for Filtering Observables</a></p>
+<h2 id="tips"><a class="anchor" href="#tips"></a> Tips</h2>
+<ol>
+<li>
+<p>python list 初始化：<code>[-1] * N</code></p>
+</li>
+<li>
+<p>adb 命令获取log的时候有时候会卡着不动，这时候可以获取试试，如果还不行的话使用Android Studio自带的Device Exploer打开log所在的文件夹，分批次取出log，猜测是log文件太大导致；</p>
+</li>
+<li>
+<p>ime命令可以统计cpu实际运行了多长时间，命令返回三个值，real time也就是wall clock time，第二个是user time，cpu运行你的程序，在用户态运行的时间，第三个个sys time，是cpu运行程序时内核里运行指令的时间，实际程序运行时间为user time+sys time;</p>
+</li>
+<li>
+<p><code>print(**f**”xxx {var} yyy”)</code>格式化输出字符串，format方法可以得到同样的结果：</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">name = ‘cuz’</span><br><span class="line">str_var = ‘His name <span class="keyword">is</span> &#123;&#125;’</span><br><span class="line">str_var.format(name)</span><br><span class="line"><span class="comment"># Output: His name is cuz</span></span><br></pre></td></tr></table></figure>
+</li>
+<li>
+<p>python中的有序字典: <code>collections.OrderedDict</code></p>
+</li>
+<li>
+<p>Linux 中目录切换：pushd、popd</p>
+</li>
+<li>
+<p>参数解包：</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">from</span> sys <span class="keyword">import</span> argv</span><br><span class="line">a, b, c = argv <span class="comment"># 参数解包</span></span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<h2 id=""><a class="anchor" href="#"></a> </h2>
+<h2 id="share"><a class="anchor" href="#share"></a> Share</h2>
+<p>Android OOM案例分析：<a href="https://tech.meituan.com/2017/04/14/oom-analysis.html">https://tech.meituan.com/2017/04/14/oom-analysis.html</a></p>
+
             
-            <div class="postShorten-header">
-                <h1 class="postShorten-title" itemprop="headline">
-                    
-                        <a class="link-unstyled" href="/2018/03/08/creat-your-custom-hexo-theme-from-scratch/">
-                            从零开始制作自己的 Hexo 主题
-                        </a>
-                    
-                </h1>
-                <div class="postShorten-meta">
-    <time itemprop="datePublished" datetime="2018-03-08T22:12:19+08:00">
-        <img class="calendar" src="/assets/images/calendar.png">
-        
-        3月 08, 2018
-        
-    </time>
-    
-    <span>发布在 </span>
-    
-<a class="category-link" href="/categories/程序猿进化之路/">程序猿进化之路</a>
 
+        </div>
+        
+            <div class="tableContent fade-in" data-message="true"></div>
+        
+        
+            <div class="post-copyright main-content-wrap content-with-table">
+    <p class="copyright-item">
+        <span>原文作者: </span>
+        <a href="http://http://www.istarx.cn">小一</a>
+    </p>
+    <p class="copyright-item">
+        <span>原文链接: </span>
+        <a href="http://www.istarx.cn/2019/05/12/arts-week-six/">http://www.istarx.cn/2019/05/12/arts-week-six/</a>
+    </p>
+    <p class="copyright-item">
+        <span>许可协议: </span>
+        <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/" target="_blank">知识共享署名-非商业性使用 4.0 国际许可协议，转载请注明出处，谢谢.</a>
+    </p>
+</div>
 
-    
-    
-    <img class="tag-img" src="/assets/images/tag-icon.svg">
-    <div class="post-tags">
-        
-        <a href="/tags/hexo/">hexo</a>
-        
-        <a href="/tags/theme/">theme</a>
-        
-        <a href="/tags/主题/">主题</a>
         
     </div>
     
+        <div id="post-footer" class="post-footer main-content-wrap content-with-table">
+            
+                <div class="post-footer-tags">
+                    <span class="text-color-light text-small">标签</span><br>
+                    
+<div class="tagcloud article-tag-list">
+    
+    <li class="article-tag-list-item">
+        <a href="/tags/ARTS/" class="js-tag color5">ARTS</a>
+    </li>
+    
+    <div class="clearfix"></div>
 </div>
 
-            </div>
+
+                </div>
             
-                <div class="postShorten-excerpt" itemprop="articleBody">
-                    <p>Hexo 作为一款比较流行的博客框架，其主题也是各式各样，<a href="https://hexo.io/themes/">Hexo官网</a>上有很多漂亮的主题直接可以使用，但是莫不如自己设计编写一个自己喜欢的。这篇文章将从零开始制作一个 LandScape 主题。</p>
-                    
-                        <a href="/2018/03/08/creat-your-custom-hexo-theme-from-scratch/" class="postShorten-excerpt_link link">
-                            阅读全文
-                        </a>
+            
+                <div class="post-actions-wrap">
+    <nav>
+        <ul class="post-actions post-action-nav">
+            <li class="post-action">
+                
+                    <a class="post-action-btn btn btn--disabled">
                         
+                        <i class="fa fa-angle-left" aria-hidden="true"></i>
+                        <span class="hide-xs hide-sm text-small icon-ml">上一篇</span>
+                    </a>
+            </li>
+            <li class="post-action">
+                
+                
+                <a class="post-action-btn btn btn--default tooltip--top" href="/2019/05/03/arts-week-five/" data-tooltip="ARTS打卡—第5周" aria-label="下一篇: ARTS打卡—第5周">
                     
-                </div>
-            
-        </div>
-        
-            <a href="/2018/03/08/creat-your-custom-hexo-theme-from-scratch/">
-                <div class="postShorten-thumbnailimg">
-                    <img alt="" itemprop="image" src="http://cherlas-blog.oss-cn-beijing.aliyuncs.com/create-hexo-theme.jpg?x-oss-process=style/bottom">
-                </div>
-            </a>
-            
-        
-    </article>
-    
-    
-    <article class="postShorten postShorten--thumbnailimg-left fadeInUp" itemscope="" itemtype="http://schema.org/BlogPosting" style="animation-delay: 0.1s">
-        <div class="postShorten-wrap">
-            
-            <div class="postShorten-header">
-                <h1 class="postShorten-title" itemprop="headline">
-                    
-                        <a class="link-unstyled" href="/2018/02/11/hamcrest-matcher/">
-                            Hamcrest 匹配器
-                        </a>
-                    
-                </h1>
-                <div class="postShorten-meta">
-    <time itemprop="datePublished" datetime="2018-02-11T00:04:33+08:00">
-        <img class="calendar" src="/assets/images/calendar.png">
-        
-        2月 11, 2018
-        
-    </time>
-    
-    <span>发布在 </span>
-    
-<a class="category-link" href="/categories/程序猿进化之路/">程序猿进化之路</a>, <a class="category-link" href="/categories/程序猿进化之路/自动化测试/">自动化测试</a>
-
-
-    
-    
-    <img class="tag-img" src="/assets/images/tag-icon.svg">
-    <div class="post-tags">
-        
-        <a href="/tags/android/">android</a>
-        
-        <a href="/tags/hamcrest/">hamcrest</a>
-        
-    </div>
-    
-</div>
-
-            </div>
-            
-                <div class="postShorten-excerpt" itemprop="articleBody">
-                    <p>Hamcrest是用于编写匹配器对象的框架，允许以声明方式定义“匹配”规则。有许多情况下匹配器是不可估量的，例如UI验证或数据过滤，但是在编写灵活测试的领域中，匹配器反而是最常用的。</p>
-                    
-                        <a href="/2018/02/11/hamcrest-matcher/" class="postShorten-excerpt_link link">
-                            阅读全文
-                        </a>
-                        
-                    
-                </div>
-            
-        </div>
-        
-            <a href="/2018/02/11/hamcrest-matcher/">
-                <div class="postShorten-thumbnailimg">
-                    <img alt="" itemprop="image" src="http://cherlas-blog.oss-cn-beijing.aliyuncs.com/hamcrest-matching.jpg?x-oss-process=style/left">
-                </div>
-            </a>
-            
-        
-    </article>
-    
-    
-    <article class="postShorten postShorten--thumbnailimg-left fadeInUp" itemscope="" itemtype="http://schema.org/BlogPosting" style="animation-delay: 0.2s">
-        <div class="postShorten-wrap">
-            
-            <div class="postShorten-header">
-                <h1 class="postShorten-title" itemprop="headline">
-                    
-                        <a class="link-unstyled" href="/2018/02/10/android-autotest-summary/">
-                            Android 自动化测试总述
-                        </a>
-                    
-                </h1>
-                <div class="postShorten-meta">
-    <time itemprop="datePublished" datetime="2018-02-10T20:46:27+08:00">
-        <img class="calendar" src="/assets/images/calendar.png">
-        
-        2月 10, 2018
-        
-    </time>
-    
-    <span>发布在 </span>
-    
-<a class="category-link" href="/categories/程序猿进化之路/">程序猿进化之路</a>, <a class="category-link" href="/categories/程序猿进化之路/自动化测试/">自动化测试</a>
-
-
-    
-    
-    <img class="tag-img" src="/assets/images/tag-icon.svg">
-    <div class="post-tags">
-        
-        <a href="/tags/android/">android</a>
-        
-        <a href="/tags/自动化测试/">自动化测试</a>
-        
-    </div>
-    
-</div>
-
-            </div>
-            
-                <div class="postShorten-excerpt" itemprop="articleBody">
-                    <p>自动化测试作为整个产品生命周期过程中必不可少的一部分，可以得到快速的反馈，提前发现错误进行改正，避免把错误暴露在用户手中，同时也可以较少项目开销、缩短项目周期。</p>
-                    
-                        <a href="/2018/02/10/android-autotest-summary/" class="postShorten-excerpt_link link">
-                            阅读全文
-                        </a>
-                        
-                    
-                </div>
-            
-        </div>
-        
-            <a href="/2018/02/10/android-autotest-summary/">
-                <div class="postShorten-thumbnailimg">
-                    <img alt="" itemprop="image" src="http://cherlas-blog.oss-cn-beijing.aliyuncs.com/1.jpg?x-oss-process=style/left">
-                </div>
-            </a>
-            
-        
-    </article>
-    
-    
-    <article class="postShorten postShorten--thumbnailimg-left fadeInUp" itemscope="" itemtype="http://schema.org/BlogPosting" style="animation-delay: 0.30000000000000004s">
-        <div class="postShorten-wrap">
-            
-            <div class="postShorten-header">
-                <h1 class="postShorten-title" itemprop="headline">
-                    
-                        <a class="link-unstyled" href="/2018/02/04/build-mulit-edition-apks-using-productflavors/">
-                            利用 ProductFlavors 构建差异化APK版本
-                        </a>
-                    
-                </h1>
-                <div class="postShorten-meta">
-    <time itemprop="datePublished" datetime="2018-02-04T22:17:08+08:00">
-        <img class="calendar" src="/assets/images/calendar.png">
-        
-        2月 04, 2018
-        
-    </time>
-    
-    <span>发布在 </span>
-    
-<a class="category-link" href="/categories/程序猿进化之路/">程序猿进化之路</a>
-
-
-    
-    
-    <img class="tag-img" src="/assets/images/tag-icon.svg">
-    <div class="post-tags">
-        
-        <a href="/tags/android/">android</a>
-        
-        <a href="/tags/gradle/">gradle</a>
-        
-        <a href="/tags/productflavors/">productflavors</a>
-        
-    </div>
-    
-</div>
-
-            </div>
-            
-                <div class="postShorten-excerpt" itemprop="articleBody">
-                    <p>在编译打包 Android apk 时，根据不同的情况需要提供不同的功能，打包不同版本的 apk，例如免费版本和收费版本等等。而 Gradle 和 Android 插件的 productFlavors 可以轻松的搞定这一切。</p>
-                    
-                        <a href="/2018/02/04/build-mulit-edition-apks-using-productflavors/" class="postShorten-excerpt_link link">
-                            阅读全文
-                        </a>
-                        
-                    
-                </div>
-            
-        </div>
-        
-            <a href="/2018/02/04/build-mulit-edition-apks-using-productflavors/">
-                <div class="postShorten-thumbnailimg">
-                    <img alt="" itemprop="image" src="http://cherlas-blog.oss-cn-beijing.aliyuncs.com/2.jpg?x-oss-process=style/left">
-                </div>
-            </a>
-            
-        
-    </article>
-    
-    
-    <article class="postShorten postShorten--thumbnailimg-left fadeInUp" itemscope="" itemtype="http://schema.org/BlogPosting" style="animation-delay: 0.4s">
-        <div class="postShorten-wrap">
-            
-            <div class="postShorten-header">
-                <h1 class="postShorten-title" itemprop="headline">
-                    
-                        <a class="link-unstyled" href="/2018/02/03/download-android-source-code/">
-                            Android 源代码下载与编译
-                        </a>
-                    
-                </h1>
-                <div class="postShorten-meta">
-    <time itemprop="datePublished" datetime="2018-02-03T17:28:11+08:00">
-        <img class="calendar" src="/assets/images/calendar.png">
-        
-        2月 03, 2018
-        
-    </time>
-    
-    <span>发布在 </span>
-    
-<a class="category-link" href="/categories/程序猿进化之路/">程序猿进化之路</a>
-
-
-    
-    
-    <img class="tag-img" src="/assets/images/tag-icon.svg">
-    <div class="post-tags">
-        
-        <a href="/tags/android/">android</a>
-        
-        <a href="/tags/sourcecode/">sourcecode</a>
-        
-    </div>
-    
-</div>
-
-            </div>
-            
-                <div class="postShorten-excerpt" itemprop="articleBody">
-                    <p>在查看源代码以及二次开发的过程中避免不了和源代码打交道。本文记录了在Mac OS(当前10.13.2版本)下载、编译Android源代码过程。</p>
-                    
-                        <a href="/2018/02/03/download-android-source-code/" class="postShorten-excerpt_link link">
-                            阅读全文
-                        </a>
-                        
-                    
-                </div>
-            
-        </div>
-        
-            <a href="/2018/02/03/download-android-source-code/">
-                <div class="postShorten-thumbnailimg">
-                    <img alt="" itemprop="image" src="http://cherlas-blog.oss-cn-beijing.aliyuncs.com/android-source-code.jpg?x-oss-process=style/left">
-                </div>
-            </a>
-            
-        
-    </article>
-    
-    
-    <article class="postShorten postShorten--thumbnailimg-left fadeInUp" itemscope="" itemtype="http://schema.org/BlogPosting" style="animation-delay: 0.5s">
-        <div class="postShorten-wrap">
-            
-            <div class="postShorten-header">
-                <h1 class="postShorten-title" itemprop="headline">
-                    
-                        <a class="link-unstyled" href="/2018/01/15/andoid-autotest-apis-complete/">
-                            UI Automator API 整理
-                        </a>
-                    
-                </h1>
-                <div class="postShorten-meta">
-    <time itemprop="datePublished" datetime="2018-01-15T23:27:50+08:00">
-        <img class="calendar" src="/assets/images/calendar.png">
-        
-        1月 15, 2018
-        
-    </time>
-    
-    <span>发布在 </span>
-    
-<a class="category-link" href="/categories/程序猿进化之路/">程序猿进化之路</a>
-
-
-    
-    
-    <img class="tag-img" src="/assets/images/tag-icon.svg">
-    <div class="post-tags">
-        
-        <a href="/tags/android/">android</a>
-        
-        <a href="/tags/自动化测试/">自动化测试</a>
-        
-        <a href="/tags/UIAutomator/">UIAutomator</a>
-        
-    </div>
-    
-</div>
-
-            </div>
-            
-                <div class="postShorten-excerpt" itemprop="articleBody">
-                    <p>得益于公司坑爹的网络，整理一下Android自动化测试框架UI Automator的API接口，方便以后使用查询，也更好的熟悉下API接口。</p>
-                    
-                        <a href="/2018/01/15/andoid-autotest-apis-complete/" class="postShorten-excerpt_link link">
-                            阅读全文
-                        </a>
-                        
-                    
-                </div>
-            
-        </div>
-        
-            <a href="/2018/01/15/andoid-autotest-apis-complete/">
-                <div class="postShorten-thumbnailimg">
-                    <img alt="" itemprop="image" src="http://cherlas-blog.oss-cn-beijing.aliyuncs.com/4.jpg?x-oss-process=style/left">
-                </div>
-            </a>
-            
-        
-    </article>
-    
-    
-    <article class="postShorten postShorten--thumbnailimg-left fadeInUp" itemscope="" itemtype="http://schema.org/BlogPosting" style="animation-delay: 0.6000000000000001s">
-        <div class="postShorten-wrap">
-            
-            <div class="postShorten-header">
-                <h1 class="postShorten-title" itemprop="headline">
-                    
-                        <a class="link-unstyled" href="/2018/01/09/eatablish-your-own-blog-with-hexo-and-github-pages/">
-                            Hexo + Github 搭建属于自己的小窝
-                        </a>
-                    
-                </h1>
-                <div class="postShorten-meta">
-    <time itemprop="datePublished" datetime="2018-01-09T23:46:02+08:00">
-        <img class="calendar" src="/assets/images/calendar.png">
-        
-        1月 09, 2018
-        
-    </time>
-    
-    <span>发布在 </span>
-    
-<a class="category-link" href="/categories/程序猿进化之路/">程序猿进化之路</a>
-
-
-    
-    
-    <img class="tag-img" src="/assets/images/tag-icon.svg">
-    <div class="post-tags">
-        
-        <a href="/tags/hexo/">hexo</a>
-        
-        <a href="/tags/blog/">blog</a>
-        
-    </div>
-    
-</div>
-
-            </div>
-            
-                <div class="postShorten-excerpt" itemprop="articleBody">
-                    <p>本文主要是在Mac(Mac OS High Sierra)环境下从零开始搭建自己的博客，利用靓丽的主题生成漂亮的博客，博文部署到Github上，并实现使用自定义域名访问博客。</p>
-                    
-                        <a href="/2018/01/09/eatablish-your-own-blog-with-hexo-and-github-pages/" class="postShorten-excerpt_link link">
-                            阅读全文
-                        </a>
-                        
-                    
-                </div>
-            
-        </div>
-        
-            <a href="/2018/01/09/eatablish-your-own-blog-with-hexo-and-github-pages/">
-                <div class="postShorten-thumbnailimg">
-                    <img alt="" itemprop="image" src="http://cherlas-blog.oss-cn-beijing.aliyuncs.com/3.jpg?x-oss-process=style/left">
-                </div>
-            </a>
-            
-        
-    </article>
-    
-    
-    <nav id="page-nav" class="fadeInUp" style="animation-delay: 1s">
-        <a class="extend prev" rel="prev" href="/archives/2018/"> </a><a class="page-number" href="/archives/2018/">1</a><span class="page-number current">2</span>
+                        <span class="hide-xs hide-sm text-small icon-mr">下一篇</span>
+                        <i class="fa fa-angle-right" aria-hidden="true"></i>
+                    </a>
+            </li>
+        </ul>
     </nav>
-    
-</section>
+    <ul class="post-actions post-action-share">
+        <li class="post-action hide-lg hide-md hide-sm">
+            <a class="post-action-btn btn btn--default btn-open-shareoptions" href="#btn-open-shareoptions" aria-label="Diesen Beitrag teilen">
+                <i class="fa fa-share-alt" aria-hidden="true"></i>
+            </a>
+        </li>
+        
+        
+        <li class="post-action">
+            
+                <a class="post-action-btn btn btn--default" href="#" aria-label="Nach oben">
+                    
+                    <i class="fa fa-arrow-up" aria-hidden="true"></i>
+                </a>
+        </li>
+    </ul>
+</div>
 
+
+            
+            
+        </div>
+    
+</article>
 
 
 
@@ -665,6 +496,57 @@
 </footer>
 
         </div>
+        
+        <div id="bottom-bar" class="post-bottom-bar" data-behavior="2">
+            <div class="post-actions-wrap">
+    <nav>
+        <ul class="post-actions post-action-nav">
+            <li class="post-action">
+                
+                    <a class="post-action-btn btn btn--disabled">
+                        
+                        <i class="fa fa-angle-left" aria-hidden="true"></i>
+                        <span class="hide-xs hide-sm text-small icon-ml">上一篇</span>
+                    </a>
+            </li>
+            <li class="post-action">
+                
+                
+                <a class="post-action-btn btn btn--default tooltip--top" href="/2019/05/03/arts-week-five/" data-tooltip="ARTS打卡—第5周" aria-label="下一篇: ARTS打卡—第5周">
+                    
+                        <span class="hide-xs hide-sm text-small icon-mr">下一篇</span>
+                        <i class="fa fa-angle-right" aria-hidden="true"></i>
+                    </a>
+            </li>
+        </ul>
+    </nav>
+    <ul class="post-actions post-action-share">
+        <li class="post-action hide-lg hide-md hide-sm">
+            <a class="post-action-btn btn btn--default btn-open-shareoptions" href="#btn-open-shareoptions" aria-label="Diesen Beitrag teilen">
+                <i class="fa fa-share-alt" aria-hidden="true"></i>
+            </a>
+        </li>
+        
+        
+        <li class="post-action">
+            
+                <a class="post-action-btn btn btn--default" href="#" aria-label="Nach oben">
+                    
+                    <i class="fa fa-arrow-up" aria-hidden="true"></i>
+                </a>
+        </li>
+    </ul>
+</div>
+
+
+        </div>
+        <div id="share-options-bar" class="share-options-bar" data-behavior="2">
+    <i id="btn-close-shareoptions" class="fa fa-close"></i>
+    <ul class="share-options">
+        
+    </ul>
+</div>
+
         
     </div>
     
