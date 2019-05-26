@@ -7,12 +7,12 @@
     <meta name="baidu-site-verification" content="fJhstNzkJ1"/>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="generator" content="小一 | 莫舍己道 勿扰他心">
-    <title>Android 源代码下载与编译 - 小一 | 莫舍己道 勿扰他心</title>
+    <title>ARTS打卡—第8周 - 小一 | 莫舍己道 勿扰他心</title>
     <meta name="author" content="小一">
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0" />
     <link rel="Shortcut Icon" href="http://www.istarx.cn/assets/images/favicon.ico" type="image/x-icon">
     
-        <meta name="keywords" content="android,source,code,source-code">
+        <meta name="keywords" content="ARTS,LeetCode">
     
     
         <link rel="icon" href="http://www.istarx.cn/assets/images/favicon.ico">
@@ -30,9 +30,9 @@
     
     
     
-        <meta property="og:image" content="http://cherlas-blog.oss-cn-beijing.aliyuncs.com/android-source-code.jpg"/>
+        <meta property="og:image" content="https://cherlas-blog.oss-cn-beijing.aliyuncs.com/arts-week8.jpg"/>
         <meta class="swiftype" name="image" data-type="enum"
-              content="http://cherlas-blog.oss-cn-beijing.aliyuncs.com/android-source-code.jpg"/>
+              content="https://cherlas-blog.oss-cn-beijing.aliyuncs.com/arts-week8.jpg"/>
     
     
     <!--STYLES-->
@@ -215,15 +215,15 @@
         
 <div class="post-header-cover fade-in header-image-cover
                     text-left
-                    post-header-cover--partial" style="background-image:url('http://cherlas-blog.oss-cn-beijing.aliyuncs.com/android-source-code.jpg');
+                    post-header-cover--partial" style="background-image:url('https://cherlas-blog.oss-cn-beijing.aliyuncs.com/arts-week8.jpg');
       filter: blur(0px); 
-      height: 50%;" data-behavior="2">
+      height: 60%;" data-behavior="2">
 </div>
 <div class="post-header-cover fade-in post-header-cover-background
                             text-left
                             post-header-cover--partial" style="
      
-             height: 50%;
+             height: 60%;
      " data-behavior="2">
 
     
@@ -231,21 +231,21 @@
     <div class="post-header-message content-with-table">
         
         <h1 class="post-title" itemprop="headline">
-            Android 源代码下载与编译
+            ARTS打卡—第8周
         </h1>
         
         
         <div class="post-meta">
-    <time itemprop="datePublished" datetime="2018-02-03T17:28:11+08:00">
+    <time itemprop="datePublished" datetime="2019-05-26T17:05:21+08:00">
         <img class="calendar" src="/assets/images/calendar.png">
         
-        2月 03, 2018
+        5月 26, 2019
         
     </time>
     
     <span>发布在 </span>
     
-<a class="category-link" href="/categories/程序猿进化之路/">程序猿进化之路</a>
+<a class="category-link" href="/categories/ARTS打卡/">ARTS打卡</a>
 
 
     
@@ -253,9 +253,7 @@
     <img class="tag-img" src="/assets/images/tag-icon.svg">
     <div class="post-tags">
         
-        <a href="/tags/android/">android</a>
-        
-        <a href="/tags/sourcecode/">sourcecode</a>
+        <a href="/tags/ARTS/">ARTS</a>
         
     </div>
     
@@ -276,278 +274,66 @@
             
 <article class="post" itemscope="" itemtype="http://schema.org/BlogPosting">
     
-        <span class="post-header-cover-caption caption">Road to the future</span>
+        <span class="post-header-cover-caption caption">我们这个世界的一个问题是，蠢人信誓旦旦，智人满腹狐疑。  ——伯兰特·罗素</span>
     
     
     <div class="tableTile" data-message="目录">
     </div>
     <div class="post-content markdown" itemprop="articleBody">
         <div class="main-content-wrap fadeInDown toc content-with-table">
-            <script src="/assets/js/APlayer.min.js"> </script><p>在查看源代码以及二次开发的过程中避免不了和源代码打交道。本文记录了在Mac OS(当前10.13.2版本)下载、编译Android源代码过程。</p>
+            <script src="/assets/js/APlayer.min.js"> </script><p>本周做的内容比较少，折腾了一道 LRU 缓存的题目，顺便学习了相关的 LinkedHashMap 数据结构。除此之外看了一篇 RxJava 系列的文章。</p>
 <a id="more"></a>
 <p><ul class="toc js-fixedContent">
-<li><a href="#%E8%AE%BE%E7%BD%AE%E7%BC%96%E8%AF%91%E7%8E%AF%E5%A2%83">设置编译环境</a>
+<li><a href="#algorithm">Algorithm</a>
 <ul>
-<li><a href="#%E5%AE%89%E8%A3%85jdk%E4%BB%A5%E5%8F%8A-xcode-%E5%91%BD%E4%BB%A4%E8%A1%8C%E5%B7%A5%E5%85%B7">安装JDK以及 Xcode 命令行工具</a>
-<ul>
-<li><a href="#%E5%AE%89%E8%A3%85jdk">安装jdk</a></li>
-<li><a href="#%E5%AE%89%E8%A3%85xcode%E5%91%BD%E4%BB%A4%E8%A1%8C%E5%B7%A5%E5%85%B7">安装Xcode命令行工具</a></li>
+<li><a href="#%E9%A2%98%E7%9B%AE%E6%8F%8F%E8%BF%B0">题目描述</a></li>
+<li><a href="#%E6%96%B9%E6%B3%95%E4%B8%80">方法一</a></li>
+<li><a href="#%E6%96%B9%E6%B3%95%E4%BA%8C">方法二</a></li>
 </ul>
 </li>
-<li><a href="#%E5%88%9B%E5%BB%BA%E5%A4%A7%E5%B0%8F%E5%86%99%E6%95%8F%E6%84%9F%E7%9A%84%E7%A3%81%E7%9B%98%E6%98%A0%E5%83%8F">创建大小写敏感的磁盘映像</a>
-<ul>
-<li><a href="#%E5%88%9B%E5%BB%BA%E7%A3%81%E7%9B%98%E6%98%A0%E5%83%8F">创建磁盘映像</a></li>
-<li><a href="#%E8%A3%85%E8%BD%BD%E5%8F%8A%E5%8D%B8%E8%BD%BD%E7%A3%81%E7%9B%98%E6%98%A0%E5%83%8F">装载及卸载磁盘映像</a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li><a href="#%E4%B8%8B%E8%BD%BD%E6%BA%90%E4%BB%A3%E7%A0%81">下载源代码</a>
-<ul>
-<li><a href="#%E5%88%9D%E5%A7%8B%E5%8C%96repo">初始化Repo</a></li>
-<li><a href="#%E5%90%8C%E6%AD%A5android%E6%BA%90%E4%BB%A3%E7%A0%81%E6%A0%91">同步Android源代码树</a></li>
-<li><a href="#%E9%80%9A%E8%BF%87%E4%B8%8B%E8%BD%BD%E4%BD%BF%E7%94%A8%E6%AF%8F%E6%9C%88%E6%9B%B4%E6%96%B0%E7%9A%84%E5%88%9D%E5%A7%8B%E5%8C%96%E5%8C%85%E5%90%8C%E6%AD%A5%E4%BB%A3%E7%A0%81">通过下载使用每月更新的初始化包同步代码</a></li>
-<li><a href="#%E5%88%87%E6%8D%A2%E5%88%86%E6%94%AF">切换分支</a></li>
-</ul>
-</li>
-<li><a href="#%E7%BC%96%E8%AF%91%E6%BA%90%E4%BB%A3%E7%A0%81">编译源代码</a>
-<ul>
-<li><a href="#%E6%B8%85%E9%99%A4%E7%BC%96%E8%AF%91%E6%93%8D%E4%BD%9C%E7%9A%84%E6%89%80%E6%9C%89%E8%BE%93%E5%87%BA">清除编译操作的所有输出</a></li>
-<li><a href="#%E8%AE%BE%E7%BD%AE%E7%8E%AF%E5%A2%83">设置环境</a></li>
-<li><a href="#%E9%80%89%E6%8B%A9%E7%9B%AE%E6%A0%87">选择目标</a></li>
-<li><a href="#%E7%BC%96%E8%AF%91%E4%BB%A3%E7%A0%81">编译代码</a></li>
-<li><a href="#%E7%BC%96%E8%AF%91-fastboot-%E5%92%8C-adb">编译 fastboot 和 adb</a></li>
-<li><a href="#%E8%A7%A3%E9%94%81%E5%8F%8A%E5%8A%A0%E9%94%81%E5%BC%95%E5%AF%BC%E5%8A%A0%E8%BD%BD%E7%A8%8B%E5%BA%8F">解锁及加锁引导加载程序</a></li>
-</ul>
-</li>
-<li><a href="#%E4%BD%BF%E7%94%A8-android-studio-%E5%8A%A0%E8%BD%BD%E6%BA%90%E4%BB%A3%E7%A0%81">使用 Android Studio 加载源代码</a></li>
-<li><a href="#%E9%81%87%E5%88%B0%E7%9A%84%E9%97%AE%E9%A2%98">遇到的问题</a></li>
+<li><a href="#review">Review</a></li>
+<li><a href="#tips">Tips</a></li>
+<li><a href="#share">Share</a></li>
 </ul>
 </p>
-<h2 id="设置编译环境"><a class="anchor" href="#设置编译环境"></a> 设置编译环境</h2>
-<p>Mac上默认安装是在一个保留大小写但是不区分大小写的环境下进行的，但是git命令并不能很好的支持该环境，后续编译也不能正常进行。因此在Mac上下载Android源代码之前要新建一个始终区分大小写的文件系统中，并在此文件系统中对源码进行编译等操作。</p>
-<h3 id="安装jdk以及-xcode-命令行工具"><a class="anchor" href="#安装jdk以及-xcode-命令行工具"></a> 安装JDK以及 Xcode 命令行工具</h3>
-<h4 id="安装jdk"><a class="anchor" href="#安装jdk"></a> 安装jdk</h4>
-<p>你可以在<a href="http://www.oracle.com/technetwork/java/javase/downloads/index.html">java官网</a>上下载最新或指定的jdk版本进行安装。也可以使用HomeBrew命令来进行安装:</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">brew cask info java <span class="comment"># 查看java最新版本相关信息</span></span><br><span class="line">brew cask install java <span class="comment"># 安装java最新版本</span></span><br></pre></td></tr></table></figure>
-<p>也可以通过如下命令来进行特定版本的安装：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">brew tap caskroom/versions</span><br><span class="line">brew cask info java8</span><br><span class="line">brew cask install java8</span><br></pre></td></tr></table></figure>
-<div class="alert info no-icon"><p>Android 7.0 (Nougat) - Android 8.0 (O)在Ubuntu上需要<a href="http://openjdk.java.net/install/">OpenJDK8</a>，Mac OS上需要<a href="http://www.oracle.com/technetwork/java/javase/downloads/java-archive-javase8-2177648.html#jdk-8u45-oth-JPR">jdk8u45或更高</a>版本。</p>
-</div>
-<h4 id="安装xcode命令行工具"><a class="anchor" href="#安装xcode命令行工具"></a> 安装Xcode命令行工具</h4>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">xcode-select --install</span><br></pre></td></tr></table></figure>
-<p>如果你已经安装过Xcode，则只需要在第一次打开的时候同意许可即可。</p>
-<h3 id="创建大小写敏感的磁盘映像"><a class="anchor" href="#创建大小写敏感的磁盘映像"></a> 创建大小写敏感的磁盘映像</h3>
-<h4 id="创建磁盘映像"><a class="anchor" href="#创建磁盘映像"></a> 创建磁盘映像</h4>
+<h2 id="algorithm"><a class="anchor" href="#algorithm"></a> Algorithm</h2>
+<h3 id="题目描述"><a class="anchor" href="#题目描述"></a> 题目描述</h3>
+<blockquote>
+<p>Design and implement a data structure for <a href="https://en.wikipedia.org/wiki/Cache_replacement_policies#LRU">Least Recently Used (LRU) cache</a>. It should support the following operations: <code>get</code> and <code>put</code>.</p>
+<p><strong>Example:</strong></p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line">&gt; LRUCache cache = <span class="keyword">new</span> LRUCache( <span class="number">2</span> <span class="comment">/* capacity */</span> );</span><br><span class="line">&gt; </span><br><span class="line">&gt; cache.put(<span class="number">1</span>, <span class="number">1</span>);</span><br><span class="line">&gt; cache.put(<span class="number">2</span>, <span class="number">2</span>);</span><br><span class="line">&gt; cache.get(<span class="number">1</span>);       <span class="comment">// returns 1</span></span><br><span class="line">&gt; cache.put(<span class="number">3</span>, <span class="number">3</span>);    <span class="comment">// evicts key 2</span></span><br><span class="line">&gt; cache.get(<span class="number">2</span>);       <span class="comment">// returns -1 (not found)</span></span><br><span class="line">&gt; cache.put(<span class="number">4</span>, <span class="number">4</span>);    <span class="comment">// evicts key 1</span></span><br><span class="line">&gt; cache.get(<span class="number">1</span>);       <span class="comment">// returns -1 (not found)</span></span><br><span class="line">&gt; cache.get(<span class="number">3</span>);       <span class="comment">// returns 3</span></span><br><span class="line">&gt; cache.get(<span class="number">4</span>);       <span class="comment">// returns 4</span></span><br><span class="line">&gt;</span><br></pre></td></tr></table></figure>
+</blockquote>
+<p>设计一个 LRU 缓存，实现 get 以及 put 方法。</p>
+<h3 id="方法一"><a class="anchor" href="#方法一"></a> 方法一</h3>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">LRUCache</span> </span>&#123;</span><br><span class="line">  <span class="keyword">private</span> <span class="keyword">int</span> mCapacity;</span><br><span class="line">  <span class="keyword">private</span> Map&lt;Integer, Integer&gt; mCache;</span><br><span class="line"></span><br><span class="line">  <span class="function"><span class="keyword">public</span> <span class="title">LRUCache</span><span class="params">(<span class="keyword">int</span> capacity)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">this</span>.mCapacity = capacity;</span><br><span class="line">    mCache = <span class="keyword">new</span> LinkedHashMap();</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">get</span><span class="params">(<span class="keyword">int</span> key)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (mCache.containsKey(key)) &#123;</span><br><span class="line">      <span class="keyword">int</span> newValue = mCache.get(key);</span><br><span class="line">      mCache.remove(key);</span><br><span class="line">      mCache.put(key, newValue);</span><br><span class="line">      <span class="keyword">return</span> newValue;</span><br><span class="line">    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">      <span class="keyword">return</span> -<span class="number">1</span>;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">put</span><span class="params">(<span class="keyword">int</span> key, <span class="keyword">int</span> value)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (mCache.containsKey(key)) &#123;</span><br><span class="line">      mCache.remove(key, value);</span><br><span class="line">    &#125; <span class="keyword">else</span> <span class="keyword">if</span> (mCache.size() &gt;= mCapacity) &#123;</span><br><span class="line">      <span class="keyword">for</span> (<span class="keyword">int</span> k : lru.keySet()) &#123;</span><br><span class="line">        mCache.remove(k);</span><br><span class="line">        <span class="keyword">break</span>;</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    mCache.put(key, value);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="方法二"><a class="anchor" href="#方法二"></a> 方法二</h3>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">class LRUMap&lt;K, V&gt; extends LinkedHashMap&lt;K, V&gt; &#123;</span><br><span class="line">    private int cacheSize ;</span><br><span class="line"></span><br><span class="line">    public LRUMap(int capacity) &#123;</span><br><span class="line">        super(capacity, <span class="number">0.75</span>f, true) ; //access-based eviction set to <span class="string">'true'</span> (<span class="keyword">as</span> opposed to <span class="string">'insertion'</span>-based eviciton)</span><br><span class="line">        cacheSize = capacity ;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line"><span class="meta">    @Override</span></span><br><span class="line">    protected boolean removeEldestEntry(Map.Entry&lt;K, V&gt; eldest) &#123;</span><br><span class="line">        <span class="keyword">return</span> size() &gt; cacheSize ;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">public class LRUCache  &#123;</span><br><span class="line">		LRUMap&lt;Integer, Integer&gt; map ; //use extension of LinkedHashMap here</span><br><span class="line">    public LRUCache(int capacity) &#123;</span><br><span class="line">        map = new LRUMap&lt;Integer, Integer&gt;(capacity) ; //make sure to <span class="keyword">pass</span> <span class="string">'capacity'</span> on to LinkedHashMap ctor</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    public int get(int key) &#123;</span><br><span class="line">        <span class="keyword">if</span>(map.containsKey(key)) &#123;</span><br><span class="line">            <span class="keyword">return</span> map.get(key) ;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> <span class="number">-1</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    public void set(int key, int value) &#123;</span><br><span class="line">        map.put(key, value) ; </span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="review"><a class="anchor" href="#review"></a> Review</h2>
+<p>本周阅读学习 RxJava系列的文章。主要讲述了判断类型的一些操作：</p>
 <ul>
-<li>
-<p>通过磁盘文件系统创建映像</p>
-<p>通过 <code>应用程序—&gt;实用工具—&gt;磁盘工具</code>，选择<code>文件--&gt;新建映像--&gt;空白映像</code>，填写名称大小(编译至少需要25G空间，如果是设置缓存等功能，则需要更大的控件)，<span class="highlight-text orange">格式选择Mac OS 扩展 (区分大小写，日志式) </span>。</p>
-</li>
-<li>
-<p>通过shell命令</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hdiutil create -<span class="built_in">type</span> SPARSE -fs <span class="string">'Case-sensitive Journaled HFS+'</span> -size 40g ~/AndroidSourceCode/android.dmg</span><br></pre></td></tr></table></figure>
-<p>输出如下图：</p>
-<p><img src="create-image.png" alt="create-image"></p>
-<p>新建的image文件可能是一个<code>.dmg</code>，也可能是一个<code>.dmg.sparseimage</code>。</p>
-<p>可以使用如下命令来调整稀疏映像的大小：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hdiutil resize -size &lt;new-size-you-want&gt;g ~/AndroidSourceCode/android.dmg.sparseimage</span><br></pre></td></tr></table></figure>
-</li>
+<li><strong>All</strong>： 判断传递的所有参数是否满足一定条件，结果是 Bool 类型， 会返回该结果给 onNext() 方法；</li>
+<li><strong>Amb</strong>：会忽略后发事件的 Observable 所有事件传递，而不忽略先发事件的 Observable 对象；</li>
+<li><strong>Contains</strong>：判断传递的所有参数是否包含某一参数，结果是 Bool 类型， 会返回该结果给 onNext() 方法</li>
+<li><strong>DefaultIfEmpty</strong>: 如果 Observable 对象没有传递任何事件或者数据，则传递该默认数据或事件；</li>
+<li><strong>SequenceEqual</strong>：判断两个 Observable 对象传递的参数是否完全一致；</li>
+<li><strong>SkipUntil</strong>:  忽略某个 Observable 对象传递的数据，直到另外一个 Observable 对象开始传数据；</li>
+<li><strong>SkipWhile</strong>：当某条件为 true 时一直忽略传递的参数，直到它为 false 时才开始传递；</li>
+<li><strong>TakeUntil</strong>：和 skipUtil 正好相反；</li>
+<li><strong>takeWhile</strong>：和 SkipWhile 正好相反；</li>
 </ul>
-<h4 id="装载及卸载磁盘映像"><a class="anchor" href="#装载及卸载磁盘映像"></a> 装载及卸载磁盘映像</h4>
-<p>执行装载卸载映像，只需要执行一下命令即可：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hdiutil attach ~/AndroidSourceCode/android.dmg.sparseimage -mountpoint /Volumes/android;  <span class="comment"># 装载</span></span><br><span class="line">hdiutil detach /Volumes/android <span class="comment"># 卸载</span></span><br></pre></td></tr></table></figure>
-<p>为了方便装载及卸载映像，可以把上述代码写进<code>.bashrc</code>或<code>zshrc</code>或者类似的文件中：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># mount the android file image</span></span><br><span class="line"><span class="keyword">function</span> mountAndroid &#123; hdiutil attach ~/AndroidSourceCode/android.dmg.sparseimage -mountpoint /Volumes/android; &#125;</span><br><span class="line"></span><br><span class="line"><span class="comment"># unmount the android file image</span></span><br><span class="line"><span class="keyword">function</span> unmountAndroid &#123; hdiutil detach /Volumes/android; &#125;</span><br></pre></td></tr></table></figure>
-<p>接着执行<code>source .bashrc</code>或者<code>source .zshrc</code>就可以使用<code>mountAndroid</code>命令装载映像，<code>unmmountAndroid</code>命令卸载映像。</p>
-<h2 id="下载源代码"><a class="anchor" href="#下载源代码"></a> 下载源代码</h2>
-<h3 id="初始化repo"><a class="anchor" href="#初始化repo"></a> 初始化Repo</h3>
-<p>新建一个专门存放repo的bin文件夹，并将其添加到PATH变量中：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">mkdir ~/bin</span><br><span class="line">PATH=~/bin:<span class="variable">$PATH</span>  <span class="comment"># 也可以执行 echo 'export PATH=~/bin:$PATH' &gt;&gt; ~/.zshrc 命令</span></span><br></pre></td></tr></table></figure>
-<p>然后下载Repo工具，在命令行中输入以下命令：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">curl https://storage.googleapis.com/git-repo-downloads/repo &gt; ~/bin/repo</span><br><span class="line">chmod a+x ~/bin/repo</span><br></pre></td></tr></table></figure>
-<p>如果没有VPN，则可以用清华的镜像地址替换谷歌的地址。</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">REPO_URL = <span class="string">'https://gerrit-googlesource.lug.ustc.edu.cn/git-repo'</span></span><br></pre></td></tr></table></figure>
-<p><img src="repo-address.png" alt="repo-address"></p>
-<p>替换为：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">REPO_URL = <span class="string">'https://aosp.tuna.tsinghua.edu.cn/git-repo'</span></span><br></pre></td></tr></table></figure>
-<p>加载之前创建的稀疏映像，新建工作目录：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">cd</span> /Volumes/android</span><br><span class="line">mkdir source_code</span><br><span class="line"><span class="built_in">cd</span> source_code</span><br></pre></td></tr></table></figure>
-<p>执行repo初始化指令</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">repo init</span><br></pre></td></tr></table></figure>
-<p>如果指定地址和分支，则使用：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">repo init -u https://aosp.tuna.tsinghua.edu.cn/platform/manifest -b android-8.0.0_r31</span><br></pre></td></tr></table></figure>
-<p>初始化成功之后在工作目录下会有一个<code>.repo</code>文件夹，包含了清单文件。</p>
-<h3 id="同步android源代码树"><a class="anchor" href="#同步android源代码树"></a> 同步Android源代码树</h3>
-<p>在工作目录下运行如下命令，经过漫长的等待即可以下载到对应分支的源代码了。</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">repo sync</span><br></pre></td></tr></table></figure>
-<p>如果已经有源码，并需要更换清华源，则需要替换<code>.repo/manifests/default.xml</code>中的同步源码</p>
-<figure class="highlight diff"><table><tr><td class="code"><pre><span class="line"> &lt;manifest&gt;</span><br><span class="line">   &lt;remote  name="aosp"</span><br><span class="line"><span class="deletion">-           fetch=".."</span></span><br><span class="line"><span class="addition">+           fetch="https://aosp.tuna.tsinghua.edu.cn/"</span></span><br><span class="line">            review="https://android-review.googlesource.com/" /&gt;</span><br><span class="line">   &lt;default revision="refs/tags/android-8.0.0_r31"</span><br><span class="line">            remote="aosp"</span><br></pre></td></tr></table></figure>
-<h3 id="通过下载使用每月更新的初始化包同步代码"><a class="anchor" href="#通过下载使用每月更新的初始化包同步代码"></a> 通过下载使用每月更新的初始化包同步代码</h3>
-<p>由于上述同步工作需要下载30G的数据，任何环节出问题都可能造成同步失败，所以可以使用清华的<a href="https://mirrors.tuna.tsinghua.edu.cn/aosp-monthly/aosp-latest.tar">每月初始化包</a>进行同步代码。</p>
-<p>下载<a href="https://mirrors.tuna.tsinghua.edu.cn/aosp-monthly/aosp-latest.tar">https://mirrors.tuna.tsinghua.edu.cn/aosp-monthly/aosp-latest.tar</a>最新的源代码tar包以及对应的md5文件，下载完成后执行以下MD5校验一下。</p>
-<p>具体执行过程如下：</p>
+<p><a href="https://proandroiddev.com/exploring-rxjava-in-android-conditional-and-boolean-operators-3bca84c773af">Exploring RxJava in Android — Conditional and Boolean Operators</a></p>
+<h2 id="tips"><a class="anchor" href="#tips"></a> Tips</h2>
 <ol>
 <li>
-<p>先下载repo工具；</p>
+<p>actionbar 中设置自定义view：</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line">actionbar.setDisplayShowCustomEnabled(<span class="keyword">true</span>); <span class="comment">// 显示自定义view</span></span><br><span class="line">actionbar.setDisplayShowTitleEnabled(<span class="keyword">false</span>); <span class="comment">// 不显示原title</span></span><br><span class="line">actionbar.setCustomView(view);</span><br></pre></td></tr></table></figure>
 </li>
 <li>
-<p>下载初始化包并同步；</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">wget -c https://mirrors.tuna.tsinghua.edu.cn/aosp-monthly/aosp-latest.tar <span class="comment"># 下载初始化包</span></span><br><span class="line">wget -c https://mirrors.tuna.tsinghua.edu.cn/aosp-monthly/aosp-latest.tar <span class="comment"># 下载初始化包对应的md5码</span></span><br><span class="line">MD5 aosp-latest.tar <span class="comment">#校验MD5码</span></span><br><span class="line">tar xf aosp-latest.tar</span><br><span class="line"><span class="built_in">cd</span> AOSP   <span class="comment"># 解压得到的 AOSP 工程目录，这时 ls 的话什么也看不到，因为只有一个隐藏的 .repo 目录</span></span><br><span class="line">repo sync <span class="comment"># 正常同步一遍即可得到完整目录或 repo sync -l 仅checkout代码</span></span><br></pre></td></tr></table></figure>
+<p>bit.getPixel(x, y) 获取 bitmap 中某个像素点的颜色；</p>
 </li>
 </ol>
-<h3 id="切换分支"><a class="anchor" href="#切换分支"></a> 切换分支</h3>
-<p>以每月更新的初始化包下载的代码，分支为默认分支，需要切换到所需的分支上。</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">cd</span> .repo/manifests</span><br><span class="line">git branch -a | cut -d / -f 3</span><br><span class="line">repo init -u https://aosp.tuna.tsinghua.edu.cn/platform/manifest -b android-8.0.0_r31</span><br><span class="line">repo sync</span><br></pre></td></tr></table></figure>
-<p>之后就可以使用命令编译源码了。</p>
-<h2 id="编译源代码"><a class="anchor" href="#编译源代码"></a> 编译源代码</h2>
-<h3 id="清除编译操作的所有输出"><a class="anchor" href="#清除编译操作的所有输出"></a> 清除编译操作的所有输出</h3>
-<blockquote>
-<p>建议在 bash 环境下执行，否则会出现莫名其妙的问题。</p>
-</blockquote>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">make clobber</span><br></pre></td></tr></table></figure>
-<h3 id="设置环境"><a class="anchor" href="#设置环境"></a> 设置环境</h3>
-<p>Android 源代码种与编译相关的文件都放在 build 目录中，其中<code>envsetup.sh</code>脚本是初始化环境所用：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">source</span> build/envsetup.sh</span><br></pre></td></tr></table></figure>
-<p>可以简写为：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">. build/envsetup.sh</span><br></pre></td></tr></table></figure>
-<h3 id="选择目标"><a class="anchor" href="#选择目标"></a> 选择目标</h3>
-<p>使用<code>lunch</code>命令，可以在该命令后面添加参数，参数采用 <code>BUILD-BUILDTYPE</code>的形式指定编译目标，其中 <code>BUILD</code>指特定功能组合的代号，而<code>BUILDTYPE</code>则有 <code>user</code>、<code>userdebug</code>、<code>eng</code> 三种：</p>
-<ul>
-<li><code>user</code>：权限受限；适用于生产环境；</li>
-<li><code>userdebug</code>：与“user”类似，但具有 root 权限和可调试性；是进行调试时的首选编译类型；</li>
-<li><code>eng</code>：具有额外调试工具的开发配置；</li>
-</ul>
-<p>如果在<code>lunch</code>命令后面不添加参数，则需要从提示菜单中选择一个编译目标。</p>
-<h3 id="编译代码"><a class="anchor" href="#编译代码"></a> 编译代码</h3>
-<p>Android 源码编译命令为 <code>make</code>，参数为<code>-jN</code>，N 是介于所使用计算机硬件线程总数的1～2倍之间。</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">make -j8</span><br></pre></td></tr></table></figure>
-<p>常用的编译命令：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">make -k <span class="comment"># 继续编译</span></span><br><span class="line">m  <span class="comment"># 编译完整的Android源代码</span></span><br><span class="line">mm  <span class="comment"># 此命令必须进入指定的工程的目录进行编译</span></span><br><span class="line">mmm  <span class="comment"># 可以在任何一级目录编译任意指定的工程</span></span><br></pre></td></tr></table></figure>
-<h3 id="编译-fastboot-和-adb"><a class="anchor" href="#编译-fastboot-和-adb"></a> 编译 fastboot 和 adb</h3>
-<p>编译 fastboot 和 adb 命令如下：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">make fastboot adb</span><br></pre></td></tr></table></figure>
-<p>之后可以使用物理按键的方式((对于Nexus系列可以参考<a href="https://source.android.com/source/running.html#booting-into-fastboot-mode">这里</a>))或者 <code>adb reboot bootloader</code>命令重启进入引导加载程序。</p>
-<h3 id="解锁及加锁引导加载程序"><a class="anchor" href="#解锁及加锁引导加载程序"></a> 解锁及加锁引导加载程序</h3>
-<p>如果要刷写定制系统，例如各个 Android 厂商的定制 ROM，需要解锁引导加载程序，而引导加载程序默认处于锁定状态。解锁会导致系统清楚设备上的所有数据，so，在解锁之前请先备份重要文件。</p>
-<p>解锁引导加载程序的步骤如下：</p>
-<ul>
-<li>
-<p>在设置—系统—关于本机，点按<code>版本号</code>7次，当看到“您已处于开发者模式”这条消息后，点按返回按钮；</p>
-</li>
-<li>
-<p>进入<strong>开发者选项</strong>，然后启用 <strong>OEM 解锁</strong>和 <strong>USB 调试</strong>，如果 OEM 解锁处于不可用状态，则需要链接互联网，以便设备至少签到一次，之后如果仍处于锁定状态，说明设备可能已被运营商锁定 SIM 卡；</p>
-</li>
-<li>
-<p><code>adb reboot bootloader</code>命令进入引导加载程序；</p>
-</li>
-<li>
-<p>执行以下命令以解锁：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">fastboot flashing unlock <span class="comment"># 2015 之后发布的设备</span></span><br><span class="line">fastboot oem unlock <span class="comment"># 2014 年及之前发布的设备</span></span><br></pre></td></tr></table></figure>
-</li>
-<li>
-<p>在屏幕上确认解锁；</p>
-</li>
-</ul>
-<p>对于加锁过程，只需要重启到引导加载程序以后执行以下命令即可：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">fastboot flashing lock <span class="comment"># 2015 之后发布的设备</span></span><br><span class="line">fastboot oem lock <span class="comment"># 2014 年及之前发布的设备</span></span><br></pre></td></tr></table></figure>
-<h2 id="使用-android-studio-加载源代码"><a class="anchor" href="#使用-android-studio-加载源代码"></a> 使用 Android Studio 加载源代码</h2>
-<p>在编译完全部源代码一次之后查看<code>out/host/darwin-x86/framework/idegen.jar</code>是否存在，如不存在，则使用如下命令生成该文件：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">source</span> build/envsetup.sh</span><br><span class="line">lunch [编译全部源代码时选择的参数]</span><br><span class="line">mmm development/tools/idegen/</span><br></pre></td></tr></table></figure>
-<p>接下来生成配置文件：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">development/tools/idegen/idegen.sh</span><br></pre></td></tr></table></figure>
-<p>之后会在源码目录下生成<code>android.ipr</code>和<code>android.iml</code>文件。</p>
-<p><img src="android-ipr.png" alt="android-ipr"></p>
-<p>打开 Android Studio 加载ipr文件即可。</p>
-<p><img src="android-studio.png" alt="android-studio"></p>
-<p><img src="open-android-ipr.png" alt="open-android-ipr"></p>
-<h2 id="遇到的问题"><a class="anchor" href="#遇到的问题"></a> 遇到的问题</h2>
-<ul>
-<li>
-<blockquote>
-<p>RPC failed; curl 18 transfer closed with outstanding read data remaining.</p>
-</blockquote>
-<p>因为curl的postBuffer默认值太小的原因，重新在终端配置一下这个值就可以了。</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git config –global http.postBuffer 524288000</span><br></pre></td></tr></table></figure>
-</li>
-<li>
-<blockquote>
-<p>curl: (22) The requested URL returned error: 404 Server does not provide clone.bundle; ignoring.</p>
-</blockquote>
-<p>无视即可</p>
-</li>
-<li>
-<blockquote>
-<p>error.GitError: device/asus/fugu-kernel rev-list (’^fb4baab945ff1b696b84a8bd9af3d54032d3cfaa’, ‘HEAD’, ‘–’): fatal: bad object HEAD</p>
-</blockquote>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">cd</span> AOSP/device/asus/fugu-kernel </span><br><span class="line">git fetch --all</span><br></pre></td></tr></table></figure>
-</li>
-<li>
-<blockquote>
-<p>curl: (35) LibreSSL SSL_connect: SSL_ERROR_SYSCALL in connection to <a href="http://android.googlesource.com:443">android.googlesource.com:443</a></p>
-</blockquote>
-<p>升级系统自带的libressl, openssl 和 curl 即可</p>
-</li>
-<li>
-<blockquote>
-<p>repo sync discarding xxx commits.</p>
-</blockquote>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">repo forall -c <span class="string">'git reset --hard; git clean -f -d -x'</span>;</span><br></pre></td></tr></table></figure>
-</li>
-<li>
-<blockquote>
-<p>external/error_prone/soong/Android.bp:1:1: “soong-java-config-error_prone” depends on undefined module “soong-java-config” ninja: error: rebuilding ‘out/soong/.minibootstrap/build.ninja’: subcommand failed.</p>
-</blockquote>
-<p>删除soong相关的文件<code>external/error_prone/soong</code>以及<code>out</code>文件夹，然后执行<code>repo sync</code>命令。</p>
-</li>
-<li>
-<blockquote>
-<p>Could not find a supported mac sdk: [“10.10” “10.11” “10.12”]</p>
-</blockquote>
-<p><a href="https://github.com/phracker/MacOSX-SDKs">下载</a> 10.13 版本的SDK，解压到 <code>/Applications/XCode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/</code> 目录下</p>
-</li>
-<li>
-<blockquote>
-<p>frameworks/layoutlib: MODULE.darwin.JAVA_LIBRARIES.temp_layoutlib already defined by frameworks/base/tools/layoutlib.</p>
-</blockquote>
-<p>删除源码中的 framworks 文件夹，重新执行 <code>repo sync</code></p>
-</li>
-<li>
-<blockquote>
-<p>FAILED: out/soong/.intermediates/system/tools/aidl/libaidl-  common/darwin_x86_64_static/gen/yacc/system/tools/aidl/aidl_language_y.cpp out/soong/.intermediates/system/tools/aidl/libaidl-common/darwin_x86_64_static/gen/yacc/system/tools/aidl/aidl_language_y.h</p>
-</blockquote>
-<p>是因为 bison 造成的，需要给 bison 打补丁，并且替换现有的 /prebuilt/ 目录下的二进制文件，具体做法如下：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">cd</span> /Volumes/AOSP/external/bison</span><br><span class="line">git cherry-pick c0c852bd6fe462b148475476d9124fd740eba160</span><br><span class="line">mm</span><br><span class="line">cp /Volumes/AOSP/out/host/darwin-x86/bin/bison /Volumes/AOSP/prebuilts/misc/darwin-x86/bison/</span><br></pre></td></tr></table></figure>
-<p>参考网址<a href="https://groups.google.com/forum/#!topic/android-building/D1-c5lZ9Oco">https://groups.google.com/forum/#!topic/android-building/D1-c5lZ9Oco</a></p>
-</li>
-<li>
-<blockquote>
-<p>Unsupported curl, please use a curl not based on SecureTransport. Jack server installation not found</p>
-</blockquote>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">brew install curl --with-openssl</span><br><span class="line"><span class="built_in">echo</span> <span class="string">'export PATH=$(brew --prefix curl)/bin:$PATH'</span> &gt;&gt; ~/.zshrc</span><br><span class="line"><span class="built_in">source</span> ~/.zshrc</span><br><span class="line">caffeinate make -j8 <span class="comment"># caffeinate是为了防止OS X 进入睡眠</span></span><br></pre></td></tr></table></figure>
-</li>
-<li>
-<blockquote>
-<p>/bin/bash: xz: command not found</p>
-</blockquote>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">brew install xz</span><br></pre></td></tr></table></figure>
-</li>
-<li>
-<blockquote>
-<p>Couldn’t locate the directory development/tools/idegen</p>
-</blockquote>
-<p>是因为编译时使用zsh，要切换到bash环境下：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">bash</span><br><span class="line">mmm development/tools/idegen/</span><br></pre></td></tr></table></figure>
-</li>
-<li>
-<blockquote>
-<p>fatal error: error in backend: IO failure on output stream.</p>
-</blockquote>
-<p>是因为磁盘分区小了，扩大磁盘分区：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo hdiutil resize -size &lt;new-size-you-want&gt;g ~/android.dmg.sparseimage</span><br></pre></td></tr></table></figure>
-<p>​</p>
-</li>
-</ul>
+<h2 id="share"><a class="anchor" href="#share"></a> Share</h2>
+<p><a href="https://my.oschina.net/crossoverjie/blog/3051516">线程池没你想的那么简单</a></p>
 
             
 
@@ -563,7 +349,7 @@
     </p>
     <p class="copyright-item">
         <span>原文链接: </span>
-        <a href="http://www.istarx.cn/2018/02/03/download-android-source-code/">http://www.istarx.cn/2018/02/03/download-android-source-code/</a>
+        <a href="http://www.istarx.cn/2019/05/26/arts-week-eight/">http://www.istarx.cn/2019/05/26/arts-week-eight/</a>
     </p>
     <p class="copyright-item">
         <span>许可协议: </span>
@@ -582,11 +368,7 @@
 <div class="tagcloud article-tag-list">
     
     <li class="article-tag-list-item">
-        <a href="/tags/android/" class="js-tag color3">android</a>
-    </li>
-    
-    <li class="article-tag-list-item">
-        <a href="/tags/sourcecode/" class="js-tag color1">sourcecode</a>
+        <a href="/tags/ARTS/" class="js-tag color5">ARTS</a>
     </li>
     
     <div class="clearfix"></div>
@@ -601,9 +383,8 @@
         <ul class="post-actions post-action-nav">
             <li class="post-action">
                 
-                
-                <a class="post-action-btn btn btn--default tooltip--top" href="/2018/02/04/build-mulit-edition-apks-using-productflavors/" data-tooltip="利用 ProductFlavors 构建差异化APK版本" aria-label="上一篇: 利用 ProductFlavors 构建差异化APK版本">
-                    
+                    <a class="post-action-btn btn btn--disabled">
+                        
                         <i class="fa fa-angle-left" aria-hidden="true"></i>
                         <span class="hide-xs hide-sm text-small icon-ml">上一篇</span>
                     </a>
@@ -611,7 +392,7 @@
             <li class="post-action">
                 
                 
-                <a class="post-action-btn btn btn--default tooltip--top" href="/2018/01/15/andoid-autotest-apis-complete/" data-tooltip="UI Automator API 整理" aria-label="下一篇: UI Automator API 整理">
+                <a class="post-action-btn btn btn--default tooltip--top" href="/2019/05/19/arts-week-seven/" data-tooltip="ARTS打卡—第7周" aria-label="下一篇: ARTS打卡—第7周">
                     
                         <span class="hide-xs hide-sm text-small icon-mr">下一篇</span>
                         <i class="fa fa-angle-right" aria-hidden="true"></i>
@@ -660,9 +441,8 @@
         <ul class="post-actions post-action-nav">
             <li class="post-action">
                 
-                
-                <a class="post-action-btn btn btn--default tooltip--top" href="/2018/02/04/build-mulit-edition-apks-using-productflavors/" data-tooltip="利用 ProductFlavors 构建差异化APK版本" aria-label="上一篇: 利用 ProductFlavors 构建差异化APK版本">
-                    
+                    <a class="post-action-btn btn btn--disabled">
+                        
                         <i class="fa fa-angle-left" aria-hidden="true"></i>
                         <span class="hide-xs hide-sm text-small icon-ml">上一篇</span>
                     </a>
@@ -670,7 +450,7 @@
             <li class="post-action">
                 
                 
-                <a class="post-action-btn btn btn--default tooltip--top" href="/2018/01/15/andoid-autotest-apis-complete/" data-tooltip="UI Automator API 整理" aria-label="下一篇: UI Automator API 整理">
+                <a class="post-action-btn btn btn--default tooltip--top" href="/2019/05/19/arts-week-seven/" data-tooltip="ARTS打卡—第7周" aria-label="下一篇: ARTS打卡—第7周">
                     
                         <span class="hide-xs hide-sm text-small icon-mr">下一篇</span>
                         <i class="fa fa-angle-right" aria-hidden="true"></i>
