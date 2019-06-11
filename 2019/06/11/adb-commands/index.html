@@ -7,12 +7,12 @@
     <meta name="baidu-site-verification" content="fJhstNzkJ1"/>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="generator" content="小一 | 莫舍己道 勿扰他心">
-    <title>Android 自动化测试总述 - 小一 | 莫舍己道 勿扰他心</title>
+    <title>ADB 常用命令整理 - 小一 | 莫舍己道 勿扰他心</title>
     <meta name="author" content="小一">
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0" />
     <link rel="Shortcut Icon" href="http://www.istarx.cn/assets/images/favicon.ico" type="image/x-icon">
     
-        <meta name="keywords" content="android,自动化测试,JUnit">
+        <meta name="keywords" content="adb">
     
     
         <link rel="icon" href="http://www.istarx.cn/assets/images/favicon.ico">
@@ -30,9 +30,9 @@
     
     
     
-        <meta property="og:image" content="http://cherlas-blog.oss-cn-beijing.aliyuncs.com/1.jpg"/>
+        <meta property="og:image" content="https://cherlas-blog.oss-cn-beijing.aliyuncs.com/adb-commands.jpg"/>
         <meta class="swiftype" name="image" data-type="enum"
-              content="http://cherlas-blog.oss-cn-beijing.aliyuncs.com/1.jpg"/>
+              content="https://cherlas-blog.oss-cn-beijing.aliyuncs.com/adb-commands.jpg"/>
     
     
     <!--STYLES-->
@@ -46,7 +46,7 @@
 
 <body>
 <div id="container">
-    <canvas id="anm-canvas" data-behavior="5" class="anm-canvas hidden"></canvas>
+    <canvas id="anm-canvas" data-behavior="2" class="anm-canvas hidden"></canvas>
     <div id="blog">
         <!-- Define author's picture -->
 
@@ -57,7 +57,7 @@
         
     
 
-<header id="header" data-behavior="5" class="fade-in">
+<header id="header" data-behavior="2" class="fade-in">
     <i id="btn-open-sidebar" class="fa fa-lg fa-bars"></i>
     <div class="header-title">
         <a class="header-title-link" href="/ ">小一 | 莫舍己道 勿扰他心</a>
@@ -81,7 +81,7 @@
         
     
 
-<nav id="sidebar" data-behavior="5" class="hidden fade-in">
+<nav id="sidebar" data-behavior="2" class="hidden fade-in">
     <div class="sidebar-top-whitespace"></div>
     <div class="sidebar-container">
         
@@ -214,38 +214,38 @@
 
         
 <div class="post-header-cover fade-in header-image-cover
-                    text-center
-                    post-header-cover--partial" style="background-image:url('http://cherlas-blog.oss-cn-beijing.aliyuncs.com/1.jpg');
+                    text-left
+                    post-header-cover--partial" style="background-image:url('https://cherlas-blog.oss-cn-beijing.aliyuncs.com/adb-commands.jpg');
       filter: blur(0px); 
-      height: 100%;" data-behavior="5">
+      height: 60%;" data-behavior="2">
 </div>
 <div class="post-header-cover fade-in post-header-cover-background
-                            text-center
+                            text-left
                             post-header-cover--partial" style="
      
-             height: 100%;
-     " data-behavior="5">
+             height: 60%;
+     " data-behavior="2">
 
     
-    <div class="post-header main-content-wrap text-center fadeInDown">
+    <div class="post-header main-content-wrap text-left fadeInDown">
     <div class="post-header-message content-with-table">
         
         <h1 class="post-title" itemprop="headline">
-            Android 自动化测试总述
+            ADB 常用命令整理
         </h1>
         
         
         <div class="post-meta">
-    <time itemprop="datePublished" datetime="2018-02-10T20:46:27+08:00">
+    <time itemprop="datePublished" datetime="2019-06-11T12:22:46+08:00">
         <img class="calendar" src="/assets/images/calendar.png">
         
-        2月 10, 2018
+        6月 11, 2019
         
     </time>
     
     <span>发布在 </span>
     
-<a class="category-link" href="/categories/程序猿进化之路/">程序猿进化之路</a>, <a class="category-link" href="/categories/程序猿进化之路/自动化测试/">自动化测试</a>
+<a class="category-link" href="/categories/程序猿进化之路/">程序猿进化之路</a>
 
 
     
@@ -253,10 +253,10 @@
     <img class="tag-img" src="/assets/images/tag-icon.svg">
     <div class="post-tags">
         
+        <a href="/tags/adb/">adb</a>
+        
         <a href="/tags/android/">android</a>
         
-        <a href="/tags/自动化测试/">自动化测试</a>
-        
     </div>
     
 </div>
@@ -269,96 +269,373 @@
 </div>
 
 
-        <div id="main" data-behavior="5"
+        <div id="main" data-behavior="2"
              class="hasCover
                         hasCoverMetaIn
                         hasCoverCaption hidden fade-in">
             
 <article class="post" itemscope="" itemtype="http://schema.org/BlogPosting">
     
-        <span class="post-header-cover-caption caption">生活乐趣的大小时随我们对生活的关心程度而定的。  —— 蒙田</span>
+        <span class="post-header-cover-caption caption">生命的历程就像是写在水上的字，顺流而下，想回头寻找的时候总是失去了痕迹 —- 林清玄</span>
     
     
     <div class="tableTile" data-message="目录">
     </div>
     <div class="post-content markdown" itemprop="articleBody">
         <div class="main-content-wrap fadeInDown toc content-with-table">
-            <script src="/assets/js/APlayer.min.js"> </script><p>自动化测试作为整个产品生命周期过程中必不可少的一部分，可以得到快速的反馈，提前发现错误进行改正，避免把错误暴露在用户手中，同时也可以较少项目开销、缩短项目周期。</p>
+            <script src="/assets/js/APlayer.min.js"> </script><p>作为一名 Android 开发人员，adb 命令是不可缺少的技能之一，在日常工作中或多或少会用到这些命令，本篇内容主要是整理了一些常用的 adb 命令，同时加强记忆。</p>
 <a id="more"></a>
 <p><ul class="toc js-fixedContent">
-<li><a href="#local-junit-%E5%92%8C-instrumented-junit">Local JUnit  和 Instrumented JUnit</a></li>
-<li><a href="#%E5%85%AC%E5%85%B1api">公共API</a></li>
-<li><a href="#android-testing-support-library">Android Testing Support Library</a></li>
-<li><a href="#%E4%B8%BB%E8%A6%81%E6%A1%86%E6%9E%B6">主要框架</a></li>
-</ul>
-</p>
-<h2 id="local-junit-和-instrumented-junit"><a class="anchor" href="#local-junit-和-instrumented-junit"></a> Local JUnit  和 Instrumented JUnit</h2>
-<p>Android测试是基于JUnit，可以分为两大类:</p>
+<li>
 <ul>
-<li>依赖本地JVM的JUnit测试(Local JUnit), 测试用例在<code>module-name/src/test/java/</code> 目录下, <strong>不能访问Android框架功能</strong>;</li>
-<li>依赖Android手机的设备化测试(Instrumented JUnit), 测试用例在 <code>module-name/src/androidTest/java/</code> 目录下; <strong>必须要运行在Android真机或虚拟机</strong>;</li>
-</ul>
-<p>两者的对比如下:</p>
-<p><img src="local-and-instrumented-test.png" alt="local-and-instrumented-test"></p>
-<table>
-<thead>
-<tr>
-<th>test types</th>
-<th>description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Local unit test/Small tests</td>
-<td>测试用例只在本地JVM上运行, 当测试用例中没有Android框架或者可以mock Android框架时，这类测试用例可以最大化的减少运行时间</td>
-</tr>
-<tr>
-<td>Instrumented unit test/ <br>Medium tests</td>
-<td>测试用例必须要运行在Android设备或者虚拟机上, 可以获取设备信息等一系列信息, eg: Contex;</td>
-</tr>
-<tr>
-<td>Components within your app only/ Large tests</td>
-<td>集成测试，UI测试，只能在一个app内部进行测试，eg:<code>Espresso</code>;</td>
-</tr>
-<tr>
-<td>Cross-app Components / <br>Large tests</td>
-<td>集成测试，UI测试，可以跨多个app进行测试，eg:<code>UI Automator</code>;</td>
-</tr>
-</tbody>
-</table>
-<h2 id="公共api"><a class="anchor" href="#公共api"></a> 公共API</h2>
-<ul>
-<li><code>@Before</code>: 测试用例初始化操作，在测试类内部的每个测试方法运行之前都会运行一次该初始化方法，可以定义多个以@Before注释的方法；</li>
-<li><code>@After</code>: 测试用例收尾，包括释放资源和内存等。在测试类内部的每个测试方法运行之后都会运行一次该初始化方法，可以定义多个以@After注释的方法；</li>
-<li><code>@Test</code>: 一条测试用例;</li>
-<li><code>@Rule</code>: 为了灵活并且重复定义每个测试方法的表现形式，Android测试中主要有ActivityTestRule 和 ServiceTestRule;</li>
-<li><code>@BeforeClass</code>: 测试的初始化方法，和@Before的区别在于：@BeforeClass注释的方法在整个测试类中只运行一次，主要用于一些比较耗时或者耗费资源的操作；</li>
-<li><code>@AfterClass</code>: 测试的初始化方法，和@After的区别在于：@AfterClass注释的方法在整个测试类中只运行一次，主要用来释放资源；</li>
-<li><code>@Test(timeout=expectedTime)</code>: 超时测试，用例耗时超过一个确定的时间则判断该测试用例失败，eg: @Test(timeout=500);</li>
-<li><code>@Test(expected ...)</code>: 异常测试，期望测试方法抛出异常；</li>
-<li><code>@Ignore</code>: 跳过某个测试方法不执行；</li>
-</ul>
-<h2 id="android-testing-support-library"><a class="anchor" href="#android-testing-support-library"></a> Android Testing Support Library</h2>
-<p>Android Testing Support Library提供了一组APIs，利用这些APIs可以快速的建立和运行测试用例，包括JUnit测试和UI测试，包括以下几类API:</p>
-<ul>
-<li><code>Espresso</code>: UI测试框架，只能在一个app内部进行测试，不能跨app；</li>
-<li><code>UI Automator</code>: UI测试框架，可以跨多个app进行测试；</li>
-<li><code>AndroidJUnitRunner</code>: 针对android的junit4 测试框架；</li>
-</ul>
-<h2 id="主要框架"><a class="anchor" href="#主要框架"></a> 主要框架</h2>
-<ul>
-<li>Local JUnit 的测试框架主要有：
-<ul>
-<li><code>Robolectric</code>：是一个可以在JVM上运行Android框架相关的框架，可以测试控件、组件、资源等；</li>
-<li><code>mock</code>：mock 是一个可以模拟类、接口、方法等的框架，可以模拟android框架相关的部分；</li>
-<li><code>powerMock</code>：和 mock 功能类似，但是比 mock 更强大，可以 mock 私有、静态、final等类和方法；</li>
+<li><a href="#adb-%E5%91%BD%E4%BB%A4%E5%90%AF%E5%8A%A8%E5%92%8C%E5%85%B3%E9%97%AD">adb 命令启动和关闭</a></li>
+<li><a href="#adb-%E5%B8%B8%E8%A7%84%E5%91%BD%E4%BB%A4">adb 常规命令</a></li>
+<li><a href="#adb-devices-%E6%9F%A5%E8%AF%A2%E8%AE%BE%E5%A4%87">adb devices 查询设备</a></li>
+<li><a href="#%E6%93%8D%E4%BD%9C%E5%A4%9A%E4%B8%AA%E8%AE%BE%E5%A4%87%E4%B8%AD%E7%9A%84%E4%B8%80%E4%B8%AA">操作多个设备中的一个</a></li>
+<li><a href="#adb-forward-%E8%AE%BE%E7%BD%AE%E7%AB%AF%E5%8F%A3%E8%BD%AC%E5%8F%91">adb forward 设置端口转发</a></li>
+<li><a href="#adb-connect-%E9%80%9A%E8%BF%87-wifi-%E4%BD%BF%E7%94%A8-adb">adb connect 通过 wifi 使用 adb</a></li>
+<li><a href="#adb-usb">adb usb</a></li>
+<li><a href="#%E6%96%87%E4%BB%B6%E6%93%8D%E4%BD%9C-push-pull">文件操作 <code>push</code> / <code>pull</code></a></li>
+<li><a href="#%E8%B0%83%E8%AF%95%E5%91%BD%E4%BB%A4">调试命令</a></li>
+<li><a href="#%E8%B0%83%E7%94%A8-activity-manageram">调用 Activity Manager(am)</a></li>
+<li><a href="#%E8%B0%83%E7%94%A8%E8%BD%AF%E4%BB%B6%E5%8C%85%E7%AE%A1%E7%90%86%E5%99%A8-package-managerpm">调用软件包管理器 Package Manager(pm)</a></li>
+<li><a href="#%E6%88%AA%E5%9B%BEscreencap%E4%BB%A5%E5%8F%8A%E5%BD%95%E5%88%B6%E8%A7%86%E9%A2%91screenrecord">截图(<code>screencap</code>)以及录制视频(<code>screenrecord</code>)</a></li>
 </ul>
 </li>
-<li>Large tests 的测试框架主要有：
+</ul>
+</p>
+<h3 id="adb-命令启动和关闭"><a class="anchor" href="#adb-命令启动和关闭"></a> adb 命令启动和关闭</h3>
 <ul>
-<li><code>Android JUnit4 Rules</code>：可以测试 Activity 或者 Service 等；</li>
-<li><code>Espresso</code>：UI 测试框架，只能在同一个 App 内部进行测试，不能和其它 App 进行交互；</li>
-<li><code>UI Automator</code>：UI 测试框架，可以和系统应用、其它应用进行交互；</li>
+<li><strong>adb start-server</strong>：检查 adb 服务器进程是否在运行，如果未运行则启动它；</li>
+<li><strong>adb kill-server</strong>：关闭 adb 服务；</li>
+</ul>
+<h3 id="adb-常规命令"><a class="anchor" href="#adb-常规命令"></a> adb 常规命令</h3>
+<ul>
+<li><strong>adb version</strong>：查看 adb 版本；</li>
+<li><strong>adb help</strong>：输出 adb 支持的命令；</li>
+<li><strong>adb wait-for-device</strong>：等待连接设备；</li>
+</ul>
+<h3 id="adb-devices-查询设备"><a class="anchor" href="#adb-devices-查询设备"></a> adb devices 查询设备</h3>
+<p>此命令会列举出当前电脑上链接的设备，包括模拟器以及实体设备。命令窗口会输出当前链接设备的序列号以及状态：</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">e6b2a367        device</span><br><span class="line">emulator-5654   device</span><br></pre></td></tr></table></figure>
+<div class="alert info"><p>必须要安装驱动，并且打开开发者模式下的 usb 调试才可以显示出设备</p>
+</div>
+<h3 id="操作多个设备中的一个"><a class="anchor" href="#操作多个设备中的一个"></a> 操作多个设备中的一个</h3>
+<p>通过 adb devices 命令可以看到连接电脑的所有 android 设备，如果要对多个设备中的某个进行操作，需要使用 <code>-s</code> 参数，使用方法如下：</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">adb [-d|-e|-s serial_number] [shell] command</span><br></pre></td></tr></table></figure>
+<ul>
+<li><strong>-d</strong>：将命令发送到唯一连接的 USB 设备，如果连接多个设备则会报错；</li>
+<li><strong>-e</strong>：将命令发送到唯一运行的模拟器，如果启动了多个模拟器设备，则会报错；</li>
+</ul>
+<h3 id="adb-forward-设置端口转发"><a class="anchor" href="#adb-forward-设置端口转发"></a> adb forward 设置端口转发</h3>
+<p>可以使用该命令设置任意端口转发，即对特定主机端口的请求转发到模拟器/实体设备上的其它端口，实现主机和设备之间的通信。</p>
+<p>使用方法：</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">adb forward &lt;local&gt; &lt;remote&gt;</span><br></pre></td></tr></table></figure>
+<p>例如以下命令实现主机 6100 端口到模拟器或者实体设备 7100 端口的转发：</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">adb forward tcp:6100 tcp:7100</span><br></pre></td></tr></table></figure>
+<h3 id="adb-connect-通过-wifi-使用-adb"><a class="anchor" href="#adb-connect-通过-wifi-使用-adb"></a> adb connect 通过 wifi 使用 adb</h3>
+<p>命令使用方法：</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">adb connect &lt;host&gt;[:&lt;port&gt;]</span><br></pre></td></tr></table></figure>
+<p>操作步骤：</p>
+<ul>
+<li>
+<p>手机连接 usb 接口；</p>
+</li>
+<li>
+<p>adb devices 列出设备；</p>
+</li>
+<li>
+<p>adb tcpip 5555：在 TCP 模式下重启，端口为5555</p>
+</li>
+<li>
+<p>adb connect #.#.#.# 连接到 #.#.#.#:5555</p>
+<div class="alert info"><p>参数 #.#.#.# 是 Android 设备的 IP 地址。</p>
+</div>
+</li>
+</ul>
+<h3 id="adb-usb"><a class="anchor" href="#adb-usb"></a> adb usb</h3>
+<p>在 usb 模式下重新连接；</p>
+<h3 id="文件操作-push-pull"><a class="anchor" href="#文件操作-push-pull"></a> 文件操作 <code>push</code> / <code>pull</code></h3>
+<p>adb 命令 <code>push</code>、<code>pull</code>将文件从本地拷贝到手机或者从手机拷贝到本地；</p>
+<p>使用方法：</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">adb pull remote local // 从设备拷贝到本地</span><br><span class="line">adb push local remote // 从本地推送到设备</span><br></pre></td></tr></table></figure>
+<h3 id="调试命令"><a class="anchor" href="#调试命令"></a> 调试命令</h3>
+<ul>
+<li><strong><code>dumpsys</code></strong>：输出系统数据；</li>
+<li><strong><code>dumpstate</code></strong>：输出系统状态；</li>
+<li><strong><code>logcat</code></strong>：输出日志；</li>
+</ul>
+<h3 id="调用-activity-manageram"><a class="anchor" href="#调用-activity-manageram"></a> 调用 Activity Manager(am)</h3>
+<p>使用方法：</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">adb shell am command</span><br></pre></td></tr></table></figure>
+<p>利用该命令可以启动某个 activity、service、发送广播等。</p>
+<p>可用的 Activity Manager 命令如下：</p>
+<ul>
+<li>
+<p><strong><code>start</code> [<em>options</em>] <em>intent</em></strong>：启动 intent 指定的 activity。选项主要有如下：</p>
+<ul>
+<li><strong><code>-D</code></strong>：启动调试；</li>
+<li><strong><code>-W</code></strong>：等待启动完成；</li>
+<li><strong><code>--start-profiler</code> <em>file</em></strong>：启动分析器并将结果发送到file；</li>
+<li><strong><code>-P</code> <em>file</em></strong>：类似 start-profiler，但是当应用进入空闲状态时停止分析；</li>
+<li><strong><code>-R</code> <em>count</em></strong>：重复启动 activity count 次。每次重复前将完成顶部 activity；</li>
+<li><strong><code>-S</code></strong>：启动 Activity 前强行停止目标应用；</li>
+<li><strong><code>—user</code> <em>user_id</em> | current</strong>：指定要作为哪个用户运行；如果未指定，则作为当前用户运行;</li>
+</ul>
+</li>
+<li>
+<p><strong><code>startservice</code> [<em>options</em>] <em>intent</em></strong>：启动 intent 对应的 Service；</p>
+<p>选项有：</p>
+<ul>
+<li><strong><code>—user</code> <em>user_id</em> | current</strong>：指定要作为哪个用户运行；如果未指定，则作为当前用户运行;</li>
+</ul>
+</li>
+<li>
+<p><strong><code>force-stop</code> <em>package_name</em></strong>：强行停止与 package_name(应用包名) 相关联的所有<strong>应用</strong>；</p>
+</li>
+<li>
+<p><strong><code>kill</code> [<em>options</em>] <em>package_name</em></strong>：终止与 <code>package_name</code>（应用的包名称）关联的所有<strong>进程</strong>。此命令仅终止可安全终止且不会影响用户体验的进程；</p>
+<p>选项有：</p>
+<ul>
+<li><strong><code>—user</code> <em>user_id</em> | current</strong>：指定要作为哪个用户运行；如果未指定，则作为当前用户运行;</li>
+</ul>
+</li>
+<li>
+<p><strong><code>kill-all</code></strong>：终止后台所有进程；</p>
+</li>
+<li>
+<p><strong><code>broadcast</code> [<em>options</em>] <em>intent</em></strong>：发出广播 intent；</p>
+<p>选项有：</p>
+<ul>
+<li><strong><code>—user</code> <em>user_id</em> | current</strong>：指定要作为哪个用户运行；如果未指定，则作为当前用户运行;</li>
+</ul>
+</li>
+<li>
+<p><strong><code>instrument</code>  [<em>options</em>] <em>compoent</em></strong>：使用  <code>Instrumentation</code> 实例监控。通常情况下 component 是**<em>test_package</em>/<em>runner_class</em>**；</p>
+<p>可选项有：</p>
+<ul>
+<li><strong><code>-r</code></strong>：输出原始结果，否则对<code>report_key_streamresult</code> 进行解码；</li>
+<li><strong><code>-e</code> <em>name value</em></strong>：将参数 <strong>name</strong> 的值设置为 <strong>value</strong>；</li>
+<li><strong><code>-p</code> <em>file</em></strong>：将分析数据写入 file；</li>
+<li><strong><code>-w</code></strong>：先等待仪器完成，然后再返回，测试运行器需要使用此选项；</li>
+<li><strong><code>--no-window-animation</code></strong>：运行时关闭窗口动画；</li>
+<li><strong><code>—user</code> <em>user_id</em> | current</strong>：指定要作为哪个用户运行；如果未指定，则作为当前用户运行;</li>
+</ul>
+</li>
+<li>
+<p><strong><code>profile start</code> <em>process  file</em></strong>：启动 process 进程的分析器，将结果写入 file；</p>
+</li>
+<li>
+<p><strong><code>profile start</code> <em>process</em></strong>：停止 process 进程的分析器；</p>
+</li>
+<li>
+<p><strong><code>dumpheap</code> [<em>options</em>] <em>process file</em></strong>：将 process 进程的内存使用情况保存到 file 文件中；</p>
+<p>可选项有：</p>
+<ul>
+<li><strong><code>—user</code> <em>user_id</em> | current</strong>：指定要作为哪个用户运行；如果未指定，则作为当前用户运行;</li>
+<li><strong><code>-n</code></strong>：保存原生堆，而非托管堆；</li>
+</ul>
+</li>
+<li>
+<p><strong><code>set-debug-app</code> [<em>options</em>] <em>package</em></strong>：将应用 package 设为调试；</p>
+<p>可选项有：</p>
+<ul>
+<li><strong><code>-w</code></strong>：应用启动时等待调试程序；</li>
+<li><strong><code>--persistent</code></strong>：保留此值；</li>
+</ul>
+</li>
+<li>
+<p><strong><code>clear-debug-app</code></strong>：清除设置的调试 软件；</p>
+</li>
+<li>
+<p><strong><code>monitor</code> [<em>options</em>]</strong>：启动对 crash 或 anr 的监控；</p>
+</li>
+<li>
+<p><strong><code>display-size</code> [<em>reset</em> | <em>width</em> x <em>height</em>]</strong>：替换模拟器、设备的显示尺寸，用于处事不同分辨率显示；</p>
+</li>
+<li>
+<p><strong><code>display-density</code> <em>dpi</em></strong>：替换设备的显示密度；</p>
+</li>
+<li>
+<p><strong><code>to-uri</code> <em>intent</em></strong>：将 intent 以 URI 的形式输出；</p>
+</li>
+<li>
+<p><strong><code>to-intent-uri</code> <em>intent</em></strong>：将给定的 intent 规范以 <code>intent:URI</code> 的形式输出；</p>
+</li>
+</ul>
+<h3 id="调用软件包管理器-package-managerpm"><a class="anchor" href="#调用软件包管理器-package-managerpm"></a> 调用软件包管理器 Package Manager(pm)</h3>
+<p>使用方法:</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">adb shell pm command</span><br></pre></td></tr></table></figure>
+<p>可用的命令有：</p>
+<ul>
+<li>
+<p><strong><code>list packages</code> [<em>options</em>] <em>filter</em></strong>：输出 所有包含 filter 文本的软件包，默认列出所有的软件包；</p>
+<p>可选项有：</p>
+<ul>
+<li><code>-f</code>：查看它们的关联文件；</li>
+<li><code>-d</code>：进行过滤以仅显示已停用的软件包；</li>
+<li><code>-e</code>：进行过滤以仅显示已启用的软件包；</li>
+<li><code>-s</code>：进行过滤以仅显示系统软件包；</li>
+<li><code>-3</code>：进行过滤以仅显示第三方软件包；</li>
+<li><code>-i</code>：查看软件包的安装程序；</li>
+<li><code>-u</code>：包括卸载的软件包；</li>
+<li><code>--user</code> <em><strong>user_id</strong></em>：要查询的用户空间；</li>
+</ul>
+</li>
+<li>
+<p><strong><code>list permission-groups</code></strong>：输出所有已知的权限组；</p>
+</li>
+<li>
+<p><strong><code>list permissions</code> [<em>options</em>] <em>group</em></strong>：输出所有已知权限，或者，仅输出 <code>group</code> 中的权限；</p>
+<p>可选项有：</p>
+<ul>
+<li><code>-g</code>：按组加以组织；</li>
+<li><code>-f</code>：输出所有信息；</li>
+<li><code>-s</code>：仅输出间断摘要；</li>
+<li><code>-d</code>：仅列出危险权限；</li>
+<li><code>-u</code>：仅列出用户看到的权限；</li>
+</ul>
+</li>
+<li>
+<p>**<code>list instrumentation</code> [<em>options</em>] **：列出所有的测试软件包；</p>
+<p>选项有：</p>
+<ul>
+<li><code>-f</code>：列出用于测试软件包的 apk 文件；</li>
+<li><code>target_package</code>：列出仅用于此应用的测试软件包；</li>
+</ul>
+</li>
+<li>
+<p><strong><code>list features</code></strong>：列出系统的所有功能；</p>
+</li>
+<li>
+<p><strong><code>list libraries</code></strong>：列出支持的所有库；</p>
+</li>
+<li>
+<p><strong><code>list users</code></strong>：列出设备系统上所有的用户；</p>
+</li>
+<li>
+<p><strong><code>path</code> <em>package</em></strong>：输出给定packge 的 apk 路径；</p>
+</li>
+<li>
+<p><strong><code>install</code> [<em>options</em>] <em>path</em></strong>：将软件安装到 path 指定的路径</p>
+<p>选项有：</p>
+<ul>
+<li><code>-l</code>：安装具有锁定功能的软件包；</li>
+<li><code>-r</code>：覆盖现有应用，保留用户数据；</li>
+<li><code>-t</code>：允许安装测试 apk；</li>
+<li><code>-i</code> <em>install_package_name</em>：指定安装程序软件包名称；</li>
+<li><code>-s</code>：在共享的大容量存储（如 sdcard）上安装软件包；</li>
+<li><code>-f</code>：在内部系统内存上安装软件包；</li>
+<li><code>-d</code>：允许版本降级安装；</li>
+<li><code>-g</code>：授予应用清淡中列出的所有权限；</li>
+</ul>
+</li>
+<li>
+<p><strong><code>uninstall</code> [<em>options</em>] <em>package</em></strong>：从系统中移除软件；</p>
+<p>选项有：</p>
+<ul>
+<li><code>-k</code>：移除软件后保留数据和缓存目录；</li>
+</ul>
+</li>
+<li>
+<p><strong><code>clear</code> <em>package</em></strong>：删除与软件包关联的所有数据；</p>
+</li>
+<li>
+<p><strong><code>enable</code> <em>package_or_component</em></strong>：启用给定软件包或组件（作为“package/class”写入）；</p>
+</li>
+<li>
+<p><strong><code>disable</code> <em>package_or_component</em></strong>：停用给定软件包或组件（作为“package/class”写入）；</p>
+</li>
+<li>
+<p><strong><code>disable-user</code>[<em>options</em>] <em>package_or_component</em></strong></p>
+<p>选项有：</p>
+<ul>
+<li><strong><code>—user</code> <em>user_id</em> | current</strong>：指定要作为哪个用户运行；如果未指定，则作为当前用户运行;</li>
+</ul>
+</li>
+<li>
+<p>允许/撤销权限：</p>
+<ul>
+<li>
+<p><code>grant</code> <em>package_name permission</em>：授予应用权限；</p>
+</li>
+<li>
+<p><code>revoke</code> <em>package_name permission</em>：撤销应用权限；</p>
+<div class="alert info"><p>在运行 Android 6.0（API 级别 23）及更高版本的设备上，可以是应用清单中声明的任何权限。在运行 Android 5.1（API 级别 22）和更低版本的设备上，必须是应用定义的可选权限。</p>
+</div>
+</li>
+</ul>
+</li>
+<li>
+<p>设置/获取应用安装位置：</p>
+<ul>
+<li>
+<p><code>set-install-location</code> <em>location</em>：更改默认安装位置；</p>
+</li>
+<li>
+<p><code>get-install-location</code>：获取默认安装位置；</p>
+<p>上述命令设置或者获取结果都是三个值：</p>
+<ul>
+<li><code>0</code>：自动—让系统决定最佳位置。</li>
+<li><code>1</code>：内部—安装在内部设备存储上。</li>
+<li><code>2</code>：外部—安装在外部介质上。</li>
+</ul>
+<div class="alert info"><p>使用此命令会导致应用中断和其它意外行为</p>
+</div>
+</li>
+</ul>
+</li>
+<li>
+<p><strong><code>set-permission-enforced</code> <em>permission</em> [true|false]</strong>：指定是否强制执行给定的权限；</p>
+</li>
+<li>
+<p><strong><code>trim-caches</code> <em>desired_free_space</em></strong>：减少缓存文件以达到给定的可用空间；</p>
+</li>
+<li>
+<p><strong><code>create-user</code> <em>user_name</em></strong>：创建新用户 user_name；</p>
+</li>
+<li>
+<p><strong><code>remove-user</code> user_id</strong>： 移除 user_id 对应的用户，删除与该用户关联的所有数据；</p>
+</li>
+<li>
+<p><strong><code>get-max-users</code></strong>：输出设备支持的最大用户数；</p>
+</li>
+</ul>
+<h3 id="截图screencap以及录制视频screenrecord"><a class="anchor" href="#截图screencap以及录制视频screenrecord"></a> 截图(<code>screencap</code>)以及录制视频(<code>screenrecord</code>)</h3>
+<ul>
+<li>
+<p>截图</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">adb shell screencap /sdcard/screen.png</span><br></pre></td></tr></table></figure>
+</li>
+<li>
+<p>录制视频：</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">adb shell screenrecord [options] filename</span><br></pre></td></tr></table></figure>
+<div class="alert info"><ul>
+<li>音频和视频不能同时录制；</li>
+<li>按 Control + C 停止屏幕录制，否则，到三分钟或 <code>--time-limit</code> 设置的时间限制时，录制将自动停止；</li>
+</ul>
+</div>
+<p>视频录制的参数：</p>
+<ul>
+<li>
+<p><code>--help</code>：显示帮助命令；</p>
+</li>
+<li>
+<p><code>--size</code> <em>width</em> x <em>height</em>：设置视频大小，默认是设备的元素显示分辨率(如果支持)，<strong>如果不支持则使用1280 x 720</strong>；</p>
+</li>
+<li>
+<p><code>--bit-rate</code> <em>rate</em>：设置视频的视频比特率（以兆比特每秒为单位）。默认值为 4Mbps。您可以增加比特率以提升视频质量，但这么做会导致影片文件变得更大；</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">// 设置比特率为6Mbps</span><br><span class="line">adb shell screenrecord --bit-rate 6000000 /sdcard/demo.mp4</span><br></pre></td></tr></table></figure>
+</li>
+<li>
+<p><code>--time-limit</code> <em><strong>time</strong></em>：设置最大录制时间，单位为 <strong>s</strong>，默认值为 3分钟；</p>
+</li>
+<li>
+<p><code>--rotate</code>：视频输出旋转90度(<strong>实验功能</strong>)；</p>
+</li>
+<li>
+<p><code>--verbose</code>：啰嗦模式；</p>
+</li>
 </ul>
 </li>
 </ul>
@@ -377,7 +654,7 @@
     </p>
     <p class="copyright-item">
         <span>原文链接: </span>
-        <a href="http://www.istarx.cn/2018/02/10/android-autotest-summary/">http://www.istarx.cn/2018/02/10/android-autotest-summary/</a>
+        <a href="http://www.istarx.cn/2019/06/11/adb-commands/">http://www.istarx.cn/2019/06/11/adb-commands/</a>
     </p>
     <p class="copyright-item">
         <span>许可协议: </span>
@@ -396,11 +673,11 @@
 <div class="tagcloud article-tag-list">
     
     <li class="article-tag-list-item">
-        <a href="/tags/android/" class="js-tag color3">android</a>
+        <a href="/tags/adb/" class="js-tag color4">adb</a>
     </li>
     
     <li class="article-tag-list-item">
-        <a href="/tags/自动化测试/" class="js-tag color1">自动化测试</a>
+        <a href="/tags/android/" class="js-tag color3">android</a>
     </li>
     
     <div class="clearfix"></div>
@@ -415,9 +692,8 @@
         <ul class="post-actions post-action-nav">
             <li class="post-action">
                 
-                
-                <a class="post-action-btn btn btn--default tooltip--top" href="/2018/02/11/hamcrest-matcher/" data-tooltip="Hamcrest 匹配器" aria-label="上一篇: Hamcrest 匹配器">
-                    
+                    <a class="post-action-btn btn btn--disabled">
+                        
                         <i class="fa fa-angle-left" aria-hidden="true"></i>
                         <span class="hide-xs hide-sm text-small icon-ml">上一篇</span>
                     </a>
@@ -425,7 +701,7 @@
             <li class="post-action">
                 
                 
-                <a class="post-action-btn btn btn--default tooltip--top" href="/2018/02/04/build-mulit-edition-apks-using-productflavors/" data-tooltip="利用 ProductFlavors 构建差异化APK版本" aria-label="下一篇: 利用 ProductFlavors 构建差异化APK版本">
+                <a class="post-action-btn btn btn--default tooltip--top" href="/2019/06/02/arts-week-nine/" data-tooltip="ARTS打卡—第9周" aria-label="下一篇: ARTS打卡—第9周">
                     
                         <span class="hide-xs hide-sm text-small icon-mr">下一篇</span>
                         <i class="fa fa-angle-right" aria-hidden="true"></i>
@@ -468,15 +744,14 @@
 
         </div>
         
-        <div id="bottom-bar" class="post-bottom-bar" data-behavior="5">
+        <div id="bottom-bar" class="post-bottom-bar" data-behavior="2">
             <div class="post-actions-wrap">
     <nav>
         <ul class="post-actions post-action-nav">
             <li class="post-action">
                 
-                
-                <a class="post-action-btn btn btn--default tooltip--top" href="/2018/02/11/hamcrest-matcher/" data-tooltip="Hamcrest 匹配器" aria-label="上一篇: Hamcrest 匹配器">
-                    
+                    <a class="post-action-btn btn btn--disabled">
+                        
                         <i class="fa fa-angle-left" aria-hidden="true"></i>
                         <span class="hide-xs hide-sm text-small icon-ml">上一篇</span>
                     </a>
@@ -484,7 +759,7 @@
             <li class="post-action">
                 
                 
-                <a class="post-action-btn btn btn--default tooltip--top" href="/2018/02/04/build-mulit-edition-apks-using-productflavors/" data-tooltip="利用 ProductFlavors 构建差异化APK版本" aria-label="下一篇: 利用 ProductFlavors 构建差异化APK版本">
+                <a class="post-action-btn btn btn--default tooltip--top" href="/2019/06/02/arts-week-nine/" data-tooltip="ARTS打卡—第9周" aria-label="下一篇: ARTS打卡—第9周">
                     
                         <span class="hide-xs hide-sm text-small icon-mr">下一篇</span>
                         <i class="fa fa-angle-right" aria-hidden="true"></i>
@@ -512,7 +787,7 @@
 
 
         </div>
-        <div id="share-options-bar" class="share-options-bar" data-behavior="5">
+        <div id="share-options-bar" class="share-options-bar" data-behavior="2">
     <i id="btn-close-shareoptions" class="fa fa-close"></i>
     <ul class="share-options">
         
