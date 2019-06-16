@@ -7,12 +7,12 @@
     <meta name="baidu-site-verification" content="fJhstNzkJ1"/>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="generator" content="小一 | 莫舍己道 勿扰他心">
-    <title>Android 自动化测试之 — Espresso - 小一 | 莫舍己道 勿扰他心</title>
+    <title>ARTS打卡—第10周 - 小一 | 莫舍己道 勿扰他心</title>
     <meta name="author" content="小一">
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0" />
     <link rel="Shortcut Icon" href="http://www.istarx.cn/assets/images/favicon.ico" type="image/x-icon">
     
-        <meta name="keywords" content="自动化测试,android Test,espresso">
+        <meta name="keywords" content="ARTS,LeetCode">
     
     
         <link rel="icon" href="http://www.istarx.cn/assets/images/favicon.ico">
@@ -29,10 +29,6 @@
         <meta property="og:image" content="http://www.istarx.cn/assets/images/avatar.png"/>
     
     
-    
-        <meta property="og:image" content="http://cherlas-blog.oss-cn-beijing.aliyuncs.com/espresso.jpg"/>
-        <meta class="swiftype" name="image" data-type="enum"
-              content="http://cherlas-blog.oss-cn-beijing.aliyuncs.com/espresso.jpg"/>
     
     
     <!--STYLES-->
@@ -213,39 +209,36 @@
 </nav>
 
         
-<div class="post-header-cover fade-in header-image-cover
-                    text-left
-                    post-header-cover--partial" style="background-image:url('http://cherlas-blog.oss-cn-beijing.aliyuncs.com/espresso.jpg');
-      filter: blur(0px); 
-      height: 60%;" data-behavior="2">
-</div>
-<div class="post-header-cover fade-in post-header-cover-background
-                            text-left
-                            post-header-cover--partial" style="
-     
-             height: 60%;
-     " data-behavior="2">
 
+        <div id="main" data-behavior="2"
+             class="
+                        hasCoverMetaIn
+                        hasCoverCaption hidden fade-in">
+            
+<article class="post" itemscope="" itemtype="http://schema.org/BlogPosting">
     
-    <div class="post-header main-content-wrap text-left fadeInDown">
+        <span class="post-header-cover-caption caption">人活着就是要干事情，干事情就要干好。  ——褚时健</span>
+    
+    
+        <div class="post-header main-content-wrap text-left fadeInDown">
     <div class="post-header-message content-with-table">
         
         <h1 class="post-title" itemprop="headline">
-            Android 自动化测试之 — Espresso
+            ARTS打卡—第10周
         </h1>
         
         
         <div class="post-meta">
-    <time itemprop="datePublished" datetime="2018-04-09T22:43:27+08:00">
+    <time itemprop="datePublished" datetime="2019-06-16T10:32:47+08:00">
         <img class="calendar" src="/assets/images/calendar.png">
         
-        4月 09, 2018
+        6月 16, 2019
         
     </time>
     
     <span>发布在 </span>
     
-<a class="category-link" href="/categories/程序猿进化之路/">程序猿进化之路</a>, <a class="category-link" href="/categories/程序猿进化之路/自动化测试/">自动化测试</a>
+<a class="category-link" href="/categories/ARTS打卡/">ARTS打卡</a>
 
 
     
@@ -253,9 +246,7 @@
     <img class="tag-img" src="/assets/images/tag-icon.svg">
     <div class="post-tags">
         
-        <a href="/tags/自动化测试/">自动化测试</a>
-        
-        <a href="/tags/espresso/">espresso</a>
+        <a href="/tags/ARTS/">ARTS</a>
         
     </div>
     
@@ -265,172 +256,126 @@
     </div>
 </div>
 
-    
-</div>
-
-
-        <div id="main" data-behavior="2"
-             class="hasCover
-                        hasCoverMetaIn
-                        hasCoverCaption hidden fade-in">
-            
-<article class="post" itemscope="" itemtype="http://schema.org/BlogPosting">
-    
-        <span class="post-header-cover-caption caption">If one&#39;s different, one&#39;s bound to be lonely.</span>
-    
     
     <div class="tableTile" data-message="目录">
     </div>
     <div class="post-content markdown" itemprop="articleBody">
         <div class="main-content-wrap fadeInDown toc content-with-table">
-            <script src="/assets/js/APlayer.min.js"> </script><p>Espresso 是基于 ATSL(Android Testing Support Library) 的Android 设备化测试框架，它只能在单独apk内部进行测试而不能和其它应用进行交互，它可以检查应用的 UI 组件是否正确工作。</p>
+            <script src="/assets/js/APlayer.min.js"> </script><p>今天是父亲节，祝老爸节日快乐，身体健康，也祝天下所有父亲节日快乐。上周由于带端午节回家没打卡拖延了一周。本周打卡内容主要是二叉树相关的内容。</p>
 <a id="more"></a>
 <p><ul class="toc js-fixedContent">
-<li><a href="#espresso-%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA">Espresso 环境搭建</a></li>
-<li><a href="#espresso-%E5%9F%BA%E6%9C%AC%E7%BB%84%E4%BB%B6%E5%8F%8A%E4%BD%BF%E7%94%A8">Espresso 基本组件及使用</a>
+<li><a href="#algorithm">Algorithm</a>
 <ul>
-<li><a href="#%E5%9F%BA%E6%9C%AC%E7%BB%84%E4%BB%B6">基本组件</a>
+<li><a href="#%E9%A2%98%E7%9B%AE%E4%B8%80">题目一</a>
 <ul>
-<li><a href="#viewinteraction">ViewInteraction</a></li>
-<li><a href="#%E4%B8%A4%E4%B8%AA%E5%B8%B8%E8%A7%81%E7%9A%84%E5%BC%82%E5%B8%B8">两个常见的异常</a></li>
+<li><a href="#%E8%BF%90%E8%A1%8C%E7%BB%93%E6%9E%9C">运行结果</a></li>
 </ul>
 </li>
-<li><a href="#%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95">使用方法</a>
+<li><a href="#%E9%A2%98%E7%9B%AE%E4%BA%8C">题目二</a>
 <ul>
-<li><a href="#%E6%9F%A5%E6%89%BE%E6%8E%A7%E4%BB%B6">查找控件</a></li>
-<li><a href="#%E6%89%A7%E8%A1%8C%E6%93%8D%E4%BD%9C">执行操作</a></li>
-<li><a href="#%E8%BF%9B%E8%A1%8C%E9%AA%8C%E8%AF%81">进行验证</a></li>
-<li><a href="#%E4%B8%80%E4%B8%AA%E7%AE%80%E5%8D%95%E7%9A%84%E6%A0%97%E5%AD%90">一个简单的栗子</a></li>
+<li><a href="#%E8%BF%90%E8%A1%8C%E7%BB%93%E6%9E%9C-2">运行结果</a></li>
 </ul>
 </li>
-<li><a href="#espresso-intents">Espresso-Intents</a></li>
 </ul>
 </li>
+<li><a href="#review">Review</a><br>
+*
+<ul>
+<li><a href="#%E6%95%B0%E5%AD%A6%E7%9B%B8%E5%85%B3%E7%9A%84%E6%93%8D%E4%BD%9C">数学相关的操作：</a></li>
+<li><a href="#%E5%B8%B8%E7%94%A8%E4%B8%8D%E5%90%8C%E7%B1%BB%E5%9E%8B%E7%9A%84-observable">常用不同类型的 Observable</a></li>
+</ul>
+</li>
+<li><a href="#tips">Tips</a></li>
+<li><a href="#share">Share</a></li>
 </ul>
 </p>
-<p>前面有文章介绍了 <a href="http://www.istarx.cc/2018/04/07/android-test-uiautomator/">UI Automator 测试框架</a>，该框架在多个应用之间进行交互测试，而 Espresso 框架则正好相反，它是在单独的应用内部进行测试。在单独的应用内部进行测试可以确保该应用可以在没有其它应用交互的情况下正常工作，并且不会给用户带来很糟糕的体验。</p>
-<p>Espresso 框架相对于 UI Automator 框架主要有以下几个优点：</p>
+<h2 id="algorithm"><a class="anchor" href="#algorithm"></a> Algorithm</h2>
+<p>这周主要作了二叉树相关的题目，第二个题目是第一个题目的延伸。</p>
+<h3 id="题目一"><a class="anchor" href="#题目一"></a> 题目一</h3>
+<blockquote>
+<p><strong>654. Maximum Binary Tree</strong></p>
+<p>Given an integer array with no duplicates. A maximum tree building on this array is defined as follow:</p>
+<ol>
+<li>The root is the maximum number in the array.</li>
+<li>The left subtree is the maximum tree constructed from left part subarray divided by the maximum number.</li>
+<li>The right subtree is the maximum tree constructed from right part subarray divided by the maximum number.</li>
+</ol>
+<p>Construct the maximum tree by the given array and output the root node of this tree.</p>
+<p><strong>Example:</strong></p>
+<figure class="highlight angelscript"><table><tr><td class="code"><pre><span class="line">&gt; Input: [<span class="number">3</span>,<span class="number">2</span>,<span class="number">1</span>,<span class="number">6</span>,<span class="number">0</span>,<span class="number">5</span>]</span><br><span class="line">&gt; Output: <span class="keyword">return</span> the tree root node representing the following tree:</span><br><span class="line">&gt; </span><br><span class="line">&gt;       <span class="number">6</span></span><br><span class="line">&gt;     /   \</span><br><span class="line">&gt;    <span class="number">3</span>     <span class="number">5</span></span><br><span class="line">&gt;     \    / </span><br><span class="line">&gt;      <span class="number">2</span>  <span class="number">0</span>   </span><br><span class="line">&gt;        \</span><br><span class="line">&gt;         <span class="number">1</span></span><br><span class="line">&gt;</span><br></pre></td></tr></table></figure>
+</blockquote>
+<p>题目要求将一数组转化成二叉树，而且操作是很规律的，因此用递归是最好不过了。</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> TreeNode <span class="title">constructMaximumBinaryTree</span><span class="params">(<span class="keyword">int</span>[] nums)</span> </span>&#123;</span><br><span class="line">  <span class="keyword">return</span> constructMaximumBinaryTree(nums, <span class="number">0</span>, nums.length - <span class="number">1</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">private</span> TreeNode <span class="title">constructMaximumBinaryTree</span><span class="params">(<span class="keyword">int</span>[] nums, <span class="keyword">int</span> start, <span class="keyword">int</span> end)</span> </span>&#123;</span><br><span class="line">  <span class="keyword">int</span> maxValPosition = findMaxValueBetweenPosition(nums, start, end);</span><br><span class="line">  <span class="keyword">if</span> (maxValPosition == -<span class="number">1</span>) &#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">null</span>;</span><br><span class="line">  &#125;</span><br><span class="line">  TreeNode head = <span class="keyword">new</span> TreeNode(nums[maxValPosition]);</span><br><span class="line">  head.left = constructMaximumBinaryTree(nums, start, maxValPosition - <span class="number">1</span>);</span><br><span class="line">  head.right = constructMaximumBinaryTree(nums, maxValPosition + <span class="number">1</span>, end);</span><br><span class="line">  <span class="keyword">return</span> head;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">private</span> <span class="keyword">int</span> <span class="title">findMaxValueBetweenPosition</span><span class="params">(<span class="keyword">int</span>[] nums, <span class="keyword">int</span> start, <span class="keyword">int</span> end)</span> </span>&#123;</span><br><span class="line">  <span class="keyword">if</span> (start &gt; end) &#123;</span><br><span class="line">    <span class="keyword">return</span> -<span class="number">1</span>;</span><br><span class="line">  &#125; <span class="keyword">else</span> <span class="keyword">if</span> (start == end) &#123;</span><br><span class="line">    <span class="keyword">return</span> start;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">int</span> maxValPos = start;</span><br><span class="line">  <span class="keyword">for</span> (<span class="keyword">int</span> i = start + <span class="number">1</span>; i &lt;= end; i++) &#123;</span><br><span class="line">    <span class="keyword">if</span> (nums[i] &gt; nums[maxValPos]) &#123;</span><br><span class="line">      maxValPos = i;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">return</span> maxValPos;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="运行结果"><a class="anchor" href="#运行结果"></a> 运行结果</h4>
+<p><img src="result1.png" alt="result1"></p>
+<h3 id="题目二"><a class="anchor" href="#题目二"></a> 题目二</h3>
+<blockquote>
+<p><strong>998. Maximum Binary Tree II</strong></p>
+<p>We are given the <code>root</code> node of a <em>maximum tree:</em> a tree where every node has a value greater than any other value in its subtree.</p>
+<p>Just as in the <a href="https://leetcode.com/problems/maximum-binary-tree/">previous problem</a>, the given tree was constructed from an list <code>A</code> (<code>root = Construct(A)</code>) recursively with the following <code>Construct(A)</code> routine:</p>
 <ul>
-<li>速度快；</li>
-<li>UI 线程等待：Espresso 测试框架在测试进行的过程中检测主线程是否处于空闲状态，它会等到主线程空闲的时候才会进行测试，提升测试的稳定性。</li>
+<li>If <code>A</code> is empty, return <code>null</code>.</li>
+<li>Otherwise, let <code>A[i]</code> be the largest element of <code>A</code>.  Create a <code>root</code> node with value <code>A[i]</code>.</li>
+<li>The left child of <code>root</code> will be <code>Construct([A[0], A[1], ..., A[i-1]])</code></li>
+<li>The right child of <code>root</code> will be <code>Construct([A[i+1], A[i+2], ..., A[A.length - 1]])</code></li>
+<li>Return <code>root</code>.</li>
 </ul>
-<p>当然 Espresso 测试框架相比于UI Automator 框架也有其缺点存在：</p>
+<p>Note that we were not given A directly, only a root node <code>root = Construct(A)</code>.</p>
+<p>Suppose <code>B</code> is a copy of <code>A</code> with the value <code>val</code> appended to it.  It is guaranteed that <code>B</code> has unique values.</p>
+<p>Return <code>Construct(B)</code>.</p>
+<p><strong>Example1</strong></p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line">&gt;Input: root = [<span class="number">4</span>,<span class="number">1</span>,<span class="number">3</span>,<span class="keyword">null</span>,<span class="keyword">null</span>,<span class="number">2</span>], val = <span class="number">5</span></span><br><span class="line">&gt;Output: [<span class="number">5</span>,<span class="number">4</span>,<span class="keyword">null</span>,<span class="number">1</span>,<span class="number">3</span>,<span class="keyword">null</span>,<span class="keyword">null</span>,<span class="number">2</span>]</span><br><span class="line">&gt;Explanation: A = [<span class="number">1</span>,<span class="number">4</span>,<span class="number">2</span>,<span class="number">3</span>], B = [<span class="number">1</span>,<span class="number">4</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">5</span>]</span><br><span class="line">&gt;</span><br></pre></td></tr></table></figure>
+</blockquote>
+<blockquote>
+<p><strong>Example2</strong></p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line">&gt;Input: root = [<span class="number">5</span>,<span class="number">2</span>,<span class="number">4</span>,<span class="keyword">null</span>,<span class="number">1</span>], val = <span class="number">3</span></span><br><span class="line">&gt;Output: [<span class="number">5</span>,<span class="number">2</span>,<span class="number">4</span>,<span class="keyword">null</span>,<span class="number">1</span>,<span class="keyword">null</span>,<span class="number">3</span>]</span><br><span class="line">&gt;Explanation: A = [<span class="number">2</span>,<span class="number">1</span>,<span class="number">5</span>,<span class="number">4</span>], B = [<span class="number">2</span>,<span class="number">1</span>,<span class="number">5</span>,<span class="number">4</span>,<span class="number">3</span>]</span><br><span class="line">&gt;</span><br></pre></td></tr></table></figure>
+</blockquote>
+<blockquote>
+<p><strong>Example3</strong></p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line">&gt;Input: root = [<span class="number">5</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="keyword">null</span>,<span class="number">1</span>], val = <span class="number">4</span></span><br><span class="line">&gt;Output: [<span class="number">5</span>,<span class="number">2</span>,<span class="number">4</span>,<span class="keyword">null</span>,<span class="number">1</span>,<span class="number">3</span>]</span><br><span class="line">&gt;Explanation: A = [<span class="number">2</span>,<span class="number">1</span>,<span class="number">5</span>,<span class="number">3</span>], B = [<span class="number">2</span>,<span class="number">1</span>,<span class="number">5</span>,<span class="number">3</span>,<span class="number">4</span>]</span><br><span class="line">&gt;</span><br></pre></td></tr></table></figure>
+</blockquote>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> TreeNode <span class="title">insertIntoMaxTree</span><span class="params">(TreeNode root, <span class="keyword">int</span> val)</span> </span>&#123;</span><br><span class="line">  TreeNode tmp = <span class="keyword">new</span> TreeNode(val);</span><br><span class="line">  <span class="keyword">if</span> (root == <span class="keyword">null</span>) &#123;</span><br><span class="line">    <span class="keyword">return</span> tmp;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">if</span> (val &gt; root.val) &#123;</span><br><span class="line">    tmp.left = root;</span><br><span class="line">    <span class="keyword">return</span> tmp;</span><br><span class="line">  &#125;</span><br><span class="line">  TreeNode head = root;</span><br><span class="line">  <span class="keyword">while</span> (head.right != <span class="keyword">null</span> &amp;&amp; val &lt; head.right.val) &#123;</span><br><span class="line">    head = head.right;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">if</span> (head.right == <span class="keyword">null</span>) &#123;</span><br><span class="line">    head.right = tmp;</span><br><span class="line">  &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">    TreeNode tmp1 = head.right;</span><br><span class="line">    head.right = tmp;</span><br><span class="line">    tmp.left = tmp1; </span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">return</span> root;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="运行结果-2"><a class="anchor" href="#运行结果-2"></a> 运行结果</h4>
+<p><img src="result2.png" alt="result2"></p>
+<h2 id="review"><a class="anchor" href="#review"></a> Review</h2>
+<p>本周阅读学习 RxJava 系列的中的两篇文章：</p>
+<h4 id="数学相关的操作"><a class="anchor" href="#数学相关的操作"></a> 数学相关的操作：</h4>
+<p>使用这些接口时需要新引入一个 jar 包，如下：</p>
+<figure class="highlight groovy"><table><tr><td class="code"><pre><span class="line">implementation <span class="string">'com.github.akarnokd:rxjava2-extensions:0.20.0'</span></span><br></pre></td></tr></table></figure>
 <ul>
-<li>依赖业务代码：Espresso 测试用例代码要和被测试的 apk 业务代码放在一起；</li>
-<li>签名一致：Espresso 框架进行测试的时候测试 apk 和业务 apk 签名必须保持一致；</li>
-<li>前期编译生成 apk 时间较长：UI Automator 框架可以只单独编译测试 apk，而 Espresso 则需要同时编译被测 apk 和测试 apk，编译时间相对较长，尤其在业务代码量较大时，编译时间就更不用说了；</li>
+<li><strong>Average</strong>： 求出传递所有元素的平均值，将该平均值传递给 Observer；</li>
+<li><strong>Count</strong>：统计所传数据的个数，即原始 Obserable 发送了多少次数据；</li>
+<li><strong>Max</strong>：将所有传递的数据中的最大值当最终结果进行传递；</li>
+<li><strong>Min</strong>: 和 Max 类似；</li>
+<li><strong>Reduce</strong>：将所有的原始发送数据进行累积乘积，将最终结果传递给 Observer；</li>
+<li><strong>Sum</strong>:  将所有数据求和；</li>
 </ul>
-<div class="alert warning"><p>Espresso 测试框架必须在 <strong>Android 2.2(API10)</strong> 以上运行。</p>
-</div>
-<h2 id="espresso-环境搭建"><a class="anchor" href="#espresso-环境搭建"></a> Espresso 环境搭建</h2>
-<p>要使用 Espresso 框架进行编写测试用例并进行软件测试，必须要在 build.gradle 文件中添加相应的依赖。新版本的   Android Studio 在新建工程的时候会默认添加该依赖包，如果对已有工程进行测试，则需要添加以下依赖包到 <code>dependencies</code>闭包下：</p>
-<figure class="highlight gradle"><table><tr><td class="code"><pre><span class="line"><span class="keyword">dependencies</span> &#123;</span><br><span class="line">    androidTestImplementation <span class="string">'com.android.support.test:runner:1.0.1'</span></span><br><span class="line">    androidTestImplementation <span class="string">'com.android.support.test.espresso:espresso-core:3.0.1'</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>除了添加Espresso依赖包，还需要添加 <code>instrumentation runner</code>, 在 <code>android.defaultConfig</code>闭包中添加如下内容：</p>
-<figure class="highlight gradle"><table><tr><td class="code"><pre><span class="line">testInstrumentationRunner <span class="string">"android.support.test.runner.AndroidJUnitRunner"</span></span><br></pre></td></tr></table></figure>
-<p>Espresso 框架除了可以做基本功能测试，还可以做 intent 测试，如需进行 intent 测试，则需要添加如下依赖：</p>
-<figure class="highlight gradle"><table><tr><td class="code"><pre><span class="line"><span class="keyword">dependencies</span> &#123;</span><br><span class="line">    androidTestImplementation <span class="string">'com.android.support.test.espresso:espresso-core:3.0.1'</span></span><br><span class="line">    <span class="comment">// espresso intent test dependency, only compatible with Espresso 2.1+</span></span><br><span class="line">    <span class="comment">// and the testing support library 0.3+</span></span><br><span class="line">    androidTestImplementation <span class="string">'com.android.support.test.espresso:espresso-intents:3.0.1'</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h2 id="espresso-基本组件及使用"><a class="anchor" href="#espresso-基本组件及使用"></a> Espresso 基本组件及使用</h2>
-<p>总的来说，UI 测试或者功能测试用例执行都遵循以下流程：</p>
-<p><img src="black-test-rules.gif" alt="black-test-rules"></p>
-<p>无论是UI Automator 还是 Espresso 框架都是经过寻找控件、执行操作、验证结果来保证一个测试用例的完整性。</p>
-<h3 id="基本组件"><a class="anchor" href="#基本组件"></a> 基本组件</h3>
-<p>对Espresso 来说，对这三个阶段分别提供了不同的 API 组件：</p>
-<ul>
-<li><code>ViewMatchers</code> - 匹配器，该类内部提供了如<code>withId</code>、<code>withClassName</code>等匹配器方法用来在当前布局树中查找控件；</li>
-<li><code>ViewActions</code> - 操作类，该类内部提供了很多操作控件的方法，例如 <code>click()</code>、<code>swipDown()</code>、<code>pressKey()</code>等方法在测试用例执行过程中对控件进行操作；</li>
-<li><code>ViewAssertions</code> - 验证类，该类中的方法比较少，主要有doesNotExist<code>()</code>、<code>matches()</code>方法，用来对控件的操作结果进行验证；</li>
-</ul>
-<p>除了以上三个组件以外，Espresso 还提供了一个类来作为与视图的交互入口点：</p>
-<ul>
-<li><code>Espresso</code> - 视图交互入口点，视图交互的方法主要有两个，分别为<code>onView()</code>和<code>onData()</code>，这两个方法是搭配<code>ViewMatches</code>类的方法来进行查找控件的。除此之外还提供了一些和设备进行的交互的方法，例如：<code>pressBack()</code>、<code>closeSoftKeyboard()</code>等;</li>
-</ul>
-<div class="alert info"><p><code>onView()</code>方法主要用于查找诸如TextView、Button等的普通控件；而<code>onData()</code>用来查找AdapterView，主要有ListView等。</p>
-</div>
-<h4 id="viewinteraction"><a class="anchor" href="#viewinteraction"></a> ViewInteraction</h4>
-<p>ViewInteraction 可以看作是查找、操作、验证三个步骤的连接点，该类常用的两个方法有：</p>
-<ul>
-<li><code>perform()</code> - 配合<code>ViewActions</code> 对控件进行操作，该方法的参数为一个或多个<code>ViewAction</code>对象，返回值为返回一个<code>ViewInteraction</code>对象；</li>
-<li><code>check()</code> - 配合 <code>ViewAssertion</code>对操作结果进行验证，该方法参数为一个<code>ViewAssertion</code>对象；</li>
-</ul>
-<p><code>onView()</code>和<code>onData()</code> 两个方法都会返回一个<code>ViewInteraction</code>对象，所以这两个方法可以和<code>perform()</code>、<code>check()</code> 两个方法连起来使用：</p>
-<p><img src="black-test-rules-method.png" alt="black-test-rules-method"></p>
-<p>写法如下：</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line">onView(withId(R.id.text_view)).perform(click()).check(matches(isDisplayed()));</span><br></pre></td></tr></table></figure>
-<h4 id="两个常见的异常"><a class="anchor" href="#两个常见的异常"></a> 两个常见的异常</h4>
-<ul>
-<li>
-<p><code>AmbiguousViewMatcherException</code> - 当前条件匹配到多个控件时，会抛出该异常；</p>
-</li>
-<li>
-<p><code>NoMatchingViewException</code> - 当前条件在当前界面匹配不到控件时，会抛出异常；</p>
-</li>
-</ul>
-<h3 id="使用方法"><a class="anchor" href="#使用方法"></a> 使用方法</h3>
-<h4 id="查找控件"><a class="anchor" href="#查找控件"></a> 查找控件</h4>
-<p>Espresso控件使用<code>onView()</code>和<code>onData()</code>方法进行查找控件，这两个方法的区别在于<code>onView()</code>方法主要用于查找诸如TextView、Button等的普通控件；而<code>onData()</code>用来查找AdapterView，主要有ListView、Spinner、GridView 等。这两个方法都需要搭配 Harmcrest 匹配器在当前界面中寻找<strong>唯一</strong>的控件。</p>
-<p>Espresso 可以借助控件 id 进行控件查找，使用方法如下：</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line">onView(withId(R.id.view_id));</span><br></pre></td></tr></table></figure>
-<p>使用方法和被测试代码中的引用是一样的，但是假如界面上有两个相同 id 控件时，该控件在当前界面中不具有唯一性，则测试用例会抛出<code>AmbiguousViewMatcherException</code>异常，此时需要借助<code>allOf()</code>匹配器，使用多个条件限制该控件，使之具有唯一性，例如：</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line">onView(allOf(withId(R.id.view_id), not(withText(<span class="string">"Not View Text"</span>)), ...));</span><br></pre></td></tr></table></figure>
-<p>可以同时使用多个条件并且搭配 Harmcrest 匹配器方法进行限制该控件，但是建议使用尽可能少的条件进行寻找控件，以减少不必要的查找。</p>
-<p><code>onData()</code>方法使用方法基本和<code>onView()</code>方法类似，假设一个 AdapterView 的每一行的填充数据为<code>Map&lt;String key, String value&gt;</code>,其中有一条数据如下：</p>
-<figure class="highlight"><table><tr><td class="code"><pre><span class="line">&#123;"key": "espresso", "value", "fase"&#125;</span><br></pre></td></tr></table></figure>
-<p>则可以使用如下代码来寻找上述数据所在的 item 并点击：</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line">onData(allOf(</span><br><span class="line">    is(instanceOf(Map.class)),</span><br><span class="line">    hasEntry(equalTo(<span class="string">"espresso"</span>),is(<span class="string">"fast"</span>))))</span><br><span class="line">    .perform(click());</span><br></pre></td></tr></table></figure>
-<p>也可以把上述<code>allOf()</code>所包含的条件写成自定义的 Matcher，优化代码：</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> Matcher&lt;Object&gt; <span class="title">mapValueMatcher</span><span class="params">(<span class="keyword">final</span> String expectedText)</span> </span>&#123;</span><br><span class="line">        checkNotNull(expectedText);</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">new</span> BoundedMatcher&lt;Object, Map&gt;(Map.class) &#123;</span><br><span class="line">            <span class="meta">@Override</span></span><br><span class="line">            <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">describeTo</span><span class="params">(Description description)</span> </span>&#123;</span><br><span class="line">                description.appendText(<span class="string">"with item content"</span>);</span><br><span class="line">            &#125;</span><br><span class="line"></span><br><span class="line">            <span class="meta">@Override</span></span><br><span class="line">            <span class="function"><span class="keyword">protected</span> <span class="keyword">boolean</span> <span class="title">matchesSafely</span><span class="params">(Map item)</span> </span>&#123;</span><br><span class="line">                <span class="keyword">return</span> hasEntry(equalTo(<span class="string">"espresso"</span>), is(expectedText)).matches(item);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
-<p>上述用例代码可以简写成：</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line">onData(mapValueMatcher(<span class="string">"fast"</span>)).perform(click());</span><br></pre></td></tr></table></figure>
-<div class="alert warning"><p><code>RecyclerView</code>和普通的 AdapterView 在执行操作的时候有所不同，<code>onData()</code>方法不能查找其内部的控件，需要使用<code>onView()</code>方法。</p>
-</div>
-<h4 id="执行操作"><a class="anchor" href="#执行操作"></a> 执行操作</h4>
-<p>按之前描述的步骤，寻找到控件之后就时对该控件进行模拟用户操作。Espresso 提供了<code>perform()</code>方法对控件进行操作，该方法需要传输至少一个<code>ViewAction</code>对象，当传多个代表动作的参数时，会按照参数的先后顺序执行一系列动作。例如：</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line">onView(withId(R.id.view_id)).perform(scrollTo(), click(), typeText(<span class="string">"Test Text"</span>), closeSoftKeyboard(), ...);</span><br></pre></td></tr></table></figure>
-<p><code>RecyclerView</code>和普通的 AdapterView 在执行操作的时候也有所不同。对<code>RecyclerView</code>执行需要使用<code>espresso-contrib</code>包下的<code>RecyclerViewActions</code>类，该类下提供了一系列方法可以对 RecyclerView 进行滚动或者执行操作。</p>
-<ul>
-<li><code>scrollTo()</code> - 滚动到匹配的 View</li>
-<li><code>scrollToHolder()</code> - 滚动到匹配的 View Holder</li>
-<li><code>scrollToPosition()</code> - 滚动到固定位置</li>
-<li><code>actionOnHolderItem()</code> - 对匹配到的 View Holder 执行 ViewAction</li>
-<li><code>actionOnItem()</code> - 对匹配到的 View 执行 ViewAction</li>
-<li><code>actionOnItemAtPosition()</code>  - 对固定位置的 View  执行 ViewAction</li>
-</ul>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line">onView(withId(R.id.recyclerView))</span><br><span class="line">    .perform(RecyclerViewActions.actionOnItemAtPosition(ITEM_BELOW_THE_FOLD, click()));</span><br></pre></td></tr></table></figure>
-<h4 id="进行验证"><a class="anchor" href="#进行验证"></a> 进行验证</h4>
-<p>Espresso 在通过 perform() 执行一系列方法之后需要使用<code>check()</code>方法来对当前控件的状态进行验证，常用的判断方法时<code>matchers()</code>，该方法接收一个<code>ViewMatcher</code>参数，该参数可一使用<code>allOf()</code>或者<code>anyOf()</code>添加多个条件进行验证。例如：</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line">onView(withId(R.id.view_id))</span><br><span class="line">    .perform(click())</span><br><span class="line">    .check(matches(allOf(isDisplayed(), withText(<span class="string">"Expected Text"</span>)),...));</span><br></pre></td></tr></table></figure>
-<div class="alert warning"><p>当确定一个 AdapterView 控件在当前布局中，但是使用 <code>onView()</code>方法抛出<code>NoMatchingViewException</code> 时最常见的解决方法是使用<code>onData()</code>方法。</p>
-</div>
-<h4 id="一个简单的栗子"><a class="anchor" href="#一个简单的栗子"></a> 一个简单的栗子</h4>
-<p>是时候举个栗子了！ 用例很简单，实现一个“伪”登陆界面。为什么时“伪”的呢，因为账号和密码不会验证，直接会传到第二个界面并且在界面上显示出来。源代码很简单，只有两个 Activity，一个登陆界面，可以输入邮箱、密码，并有登陆按钮，点击该按钮之后，跳转到第二个Activity，并在该界面上显示刚输入的用户和密码。</p>
-<p>测试用例代码如下：</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">final</span> String EMAIL = <span class="string">"istarx@163.com"</span>;</span><br><span class="line"><span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">final</span> String PASSWORD = <span class="string">"istarx.cc"</span>;</span><br><span class="line"></span><br><span class="line"><span class="meta">@Rule</span></span><br><span class="line"><span class="keyword">public</span> ActivityTestRule&lt;EspressoDemoActivity&gt; rule = <span class="keyword">new</span> ActivityTestRule&lt;&gt;(EspressoDemoActivity.class);</span><br><span class="line"></span><br><span class="line"><span class="meta">@Test</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">espressoTestDemo</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    onView(withId(R.id.email)).perform(typeText(EMAIL));</span><br><span class="line">    onView(withId(R.id.password)).perform(typeText(PASSWORD), closeSoftKeyboard());</span><br><span class="line">    onView(withId(R.id.login)).perform(click());</span><br><span class="line"></span><br><span class="line">    String expectedString = String.format(<span class="string">"Email is: %s\nPassword is: %s"</span>, EMAIL, PASSWORD);</span><br><span class="line">    onView(withId(R.id.intent_content)).check(matches(allOf(isDisplayed(), withText(expectedString))));</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>运行过程如下：</p>
-<p><img src="espresso-test-running.gif" alt="espresso-test-running"></p>
-<h3 id="espresso-intents"><a class="anchor" href="#espresso-intents"></a> Espresso-Intents</h3>
-<p><code>Espresso-Intents</code>是 Espresso 的扩展，是对 intent 的发送进行测试。假如被测试应用和别的应用有很多和 intent 相关的交互，则可以利用 Espresso-Intent 进行测试，以保证应用内部的逻辑没有问题。Espresso-Intents 测试是假设和被测试应用有 intent 交互的应用都是正常工作的。Espresso-Intents 可以检测被测试应用是否正确的发送 intent 或者 是否正确的接收到 intent。</p>
-<p>使用 Espresso-Intents 必须要在 <code>build.gradle</code>文件中添加以下依赖：</p>
-<figure class="highlight gradle"><table><tr><td class="code"><pre><span class="line"><span class="keyword">dependencies</span> &#123;</span><br><span class="line">    androidTestCompile <span class="string">'com.android.support.test.espresso:espresso-intents:3.0.1'</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>Espresso-Intents 提供了<code>ìntended()</code>和<code>intending()</code>两个方法来对 intent 进行测试，这两个方法的参数都是<code>Matcher&lt;Intent&gt;</code>类型的。该 Matcher 可以使用自带的，也可以通过实现接口来构建自定义的 Matcher。</p>
-<p>还是对上文的例子进行测试，测试用例如下：</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="meta">@Rule</span></span><br><span class="line"><span class="keyword">public</span> IntentsTestRule&lt;EspressoDemoActivity&gt; intentsTestRule =</span><br><span class="line">    <span class="keyword">new</span> IntentsTestRule&lt;&gt;(EspressoDemoActivity.class);</span><br><span class="line"></span><br><span class="line"><span class="meta">@Test</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">espressoIntentTest</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    onView(withId(R.id.email)).perform(typeText(EMAIL));</span><br><span class="line">    onView(withId(R.id.password)).perform(typeText(PASSWORD), closeSoftKeyboard());</span><br><span class="line">    onView(withId(R.id.login)).perform(click());</span><br><span class="line"></span><br><span class="line">    intended(allOf(</span><br><span class="line">        toPackage(<span class="string">"cc.istarx.espressodemo"</span>),</span><br><span class="line">        not(hasAction(<span class="string">"cc.istarx.test.action"</span>)),</span><br><span class="line">        hasExtras(allOf(</span><br><span class="line">            hasEntry(equalTo(<span class="string">"email"</span>), equalTo(EMAIL)),</span><br><span class="line">            hasEntry(equalTo(<span class="string">"password"</span>), equalTo(PASSWORD))</span><br><span class="line">        ))));</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p><code>intending</code>和 Mock.when() 有点类似，意思是当 xxx 的时候做什么，例如，当当前是向 cc.istarx.espressodemo 发送的 intent ,则返回特定的 response。其使用配合 <code>startActivityForResult()</code>测试和其它应用交互。</p>
-<p>在本例子中，在第一个 Activity 中点击 <code>Intenting test</code>的按钮，会从 IntendingTestActivity 返回一个字符串，并显示在Button下方的TextView上。测试如下：</p>
+<p><a href="https://proandroiddev.com/exploring-rxjava-in-android-mathematical-and-aggregate-operators-eb3e37322ac8">Mathematical and Aggregate Operators</a></p>
+<h4 id="常用不同类型的-observable"><a class="anchor" href="#常用不同类型的-observable"></a> 常用不同类型的 Observable</h4>
 <ul>
 <li>
-<p>首先需要建立一个response：</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line">Intent resultData = <span class="keyword">new</span> Intent();</span><br><span class="line">String testStr = <span class="string">"Intending test string for test..."</span>;</span><br><span class="line">resultData.putExtra(<span class="string">"test"</span>, testStr);</span><br><span class="line">Instrumentation.ActivityResult result =</span><br><span class="line">    <span class="keyword">new</span> Instrumentation.ActivityResult(Activity.RESULT_OK, resultData);</span><br></pre></td></tr></table></figure>
+<p><strong>Single</strong>：该 Observable 每次只传递一个元素或者抛出一个异常，常用的有网络连接等。</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line">Single.create(<span class="keyword">new</span> SingleOnSubscribe&lt;User&gt;() &#123;</span><br><span class="line">  <span class="meta">@Override</span></span><br><span class="line">  <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">subscribe</span><span class="params">(SingleEmitter&lt;User&gt; emitter)</span> <span class="keyword">throws</span> Exception </span>&#123;</span><br><span class="line">    User user = <span class="keyword">new</span> User(<span class="string">"Anitaa"</span>);</span><br><span class="line">    emitter.onSuccess(user);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;)</span><br><span class="line">  .observeOn(Schedulers.io())</span><br><span class="line">  .subscribe(<span class="keyword">new</span> SingleObserver&lt;User&gt;() &#123;</span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">onSubscribe</span><span class="params">(Disposable d)</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">onSuccess</span><span class="params">(User user)</span> </span>&#123;</span><br><span class="line">      System.out.println(String.format(<span class="string">"User with name %s successfully created: "</span>, user.getName()));</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">onError</span><span class="params">(Throwable e)</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">  &#125;);</span><br></pre></td></tr></table></figure>
 </li>
 <li>
-<p>接着需要对对应的 intent 进行stub：</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line">intending(toPackage(<span class="string">"cc.istarx.espressodemo"</span>)).respondWith(result);</span><br></pre></td></tr></table></figure>
+<p><strong>Maybe</strong>：该 Observable 可能发送元素也可能不发送元素；</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line">Maybe.create(<span class="keyword">new</span> MaybeOnSubscribe&lt;User&gt;() &#123;</span><br><span class="line">  <span class="meta">@Override</span></span><br><span class="line">  <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">subscribe</span><span class="params">(MaybeEmitter&lt;User&gt; emitter)</span> </span>&#123;</span><br><span class="line">    User user = <span class="keyword">new</span> User(<span class="string">"Anitaa"</span>);</span><br><span class="line">    emitter.onSuccess(user);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;)</span><br><span class="line">  .observeOn(Schedulers.io())</span><br><span class="line">  .subscribe(<span class="keyword">new</span> MaybeObserver&lt;User&gt;() &#123;</span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">onSubscribe</span><span class="params">(Disposable d)</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">onSuccess</span><span class="params">(User user)</span> </span>&#123;</span><br><span class="line">      System.out.println(String.format(<span class="string">"User with name '%s' successfully created "</span>, user.getName()));</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">onError</span><span class="params">(Throwable e)</span> </span>&#123;</span><br><span class="line">      System.out.println(<span class="string">"onError is called: "</span> + e.getMessage());</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">onComplete</span><span class="params">()</span> </span>&#123;</span><br><span class="line">      System.out.println(<span class="string">"onComplete is called"</span>);</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;);</span><br></pre></td></tr></table></figure>
 </li>
 <li>
-<p>操作并验证</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line">onView(withId(R.id.intending_button)).perform(click());</span><br><span class="line">onView(withId(R.id.result_text)).check(matches(allOf(isDisplayed(),withText(testStr))));</span><br></pre></td></tr></table></figure>
+<p><strong>Completeable</strong>：该 Observable 不会发送数据，但是会关注事件是否成功执行，<code>onComplete</code>或者<code>onFail</code>之一会被调用；</p>
+</li>
+<li>
+<p><strong>Flowable</strong>：当 Observable 发送大量数据，但是 Observer 不能及时处理这些数据时需要使用此 Observable；</p>
 </li>
 </ul>
-<p>本文示例地址：<a href="http://www.istarx.cc/2018/04/09/android-test-espresso">Espresso Test Demo</a></p>
+<p><a href="https://proandroiddev.com/exploring-rxjava-in-android-different-types-of-observables-f23b3c78aeb6">Different Types of Observables</a></p>
+<h2 id="tips"><a class="anchor" href="#tips"></a> Tips</h2>
+<ol>
+<li><code>git log —grep key-word</code>命令可以过滤包含 key-word的 git log 信息；</li>
+<li>EditText设置边框需要使用 background 属性 ；</li>
+</ol>
+<h2 id="share"><a class="anchor" href="#share"></a> Share</h2>
+<p><a href="http://www.istarx.cn/2019/06/11/adb-commands/">ADB 常用命令整理</a></p>
 
             
 
@@ -446,7 +391,7 @@
     </p>
     <p class="copyright-item">
         <span>原文链接: </span>
-        <a href="http://www.istarx.cn/2018/04/09/android-test-espresso/">http://www.istarx.cn/2018/04/09/android-test-espresso/</a>
+        <a href="http://www.istarx.cn/2019/06/16/arts-week-ten/">http://www.istarx.cn/2019/06/16/arts-week-ten/</a>
     </p>
     <p class="copyright-item">
         <span>许可协议: </span>
@@ -465,11 +410,7 @@
 <div class="tagcloud article-tag-list">
     
     <li class="article-tag-list-item">
-        <a href="/tags/自动化测试/" class="js-tag color1">自动化测试</a>
-    </li>
-    
-    <li class="article-tag-list-item">
-        <a href="/tags/espresso/" class="js-tag color4">espresso</a>
+        <a href="/tags/ARTS/" class="js-tag color5">ARTS</a>
     </li>
     
     <div class="clearfix"></div>
@@ -484,9 +425,8 @@
         <ul class="post-actions post-action-nav">
             <li class="post-action">
                 
-                
-                <a class="post-action-btn btn btn--default tooltip--top" href="/2018/04/16/unit-test-what-and-why/" data-tooltip="Android自动化测试之 — 简单聊聊单元测试" aria-label="上一篇: Android自动化测试之 — 简单聊聊单元测试">
-                    
+                    <a class="post-action-btn btn btn--disabled">
+                        
                         <i class="fa fa-angle-left" aria-hidden="true"></i>
                         <span class="hide-xs hide-sm text-small icon-ml">上一篇</span>
                     </a>
@@ -494,7 +434,7 @@
             <li class="post-action">
                 
                 
-                <a class="post-action-btn btn btn--default tooltip--top" href="/2018/04/07/android-test-uiautomator/" data-tooltip="Android 自动化测试之 — UI Automator" aria-label="下一篇: Android 自动化测试之 — UI Automator">
+                <a class="post-action-btn btn btn--default tooltip--top" href="/2019/06/11/adb-commands/" data-tooltip="ADB 常用命令整理" aria-label="下一篇: ADB 常用命令整理">
                     
                         <span class="hide-xs hide-sm text-small icon-mr">下一篇</span>
                         <i class="fa fa-angle-right" aria-hidden="true"></i>
@@ -543,9 +483,8 @@
         <ul class="post-actions post-action-nav">
             <li class="post-action">
                 
-                
-                <a class="post-action-btn btn btn--default tooltip--top" href="/2018/04/16/unit-test-what-and-why/" data-tooltip="Android自动化测试之 — 简单聊聊单元测试" aria-label="上一篇: Android自动化测试之 — 简单聊聊单元测试">
-                    
+                    <a class="post-action-btn btn btn--disabled">
+                        
                         <i class="fa fa-angle-left" aria-hidden="true"></i>
                         <span class="hide-xs hide-sm text-small icon-ml">上一篇</span>
                     </a>
@@ -553,7 +492,7 @@
             <li class="post-action">
                 
                 
-                <a class="post-action-btn btn btn--default tooltip--top" href="/2018/04/07/android-test-uiautomator/" data-tooltip="Android 自动化测试之 — UI Automator" aria-label="下一篇: Android 自动化测试之 — UI Automator">
+                <a class="post-action-btn btn btn--default tooltip--top" href="/2019/06/11/adb-commands/" data-tooltip="ADB 常用命令整理" aria-label="下一篇: ADB 常用命令整理">
                     
                         <span class="hide-xs hide-sm text-small icon-mr">下一篇</span>
                         <i class="fa fa-angle-right" aria-hidden="true"></i>

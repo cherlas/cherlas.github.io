@@ -309,6 +309,8 @@
 <h3 id="方法二"><a class="anchor" href="#方法二"></a> 方法二</h3>
 <figure class="highlight python"><table><tr><td class="code"><pre><span class="line">class LRUMap&lt;K, V&gt; extends LinkedHashMap&lt;K, V&gt; &#123;</span><br><span class="line">    private int cacheSize ;</span><br><span class="line"></span><br><span class="line">    public LRUMap(int capacity) &#123;</span><br><span class="line">        super(capacity, <span class="number">0.75</span>f, true) ; //access-based eviction set to <span class="string">'true'</span> (<span class="keyword">as</span> opposed to <span class="string">'insertion'</span>-based eviciton)</span><br><span class="line">        cacheSize = capacity ;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line"><span class="meta">    @Override</span></span><br><span class="line">    protected boolean removeEldestEntry(Map.Entry&lt;K, V&gt; eldest) &#123;</span><br><span class="line">        <span class="keyword">return</span> size() &gt; cacheSize ;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">public class LRUCache  &#123;</span><br><span class="line">		LRUMap&lt;Integer, Integer&gt; map ; //use extension of LinkedHashMap here</span><br><span class="line">    public LRUCache(int capacity) &#123;</span><br><span class="line">        map = new LRUMap&lt;Integer, Integer&gt;(capacity) ; //make sure to <span class="keyword">pass</span> <span class="string">'capacity'</span> on to LinkedHashMap ctor</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    public int get(int key) &#123;</span><br><span class="line">        <span class="keyword">if</span>(map.containsKey(key)) &#123;</span><br><span class="line">            <span class="keyword">return</span> map.get(key) ;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> <span class="number">-1</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    public void set(int key, int value) &#123;</span><br><span class="line">        map.put(key, value) ; </span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <h2 id="review"><a class="anchor" href="#review"></a> Review</h2>
+<ul>
+<li>
 <p>本周阅读学习 RxJava系列的文章。主要讲述了判断类型的一些操作：</p>
 <ul>
 <li><strong>All</strong>： 判断传递的所有参数是否满足一定条件，结果是 Bool 类型， 会返回该结果给 onNext() 方法；</li>
@@ -316,12 +318,14 @@
 <li><strong>Contains</strong>：判断传递的所有参数是否包含某一参数，结果是 Bool 类型， 会返回该结果给 onNext() 方法</li>
 <li><strong>DefaultIfEmpty</strong>: 如果 Observable 对象没有传递任何事件或者数据，则传递该默认数据或事件；</li>
 <li><strong>SequenceEqual</strong>：判断两个 Observable 对象传递的参数是否完全一致；</li>
-<li><strong>SkipUntil</strong>:  忽略某个 Observable 对象传递的数据，直到另外一个 Observable 对象开始传数据；</li>
+<li><strong>SkipUntil</strong>: 忽略某个 Observable 对象传递的数据，直到另外一个 Observable 对象开始传数据；</li>
 <li><strong>SkipWhile</strong>：当某条件为 true 时一直忽略传递的参数，直到它为 false 时才开始传递；</li>
 <li><strong>TakeUntil</strong>：和 skipUtil 正好相反；</li>
 <li><strong>takeWhile</strong>：和 SkipWhile 正好相反；</li>
 </ul>
 <p><a href="https://proandroiddev.com/exploring-rxjava-in-android-conditional-and-boolean-operators-3bca84c773af">Exploring RxJava in Android — Conditional and Boolean Operators</a></p>
+</li>
+</ul>
 <h2 id="tips"><a class="anchor" href="#tips"></a> Tips</h2>
 <ol>
 <li>
@@ -626,14 +630,6 @@
                     </li>
                     
                     <li class="article-tag-list-item">
-                        <a class="js-tag color2">gradle</a>
-                    </li>
-                    
-                    <li class="article-tag-list-item">
-                        <a class="js-tag color5">productflavors</a>
-                    </li>
-                    
-                    <li class="article-tag-list-item">
                         <a class="js-tag color5">hexo</a>
                     </li>
                     
@@ -650,7 +646,11 @@
                     </li>
                     
                     <li class="article-tag-list-item">
-                        <a class="js-tag color5">blog</a>
+                        <a class="js-tag color2">gradle</a>
+                    </li>
+                    
+                    <li class="article-tag-list-item">
+                        <a class="js-tag color5">productflavors</a>
                     </li>
                     
                     <li class="article-tag-list-item">
@@ -670,7 +670,11 @@
                     </li>
                     
                     <li class="article-tag-list-item">
-                        <a class="js-tag color5">PowerMock</a>
+                        <a class="js-tag color5">blog</a>
+                    </li>
+                    
+                    <li class="article-tag-list-item">
+                        <a class="js-tag color4">sql</a>
                     </li>
                     
                     <li class="article-tag-list-item">
@@ -678,14 +682,14 @@
                     </li>
                     
                     <li class="article-tag-list-item">
-                        <a class="js-tag color4">sql</a>
+                        <a class="js-tag color5">PowerMock</a>
                     </li>
                     
                     <div class="clearfix"></div>
                 </ul>
             </div>
             <p class="results-count hide" data-message-zero="没有找到文章" data-message-one="找到 1 篇文章" data-message-other="找到 {n} 篇文章">
-                找到 28 篇文章
+                找到 29 篇文章
             </p>
             <div class="search-result">
                 
@@ -936,10 +940,10 @@
 
                 
                 <div class="media">
-    <a class="search-title" href="/2019/04/21/arts-week-three/"><i class="fa fa-quote-left"></i><span id="search-post-title">ARTS打卡—第3周</span></a>
+    <a class="search-title" href="/2019/06/16/arts-week-ten/"><i class="fa fa-quote-left"></i><span id="search-post-title">ARTS打卡—第10周</span></a>
     <p class="search-time">
         <i class="fa fa-calendar icon"></i>
-        <span id="search-post-tags">2019-04-21</span>
+        <span id="search-post-tags">2019-06-16</span>
     </p>
     
     <p class="search-result-meta">
@@ -954,10 +958,10 @@
 
                 
                 <div class="media">
-    <a class="search-title" href="/2019/04/14/arts-week-two/"><i class="fa fa-quote-left"></i><span id="search-post-title">ARTS打卡—第2周</span></a>
+    <a class="search-title" href="/2019/04/21/arts-week-three/"><i class="fa fa-quote-left"></i><span id="search-post-title">ARTS打卡—第3周</span></a>
     <p class="search-time">
         <i class="fa fa-calendar icon"></i>
-        <span id="search-post-tags">2019-04-14</span>
+        <span id="search-post-tags">2019-04-21</span>
     </p>
     
     <p class="search-result-meta">

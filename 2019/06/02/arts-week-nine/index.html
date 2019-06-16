@@ -287,7 +287,6 @@
 <li><a href="#algorithm">Algorithm</a>
 <ul>
 <li><a href="#%E9%A2%98%E7%9B%AE%E6%8F%8F%E8%BF%B0">题目描述</a></li>
-<li><a href="#%E6%96%B9%E6%B3%95%E4%B8%80">方法一</a></li>
 </ul>
 </li>
 <li><a href="#review">Review</a></li>
@@ -308,7 +307,6 @@
 <figure class="highlight angelscript"><table><tr><td class="code"><pre><span class="line">&gt; 输入: <span class="number">1</span>-&gt;<span class="number">2</span>-&gt;<span class="number">2</span>-&gt;<span class="number">1</span></span><br><span class="line">&gt; 输出: <span class="literal">true</span></span><br><span class="line">&gt;</span><br></pre></td></tr></table></figure>
 </blockquote>
 <p>用快慢方法找到中点，在这个过程中把前半段链表压进栈，之后从慢节点开始和栈中的元素依次进行对比。</p>
-<h3 id="方法一"><a class="anchor" href="#方法一"></a> 方法一</h3>
 <figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">boolean</span> <span class="title">isPalindrome</span><span class="params">(ListNode head)</span> </span>&#123;</span><br><span class="line">  <span class="keyword">if</span> (head == <span class="keyword">null</span> || head.next == <span class="keyword">null</span>) &#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">true</span>;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  ListNode slow = head;</span><br><span class="line">  ListNode fast = head;</span><br><span class="line">  Stack&lt;Integer&gt; pre = <span class="keyword">new</span> Stack&lt;&gt;();</span><br><span class="line">  <span class="keyword">while</span> (fast != <span class="keyword">null</span> &amp;&amp; fast.next != <span class="keyword">null</span>) &#123;</span><br><span class="line">    pre.push(slow.val);</span><br><span class="line">    slow = slow.next;</span><br><span class="line">    fast = fast.next.next;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">if</span> (fast != <span class="keyword">null</span>) &#123; <span class="comment">//奇数</span></span><br><span class="line">    slow = slow.next;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">while</span> (slow != <span class="keyword">null</span>) &#123;</span><br><span class="line">    <span class="keyword">if</span> (slow.val != pre.pop()) &#123;</span><br><span class="line">      <span class="keyword">return</span> <span class="keyword">false</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    slow = slow.next;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">return</span> <span class="keyword">true</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <h2 id="review"><a class="anchor" href="#review"></a> Review</h2>
 <p>本周阅读学习Android studio 技巧方面的一份 wiki 文档：<a href="https://github.com/pavlospt/Android-Studio-Tips-by-Philippe-Breault/wiki">Android-Studio-Tips-by-Philippe-Breault</a></p>
@@ -611,14 +609,6 @@
                     </li>
                     
                     <li class="article-tag-list-item">
-                        <a class="js-tag color2">gradle</a>
-                    </li>
-                    
-                    <li class="article-tag-list-item">
-                        <a class="js-tag color5">productflavors</a>
-                    </li>
-                    
-                    <li class="article-tag-list-item">
                         <a class="js-tag color5">hexo</a>
                     </li>
                     
@@ -635,7 +625,11 @@
                     </li>
                     
                     <li class="article-tag-list-item">
-                        <a class="js-tag color5">blog</a>
+                        <a class="js-tag color2">gradle</a>
+                    </li>
+                    
+                    <li class="article-tag-list-item">
+                        <a class="js-tag color5">productflavors</a>
                     </li>
                     
                     <li class="article-tag-list-item">
@@ -655,7 +649,11 @@
                     </li>
                     
                     <li class="article-tag-list-item">
-                        <a class="js-tag color5">PowerMock</a>
+                        <a class="js-tag color5">blog</a>
+                    </li>
+                    
+                    <li class="article-tag-list-item">
+                        <a class="js-tag color4">sql</a>
                     </li>
                     
                     <li class="article-tag-list-item">
@@ -663,14 +661,14 @@
                     </li>
                     
                     <li class="article-tag-list-item">
-                        <a class="js-tag color4">sql</a>
+                        <a class="js-tag color5">PowerMock</a>
                     </li>
                     
                     <div class="clearfix"></div>
                 </ul>
             </div>
             <p class="results-count hide" data-message-zero="没有找到文章" data-message-one="找到 1 篇文章" data-message-other="找到 {n} 篇文章">
-                找到 28 篇文章
+                找到 29 篇文章
             </p>
             <div class="search-result">
                 
@@ -921,10 +919,10 @@
 
                 
                 <div class="media">
-    <a class="search-title" href="/2019/04/21/arts-week-three/"><i class="fa fa-quote-left"></i><span id="search-post-title">ARTS打卡—第3周</span></a>
+    <a class="search-title" href="/2019/06/16/arts-week-ten/"><i class="fa fa-quote-left"></i><span id="search-post-title">ARTS打卡—第10周</span></a>
     <p class="search-time">
         <i class="fa fa-calendar icon"></i>
-        <span id="search-post-tags">2019-04-21</span>
+        <span id="search-post-tags">2019-06-16</span>
     </p>
     
     <p class="search-result-meta">
@@ -939,10 +937,10 @@
 
                 
                 <div class="media">
-    <a class="search-title" href="/2019/04/14/arts-week-two/"><i class="fa fa-quote-left"></i><span id="search-post-title">ARTS打卡—第2周</span></a>
+    <a class="search-title" href="/2019/04/21/arts-week-three/"><i class="fa fa-quote-left"></i><span id="search-post-title">ARTS打卡—第3周</span></a>
     <p class="search-time">
         <i class="fa fa-calendar icon"></i>
-        <span id="search-post-tags">2019-04-14</span>
+        <span id="search-post-tags">2019-04-21</span>
     </p>
     
     <p class="search-result-meta">
