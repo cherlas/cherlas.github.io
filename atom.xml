@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.istarx.cn/"/>
-  <updated>2019-06-16T08:08:28.158Z</updated>
+  <updated>2019-06-23T15:20:41.661Z</updated>
   <id>http://www.istarx.cn/</id>
   
   <author>
@@ -15,6 +15,28 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>ARTS打卡—第11周</title>
+    <link href="http://www.istarx.cn/2019/06/23/arts-week-eleven/"/>
+    <id>http://www.istarx.cn/2019/06/23/arts-week-eleven/</id>
+    <published>2019-06-23T10:59:41.000Z</published>
+    <updated>2019-06-23T15:20:41.661Z</updated>
+    
+    <content type="html"><![CDATA[<script src="/assets/js/APlayer.min.js"> </script><p>996 的工作时间搞的身心俱疲，周内根本没时间打卡，只能靠周日了。本周打卡内容主要是二叉树、RxJava等相关内容。</p><a id="more"></a><p><ul class="toc js-fixedContent"><li><a href="#algorithm">Algorithm</a><br>*<ul><li><a href="#%E8%BF%90%E8%A1%8C%E7%BB%93%E6%9E%9C">运行结果</a></li></ul></li><li><a href="#review">Review</a><br>*<ul><li><a href="#%E5%B8%B8%E7%94%A8%E4%B8%8D%E5%90%8C%E7%B1%BB%E5%9E%8B%E7%9A%84-subjects">常用不同类型的 Subjects</a></li></ul></li><li><a href="#tips">Tips</a></li><li><a href="#share">Share</a></li></ul></p><h2 id="algorithm"><a class="anchor" href="#algorithm"></a> Algorithm</h2><p>这周主要作了N叉树相关的题目，判断N叉树的最大深度。</p><blockquote><p><strong>559. Maximum Depth of N-ary Tree</strong></p><p>Given a n-ary tree, find its maximum depth.</p><p>The maximum depth is the number of nodes along the longest path from the root node down to the farthest leaf node.</p><p><strong>Example:</strong></p><p>For example, given a <code>3-ary</code> tree:</p><p><img src="narytreeexample.png" alt="img"></p><p>We should return its max depth, which is 3.</p></blockquote><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">maxDepth</span><span class="params">(Node root)</span> </span>&#123;</span><br><span class="line">  <span class="keyword">if</span> (root == <span class="keyword">null</span>) &#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">if</span> (root.children == <span class="keyword">null</span> || root.children.size() == <span class="number">0</span>) &#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">int</span> maxDepth = -<span class="number">1</span>;</span><br><span class="line">  <span class="keyword">for</span> (Node node: root.children) &#123;</span><br><span class="line">    maxDepth = Math.max(maxDepth, maxDepth(node));</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">return</span> maxDepth + <span class="number">1</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><h4 id="运行结果"><a class="anchor" href="#运行结果"></a> 运行结果</h4><p><img src="result.png" alt="result1"></p><h2 id="review"><a class="anchor" href="#review"></a> Review</h2><p>本周阅读学习 RxJava 系列的中的两篇文章：</p><p>Subjects 是什么？Subjects 是继承自 Observable 并且实现 Observer 接口。</p><p>Subjects的特点：</p><ul><li>可以同时扮演观察者和被观察者的角色；</li><li>主题可以向多个子观察者发送事件。多播使得一次性运行昂贵的操作并将结果发送给多个订户成为可能，这样可以防止对多个订阅服务器执行重复操作；</li><li>热门 Observable；</li></ul><h4 id="常用不同类型的-subjects"><a class="anchor" href="#常用不同类型的-subjects"></a> 常用不同类型的 Subjects</h4><ul><li><strong>PublishSubject</strong>：在注册的时候，发送所有事件，这是最基本的 Subjects。</li><li><strong>BehaviorSubject</strong>：BehaviorSubject在订阅时发出最新的项以及之后的所有项；</li><li><strong>ReplaySubject</strong>：在订阅者订阅之前会发送所有事件；</li><li><strong>AsyncSubject</strong>：仅仅发送一个事件，而且仅在 Obserable 完成之后(<strong>onComplete</strong>执行之后)才会发送；</li><li><strong>UnicastSubject</strong>：只有有一个观察者，会在观察者订阅的时候发送所有数据；</li></ul><p><a href="https://proandroiddev.com/rxjava-different-types-of-subjects-ef9183b5e87e">Different types of Subjects</a></p><h2 id="tips"><a class="anchor" href="#tips"></a> Tips</h2><ol><li><code>git log —since=2019-3-25 —until 2019-3-26</code>(左闭右开)命令可以过滤某一段时间内的 log；</li><li>Editatext的saveEnable属性，解决setText不起作用的问题 ；</li></ol><h2 id="share"><a class="anchor" href="#share"></a> Share</h2><p><a href="https://a.codekk.com/detail/Android/Grumoon/android-Ultra-Pull-To-Refresh%20%E6%BA%90%E7%A0%81%E8%A7%A3%E6%9E%90">android-Ultra-Pull-To-Refresh 源码解析</a></p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;996 的工作时间搞的身心俱疲，周内根本没时间打卡，只能靠周日了。本周打卡内容主要是二叉树、RxJava等相关内容。&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="ARTS打卡" scheme="http://www.istarx.cn/categories/ARTS%E6%89%93%E5%8D%A1/"/>
+    
+    
+      <category term="ARTS" scheme="http://www.istarx.cn/tags/ARTS/"/>
+    
+  </entry>
   
   <entry>
     <title>ARTS打卡—第10周</title>
@@ -461,32 +483,6 @@
     
     
       <category term="proguard" scheme="http://www.istarx.cn/tags/proguard/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Android自动化测试之 — 简单聊聊单元测试</title>
-    <link href="http://www.istarx.cn/2018/04/16/unit-test-what-and-why/"/>
-    <id>http://www.istarx.cn/2018/04/16/unit-test-what-and-why/</id>
-    <published>2018-04-16T14:11:30.000Z</published>
-    <updated>2019-02-18T16:57:22.710Z</updated>
-    
-    <content type="html"><![CDATA[<script src="/assets/js/APlayer.min.js"> </script><p>单元测试是指对一个工作单元的测试。一个工作单元可以是一行代码、一个方法、一个甚至几个类。本文主要聊聊单元测试是什么，为什么要写单元测试，简单介绍一下 Android 中的单元测试。</p><a id="more"></a><p><ul class="toc js-fixedContent"><li><a href="#%E5%8D%95%E5%85%83%E6%B5%8B%E8%AF%95%E6%98%AF%E4%BB%80%E4%B9%88">单元测试是什么</a></li><li><a href="#%E4%B8%BA%E4%BB%80%E4%B9%88%E5%86%99%E5%8D%95%E5%85%83%E6%B5%8B%E8%AF%95">为什么写单元测试</a><ul><li><a href="#android-%E4%B8%AD%E7%9A%84%E5%8D%95%E5%85%83%E6%B5%8B%E8%AF%95">Android 中的单元测试</a><ul><li><a href="#instrumented-unit-test">Instrumented unit test</a></li><li><a href="#local-unit-test">Local unit test</a></li></ul></li></ul></li></ul></p><h2 id="单元测试是什么"><a class="anchor" href="#单元测试是什么"></a> 单元测试是什么</h2><p>测试作为最常见的改善质量的活动，而测试中的单元测试作为提升代码质量、理解代码的最佳手段，并不是一个新概念，早在使用 SmallTalk 编程时代就开始出现了。维基百科中对单元测试的定义是这样的：</p><blockquote><p>在计算机编程中，单元测试（Unit Testing）又称为模块测试, 是针对<strong>程序模块</strong>（<strong>软件设计的最小单位</strong>）来进行正确性检验的测试工作。程序单元是应用的最小可测试部件。在过程化编程中，一个单元就是<strong>单个程序、函数、过程</strong>等；对于面向对象编程，最小单元就是方法，包括基类、抽象类、或者子类中的方法。</p></blockquote><p>该定义中提及到的模块也就是一个单元。对于被测试程序来说，指调用一个方法并得到一个可以验证的输出过程中所涉及的所有代码统称为一个单元。单元测试不一定要尽可能的小，比如我们不一定要对一个类的每个方法都进行测试，也可以对多个方法组合成的小单元进行测试，这样使得测试代码更容易维护。如果创建的单元太小，则有可能会准备一堆测试所需的前提条件，也有可能造成过度测试。但是单元测试一定要从完整的系统中隔离出来进行测试。</p><p>单元测试的目的隔离其它的单元（或者部件）而验证当前单元的正确性。从TDD的角度来讲，开发人员必须在开发代码之前就要写好测试用例，并根据测试用例完善代码。从代码修改或者重构的角度来讲，开发每次修改代码都必须运行一次测试用例，以验证本次修改的准确性。</p><h2 id="为什么写单元测试"><a class="anchor" href="#为什么写单元测试"></a> 为什么写单元测试</h2><p>单元测试的目的是保证每一个被测试单元的运行准确，没一个被测试单元的运行准确，是保证整个系统运行正常的基础。人非神，不能保证永远不犯错，正如没有人能保证自己写的代码永远不会出错一样。只有当你的代码经过了充分的测试才能保证它不会把错误带到用户手中。</p><p>当自己千幸万苦终于写出了一个 App，并经过漫长时间的 debug 模式，终于这个 App 可以在手机上打开了，但是下一刻，有可能一个无情的错误弹框会出现在眼前。相信每个工程狮都遇到过类似的情况，可能是因为在代码里面没有考虑 null？或者没有考虑极端情况？等等。</p><p>这些基础的错误完全可以在开发初期就可以排除并解决掉，这也是初期做好单元测试的重要性。测试完全可以跟着开发走，或者测试先于开发。<br>单元测试还具有以下优点；</p><ul><li>速度快 - 主要表现在三个方面：<ul><li>从 Android 的角度来讲，不需要编译成字节码文件，因此编译时间短；</li><li>从编写角度讲，编写一条单元测试用例的时间相对较少；</li><li>从执行速度来看，单条测试用例的执行时间基本上是毫秒级的；</li></ul></li><li>不依赖设备 - 只需要在 JVM 上运行就可以，不需要其他的设备 (例如 Android 设备化测试必须要依赖手机)；</li><li>能对缺陷进行快速反馈，减少开发、维护时间、精力等；</li><li>单元测试可以对重构提供很好的保障；</li><li>更少的 Bug，或者更快的发现 Bug，可以在开发初期就可以解决很多Bug；</li></ul><p>单元测试的重要性不言而喻，尤其是在开发或者重构的过程中起到了举足轻重的作用。Google 官方文档中对 Android 测试中单元测试、集成测试、UI(设备化)测试描述的金字塔如下：</p><p><img src="test-pyramid.png" alt="test-pyramid"></p><p>由此可见单元测试处于金字塔最下一层，也是整个测试的基石。Google 对单元测试、集成测试、UI 测试的测试用例所占比例建议为70%、20%、10%，由此也可以看出单元测试的重要性。</p><h3 id="android-中的单元测试"><a class="anchor" href="#android-中的单元测试"></a> Android 中的单元测试</h3><p>Android 中的单元测试可以分为<code>Instrumented unit test</code>和<code>Local unit test</code>，即设备化的单元测试和本地化的单元测试。</p><h4 id="instrumented-unit-test"><a class="anchor" href="#instrumented-unit-test"></a> Instrumented unit test</h4><p>有些测试用例在运行的时候使用到了 Android Framework 中的一些东西，这类测试用例在测试的时候需要借助设备运行，除非把和 Android Framework 相关的使用都 Mock 掉，这类测试即设备化单元测试，该类测试默认在<code>&lt;module-name&gt;/src/androidTest/java</code>目录下；</p><p><code>Instrumented unit test</code> 运行在 <code>AndroidJunitRunner</code>之下，AndroidJunitRunner 是测试支持库下(Android Support Library)内包含的一个 Junit 运行器，可以使用它在 Android 设备上运行 JUnit 用例。测试用例可以是 JUnit3 或者 JUnit4，但是不要进行混用，不然会出现意想不到的错误。如果测试用例需要使用 AndroidJunitRunner 来运行，则测试类要添加 <code>@RunWith(AndroidJUnit4.class)</code>注释。使用 AndroidJunitRunner 需要在 <code>build.gradle</code>文件中指定 <code>testInstrumentationRunner</code>：</p><figure class="highlight java"><table><tr><td class="code"><pre><span class="line">android &#123;</span><br><span class="line">    defaultConfig &#123;</span><br><span class="line">        testInstrumentationRunner <span class="string">"android.support.test.runner.AndroidJUnitRunner"</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><h4 id="local-unit-test"><a class="anchor" href="#local-unit-test"></a> Local unit test</h4><p><code>Local unit test</code> 在运行的时候不需要借助设备，不会使用 Android Framework 或者是把 Framework 相关的代码进行 Mock 处理，使之可以在 JVM上运行，这类测试用例默认在<code>&lt;module-name&gt;/src/test/java</code>目录下；</p><p>在 Android Local Unit Test 中，为了使测试用例脱离 Android Framework，常用到的方法是使用<code>Mock</code>、 <code>PowerMock</code> 或者 <code>Robolectric</code> 框架，如果需要使用三个框架，需要引入必须的依赖文件，这个后面文章会谈到，这里只是对这几个框架做个简单的介绍：</p><ul><li><p><code>Mockito</code> - Mock 意为模拟，是指对一个类、接口等进行模拟    ，并且利用插桩的方法可以指定当调用到类、接口的方法时可以返回特定值、做特定的操作，常用来在团队开发的过程中对其它没开发完的类、接口进行mock，假设该类、接口正常工作的情况下来测试已经开发完成的代码是否正常工作.</p><p>但是 Mock 框架有个限制就是只能对公有的方法进行插桩，不会造成很大的代码侵入；</p></li><li><p><code>PowerMock</code> - PowerMock 和 Mock 相似，其实也有很多代码是继承自 Mock 框架，但是比 Mock 框架更强大，它可以做一切 Mock 框架可以做的事，还可以对静态、final、私有的方法、变量等进行操作，如果老板要求你代码覆盖率达到100%，那么 PowerMock 是个神器;</p></li><li><p><code>Robolectric</code> - Robolectric 框架对Android Framwork 进行重新的实现，使之可以脱离设备运行，该框架基本上对 adnroid.jar 包内的每一个类<code>Xxx</code>都做了一个实现<code>ShadowXxx</code>.</p><p>Robolectric 框架可以对 Acticity、BroadcastReceiver、ContentProvider、Service四大组件进行测试，比如可以测试Activity 生命周期、ContentProvider 数据是否存储成功等；除此之外还可以对 Dialog、Toast、资源等进行测试；</p></li></ul><p>最好的解决方案即是 PowerMock + Robolectric，用 Robolectric 框架测试 Android 组件，辅以 PowerMock 测试框架来测试逻辑代码或者其它，以达到很好的测试效果。</p>]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;单元测试是指对一个工作单元的测试。一个工作单元可以是一行代码、一个方法、一个甚至几个类。本文主要聊聊单元测试是什么，为什么要写单元测试，简单介绍一下 Android 中的单元测试。&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="程序猿进化之路" scheme="http://www.istarx.cn/categories/%E7%A8%8B%E5%BA%8F%E7%8C%BF%E8%BF%9B%E5%8C%96%E4%B9%8B%E8%B7%AF/"/>
-    
-      <category term="自动化测试" scheme="http://www.istarx.cn/categories/%E7%A8%8B%E5%BA%8F%E7%8C%BF%E8%BF%9B%E5%8C%96%E4%B9%8B%E8%B7%AF/%E8%87%AA%E5%8A%A8%E5%8C%96%E6%B5%8B%E8%AF%95/"/>
-    
-    
-      <category term="自动化测试" scheme="http://www.istarx.cn/tags/%E8%87%AA%E5%8A%A8%E5%8C%96%E6%B5%8B%E8%AF%95/"/>
-    
-      <category term="unit-test" scheme="http://www.istarx.cn/tags/unit-test/"/>
     
   </entry>
   
