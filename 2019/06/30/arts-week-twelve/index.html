@@ -7,10 +7,12 @@
     <meta name="baidu-site-verification" content="fJhstNzkJ1"/>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="generator" content="小一 | 莫舍己道 勿扰他心">
-    <title>归档: 2018 - 小一 | 莫舍己道 勿扰他心</title>
+    <title>ARTS打卡—第12周 - 小一 | 莫舍己道 勿扰他心</title>
     <meta name="author" content="小一">
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0" />
     <link rel="Shortcut Icon" href="http://www.istarx.cn/assets/images/favicon.ico" type="image/x-icon">
+    
+        <meta name="keywords" content="ARTS,LeetCode">
     
     
         <link rel="icon" href="http://www.istarx.cn/assets/images/favicon.ico">
@@ -27,6 +29,10 @@
         <meta property="og:image" content="http://www.istarx.cn/assets/images/avatar.png"/>
     
     
+    
+        <meta property="og:image" content="https://cherlas-blog.oss-cn-beijing.aliyuncs.com/arts-week12.jpg"/>
+        <meta class="swiftype" name="image" data-type="enum"
+              content="https://cherlas-blog.oss-cn-beijing.aliyuncs.com/arts-week12.jpg"/>
     
     
     <!--STYLES-->
@@ -207,635 +213,248 @@
 </nav>
 
         
+<div class="post-header-cover fade-in header-image-cover
+                    text-left
+                    post-header-cover--partial" style="background-image:url('https://cherlas-blog.oss-cn-beijing.aliyuncs.com/arts-week12.jpg');
+      filter: blur(0px); 
+      height: 60%;" data-behavior="2">
+</div>
+<div class="post-header-cover fade-in post-header-cover-background
+                            text-left
+                            post-header-cover--partial" style="
+     
+             height: 60%;
+     " data-behavior="2">
+
+    
+    <div class="post-header main-content-wrap text-left fadeInDown">
+    <div class="post-header-message content-with-table">
+        
+        <h1 class="post-title" itemprop="headline">
+            ARTS打卡—第12周
+        </h1>
+        
+        
+        <div class="post-meta">
+    <time itemprop="datePublished" datetime="2019-06-30T12:47:38+08:00">
+        <img class="calendar" src="/assets/images/calendar.png">
+        
+        6月 30, 2019
+        
+    </time>
+    
+    <span>发布在 </span>
+    
+<a class="category-link" href="/categories/ARTS打卡/">ARTS打卡</a>
+
+
+    
+    
+    <img class="tag-img" src="/assets/images/tag-icon.svg">
+    <div class="post-tags">
+        
+        <a href="/tags/ARTS/">ARTS</a>
+        
+    </div>
+    
+</div>
+
+        
+    </div>
+</div>
+
+    
+</div>
+
 
         <div id="main" data-behavior="2"
-             class="
+             class="hasCover
                         hasCoverMetaIn
-                         hidden fade-in">
+                        hasCoverCaption hidden fade-in">
             
-    <section class="postShorten-group main-content-wrap">
+<article class="post" itemscope="" itemtype="http://schema.org/BlogPosting">
+    
+        <span class="post-header-cover-caption caption">感激生活的赐予，而不贪心。</span>
     
     
-    <article class="postShorten postShorten--thumbnailimg-bottom fadeInUp" itemscope="" itemtype="http://schema.org/BlogPosting" style="animation-delay: 0s">
-        <div class="postShorten-wrap">
+    <div class="tableTile" data-message="目录">
+    </div>
+    <div class="post-content markdown" itemprop="articleBody">
+        <div class="main-content-wrap fadeInDown toc content-with-table">
+            <script src="/assets/js/APlayer.min.js"> </script><p>100天的打卡还剩一周，这段时间对自己提升也很大，英语阅读，算法，也养成了记小知识点、Tips 的习惯，觉得还是要继续坚持下去，后期内容要根据自己的工作内容或者兴趣稍作调整。</p>
+<a id="more"></a>
+<p><ul class="toc js-fixedContent">
+<li><a href="#algorithm">Algorithm</a><br>
+*
+<ul>
+<li><a href="#%E8%BF%90%E8%A1%8C%E7%BB%93%E6%9E%9C">运行结果</a></li>
+</ul>
+</li>
+<li><a href="#review">Review</a><br>
+*
+<ul>
+<li><a href="#dynamic-feature">Dynamic Feature</a></li>
+</ul>
+</li>
+<li><a href="#tips">Tips</a></li>
+<li><a href="#share">Share</a></li>
+</ul>
+</p>
+<h2 id="algorithm"><a class="anchor" href="#algorithm"></a> Algorithm</h2>
+<blockquote>
+<p><strong>655. Print Binary Tree</strong></p>
+<p>Print a binary tree in an m*n 2D string array following these rules:</p>
+<ol>
+<li>The row number <code>m</code> should be equal to the height of the given binary tree.</li>
+<li>The column number <code>n</code> should always be an odd number.</li>
+<li>The root node’s value (in string format) should be put in the exactly middle of the first row it can be put. The column and the row where the root node belongs will separate the rest space into two parts (<strong>left-bottom part and right-bottom part</strong>). You should print the left subtree in the left-bottom part and print the right subtree in the right-bottom part. The left-bottom part and the right-bottom part should have the same size. Even if one subtree is none while the other is not, you don’t need to print anything for the none subtree but still need to leave the space as large as that for the other subtree. However, if two subtrees are none, then you don’t need to leave space for both of them.</li>
+<li>Each unused space should contain an empty string <code>&quot;&quot;</code>.</li>
+<li>Print the subtrees following the same rules.</li>
+</ol>
+<p><strong>Example 1:</strong></p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">&gt;</span><span class="bash"> Input:</span></span><br><span class="line"><span class="meta">&gt;</span><span class="bash">      1</span></span><br><span class="line"><span class="meta">&gt;</span><span class="bash">     /</span></span><br><span class="line"><span class="meta">&gt;</span><span class="bash">    2</span></span><br><span class="line"><span class="meta">&gt;</span><span class="bash"> Output:</span></span><br><span class="line"><span class="meta">&gt;</span><span class="bash"> [[<span class="string">""</span>, <span class="string">"1"</span>, <span class="string">""</span>],</span></span><br><span class="line"><span class="meta">&gt;</span><span class="bash">  [<span class="string">"2"</span>, <span class="string">""</span>, <span class="string">""</span>]]</span></span><br><span class="line"><span class="meta">&gt;</span><span class="bash"></span></span><br></pre></td></tr></table></figure>
+</blockquote>
+<p>这道题目大致意思就是要按二叉树的层级对应转换成数组。最主要的问题就是确定数组的长度，这个长度可以通过二叉树的最大深度去确定，之后利用递归把节点的值赋值到数组中即可。</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">private</span> List&lt;List&lt;String&gt;&gt; res;</span><br><span class="line"><span class="keyword">private</span> <span class="keyword">int</span> resLen;</span><br><span class="line"><span class="keyword">public</span> List&lt;List&lt;String&gt;&gt; printTree(TreeNode root) &#123;</span><br><span class="line">  res = <span class="keyword">new</span> ArrayList&lt;&gt;();</span><br><span class="line">  resLen = getResRowLen(root);</span><br><span class="line">  fillRes(root, <span class="number">0</span>, resLen - <span class="number">1</span>, <span class="number">0</span>);</span><br><span class="line">  <span class="keyword">return</span> res;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title">fillRes</span><span class="params">(TreeNode node, <span class="keyword">int</span> left, <span class="keyword">int</span> right, <span class="keyword">int</span> depth)</span> </span>&#123;</span><br><span class="line">  <span class="keyword">if</span> (node == <span class="keyword">null</span>) &#123;</span><br><span class="line">    <span class="keyword">return</span>;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">if</span> (res.size() - <span class="number">1</span> &lt; depth) &#123;</span><br><span class="line">    List&lt;String&gt; rowItem = <span class="keyword">new</span> ArrayList&lt;&gt;();</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; resLen; i++) &#123;</span><br><span class="line">      rowItem.add(<span class="string">""</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    res.add(rowItem);</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">int</span> position = (right - left) / <span class="number">2</span> + left;</span><br><span class="line">  res.get(depth).set(position, node.val + <span class="string">""</span>);</span><br><span class="line">  fillRes(node.left, left, position - <span class="number">1</span>, depth + <span class="number">1</span>);</span><br><span class="line">  fillRes(node.right, position + <span class="number">1</span>, right, depth + <span class="number">1</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">private</span> <span class="keyword">int</span> <span class="title">getResRowLen</span><span class="params">(TreeNode node)</span> </span>&#123;</span><br><span class="line">  <span class="keyword">if</span> (node == <span class="keyword">null</span>) &#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">return</span> <span class="number">2</span> * Math.max(getResRowLen(node.left), getResRowLen(node.right)) + <span class="number">1</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="运行结果"><a class="anchor" href="#运行结果"></a> 运行结果</h4>
+<p><img src="result.png" alt="result"></p>
+<h2 id="review"><a class="anchor" href="#review"></a> Review</h2>
+<p>Android App Bundle 是一种新的 App 上传方式，而且很大程度上影响了 App 的构建以及组件化设计。和传统 App 构建方式最大的差别是 App Bundle 把构建 APK 所需的转移到了 Google Play上，这样我们可以根据用户差异而构建不同的 APK。</p>
+<p>需要在 build.gradle 文件中的 android 块下添加配置：</p>
+<figure class="highlight groovy"><table><tr><td class="code"><pre><span class="line">bundle &#123;</span><br><span class="line">  language &#123;</span><br><span class="line">  	enableSplit = <span class="literal">false</span></span><br><span class="line">  &#125;</span><br><span class="line">  density &#123;</span><br><span class="line">  	enableSplit = <span class="literal">true</span></span><br><span class="line">  &#125;</span><br><span class="line">  abi &#123;</span><br><span class="line">  	enableSplit = <span class="literal">true</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>在编译生产 aab 文件以后可以使用 bundleTool进行验证。</p>
+<ul>
+<li>
+<p>build APK</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">bundletool build-apks --bundle=/Users/joebirch/releases/sample.aab --output=/Users/joebirch/releases/sample.apks</span><br><span class="line">--ks=/Users/joebirch/some_keystore.jks</span><br><span class="line">--ks-pass=file:/Users/joebirch/some_keystore.pwd</span><br><span class="line">--ks-key-alias=SomeAlias</span><br><span class="line">--key-pass=file:/Users/joebirch/some_key.pwd</span><br></pre></td></tr></table></figure>
+</li>
+<li>
+<p>install APK</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">bundletool install-apks --apks=/Users/joebirch/releases/sample.apks</span><br></pre></td></tr></table></figure>
+</li>
+<li>
+<p>获取机器配置文件(JSON)：</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">bundletool get-device-spec</span><br></pre></td></tr></table></figure>
+<p>json 配置文件内容如下：</p>
+<figure class="highlight json"><table><tr><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  <span class="attr">"supportedAbis"</span>: [<span class="string">"arm64-v8a"</span>],</span><br><span class="line">  <span class="attr">"supportedLocales"</span>: [<span class="string">"en"</span>, <span class="string">"es"</span>],</span><br><span class="line">  <span class="attr">"screenDensity"</span>: <span class="number">640</span>,</span><br><span class="line">  <span class="attr">"sdkVersion"</span>: <span class="number">21</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li>
+<p>利用配置文件生成特定的 APK</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">bundletool extract-apks</span><br><span class="line">--apks=/Users/joebirch/releases/someApkSet.apks</span><br><span class="line">--output-dir=/Users/joebirch/releases/device_APK_set.apks</span><br><span class="line">--device-spec=/Users/joebirch/releases/some_configuraton.json</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h4 id="dynamic-feature"><a class="anchor" href="#dynamic-feature"></a> Dynamic Feature</h4>
+<p>使用动态 Feature 需要引入 Play-Core包：</p>
+<figure class="highlight groovy"><table><tr><td class="code"><pre><span class="line">implementation <span class="string">'com.google.android.play:core:1.3.4'</span></span><br></pre></td></tr></table></figure>
+<p>之后在用户使用动态 Feature 时执行下载及加载：</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line">val splitInstallManager = SplitInstallManagerFactory.create(<span class="keyword">this</span>);</span><br><span class="line">val request = SplitInstallRequest</span><br><span class="line">        .newBuilder()</span><br><span class="line">        .addModule(<span class="string">"someDynamicModule"</span>)</span><br><span class="line">        .build(); <span class="comment">// 从 google play 请求</span></span><br><span class="line">splitInstallManager</span><br><span class="line">        .startInstall(request) <span class="comment">// 后台下载：deferInstall()</span></span><br><span class="line">        .addOnSuccessListener &#123;  &#125;</span><br><span class="line">        .addOnFailureListener &#123;  &#125;</span><br><span class="line">        .addOnCompleteListener &#123;  &#125;;</span><br><span class="line"><span class="comment">// 下载过程中遇到错误的监听</span></span><br><span class="line">val stateListener = SplitInstallStateUpdatedListener &#123; state -&gt;</span><br><span class="line">    when (state.status()) &#123;</span><br><span class="line">        PENDING -&gt; &#123; &#125; </span><br><span class="line">        DOWNLOADING -&gt; &#123; &#125;</span><br><span class="line">        DOWNLOADED -&gt; &#123; &#125;</span><br><span class="line">        INSTALLED -&gt; &#123; &#125;</span><br><span class="line">        INSTALLING -&gt; &#123; &#125;</span><br><span class="line">        REQUIRES_USER_CONFIRMATION -&gt; &#123; &#125;</span><br><span class="line">        FAILED -&gt; &#123; &#125;</span><br><span class="line">        CANCELING -&gt; &#123; &#125;</span><br><span class="line">        CANCELED -&gt; &#123; &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">splitInstallManager.registerListener(stateListener)</span><br><span class="line"><span class="comment">// 卸载</span></span><br><span class="line">splitInstallManager</span><br><span class="line">        .deferredUninstall(listOf(<span class="string">"someDynamicModule"</span>))</span><br><span class="line">        .addOnSuccessListener &#123;  &#125;</span><br><span class="line">        .addOnFailureListener &#123;  &#125;</span><br><span class="line">        .addOnCompleteListener &#123;  &#125;;</span><br></pre></td></tr></table></figure>
+<p><a href="https://medium.com/google-developer-experts/exploring-the-android-app-bundle-ca16846fa3d7">Exploring the Android App Bundle</a></p>
+<h2 id="tips"><a class="anchor" href="#tips"></a> Tips</h2>
+<ol>
+<li>
+<p>Java 中如果某个方法用 synchronize 修饰，则方法内不能使用静态变量，否则会产生线程安全问题；</p>
+</li>
+<li>
+<p>Android 开启 SQL log：</p>
+<figure class="highlight powershell"><table><tr><td class="code"><pre><span class="line">adb shell setprop log.tag.SQLiteLog VERBOSE</span><br><span class="line">adb shell setprop log.tag.SQLiteStatements VERBOSE</span><br><span class="line">adb shell stop</span><br><span class="line">adb shell start</span><br></pre></td></tr></table></figure>
+</li>
+<li>
+<p>动画加载</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line">Animation animation = AnimationUtils.loadAnimation(<span class="keyword">this</span>, R.anim.hyperspace_jump);</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<h2 id="share"><a class="anchor" href="#share"></a> Share</h2>
+<p><a href="https://a.codekk.com/detail/Android/lightSky/%E5%85%AC%E5%85%B1%E6%8A%80%E6%9C%AF%E7%82%B9%E4%B9%8B%20Android%20%E5%8A%A8%E7%94%BB%E5%9F%BA%E7%A1%80">公共技术点之 Android 动画基础</a></p>
+
             
-            <div class="postShorten-header">
-                <h1 class="postShorten-title" itemprop="headline">
-                    
-                        <a class="link-unstyled" href="/2018/12/17/unique-keyword-of-mysql/">
-                            SQL 中的 UNIQUE 关键字
-                        </a>
-                    
-                </h1>
-                <div class="postShorten-meta">
-    <time itemprop="datePublished" datetime="2018-12-17T16:19:45+08:00">
-        <img class="calendar" src="/assets/images/calendar.png">
-        
-        12月 17, 2018
-        
-    </time>
-    
-    <span>发布在 </span>
-    
-<a class="category-link" href="/categories/程序猿进化之路/">程序猿进化之路</a>
 
-
-    
-    
-    <img class="tag-img" src="/assets/images/tag-icon.svg">
-    <div class="post-tags">
+        </div>
         
-        <a href="/tags/sql/">sql</a>
+            <div class="tableContent fade-in" data-message="true"></div>
+        
+        
+            <div class="post-copyright main-content-wrap content-with-table">
+    <p class="copyright-item">
+        <span>原文作者: </span>
+        <a href="http://http://www.istarx.cn">小一</a>
+    </p>
+    <p class="copyright-item">
+        <span>原文链接: </span>
+        <a href="http://www.istarx.cn/2019/06/30/arts-week-twelve/">http://www.istarx.cn/2019/06/30/arts-week-twelve/</a>
+    </p>
+    <p class="copyright-item">
+        <span>许可协议: </span>
+        <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/" target="_blank">知识共享署名-非商业性使用 4.0 国际许可协议，转载请注明出处，谢谢.</a>
+    </p>
+</div>
+
         
     </div>
     
+        <div id="post-footer" class="post-footer main-content-wrap content-with-table">
+            
+                <div class="post-footer-tags">
+                    <span class="text-color-light text-small">标签</span><br>
+                    
+<div class="tagcloud article-tag-list">
+    
+    <li class="article-tag-list-item">
+        <a href="/tags/ARTS/" class="js-tag color5">ARTS</a>
+    </li>
+    
+    <div class="clearfix"></div>
 </div>
 
-            </div>
+
+                </div>
             
-                <div class="postShorten-excerpt" itemprop="articleBody">
-                    <p>本文主要对工作中由<code>UNIQUE</code>唯一性约束更改导致数据库升级拷贝数据的时候导致数据丢失，引发VPN改变的问题做一个简单的笔记，顺便梳理一下UNIQUE关键字相关的知识。</p>
-                    
-                        <a href="/2018/12/17/unique-keyword-of-mysql/" class="postShorten-excerpt_link link">
-                            阅读全文
-                        </a>
+            
+                <div class="post-actions-wrap">
+    <nav>
+        <ul class="post-actions post-action-nav">
+            <li class="post-action">
+                
+                    <a class="post-action-btn btn btn--disabled">
                         
+                        <i class="fa fa-angle-left" aria-hidden="true"></i>
+                        <span class="hide-xs hide-sm text-small icon-ml">上一篇</span>
+                    </a>
+            </li>
+            <li class="post-action">
+                
+                
+                <a class="post-action-btn btn btn--default tooltip--top" href="/2019/06/23/arts-week-eleven/" data-tooltip="ARTS打卡—第11周" aria-label="下一篇: ARTS打卡—第11周">
                     
-                </div>
-            
-        </div>
-        
-            <a href="/2018/12/17/unique-keyword-of-mysql/">
-                <div class="postShorten-thumbnailimg">
-                    <img alt="" itemprop="image" src="http://cherlas-blog.oss-cn-beijing.aliyuncs.com/unique.jpg?x-oss-process=style/bottom">
-                </div>
-            </a>
-            
-        
-    </article>
-    
-    
-    <article class="postShorten postShorten--thumbnailimg-left fadeInUp" itemscope="" itemtype="http://schema.org/BlogPosting" style="animation-delay: 0.1s">
-        <div class="postShorten-wrap">
-            
-            <div class="postShorten-header">
-                <h1 class="postShorten-title" itemprop="headline">
-                    
-                        <a class="link-unstyled" href="/2018/05/07/robolectric-framework/">
-                            单元测试之 —  Robolectric 框架
-                        </a>
-                    
-                </h1>
-                <div class="postShorten-meta">
-    <time itemprop="datePublished" datetime="2018-05-07T23:21:28+08:00">
-        <img class="calendar" src="/assets/images/calendar.png">
-        
-        5月 07, 2018
-        
-    </time>
-    
-    <span>发布在 </span>
-    
-<a class="category-link" href="/categories/程序猿进化之路/">程序猿进化之路</a>, <a class="category-link" href="/categories/程序猿进化之路/自动化测试/">自动化测试</a>
-
-
-    
-    
-    <img class="tag-img" src="/assets/images/tag-icon.svg">
-    <div class="post-tags">
-        
-        <a href="/tags/自动化测试/">自动化测试</a>
-        
-        <a href="/tags/unit-test/">unit-test</a>
-        
-        <a href="/tags/robolectric/">robolectric</a>
-        
-    </div>
-    
-</div>
-
-            </div>
-            
-                <div class="postShorten-excerpt" itemprop="articleBody">
-                    <p>Robolectric 框架是一款可以在JVM 上运行 Android 相关代码的框架，在 Android 单元测试总起到至关重要的作用。它既有减少编译、测试用例运行的时间等优点。</p>
-                    
-                        <a href="/2018/05/07/robolectric-framework/" class="postShorten-excerpt_link link">
-                            阅读全文
-                        </a>
-                        
-                    
-                </div>
-            
-        </div>
-        
-            <a href="/2018/05/07/robolectric-framework/">
-                <div class="postShorten-thumbnailimg">
-                    <img alt="" itemprop="image" src="http://cherlas-blog.oss-cn-beijing.aliyuncs.com/robolectric-framework.jpg?x-oss-process=style/left">
-                </div>
-            </a>
-            
-        
-    </article>
-    
-    
-    <article class="postShorten postShorten--thumbnailimg-left fadeInUp" itemscope="" itemtype="http://schema.org/BlogPosting" style="animation-delay: 0.2s">
-        <div class="postShorten-wrap">
-            
-            <div class="postShorten-header">
-                <h1 class="postShorten-title" itemprop="headline">
-                    
-                        <a class="link-unstyled" href="/2018/05/02/powermock-framework/">
-                            单元测试之— PowerMock 框架
-                        </a>
-                    
-                </h1>
-                <div class="postShorten-meta">
-    <time itemprop="datePublished" datetime="2018-05-02T21:29:46+08:00">
-        <img class="calendar" src="/assets/images/calendar.png">
-        
-        5月 02, 2018
-        
-    </time>
-    
-    <span>发布在 </span>
-    
-<a class="category-link" href="/categories/程序猿进化之路/">程序猿进化之路</a>, <a class="category-link" href="/categories/程序猿进化之路/自动化测试/">自动化测试</a>
-
-
-    
-    
-    <img class="tag-img" src="/assets/images/tag-icon.svg">
-    <div class="post-tags">
-        
-        <a href="/tags/自动化测试/">自动化测试</a>
-        
-        <a href="/tags/unit-test/">unit-test</a>
-        
-        <a href="/tags/Mock/">Mock</a>
-        
-        <a href="/tags/PowerMock/">PowerMock</a>
-        
-    </div>
-    
-</div>
-
-            </div>
-            
-                <div class="postShorten-excerpt" itemprop="articleBody">
-                    <p>PowerMock 框架也是属于 Mock 框架的一种，它是从 EasyMock 和 Mockito 两个框架扩展而来的，其最大的优点就是可以 mock 或者屏蔽一些私有、静态、final 等方法。</p>
-                    
-                        <a href="/2018/05/02/powermock-framework/" class="postShorten-excerpt_link link">
-                            阅读全文
-                        </a>
-                        
-                    
-                </div>
-            
-        </div>
-        
-            <a href="/2018/05/02/powermock-framework/">
-                <div class="postShorten-thumbnailimg">
-                    <img alt="" itemprop="image" src="http://cherlas-blog.oss-cn-beijing.aliyuncs.com/powermock.jpg?x-oss-process=style/left">
-                </div>
-            </a>
-            
-        
-    </article>
-    
-    
-    <article class="postShorten postShorten--thumbnailimg-left fadeInUp" itemscope="" itemtype="http://schema.org/BlogPosting" style="animation-delay: 0.30000000000000004s">
-        <div class="postShorten-wrap">
-            
-            <div class="postShorten-header">
-                <h1 class="postShorten-title" itemprop="headline">
-                    
-                        <a class="link-unstyled" href="/2018/04/29/mockito-framework/">
-                            单元测试之— Mockito 框架
-                        </a>
-                    
-                </h1>
-                <div class="postShorten-meta">
-    <time itemprop="datePublished" datetime="2018-04-29T21:26:25+08:00">
-        <img class="calendar" src="/assets/images/calendar.png">
-        
-        4月 29, 2018
-        
-    </time>
-    
-    <span>发布在 </span>
-    
-<a class="category-link" href="/categories/程序猿进化之路/">程序猿进化之路</a>, <a class="category-link" href="/categories/程序猿进化之路/自动化测试/">自动化测试</a>
-
-
-    
-    
-    <img class="tag-img" src="/assets/images/tag-icon.svg">
-    <div class="post-tags">
-        
-        <a href="/tags/自动化测试/">自动化测试</a>
-        
-        <a href="/tags/unit-test/">unit-test</a>
-        
-        <a href="/tags/Mock/">Mock</a>
-        
-        <a href="/tags/Mockito/">Mockito</a>
-        
-    </div>
-    
-</div>
-
-            </div>
-            
-                <div class="postShorten-excerpt" itemprop="articleBody">
-                    <p>Mock 意为模拟，指模拟一个代码所依赖的框架、第三方代码或者构建起来较为复杂的对象，将被测试的代码和其它代码隔离开来，而 Mockito 框架是一款流行的 Mock 框架。</p>
-                    
-                        <a href="/2018/04/29/mockito-framework/" class="postShorten-excerpt_link link">
-                            阅读全文
-                        </a>
-                        
-                    
-                </div>
-            
-        </div>
-        
-            <a href="/2018/04/29/mockito-framework/">
-                <div class="postShorten-thumbnailimg">
-                    <img alt="" itemprop="image" src="http://cherlas-blog.oss-cn-beijing.aliyuncs.com/mockito-framework.JPG?x-oss-process=style/left">
-                </div>
-            </a>
-            
-        
-    </article>
-    
-    
-    <article class="postShorten postShorten--thumbnailimg-left fadeInUp" itemscope="" itemtype="http://schema.org/BlogPosting" style="animation-delay: 0.4s">
-        <div class="postShorten-wrap">
-            
-            <div class="postShorten-header">
-                <h1 class="postShorten-title" itemprop="headline">
-                    
-                        <a class="link-unstyled" href="/2018/04/26/how-to-write-unit-tests/">
-                            如何写有价值的单元测试
-                        </a>
-                    
-                </h1>
-                <div class="postShorten-meta">
-    <time itemprop="datePublished" datetime="2018-04-26T22:57:16+08:00">
-        <img class="calendar" src="/assets/images/calendar.png">
-        
-        4月 26, 2018
-        
-    </time>
-    
-    <span>发布在 </span>
-    
-<a class="category-link" href="/categories/程序猿进化之路/">程序猿进化之路</a>, <a class="category-link" href="/categories/程序猿进化之路/自动化测试/">自动化测试</a>
-
-
-    
-    
-    <img class="tag-img" src="/assets/images/tag-icon.svg">
-    <div class="post-tags">
-        
-        <a href="/tags/自动化测试/">自动化测试</a>
-        
-        <a href="/tags/unit-test/">unit-test</a>
-        
-    </div>
-    
-</div>
-
-            </div>
-            
-                <div class="postShorten-excerpt" itemprop="articleBody">
-                    <p>之前对单元测试做了一个简单的介绍，并介绍了但是测试常用的注释。正因为其重要，所以更应该对代码进行单元测试，保证代码运行的正确性。本文就如何编写单元测试做一个简单的介绍。</p>
-                    
-                        <a href="/2018/04/26/how-to-write-unit-tests/" class="postShorten-excerpt_link link">
-                            阅读全文
-                        </a>
-                        
-                    
-                </div>
-            
-        </div>
-        
-            <a href="/2018/04/26/how-to-write-unit-tests/">
-                <div class="postShorten-thumbnailimg">
-                    <img alt="" itemprop="image" src="http://cherlas-blog.oss-cn-beijing.aliyuncs.com/how-to-write-unit-tests.jpg?x-oss-process=style/left">
-                </div>
-            </a>
-            
-        
-    </article>
-    
-    
-    <article class="postShorten postShorten--thumbnailimg-left fadeInUp" itemscope="" itemtype="http://schema.org/BlogPosting" style="animation-delay: 0.5s">
-        <div class="postShorten-wrap">
-            
-            <div class="postShorten-header">
-                <h1 class="postShorten-title" itemprop="headline">
-                    
-                        <a class="link-unstyled" href="/2018/04/24/unit-test-annotation/">
-                            单元测试常用注释
-                        </a>
-                    
-                </h1>
-                <div class="postShorten-meta">
-    <time itemprop="datePublished" datetime="2018-04-24T22:09:24+08:00">
-        <img class="calendar" src="/assets/images/calendar.png">
-        
-        4月 24, 2018
-        
-    </time>
-    
-    <span>发布在 </span>
-    
-<a class="category-link" href="/categories/程序猿进化之路/">程序猿进化之路</a>, <a class="category-link" href="/categories/程序猿进化之路/自动化测试/">自动化测试</a>
-
-
-    
-    
-    <img class="tag-img" src="/assets/images/tag-icon.svg">
-    <div class="post-tags">
-        
-        <a href="/tags/unit-test/">unit-test</a>
-        
-    </div>
-    
-</div>
-
-            </div>
-            
-                <div class="postShorten-excerpt" itemprop="articleBody">
-                    <p>之前对单元测试做了一个简单的介绍，并说明了编写单元测试的重要性。本文主要对单元测试常用的注释做个小结和笔记并分享。</p>
-                    
-                        <a href="/2018/04/24/unit-test-annotation/" class="postShorten-excerpt_link link">
-                            阅读全文
-                        </a>
-                        
-                    
-                </div>
-            
-        </div>
-        
-            <a href="/2018/04/24/unit-test-annotation/">
-                <div class="postShorten-thumbnailimg">
-                    <img alt="" itemprop="image" src="http://cherlas-blog.oss-cn-beijing.aliyuncs.com/unit-test-annotation.jpg?x-oss-process=style/left">
-                </div>
-            </a>
-            
-        
-    </article>
-    
-    
-    <article class="postShorten postShorten--thumbnailimg-left fadeInUp" itemscope="" itemtype="http://schema.org/BlogPosting" style="animation-delay: 0.6000000000000001s">
-        <div class="postShorten-wrap">
-            
-            <div class="postShorten-header">
-                <h1 class="postShorten-title" itemprop="headline">
-                    
-                        <a class="link-unstyled" href="/2018/04/19/android-proguard/">
-                            Andoid ProGuard
-                        </a>
-                    
-                </h1>
-                <div class="postShorten-meta">
-    <time itemprop="datePublished" datetime="2018-04-19T21:22:34+08:00">
-        <img class="calendar" src="/assets/images/calendar.png">
-        
-        4月 19, 2018
-        
-    </time>
-    
-    <span>发布在 </span>
-    
-<a class="category-link" href="/categories/程序猿进化之路/">程序猿进化之路</a>
-
-
-    
-    
-    <img class="tag-img" src="/assets/images/tag-icon.svg">
-    <div class="post-tags">
-        
-        <a href="/tags/proguard/">proguard</a>
-        
-    </div>
-    
-</div>
-
-            </div>
-            
-                <div class="postShorten-excerpt" itemprop="articleBody">
-                    <p>最近公司对项目使用 Proguard 工具做代码优化及混淆，正好称这个机会学习了下一代码混淆方面的知识，顺便做个笔记，分享一下。</p>
-                    
-                        <a href="/2018/04/19/android-proguard/" class="postShorten-excerpt_link link">
-                            阅读全文
-                        </a>
-                        
-                    
-                </div>
-            
-        </div>
-        
-            <a href="/2018/04/19/android-proguard/">
-                <div class="postShorten-thumbnailimg">
-                    <img alt="" itemprop="image" src="http://cherlas-blog.oss-cn-beijing.aliyuncs.com/android-proguard.jpg?x-oss-process=style/left">
-                </div>
-            </a>
-            
-        
-    </article>
-    
-    
-    <article class="postShorten postShorten--thumbnailimg-left fadeInUp" itemscope="" itemtype="http://schema.org/BlogPosting" style="animation-delay: 0.7000000000000001s">
-        <div class="postShorten-wrap">
-            
-            <div class="postShorten-header">
-                <h1 class="postShorten-title" itemprop="headline">
-                    
-                        <a class="link-unstyled" href="/2018/04/16/unit-test-what-and-why/">
-                            Android自动化测试之 — 简单聊聊单元测试
-                        </a>
-                    
-                </h1>
-                <div class="postShorten-meta">
-    <time itemprop="datePublished" datetime="2018-04-16T22:11:30+08:00">
-        <img class="calendar" src="/assets/images/calendar.png">
-        
-        4月 16, 2018
-        
-    </time>
-    
-    <span>发布在 </span>
-    
-<a class="category-link" href="/categories/程序猿进化之路/">程序猿进化之路</a>, <a class="category-link" href="/categories/程序猿进化之路/自动化测试/">自动化测试</a>
-
-
-    
-    
-    <img class="tag-img" src="/assets/images/tag-icon.svg">
-    <div class="post-tags">
-        
-        <a href="/tags/自动化测试/">自动化测试</a>
-        
-        <a href="/tags/unit-test/">unit-test</a>
-        
-    </div>
-    
-</div>
-
-            </div>
-            
-                <div class="postShorten-excerpt" itemprop="articleBody">
-                    <p>单元测试是指对一个工作单元的测试。一个工作单元可以是一行代码、一个方法、一个甚至几个类。本文主要聊聊单元测试是什么，为什么要写单元测试，简单介绍一下 Android 中的单元测试。</p>
-                    
-                        <a href="/2018/04/16/unit-test-what-and-why/" class="postShorten-excerpt_link link">
-                            阅读全文
-                        </a>
-                        
-                    
-                </div>
-            
-        </div>
-        
-            <a href="/2018/04/16/unit-test-what-and-why/">
-                <div class="postShorten-thumbnailimg">
-                    <img alt="" itemprop="image" src="http://cherlas-blog.oss-cn-beijing.aliyuncs.com/unit-test.jpg?x-oss-process=style/left">
-                </div>
-            </a>
-            
-        
-    </article>
-    
-    
-    <article class="postShorten postShorten--thumbnailimg-left fadeInUp" itemscope="" itemtype="http://schema.org/BlogPosting" style="animation-delay: 0.8s">
-        <div class="postShorten-wrap">
-            
-            <div class="postShorten-header">
-                <h1 class="postShorten-title" itemprop="headline">
-                    
-                        <a class="link-unstyled" href="/2018/04/09/android-test-espresso/">
-                            Android 自动化测试之 — Espresso
-                        </a>
-                    
-                </h1>
-                <div class="postShorten-meta">
-    <time itemprop="datePublished" datetime="2018-04-09T22:43:27+08:00">
-        <img class="calendar" src="/assets/images/calendar.png">
-        
-        4月 09, 2018
-        
-    </time>
-    
-    <span>发布在 </span>
-    
-<a class="category-link" href="/categories/程序猿进化之路/">程序猿进化之路</a>, <a class="category-link" href="/categories/程序猿进化之路/自动化测试/">自动化测试</a>
-
-
-    
-    
-    <img class="tag-img" src="/assets/images/tag-icon.svg">
-    <div class="post-tags">
-        
-        <a href="/tags/自动化测试/">自动化测试</a>
-        
-        <a href="/tags/espresso/">espresso</a>
-        
-    </div>
-    
-</div>
-
-            </div>
-            
-                <div class="postShorten-excerpt" itemprop="articleBody">
-                    <p>Espresso 是基于 ATSL(Android Testing Support Library) 的Android 设备化测试框架，它只能在单独apk内部进行测试而不能和其它应用进行交互，它可以检查应用的 UI 组件是否正确工作。</p>
-                    
-                        <a href="/2018/04/09/android-test-espresso/" class="postShorten-excerpt_link link">
-                            阅读全文
-                        </a>
-                        
-                    
-                </div>
-            
-        </div>
-        
-            <a href="/2018/04/09/android-test-espresso/">
-                <div class="postShorten-thumbnailimg">
-                    <img alt="" itemprop="image" src="http://cherlas-blog.oss-cn-beijing.aliyuncs.com/espresso.jpg?x-oss-process=style/left">
-                </div>
-            </a>
-            
-        
-    </article>
-    
-    
-    <article class="postShorten postShorten--thumbnailimg-left fadeInUp" itemscope="" itemtype="http://schema.org/BlogPosting" style="animation-delay: 0.9s">
-        <div class="postShorten-wrap">
-            
-            <div class="postShorten-header">
-                <h1 class="postShorten-title" itemprop="headline">
-                    
-                        <a class="link-unstyled" href="/2018/04/07/android-test-uiautomator/">
-                            Android 自动化测试之 — UI Automator
-                        </a>
-                    
-                </h1>
-                <div class="postShorten-meta">
-    <time itemprop="datePublished" datetime="2018-04-07T19:34:01+08:00">
-        <img class="calendar" src="/assets/images/calendar.png">
-        
-        4月 07, 2018
-        
-    </time>
-    
-    <span>发布在 </span>
-    
-<a class="category-link" href="/categories/程序猿进化之路/">程序猿进化之路</a>, <a class="category-link" href="/categories/程序猿进化之路/自动化测试/">自动化测试</a>
-
-
-    
-    
-    <img class="tag-img" src="/assets/images/tag-icon.svg">
-    <div class="post-tags">
-        
-        <a href="/tags/UIAutomator/">UIAutomator</a>
-        
-        <a href="/tags/自动化测试/">自动化测试</a>
-        
-    </div>
-    
-</div>
-
-            </div>
-            
-                <div class="postShorten-excerpt" itemprop="articleBody">
-                    <p>自动化测试作为软件开发中不可或缺的一部分，其重要性不言而喻。自动化测试可以分为黑盒和白盒测试。而本文则是对黑盒测试框架 UI Automator 的学习做一个笔记并分享，希望可以帮到你。</p>
-                    
-                        <a href="/2018/04/07/android-test-uiautomator/" class="postShorten-excerpt_link link">
-                            阅读全文
-                        </a>
-                        
-                    
-                </div>
-            
-        </div>
-        
-            <a href="/2018/04/07/android-test-uiautomator/">
-                <div class="postShorten-thumbnailimg">
-                    <img alt="" itemprop="image" src="http://cherlas-blog.oss-cn-beijing.aliyuncs.com/uiautomator.jpg?x-oss-process=style/left">
-                </div>
-            </a>
-            
-        
-    </article>
-    
-    
-    <nav id="page-nav" class="fadeInUp" style="animation-delay: 1s">
-        <span class="page-number current">1</span><a class="page-number" href="/archives/2018/page/2/">2</a><a class="extend next" rel="next" href="/archives/2018/page/2/"> </a>
+                        <span class="hide-xs hide-sm text-small icon-mr">下一篇</span>
+                        <i class="fa fa-angle-right" aria-hidden="true"></i>
+                    </a>
+            </li>
+        </ul>
     </nav>
-    
-</section>
+    <ul class="post-actions post-action-share">
+        <li class="post-action hide-lg hide-md hide-sm">
+            <a class="post-action-btn btn btn--default btn-open-shareoptions" href="#btn-open-shareoptions" aria-label="Diesen Beitrag teilen">
+                <i class="fa fa-share-alt" aria-hidden="true"></i>
+            </a>
+        </li>
+        
+        
+        <li class="post-action">
+            
+                <a class="post-action-btn btn btn--default" href="#" aria-label="Nach oben">
+                    
+                    <i class="fa fa-arrow-up" aria-hidden="true"></i>
+                </a>
+        </li>
+    </ul>
+</div>
 
+
+            
+            
+        </div>
+    
+</article>
 
 
 
@@ -846,6 +465,57 @@
 </footer>
 
         </div>
+        
+        <div id="bottom-bar" class="post-bottom-bar" data-behavior="2">
+            <div class="post-actions-wrap">
+    <nav>
+        <ul class="post-actions post-action-nav">
+            <li class="post-action">
+                
+                    <a class="post-action-btn btn btn--disabled">
+                        
+                        <i class="fa fa-angle-left" aria-hidden="true"></i>
+                        <span class="hide-xs hide-sm text-small icon-ml">上一篇</span>
+                    </a>
+            </li>
+            <li class="post-action">
+                
+                
+                <a class="post-action-btn btn btn--default tooltip--top" href="/2019/06/23/arts-week-eleven/" data-tooltip="ARTS打卡—第11周" aria-label="下一篇: ARTS打卡—第11周">
+                    
+                        <span class="hide-xs hide-sm text-small icon-mr">下一篇</span>
+                        <i class="fa fa-angle-right" aria-hidden="true"></i>
+                    </a>
+            </li>
+        </ul>
+    </nav>
+    <ul class="post-actions post-action-share">
+        <li class="post-action hide-lg hide-md hide-sm">
+            <a class="post-action-btn btn btn--default btn-open-shareoptions" href="#btn-open-shareoptions" aria-label="Diesen Beitrag teilen">
+                <i class="fa fa-share-alt" aria-hidden="true"></i>
+            </a>
+        </li>
+        
+        
+        <li class="post-action">
+            
+                <a class="post-action-btn btn btn--default" href="#" aria-label="Nach oben">
+                    
+                    <i class="fa fa-arrow-up" aria-hidden="true"></i>
+                </a>
+        </li>
+    </ul>
+</div>
+
+
+        </div>
+        <div id="share-options-bar" class="share-options-bar" data-behavior="2">
+    <i id="btn-close-shareoptions" class="fa fa-close"></i>
+    <ul class="share-options">
+        
+    </ul>
+</div>
+
         
     </div>
     
