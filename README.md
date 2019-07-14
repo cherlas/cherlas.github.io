@@ -34,3 +34,4 @@
 29. [ARTS打卡—第10周](http://www.istarx.cn/2019/05/26/arts-week-ten/)
 30. [ARTS打卡—第11周](http://www.istarx.cn/2019/05/26/arts-week-eleven/)
 31. [ARTS打卡—第12周](http://www.istarx.cn/2019/05/26/arts-week-eleven/)
+32. [10X 程序员工作法学习整理 Part1](http://www.istarx.cn/2019/05/26/arts-week-eleven/)
