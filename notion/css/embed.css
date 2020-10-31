@@ -2,20 +2,17 @@ body {
   background: transparent;
   text-align: center;
   padding: 0;
-  margin: 0;
+  margin: 0 8px 0 8px;
 }
 
-span.image_link {
-  min-width: 128px;
-  max-width: 256px;
+img.image_link {
   width: 100%;
   height: 100%;
-  border-radius: 16px;
+  border-radius: 8px;
   display: inline-block;
-  margin: 0;
-  padding: 0;
   overflow: hidden;
   border: none;
   cursor: pointer;
   box-sizing: border-box;
+  background-repeat: no-repeat;
 }

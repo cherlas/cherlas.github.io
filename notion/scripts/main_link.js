@@ -15,7 +15,7 @@
         },
         initImageProperties: function() {
           self.imageProperties.href = self.frame.getAttribute('image-href');
-          self.imageProperties.backgroundImage = self.frame.getAttribute('image-url');
+          self.imageProperties.src = self.frame.getAttribute('image-url');
         },
         addStyles: function() {
           let link = document.createElement("LINK");
@@ -24,10 +24,10 @@
           document.body.appendChild(link);
         },
         constructContent: function() {
-          let span = self.doc.createElement("SPAN");
-          span.className = "image_link";
-          span.style.backgroundImage = "url(" + self.imageProperties.backgroundImage + ")";
-          document.body.appendChild(span);
+          let image = self.doc.createElement("IMG");
+          image.className = "image_link";
+          image.src=self.imageProperties.src;
+          document.body.appendChild(image);
         },
         handleClick: function(i) {
           i = i || self.win.event;
