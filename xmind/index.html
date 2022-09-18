@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Xmind preview</title>
+    <style>
+      html,
+      body,
+      #container {
+        width: 100%;
+        height: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <script src="polyfill/fetch.js"></script>
+    <div id="container"></div>
+    <script>
+      function getParameterByName(name, url = window.location.href) {
+        name = name.replace(/[\[\]]/g, "\\$&");
+        var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
+          results = regex.exec(url);
+        if (!results) return null;
+        if (!results[2]) return "";
+        return decodeURIComponent(results[2].replace(/\+/g, " "));
+      }
+    </script>
+
+    <script src="./xmind-embed-viewer.js"></script>
+    <script>
+      // get file stream url from query
+      var fileUrl = getParameterByName("uri");
+
+      var viewer = new XMindEmbedViewer({
+        el: "#container",
+        styles: {
+          width: "100%",
+          height: "100%",
+        },
+        origin: location.origin,
+      });
+
+      fetch(fileUrl)
+        .then(function (res) {
+          return res.arrayBuffer();
+        })
+        .then(function (buffer) {
+          viewer.load(buffer);
+        })
+        .catch(function (err) {
+          console.error(err);
+        });
+    </script>
+  </body>
+</html>
